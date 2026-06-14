@@ -3,10 +3,18 @@
 secrets/
 *.key
 *recovery*
+*.env
+*alpaca_keys*
 
-# --- Stato runtime (rigenerato dalle routine) ---
-state/*.json
-state/archive/**/*.json
+# --- Stato runtime ---
+# I JSON di stato SONO tracciati e pushati (backup/audit, vedi lib/gitsync.py).
+# Si ignorano solo i log di processo del loop di esecuzione (Routine 04).
+state/*.out
+state/*.err
+
+# --- Python ---
+__pycache__/
+*.pyc
 
 # --- Sistema / editor ---
 .DS_Store
