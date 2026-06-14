@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-06-14T23:29:40+02:00",
+  "session_date": "2026-06-14",
+  "portfolio_value": 100000.0,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": [
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 978.96,
+      "allocated_capital": 5000.0,
+      "stop_loss_price": 964.28,
+      "take_profit_price": 1008.33
+    },
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "action": "sell_short",
+      "target_entry_price": 407.57,
+      "allocated_capital": 5000.0,
+      "stop_loss_price": 413.68,
+      "take_profit_price": 395.34
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 380.4,
+      "allocated_capital": 5000.0,
+      "stop_loss_price": 374.69,
+      "take_profit_price": 391.81
+    }
+  ]
+}
