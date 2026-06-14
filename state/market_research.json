@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-06-14T23:16:58+02:00",
+  "session_date": "2026-06-14",
+  "universe_size": 25,
+  "candidates": [
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "last_price": 983.88,
+      "prev_close": 981.27,
+      "gap_pct": 0.266,
+      "premarket_volume": 0,
+      "trend": "Bullish"
+    },
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "last_price": 405.54,
+      "prev_close": 406.54,
+      "gap_pct": -0.246,
+      "premarket_volume": 0,
+      "trend": "Bearish"
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Technology",
+      "last_price": 382.31,
+      "prev_close": 381.95,
+      "gap_pct": 0.0943,
+      "premarket_volume": 0,
+      "trend": "Bullish"
+    },
+    {
+      "ticker": "MSFT",
+      "sector": "Technology",
+      "last_price": 390.42,
+      "prev_close": 390.67,
+      "gap_pct": -0.064,
+      "premarket_volume": 0,
+      "trend": "Bearish"
+    },
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "last_price": 205.1,
+      "prev_close": 205.17,
+      "gap_pct": -0.0341,
+      "premarket_volume": 0,
+      "trend": "Bearish"
+    }
+  ]
+}
