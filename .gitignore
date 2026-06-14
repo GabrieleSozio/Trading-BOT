@@ -1,0 +1,19 @@
+# --- Segreti (MAI committare) ---
+# Le chiavi API Alpaca NON stanno in file: sono variabili (secret) delle singole routine.
+secrets/
+*.key
+*recovery*
+
+# --- Stato runtime (rigenerato dalle routine) ---
+state/*.json
+state/archive/**/*.json
+
+# --- Sistema / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Mantieni le cartelle di stato vuote nel repo
+!state/.gitkeep
+!state/archive/.gitkeep

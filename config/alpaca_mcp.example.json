@@ -1,0 +1,21 @@
+{
+  "_comment": "Esempio di server MCP per esporre Alpaca alle routine. IMPORTANTE: le credenziali Alpaca NON vivono in un file .env: si impostano come VARIABILI (secret) della singola routine nell'app desktop. I segnaposto ${...} qui sotto vanno popolati con le variabili definite nella routine che usa questo server.",
+  "mcpServers": {
+    "alpaca": {
+      "command": "uvx",
+      "args": ["alpaca-mcp-server"],
+      "env": {
+        "ALPACA_API_KEY": "${ALPACA_API_KEY_dalla_routine}",
+        "ALPACA_SECRET_KEY": "${ALPACA_SECRET_KEY_dalla_routine}",
+        "ALPACA_PAPER_TRADE": "true",
+        "ALPACA_BASE_URL": "https://paper-api.alpaca.markets"
+      }
+    }
+  },
+  "_notes": [
+    "Le chiavi API Alpaca sono definite come variabili secret della routine, non in un file condiviso. Ogni routine che opera sul broker porta con sé le proprie credenziali.",
+    "Il server MCP deve esporre almeno: account (buying_power, portfolio_value, equity), market data (last trade/quote, barre, pre-market), invio Bracket Order, lista/cancellazione ordini, lista/chiusura posizioni, account activities.",
+    "Per la Fase 1 mantieni ALPACA_PAPER_TRADE=true e l'endpoint paper-api.alpaca.markets.",
+    "In alternativa al server MCP, una routine può chiamare gli endpoint REST di Alpaca direttamente usando le proprie variabili secret."
+  ]
+}

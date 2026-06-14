@@ -1,0 +1,83 @@
+# =====================================================================
+#  Trading Bot — Configurazione centrale (fonte unica dei parametri)
+#  Le routine agentiche leggono questo file. Cambia i numeri QUI,
+#  non dentro le singole routine.
+# =====================================================================
+
+meta:
+  paper_trading: true            # true = Alpaca Paper. NON mettere false senza revisione.
+  base_currency: USD
+  timezone: Europe/Rome          # CET/CEST — tutti gli orari delle routine sono in questa TZ
+  market_timezone: America/New_York
+
+# --- Universo titoli analizzato da 01 Premarket Analyst ---
+universe:
+  # Lista di ticker liquidi (tech-heavy). Estendi/riduci liberamente.
+  tickers:
+    - AAPL
+    - MSFT
+    - NVDA
+    - AMZN
+    - GOOGL
+    - META
+    - TSLA
+    - AMD
+    - AVGO
+    - NFLX
+    - INTC
+    - QCOM
+    - ADBE
+    - CRM
+    - ORCL
+    - CSCO
+    - PYPL
+    - MU
+    - PLTR
+    - SHOP
+    - UBER
+    - COIN
+    - SMCI
+    - ARM
+    - SNOW
+  top_candidates: 5              # quanti titoli passa l'Analista al Portfolio Manager
+
+# --- Allocazione (02 Portfolio Manager) ---
+allocation:
+  positions_to_open: 3          # quanti dei top_candidates effettivamente allocare
+  selection_metric: premarket_volume   # criterio di scelta tra i candidati
+  entry_retracement_pct: 0.005  # Bullish: target entry = last_price * (1 - 0.005)
+
+# --- Guardrails inviolabili (vedi docs/00_strategy_and_guardrails.md) ---
+guardrails:
+  max_daily_drawdown_pct: 0.02  # R1 Kill Switch: -2% sul portafoglio = chiudi tutto
+  max_position_size_pct: 0.05   # R2: max 5% del capitale per singolo trade
+  stop_loss_pct: 0.015          # R3: stop loss obbligatorio a -1.5% (range consentito 1.0–1.5%)
+  take_profit_pct: 0.03         # Take profit a +3%
+  max_sector_exposure_pct: 0.15 # R4: max 15% del capitale per singolo settore
+  max_consecutive_api_errors: 3 # R5: dopo 3 errori broker consecutivi -> stop
+
+# --- Orari delle routine (CET) ---
+schedule_cet:
+  premarket_analyst: "14:30"
+  portfolio_manager: "15:00"
+  risk_manager: "15:10"
+  execution_start: "15:30"
+  execution_eod_flat: "21:45"   # liquidazione forzata di fine giornata
+  execution_stop: "21:46"
+  friday_reconciliation: "Fri 23:00"
+
+# --- State management (file locali) ---
+state:
+  dir: state
+  archive_dir: state/archive
+  files:
+    market_research: state/market_research.json
+    target_orders: state/target_orders.json
+    approved_orders: state/approved_orders.json
+    executions_log: state/daily_executions_log.json
+
+# --- Notifiche opzionali (05 Reconciliation) ---
+notifications:
+  enabled: false
+  channel: none                 # none | discord | telegram
+  # Il webhook_url NON va scritto qui: è una variabile secret della Routine 05.
