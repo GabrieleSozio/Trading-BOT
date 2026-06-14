@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-06-14T23:26:31+02:00",
+  "session_date": "2026-06-14",
+  "buying_power": 400000.0,
+  "orders": [
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 978.96,
+      "allocated_capital": 133333.33
+    },
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "action": "sell_short",
+      "target_entry_price": 407.57,
+      "allocated_capital": 133333.33
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 380.4,
+      "allocated_capital": 133333.33
+    }
+  ]
+}
