@@ -1,52 +1,52 @@
 {
-  "generated_at": "2026-06-14T23:16:58+02:00",
-  "session_date": "2026-06-14",
+  "generated_at": "2026-06-15T18:35:56+02:00",
+  "session_date": "2026-06-15",
   "universe_size": 25,
   "candidates": [
     {
       "ticker": "MU",
       "sector": "Technology",
-      "last_price": 983.88,
+      "last_price": 1077.685,
       "prev_close": 981.27,
-      "gap_pct": 0.266,
-      "premarket_volume": 0,
+      "gap_pct": 9.8255,
+      "premarket_volume": 320962,
       "trend": "Bullish"
     },
     {
-      "ticker": "TSLA",
-      "sector": "Consumer Discretionary",
-      "last_price": 405.54,
-      "prev_close": 406.54,
-      "gap_pct": -0.246,
-      "premarket_volume": 0,
-      "trend": "Bearish"
-    },
-    {
-      "ticker": "AVGO",
-      "sector": "Technology",
-      "last_price": 382.31,
-      "prev_close": 381.95,
-      "gap_pct": 0.0943,
-      "premarket_volume": 0,
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 173.89,
+      "prev_close": 159.72,
+      "gap_pct": 8.8718,
+      "premarket_volume": 150790,
       "trend": "Bullish"
     },
     {
-      "ticker": "MSFT",
+      "ticker": "AMD",
       "sector": "Technology",
-      "last_price": 390.42,
-      "prev_close": 390.67,
-      "gap_pct": -0.064,
-      "premarket_volume": 0,
-      "trend": "Bearish"
+      "last_price": 549.83,
+      "prev_close": 511.74,
+      "gap_pct": 7.4432,
+      "premarket_volume": 385033,
+      "trend": "Bullish"
     },
     {
-      "ticker": "NVDA",
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "last_price": 73.125,
+      "prev_close": 68.77,
+      "gap_pct": 6.3327,
+      "premarket_volume": 1128852,
+      "trend": "Bullish"
+    },
+    {
+      "ticker": "ORCL",
       "sector": "Technology",
-      "last_price": 205.1,
-      "prev_close": 205.17,
-      "gap_pct": -0.0341,
-      "premarket_volume": 0,
-      "trend": "Bearish"
+      "last_price": 194.59,
+      "prev_close": 184.16,
+      "gap_pct": 5.6636,
+      "premarket_volume": 287573,
+      "trend": "Bullish"
     }
   ]
 }
