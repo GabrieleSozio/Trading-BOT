@@ -52,8 +52,15 @@ def sync(message: str) -> bool:
 
         p = _git(["push", "origin", "HEAD"])
         if p.returncode != 0:
-            log.error("gitsync: PUSH FALLITO: %s", (p.stderr or p.stdout).strip()[:300])
-            return False
+            # Il remote potrebbe essere avanti (un'altra routine ha pushato in
+            # contemporanea, tipico nel cloud): rebase e riprova una volta.
+            branch = _git(["rev-parse", "--abbrev-ref", "HEAD"]).stdout.strip() or "main"
+            log.warning("gitsync: push rifiutato, provo pull --rebase + retry...")
+            _git(["pull", "--rebase", "origin", branch])
+            p = _git(["push", "origin", "HEAD"])
+            if p.returncode != 0:
+                log.error("gitsync: PUSH FALLITO (anche dopo rebase): %s", (p.stderr or p.stdout).strip()[:300])
+                return False
 
         log.info("gitsync: push OK (%d file) -> %s", len(staged), message)
         return True

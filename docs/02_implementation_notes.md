@@ -78,6 +78,32 @@ routine; logga `push OK` o l'errore). Conseguenze di design:
   repo da solo). Tieni il repository **privato**.
 - Le routine condividono comunque `state/` in locale: il push è backup, non trasporto.
 
+## Esecuzione cloud (GitHub Actions)
+
+Le routine possono girare **nel cloud** (GitHub Actions) invece che sul PC locale, così
+non serve tenere acceso il computer con l'app aperta. I workflow sono in
+`.github/workflows/`:
+
+- `routine-01..03` e `05`: un run schedulato al giorno; eseguono il modulo Python.
+- `routine-04`: NON usa il loop. Ogni run è **un singolo tick idempotente** (lo stato si
+  ricostruisce dal broker), schedulato **ogni 10 minuti** nella finestra di mercato.
+  Si paga così solo ~1 min di runner per tick (sta nei minuti gratuiti del piano private).
+
+Punti chiave:
+- **Credenziali**: nel cloud non c'è `secrets/alpaca_keys.env`; le chiavi arrivano dalle
+  **GitHub Actions Secrets** `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` (il codice fa fallback
+  da file a variabili d'ambiente).
+- **Stato condiviso via repo**: ogni workflow fa `checkout` (prende l'ultimo stato dal repo),
+  esegue, e ricommitta lo stato. `lib/gitsync.py` fa `pull --rebase` + retry se due run
+  pushano insieme.
+- **Orari in UTC**: i cron di Actions sono in UTC e NON seguono l'ora legale. I valori
+  attuali sono per l'ora legale (CEST = UTC+2). **Nota DST**: da fine ottobre (ora solare,
+  CET = UTC+1) gli orari vanno spostati di +1 ora nei file workflow, oppure si accetta che
+  le routine girino 1h prima in CET (innocuo: il codice della 04 si auto-regola sull'orario
+  CET reale e le altre lavorano comunque intraday).
+- **Mai locale + cloud insieme**: se girano entrambi si rischia il **doppio ordine**. Quando
+  il cloud è attivo, i task locali schedulati vanno **disabilitati**.
+
 ## Caveat operativi
 
 - **App aperta**: i cron Claude girano solo con l'app desktop aperta; se chiusa, il

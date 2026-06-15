@@ -1,0 +1,38 @@
+# Routine 04 — Execution Desk (cloud).
+# Nel cloud NON si usa il loop: ogni run è UN tick idempotente (lo stato si
+# ricostruisce dal broker), così paghiamo solo ~1 min di runner per volta.
+# Ogni 10 minuti tra le 13:00 e le 19:59 UTC (= 15:00–21:59 CEST). Il codice
+# si auto-regola sull'orario CET reale: opera solo 15:30→21:46, prima/dopo no-op.
+name: routine-04-execution
+
+on:
+  schedule:
+    - cron: '*/10 13-19 * * 1-5'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false      # i tick non si accavallano; al massimo si saltano
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - run: pip install -r requirements.txt
+      - name: Configura identità git
+        run: |
+          git config user.name "trading-bot[bot]"
+          git config user.email "trading-bot@users.noreply.github.com"
+      - name: Esegui un tick della Routine 04
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+        run: python -m lib.routine_04_execution
