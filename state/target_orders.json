@@ -1,27 +1,27 @@
 {
-  "generated_at": "2026-06-14T23:26:31+02:00",
-  "session_date": "2026-06-14",
+  "generated_at": "2026-06-15T18:35:59+02:00",
+  "session_date": "2026-06-15",
   "buying_power": 400000.0,
   "orders": [
+    {
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "action": "buy",
+      "target_entry_price": 72.76,
+      "allocated_capital": 133333.33
+    },
+    {
+      "ticker": "AMD",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 547.08,
+      "allocated_capital": 133333.33
+    },
     {
       "ticker": "MU",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 978.96,
-      "allocated_capital": 133333.33
-    },
-    {
-      "ticker": "TSLA",
-      "sector": "Consumer Discretionary",
-      "action": "sell_short",
-      "target_entry_price": 407.57,
-      "allocated_capital": 133333.33
-    },
-    {
-      "ticker": "AVGO",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 380.4,
+      "target_entry_price": 1072.3,
       "allocated_capital": 133333.33
     }
   ]
