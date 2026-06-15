@@ -1,7 +1,7 @@
 {
   "session_date": "2026-06-15",
   "opening_balance": 99999.97,
-  "closing_balance": null,
+  "closing_balance": 100051.86,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -13,6 +13,14 @@
       "entry": 1071.87,
       "stop_loss": 1056.22,
       "take_profit": 1104.47
+    },
+    {
+      "ts": "2026-06-15T22:32:45+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "EOD flat",
+      "positions": [
+        "MU"
+      ]
     }
   ]
 }
