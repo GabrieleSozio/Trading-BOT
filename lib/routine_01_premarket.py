@@ -29,6 +29,8 @@ from .alpaca_rest import (
 )
 from .sectors import sector_of
 from . import gitsync
+from . import ai_client
+from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine01")
 
@@ -88,6 +90,68 @@ def _premarket_volume(client: AlpacaClient, symbols: list[str], session_date: st
         for sym, bars in res.get("bars", {}).items():
             out[sym] = sum(b.get("v", 0) for b in bars)
     return out
+
+
+_AI_SCHEMA = {
+    "type": "object",
+    "additionalProperties": False,
+    "properties": {
+        "analysis": {"type": "string"},
+        "selection": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": False,
+                "properties": {
+                    "ticker": {"type": "string"},
+                    "rationale": {"type": "string"},
+                },
+                "required": ["ticker", "rationale"],
+            },
+        },
+    },
+    "required": ["analysis", "selection"],
+}
+
+
+def _ai_select(rows: list[dict], top_n: int, model: str | None):
+    """Fa selezionare a Claude i top_n candidati momentum, con motivazione.
+    Ritorna (lista candidati ordinata con campo ai_rationale, testo analisi).
+    Solleva AIUnavailable se l'AI non è usabile o restituisce dati incoerenti."""
+    by_ticker = {r["ticker"]: r for r in rows}
+    table = "\n".join(
+        f"{r['ticker']:5} sector={r['sector']:22} gap={r['gap_pct']:+.2f}% "
+        f"vol={r['premarket_volume']:>10} trend={r['trend']} last={r['last_price']}"
+        for r in rows
+    )
+    system = (
+        "Sei un analista quantitativo di un piccolo hedge fund. Strategia: momentum "
+        "intraday con filtro di ritracciamento (si entra su titoli con forte "
+        "direzionalità e alti volumi, dopo un piccolo ritracciamento). Operatività "
+        "solo intraday su azioni USA liquide. Scegli i candidati più promettenti per "
+        "OGGI dai dati forniti. Rispondi solo nel formato JSON richiesto, in italiano."
+    )
+    user = (
+        f"Dati pre-market di oggi ({len(rows)} titoli):\n{table}\n\n"
+        f"Seleziona ESATTAMENTE i {top_n} migliori candidati momentum per oggi "
+        f"(usa solo ticker presenti nella lista). Per ciascuno una breve motivazione "
+        f"(forza del gap, volume, settore). Aggiungi una breve 'analysis' d'insieme."
+    )
+    data = ai_client.ask_json(system, user, _AI_SCHEMA,
+                              model=model, max_tokens=2000)
+    sel = data.get("selection") or []
+    out = []
+    for item in sel:
+        tkr = (item.get("ticker") or "").upper()
+        if tkr in by_ticker and tkr not in {c["ticker"] for c in out}:
+            row = dict(by_ticker[tkr])
+            row["ai_rationale"] = item.get("rationale", "")
+            out.append(row)
+        if len(out) >= top_n:
+            break
+    if not out:
+        raise AIUnavailable("l'AI non ha restituito ticker validi")
+    return out, data.get("analysis")
 
 
 def run(dry_run: bool = False, force: bool = False) -> dict | None:
@@ -150,16 +214,30 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         log.error("Nessun ticker con dati validi: staffetta non avviabile. Stop senza output.")
         sys.exit(1)
 
-    # Ordina per direzionalita' assoluta; a parita' di gap, volume pre-market maggiore.
+    # Fallback deterministico: |gap| desc, poi volume pre-market.
     rows.sort(key=lambda r: (abs(r["gap_pct"]), r["premarket_volume"]), reverse=True)
+
+    # --- Selezione: l'AI fa la ricerca; se non disponibile, fallback deterministico ---
+    ai_cfg = cfg.get("ai", {})
+    analysis = None
+    selected_by = "deterministico"
     candidates = rows[:top_n]
+    if ai_cfg.get("enabled") and ai_client.ai_enabled():
+        try:
+            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"))
+            selected_by = "AI (Claude)"
+        except AIUnavailable as e:
+            log.warning("AI non disponibile (%s): uso selezione deterministica.", e)
 
     payload = {
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": session_date,
         "universe_size": len(tickers),
+        "selected_by": selected_by,
+        "ai_analysis": analysis,
         "candidates": candidates,
     }
+    log.info("Selezione candidati: %s", selected_by)
 
     log.info("Analizzati=%d scartati=%d. Top %d candidati:", analyzed, skipped, len(candidates))
     for c in candidates:

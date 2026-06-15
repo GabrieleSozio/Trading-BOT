@@ -104,6 +104,30 @@ Punti chiave:
 - **Mai locale + cloud insieme**: se girano entrambi si rischia il **doppio ordine**. Quando
   il cloud è attivo, i task locali schedulati vanno **disabilitati**.
 
+## Routine AI (Claude) — ricerca (01) e supervisore (06)
+
+Due routine usano l'AI di Claude (le altre restano deterministiche). Richiedono il
+secret `ANTHROPIC_API_KEY` (GitHub Actions); senza, hanno un fallback sicuro.
+
+- **01 Premarket (AI research):** il codice raccoglie i dati grezzi dell'universo
+  (gap, volume, settore), poi **Claude seleziona e motiva** i candidati momentum
+  (`lib/ai_client.py`, modello `ai.research_model`). Se l'AI non è disponibile →
+  **fallback deterministico** (ordinamento per |gap| e volume). `market_research.json`
+  include `selected_by`, `ai_analysis` e, per candidato, `ai_rationale`.
+
+- **06 Supervisore (AI tuning):** `lib/routine_06_supervisor.py`, settimanale (sabato).
+  Claude legge la performance reale dal broker e **propone/applica miglioramenti**, ma:
+  - può modificare **solo** i parametri in `supervisor.tunable` (config), **dentro i
+    range** indicati; ogni proposta è **validata dal codice** (non ci si fida dell'AI);
+  - **non può MAI** toccare `guardrails.*`, `meta.paper_trading`, gli orari o lo stato
+    (`supervisor.forbidden_prefixes`); proposte fuori limite vengono **rifiutate**;
+  - ogni modifica è motivata, scritta in un report `state/supervisor_report_<data>.md`
+    e committata (audit completo, sempre reversibile via git);
+  - senza chiave AI → non fa nulla (esce pulito).
+
+I valori numerici modificati nel `config/trading_config.yaml` sono sostituiti con un
+edit mirato di riga che **preserva i commenti** del file.
+
 ## Caveat operativi
 
 - **App aperta**: i cron Claude girano solo con l'app desktop aperta; se chiusa, il

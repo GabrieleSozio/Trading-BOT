@@ -81,3 +81,23 @@ notifications:
   enabled: false
   channel: none                 # none | discord | telegram
   # Il webhook_url NON va scritto qui: è una variabile secret della Routine 05.
+
+# --- AI (Claude) — usata SOLO da 01 ricerca e 06 supervisore ---
+# La chiave ANTHROPIC_API_KEY è una secret (GitHub Actions), non sta qui.
+ai:
+  enabled: true
+  research_model: claude-opus-4-8     # ricerca di mercato (01)
+  supervisor_model: claude-opus-4-8   # analisi e tuning (06)
+
+# --- Supervisore AI (06) — autonomia BILANCIATA, entro limiti rigidi ---
+supervisor:
+  enabled: true
+  # SOLO questi parametri possono essere modificati dall'AI, dentro questi range.
+  # Tutto il resto (in particolare 'guardrails.*' e 'meta.paper_trading') è
+  # INVIOLABILE: il codice rifiuta qualsiasi modifica fuori da questa lista.
+  tunable:
+    allocation.positions_to_open: { min: 1, max: 5, type: int }
+    allocation.entry_retracement_pct: { min: 0.0, max: 0.02, type: float }
+    universe.top_candidates: { min: 3, max: 10, type: int }
+  # Parametri che l'AI NON può MAI toccare (ridondante con la whitelist, ma esplicito):
+  forbidden_prefixes: [ "guardrails", "meta", "schedule_cet", "state" ]

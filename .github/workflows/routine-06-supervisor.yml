@@ -1,15 +1,16 @@
-# Routine 01 — Premarket Analyst (cloud, GitHub Actions)
-# Orario in UTC. 12:30 UTC = 14:30 CEST (ora legale). In ora solare (da fine ottobre)
-# corrisponde alle 13:30 CET: vedi nota DST in docs/02_implementation_notes.md.
-name: routine-01-premarket
+# Routine 06 — Supervisore AI (cloud). Sabato 08:00 UTC = 10:00 CEST.
+# Gira a mercati chiusi (dopo il flat di venerdì), così la performance è "pulita".
+# L'AI può modificare SOLO i parametri in whitelist (config: supervisor.tunable),
+# mai le guardrail. Senza ANTHROPIC_API_KEY non fa nulla.
+name: routine-06-supervisor
 
 on:
   schedule:
-    - cron: '30 12 * * 1-5'
-  workflow_dispatch: {}        # permette il lancio manuale dalla tab Actions
+    - cron: '0 8 * * 6'
+  workflow_dispatch: {}
 
 permissions:
-  contents: write              # serve per ricommittare lo stato nel repo
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}
@@ -29,9 +30,9 @@ jobs:
         run: |
           git config user.name "trading-bot[bot]"
           git config user.email "trading-bot@users.noreply.github.com"
-      - name: Esegui Routine 01
+      - name: Esegui Supervisore AI
         env:
           ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
           ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}   # ricerca AI (fallback deterministico se assente)
-        run: python -m lib.routine_01_premarket
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m lib.routine_06_supervisor
