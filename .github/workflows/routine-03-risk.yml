@@ -2,8 +2,9 @@
 name: routine-03-risk
 
 on:
-  schedule:
-    - cron: '10 13 * * 1-5'
+  workflow_run:                       # parte quando la Routine 02 ha finito (ordine garantito)
+    workflows: ["routine-02-portfolio"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -15,6 +16,7 @@ concurrency:
 
 jobs:
   run:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6

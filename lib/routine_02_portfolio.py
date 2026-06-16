@@ -38,15 +38,16 @@ def run(dry_run: bool = False) -> dict | None:
     out_path = cfg["state"]["files"]["target_orders"]
     session_date = today_session_date()
 
-    # --- Input + validazione anti-staffetta-rotta ---
-    if not Path(in_path).exists():
-        log.error("Input mancante: %s. Staffetta rotta, stop.", in_path)
-        sys.exit(1)
+    # --- Idempotenza: se ho gia' prodotto l'output di oggi, non rifare. ---
+    if Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
+        log.info("target_orders di oggi gia' presente: skip (idempotente).")
+        return read_json(out_path)
+
+    # --- Input non pronto = ATTESA (no-op, exit 0), non errore. ---
+    if not Path(in_path).exists() or read_json(in_path).get("session_date") != session_date:
+        log.info("Input 01 non ancora pronto per oggi (%s): no-op, riprovo al prossimo trigger.", session_date)
+        return None
     research = read_json(in_path)
-    if research.get("session_date") != session_date:
-        log.error("Input obsoleto: session_date=%s != oggi=%s. Stop.",
-                  research.get("session_date"), session_date)
-        sys.exit(1)
     candidates = research.get("candidates", [])
     if not candidates:
         log.warning("Nessun candidato in input. Scrivo orders vuoto.")

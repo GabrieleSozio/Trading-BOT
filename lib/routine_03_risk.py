@@ -50,15 +50,16 @@ def run(dry_run: bool = False) -> dict | None:
     out_path = cfg["state"]["files"]["approved_orders"]
     session_date = today_session_date()
 
-    # --- Input + validazione ---
-    if not Path(in_path).exists():
-        log.error("Input mancante: %s. Stop.", in_path)
-        sys.exit(1)
+    # --- Idempotenza: output di oggi gia' presente -> non rifare. ---
+    if Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
+        log.info("approved_orders di oggi gia' presente: skip (idempotente).")
+        return read_json(out_path)
+
+    # --- Input non pronto = ATTESA (no-op, exit 0), non errore. ---
+    if not Path(in_path).exists() or read_json(in_path).get("session_date") != session_date:
+        log.info("Input 02 non ancora pronto per oggi (%s): no-op, riprovo al prossimo trigger.", session_date)
+        return None
     target = read_json(in_path)
-    if target.get("session_date") != session_date:
-        log.error("Input obsoleto: session_date=%s != oggi=%s. Stop.",
-                  target.get("session_date"), session_date)
-        sys.exit(1)
     in_orders = target.get("orders", [])
 
     # --- portfolio_value REALE dal broker: senza, non si applicano le guardrail ---

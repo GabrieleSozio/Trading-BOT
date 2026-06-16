@@ -17,6 +17,7 @@ import argparse
 import datetime as dt
 import logging
 import sys
+from pathlib import Path
 
 from .alpaca_rest import (
     AlpacaClient,
@@ -24,6 +25,7 @@ from .alpaca_rest import (
     atomic_write_json,
     load_config,
     now_cet,
+    read_json,
     today_session_date,
     US_EASTERN,
 )
@@ -164,6 +166,12 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     )
 
     session_date = today_session_date()
+    out_path = cfg["state"]["files"]["market_research"]
+
+    # --- Idempotenza: ricerca di oggi gia' fatta -> non rifare. ---
+    if not force and Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
+        log.info("market_research di oggi gia' presente: skip (idempotente).")
+        return read_json(out_path)
 
     # --- Giorno di borsa? (--force salta il gate, solo per validazione off-hours) ---
     try:

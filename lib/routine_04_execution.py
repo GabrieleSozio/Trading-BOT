@@ -175,14 +175,13 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
         return state
 
     # --- 1. Carica ordini approvati (fase execute) ---
-    if not Path(approved_path).exists():
-        log.error("approved_orders.json assente: niente da eseguire. Esco senza inviare.")
-        sys.exit(1)
+    # Se non sono pronti (staffetta non ancora completata oggi) NON e' un errore:
+    # no-op silenzioso (exit 0) e si riprova al tick successivo. La liquidazione EOD
+    # qui sopra avviene comunque, quindi eventuali posizioni vengono chiuse a fine giornata.
+    if not Path(approved_path).exists() or read_json(approved_path).get("session_date") != session_date:
+        log.info("approved_orders di oggi non ancora pronto: no-op, attendo la staffetta.")
+        return None
     approved = read_json(approved_path)
-    if approved.get("session_date") != session_date:
-        log.error("approved_orders obsoleto (%s != %s). Esco senza inviare.",
-                  approved.get("session_date"), session_date)
-        sys.exit(1)
     authorized = approved.get("orders", [])
     auth_tickers = {o["ticker"] for o in authorized}
 

@@ -7,7 +7,10 @@ name: routine-04-execution
 
 on:
   schedule:
-    - cron: '*/10 13-19 * * 1-5'
+    - cron: '*/10 13-19 * * 1-5'   # monitoraggio continuo + liquidazione EOD
+  workflow_run:                     # esecuzione tempestiva appena la Routine 03 approva
+    workflows: ["routine-03-risk"]
+    types: [completed]
   workflow_dispatch: {}
 
 permissions:
@@ -19,6 +22,7 @@ concurrency:
 
 jobs:
   run:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
