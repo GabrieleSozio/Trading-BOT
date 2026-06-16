@@ -1,0 +1,17 @@
+# ===== Trading-BOT — crontab per il portatile sempre acceso =====
+# CRON_TZ fissa il fuso a Roma: gli orari sotto sono CET/CEST e l'ora legale
+# viene gestita da sola. Sostituisci /PERCORSO con la cartella reale del repo
+# (es. /home/mario/Trading-BOT) e installa con:  crontab deploy/crontab.example
+CRON_TZ=Europe/Rome
+
+# Staffetta mattutina in ordine (01 -> 02 -> 03), giorni feriali alle 14:30
+30 14 * * 1-5 /PERCORSO/deploy/pipeline.sh >> /PERCORSO/state/cron.log 2>&1
+
+# Trader: un tick OGNI MINUTO 15:00-21:59 (il codice opera solo 15:30->21:46)
+* 15-21 * * 1-5 /PERCORSO/deploy/run.sh lib.routine_04_execution >> /PERCORSO/state/cron.log 2>&1
+
+# Riconciliazione: venerdi' 23:00
+0 23 * * 5 /PERCORSO/deploy/run.sh lib.routine_05_reconciliation >> /PERCORSO/state/cron.log 2>&1
+
+# Supervisore AI: sabato 10:00
+0 10 * * 6 /PERCORSO/deploy/run.sh lib.routine_06_supervisor >> /PERCORSO/state/cron.log 2>&1
