@@ -1,59 +1,54 @@
 {
-  "generated_at": "2026-06-15T19:39:12+02:00",
-  "session_date": "2026-06-15",
+  "generated_at": "2026-06-16T19:32:41+02:00",
+  "session_date": "2026-06-16",
   "universe_size": 25,
-  "selected_by": "AI (Claude)",
-  "ai_analysis": "Mercato a chiara propensione rialzista con forte concentrazione nel settore Technology. La strategia momentum intraday con filtro di ritracciamento privilegia titoli con gap consistente sostenuto da volumi elevati: il volume conferma la partecipazione istituzionale e riduce il rischio di gap-fade. Ho selezionato candidati che bilanciano forza direzionale (gap ampio) e liquidità (volume pre-market alto), evitando gap troppo piccoli (rischio bassa direzionalità) o gap enormi su volumi modesti (rischio esaurimento). NVDA, UBER e AMZN spiccano per liquidità eccezionale; AMD e QCOM per combinazione equilibrata gap/volume. L'entrata ideale resta su un piccolo ritracciamento del primo impulso, con stop sotto il minimo del pullback.",
+  "selected_by": "deterministico",
+  "ai_analysis": null,
   "candidates": [
     {
-      "ticker": "NVDA",
+      "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 212.355,
-      "prev_close": 205.17,
-      "gap_pct": 3.502,
-      "premarket_volume": 3336511,
-      "trend": "Bullish",
-      "ai_rationale": "Volume pre-market eccezionale (3.3M), il più liquido del gruppo, con gap +3.50% solido. Tech leader, ottimo per momentum intraday con basso slippage e pullback netti da sfruttare."
-    },
-    {
-      "ticker": "UBER",
-      "sector": "Industrials",
-      "last_price": 72.75,
-      "prev_close": 68.77,
-      "gap_pct": 5.7874,
-      "premarket_volume": 1304839,
-      "trend": "Bullish",
-      "ai_rationale": "Gap robusto +5.79% accompagnato da volume molto elevato (1.3M). Industrials liquido e direzionale, combinazione ideale forza/partecipazione per ingresso su ritracciamento."
+      "last_price": 119.72,
+      "prev_close": 127.85,
+      "gap_pct": -6.359,
+      "premarket_volume": 2618566,
+      "trend": "Bearish"
     },
     {
       "ticker": "AMD",
       "sector": "Technology",
-      "last_price": 548.785,
-      "prev_close": 511.74,
-      "gap_pct": 7.239,
-      "premarket_volume": 430341,
-      "trend": "Bullish",
-      "ai_rationale": "Gap forte +7.24% con volume sostenuto (430K). Tech ad alta beta e volatilità, eccellente per momentum intraday; i ritracciamenti offrono punti d'ingresso puliti."
+      "last_price": 520.19,
+      "prev_close": 547.19,
+      "gap_pct": -4.9343,
+      "premarket_volume": 356371,
+      "trend": "Bearish"
     },
     {
-      "ticker": "AMZN",
-      "sector": "Consumer Discretionary",
-      "last_price": 246.88,
-      "prev_close": 238.56,
-      "gap_pct": 3.4876,
-      "premarket_volume": 1278627,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +3.49% supportato da liquidità altissima (1.28M). Consumer Discretionary di peso, movimento direzionale affidabile e spread ridotto per scalping del momentum."
-    },
-    {
-      "ticker": "QCOM",
+      "ticker": "MU",
       "sector": "Technology",
-      "last_price": 221.64,
-      "prev_close": 211.54,
-      "gap_pct": 4.7745,
-      "premarket_volume": 420777,
-      "trend": "Bullish",
-      "ai_rationale": "Gap significativo +4.77% con buon volume (420K). Tech con forza direzionale chiara, equilibrio tra ampiezza del gap e liquidità adatto al filtro di ritracciamento."
+      "last_price": 1042.215,
+      "prev_close": 1088.17,
+      "gap_pct": -4.2231,
+      "premarket_volume": 605018,
+      "trend": "Bearish"
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 78.26,
+      "prev_close": 81.68,
+      "gap_pct": -4.1871,
+      "premarket_volume": 2576368,
+      "trend": "Bearish"
+    },
+    {
+      "ticker": "AVGO",
+      "sector": "Technology",
+      "last_price": 379.08,
+      "prev_close": 393.97,
+      "gap_pct": -3.7795,
+      "premarket_volume": 740596,
+      "trend": "Bearish"
     }
   ]
 }
