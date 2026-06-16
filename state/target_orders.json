@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-06-15T18:35:59+02:00",
-  "session_date": "2026-06-15",
-  "buying_power": 400000.0,
+  "generated_at": "2026-06-16T20:04:00+02:00",
+  "session_date": "2026-06-16",
+  "buying_power": 394598.24,
   "orders": [
     {
-      "ticker": "UBER",
-      "sector": "Industrials",
-      "action": "buy",
-      "target_entry_price": 72.76,
-      "allocated_capital": 133333.33
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 120.32,
+      "allocated_capital": 131532.75
     },
     {
-      "ticker": "AMD",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 547.08,
-      "allocated_capital": 133333.33
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "sell_short",
+      "target_entry_price": 78.65,
+      "allocated_capital": 131532.75
     },
     {
-      "ticker": "MU",
+      "ticker": "AVGO",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 1072.3,
-      "allocated_capital": 133333.33
+      "action": "sell_short",
+      "target_entry_price": 380.98,
+      "allocated_capital": 131532.75
     }
   ]
 }
