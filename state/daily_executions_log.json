@@ -1,26 +1,7 @@
 {
-  "session_date": "2026-06-15",
-  "opening_balance": 99999.97,
-  "closing_balance": 100051.86,
+  "session_date": "2026-06-16",
+  "opening_balance": 99875.79,
+  "closing_balance": 99875.79,
   "kill_switch_triggered": false,
-  "events": [
-    {
-      "ts": "2026-06-15T19:13:17+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "MU",
-      "alpaca_order_id": "d10c878e-17cb-48e6-97d3-fb08fe4d78f6",
-      "qty": 4,
-      "entry": 1071.87,
-      "stop_loss": 1056.22,
-      "take_profit": 1104.47
-    },
-    {
-      "ts": "2026-06-15T22:32:45+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "EOD flat",
-      "positions": [
-        "MU"
-      ]
-    }
-  ]
+  "events": []
 }
