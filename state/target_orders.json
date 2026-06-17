@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-06-16T20:04:00+02:00",
-  "session_date": "2026-06-16",
-  "buying_power": 394598.24,
+  "generated_at": "2026-06-17T18:12:36+02:00",
+  "session_date": "2026-06-17",
+  "buying_power": 399503.08,
   "orders": [
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 120.32,
-      "allocated_capital": 131532.75
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "action": "sell_short",
-      "target_entry_price": 78.65,
-      "allocated_capital": 131532.75
+      "action": "buy",
+      "target_entry_price": 120.39,
+      "allocated_capital": 133167.69
     },
     {
       "ticker": "AVGO",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 380.98,
-      "allocated_capital": 131532.75
+      "action": "buy",
+      "target_entry_price": 395.6,
+      "allocated_capital": 133167.69
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 134.3,
+      "allocated_capital": 133167.69
     }
   ]
 }
