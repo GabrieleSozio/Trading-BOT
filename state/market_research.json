@@ -1,54 +1,59 @@
 {
-  "generated_at": "2026-06-16T19:32:41+02:00",
-  "session_date": "2026-06-16",
+  "generated_at": "2026-06-17T18:12:10+02:00",
+  "session_date": "2026-06-17",
   "universe_size": 25,
-  "selected_by": "deterministico",
-  "ai_analysis": null,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il pre-market mostra una netta divergenza tra i tecnologici a forte momentum rialzista (chip e AI) e alcuni mega-cap in debolezza. Per la strategia momentum intraday con filtro di ritracciamento privilegiamo titoli con gap direzionali ampi e volumi elevati, dove un piccolo pullback offre un punto di ingresso a favore di trend. I migliori candidati sono concentrati nei semiconduttori, che combinano gap positivi consistenti e liquidità. INTC spicca per l'enorme volume pre-market che conferma la forza del movimento. AVGO e AMD offrono gap solidi con buona partecipazione. ARM ha il gap maggiore ma volume relativamente più contenuto, da gestire con attenzione. PLTR aggiunge diversificazione con gap positivo e volume molto alto.",
   "candidates": [
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 119.72,
-      "prev_close": 127.85,
-      "gap_pct": -6.359,
-      "premarket_volume": 2618566,
-      "trend": "Bearish"
-    },
-    {
-      "ticker": "AMD",
-      "sector": "Technology",
-      "last_price": 520.19,
-      "prev_close": 547.19,
-      "gap_pct": -4.9343,
-      "premarket_volume": 356371,
-      "trend": "Bearish"
-    },
-    {
-      "ticker": "MU",
-      "sector": "Technology",
-      "last_price": 1042.215,
-      "prev_close": 1088.17,
-      "gap_pct": -4.2231,
-      "premarket_volume": 605018,
-      "trend": "Bearish"
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "last_price": 78.26,
-      "prev_close": 81.68,
-      "gap_pct": -4.1871,
-      "premarket_volume": 2576368,
-      "trend": "Bearish"
+      "last_price": 120.99,
+      "prev_close": 117.05,
+      "gap_pct": 3.3661,
+      "premarket_volume": 1521017,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.37% rialzista con volume pre-market eccezionale (~1.52M), il più liquido tra i bullish: forte conferma di direzionalità, ideale per ingresso su ritracciamento. Settore Technology in tema."
     },
     {
       "ticker": "AVGO",
       "sector": "Technology",
-      "last_price": 379.08,
-      "prev_close": 393.97,
-      "gap_pct": -3.7795,
-      "premarket_volume": 740596,
-      "trend": "Bearish"
+      "last_price": 397.59,
+      "prev_close": 376.53,
+      "gap_pct": 5.5932,
+      "premarket_volume": 789308,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +5.59% molto forte con volume elevato (~789K) e trend Bullish: semiconduttori AI in slancio, ottimo profilo momentum per pullback intraday."
+    },
+    {
+      "ticker": "AMD",
+      "sector": "Technology",
+      "last_price": 522.07,
+      "prev_close": 507.32,
+      "gap_pct": 2.9074,
+      "premarket_volume": 216028,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +2.91% rialzista con volume adeguato (~216K), settore chip allineato al risk-on: candidato momentum coerente con la rotazione tech."
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "last_price": 134.97,
+      "prev_close": 133.22,
+      "gap_pct": 1.3136,
+      "premarket_volume": 711934,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +1.31% bullish ma con volume molto alto (~712K), forte interesse: liquidità garantisce esecuzione pulita su ritracciamento intraday."
+    },
+    {
+      "ticker": "ARM",
+      "sector": "Technology",
+      "last_price": 422.09,
+      "prev_close": 396.265,
+      "gap_pct": 6.5171,
+      "premarket_volume": 132988,
+      "trend": "Bullish",
+      "ai_rationale": "Gap maggiore della lista (+6.52%) e trend Bullish: massima direzionalità. Volume più contenuto (~133K) impone sizing prudente, ma il momentum è il più potente del gruppo."
     }
   ]
 }
