@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-06-17T18:12:36+02:00",
-  "session_date": "2026-06-17",
-  "buying_power": 399503.08,
+  "generated_at": "2026-06-18T18:00:22+02:00",
+  "session_date": "2026-06-18",
+  "buying_power": 399450.4,
   "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 207.92,
+      "allocated_capital": 133150.13
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 242.67,
+      "allocated_capital": 133150.13
+    },
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 120.39,
-      "allocated_capital": 133167.69
-    },
-    {
-      "ticker": "AVGO",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 395.6,
-      "allocated_capital": 133167.69
-    },
-    {
-      "ticker": "PLTR",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 134.3,
-      "allocated_capital": 133167.69
+      "target_entry_price": 132.57,
+      "allocated_capital": 133150.13
     }
   ]
 }
