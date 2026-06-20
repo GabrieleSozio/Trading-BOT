@@ -43,7 +43,7 @@ universe:
 
 # --- Allocazione (02 Portfolio Manager) ---
 allocation:
-  positions_to_open: 3          # quanti dei top_candidates effettivamente allocare
+  positions_to_open: 2          # quanti dei top_candidates effettivamente allocare
   selection_metric: premarket_volume   # criterio di scelta tra i candidati
   entry_retracement_pct: 0.005  # Bullish: target entry = last_price * (1 - 0.005)
 
