@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-06-22T19:16:16+02:00",
+  "session_date": "2026-06-22",
+  "universe_size": 25,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il pre-market mostra una netta divergenza: pochi titoli con gap rialzista e volumi elevati, mentre la maggioranza dei big tech presenta gap ribassisti. Per una strategia momentum intraday con filtro di ritracciamento, privilegiamo titoli con forte direzionalità confermata da volumi consistenti (alta liquidità) che consentano ingressi puliti dopo un piccolo pullback. I migliori candidati long sono SMCI, INTC e MU per la forza del gap rialzista e i volumi; lato short, NFLX e AMZN offrono momentum ribassista con volumi adeguati. Si evitano i titoli a gap debole (<2%) che mancano di direzionalità sufficiente e quelli a basso volume che rischiano slippage.",
+  "candidates": [
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 35.34,
+      "prev_close": 30.66,
+      "gap_pct": 15.2642,
+      "premarket_volume": 2949925,
+      "trend": "Bullish",
+      "ai_rationale": "Gap esplosivo +15.26% con volume pre-market molto alto (~2.95M) e trend Bullish: massima direzionalità del paniere, ideale per ingresso long dopo ritracciamento. Settore Technology liquido."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 140.12,
+      "prev_close": 133.8,
+      "gap_pct": 4.7235,
+      "premarket_volume": 3325367,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +4.72% con volume eccezionale (~3.33M, tra i piu alti) e trend Bullish. Forte interesse e liquidita ottima per scalping momentum long sul pullback."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 72.405,
+      "prev_close": 77.33,
+      "gap_pct": -6.3688,
+      "premarket_volume": 3830068,
+      "trend": "Bearish",
+      "ai_rationale": "Gap ribassista -6.37% con volume elevatissimo (~3.83M) e trend Bearish: momentum short netto, alta liquidita per ingressi su rimbalzo tecnico. Communication Services."
+    },
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "last_price": 1194.14,
+      "prev_close": 1132.59,
+      "gap_pct": 5.4344,
+      "premarket_volume": 691399,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +5.43% con volume solido (~691k) e trend Bullish. Forte direzionalita rialzista nel settore semiconduttori, candidato long su ritracciamento."
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "last_price": 233.73,
+      "prev_close": 244.61,
+      "gap_pct": -4.4479,
+      "premarket_volume": 1596004,
+      "trend": "Bearish",
+      "ai_rationale": "Gap -4.45% con volume robusto (~1.6M) e trend Bearish. Direzionalita ribassista chiara su titolo molto liquido (Consumer Discretionary), buon candidato short intraday."
+    }
+  ]
+}
