@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-22T19:16:44+02:00",
-  "session_date": "2026-06-22",
+  "generated_at": "2026-06-23T17:33:10+02:00",
+  "session_date": "2026-06-23",
   "buying_power": 399450.4,
   "orders": [
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
+      "ticker": "NVDA",
+      "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 72.77,
+      "target_entry_price": 202.2,
       "allocated_capital": 199725.2
     },
     {
-      "ticker": "INTC",
+      "ticker": "SMCI",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 139.42,
+      "action": "sell_short",
+      "target_entry_price": 33.98,
       "allocated_capital": 199725.2
     }
   ]
