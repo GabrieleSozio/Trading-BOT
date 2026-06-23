@@ -1,7 +1,18 @@
 {
-  "session_date": "2026-06-22",
+  "session_date": "2026-06-23",
   "opening_balance": 99862.6,
-  "closing_balance": 99862.6,
+  "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": []
+  "events": [
+    {
+      "ts": "2026-06-23T19:31:27+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "NVDA",
+      "alpaca_order_id": "b6f4de32-b5d3-4568-aa71-bd989a74b471",
+      "qty": 24,
+      "entry": 202.285,
+      "stop_loss": 205.23,
+      "take_profit": 196.13
+    }
+  ]
 }
