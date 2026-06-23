@@ -1,7 +1,7 @@
 {
   "session_date": "2026-06-23",
   "opening_balance": 99862.6,
-  "closing_balance": null,
+  "closing_balance": 99903.1,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -13,6 +13,14 @@
       "entry": 202.285,
       "stop_loss": 205.23,
       "take_profit": 196.13
+    },
+    {
+      "ts": "2026-06-23T23:18:20+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "EOD flat",
+      "positions": [
+        "NVDA"
+      ]
     }
   ]
 }
