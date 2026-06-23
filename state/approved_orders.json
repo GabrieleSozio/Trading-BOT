@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T19:17:03+02:00",
-  "session_date": "2026-06-22",
+  "generated_at": "2026-06-23T17:33:44+02:00",
+  "session_date": "2026-06-23",
   "portfolio_value": 99862.6,
   "guardrails_applied": [
     "R2_max_size",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
+      "ticker": "NVDA",
+      "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 72.77,
+      "target_entry_price": 202.2,
       "allocated_capital": 4993.13,
-      "stop_loss_price": 73.86,
-      "take_profit_price": 70.59
+      "stop_loss_price": 205.23,
+      "take_profit_price": 196.13
     },
     {
-      "ticker": "INTC",
+      "ticker": "SMCI",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 139.42,
+      "action": "sell_short",
+      "target_entry_price": 33.98,
       "allocated_capital": 4993.13,
-      "stop_loss_price": 137.33,
-      "take_profit_price": 143.6
+      "stop_loss_price": 34.49,
+      "take_profit_price": 32.96
     }
   ]
 }
