@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-23T17:33:44+02:00",
-  "session_date": "2026-06-23",
-  "portfolio_value": 99862.6,
+  "generated_at": "2026-06-24T17:19:08+02:00",
+  "session_date": "2026-06-24",
+  "portfolio_value": 99894.8,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -12,20 +12,20 @@
     {
       "ticker": "NVDA",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 202.2,
-      "allocated_capital": 4993.13,
-      "stop_loss_price": 205.23,
-      "take_profit_price": 196.13
+      "action": "buy",
+      "target_entry_price": 200.24,
+      "allocated_capital": 4994.74,
+      "stop_loss_price": 197.24,
+      "take_profit_price": 206.25
     },
     {
-      "ticker": "SMCI",
-      "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 33.98,
-      "allocated_capital": 4993.13,
-      "stop_loss_price": 34.49,
-      "take_profit_price": 32.96
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 241.17,
+      "allocated_capital": 4994.74,
+      "stop_loss_price": 237.55,
+      "take_profit_price": 248.41
     }
   ]
 }
