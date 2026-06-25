@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-24T17:18:51+02:00",
-  "session_date": "2026-06-24",
-  "buying_power": 393767.26,
+  "generated_at": "2026-06-25T17:24:06+02:00",
+  "session_date": "2026-06-25",
+  "buying_power": 394292.66,
   "orders": [
     {
       "ticker": "NVDA",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 200.24,
-      "allocated_capital": 196883.63
+      "action": "sell_short",
+      "target_entry_price": 196.65,
+      "allocated_capital": 197146.33
     },
     {
-      "ticker": "AMZN",
-      "sector": "Consumer Discretionary",
-      "action": "buy",
-      "target_entry_price": 241.17,
-      "allocated_capital": 196883.63
+      "ticker": "AAPL",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 278.41,
+      "allocated_capital": 197146.33
     }
   ]
 }
