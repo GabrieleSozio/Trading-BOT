@@ -1,21 +1,11 @@
 {
-  "session_date": "2026-06-24",
-  "opening_balance": 99965.74,
-  "closing_balance": 99872.76,
+  "session_date": "2026-06-25",
+  "opening_balance": 99989.74,
+  "closing_balance": 99989.74,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-06-24T19:30:07+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "AMZN",
-      "alpaca_order_id": "1164c379-82ac-4594-a003-aaf3ca2e0704",
-      "qty": 20,
-      "entry": 239.36,
-      "stop_loss": 237.55,
-      "take_profit": 248.41
-    },
-    {
-      "ts": "2026-06-24T22:59:17+02:00",
+      "ts": "2026-06-25T21:57:26+02:00",
       "type": "LIQUIDATE_ALL",
       "reason": "EOD flat",
       "positions": [
