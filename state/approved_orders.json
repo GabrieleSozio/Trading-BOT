@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-25T17:24:26+02:00",
-  "session_date": "2026-06-25",
-  "portfolio_value": 99981.46,
+  "generated_at": "2026-06-26T17:11:01+02:00",
+  "session_date": "2026-06-26",
+  "portfolio_value": 100046.26,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 196.65,
-      "allocated_capital": 4999.07,
-      "stop_loss_price": 199.6,
-      "take_profit_price": 190.75
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 74.34,
+      "allocated_capital": 5002.31,
+      "stop_loss_price": 73.22,
+      "take_profit_price": 76.57
     },
     {
-      "ticker": "AAPL",
+      "ticker": "MSFT",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 278.41,
-      "allocated_capital": 4999.07,
-      "stop_loss_price": 282.59,
-      "take_profit_price": 270.06
+      "action": "buy",
+      "target_entry_price": 368.25,
+      "allocated_capital": 5002.31,
+      "stop_loss_price": 362.73,
+      "take_profit_price": 379.3
     }
   ]
 }
