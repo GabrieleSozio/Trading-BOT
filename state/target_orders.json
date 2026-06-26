@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-25T17:24:06+02:00",
-  "session_date": "2026-06-25",
-  "buying_power": 394292.66,
+  "generated_at": "2026-06-26T17:10:43+02:00",
+  "session_date": "2026-06-26",
+  "buying_power": 394620.88,
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 196.65,
-      "allocated_capital": 197146.33
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 74.34,
+      "allocated_capital": 197310.44
     },
     {
-      "ticker": "AAPL",
+      "ticker": "MSFT",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 278.41,
-      "allocated_capital": 197146.33
+      "action": "buy",
+      "target_entry_price": 368.25,
+      "allocated_capital": 197310.44
     }
   ]
 }
