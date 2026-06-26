@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-06-25T17:23:47+02:00",
-  "session_date": "2026-06-25",
+  "generated_at": "2026-06-26T17:10:26+02:00",
+  "session_date": "2026-06-26",
   "universe_size": 25,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Sessione caratterizzata da debolezza generalizzata del settore Technology, con la maggior parte dei titoli in gap negativo. I migliori candidati per una strategia di momentum intraday con filtro di ritracciamento sono quelli con forte direzionalità (gap ampio) e volumi elevati, che offrono liquidita' sufficiente e movimenti netti su cui agganciarsi dopo un pullback. Per il lato long privilegiamo MU e QCOM (gap positivi rilevanti con buon volume); per il lato short i bearish con gap ampio e altissimo volume come AAPL, PLTR e NVDA, che mostrano direzionalita' netta al ribasso confermata da liquidita' istituzionale. Il fund opera solo intraday quindi la priorita' e' la combinazione gap+volume, non la direzione assoluta.",
+  "ai_analysis": "Il pre-market mostra una netta predominanza rialzista nel settore Technology e Communication Services, con diversi titoli ad alto volume e gap significativi. Per una strategia di momentum intraday con filtro di ritracciamento, privilegio titoli con forte direzionalità rialzista (trend Bullish), gap consistente e soprattutto volumi elevati che confermano la partecipazione istituzionale e garantiscono liquidità per l'entrata dopo un piccolo ritracciamento. NFLX e MSFT spiccano per la combinazione di gap molto forte e volumi tra i più alti della lista. PLTR, UBER e PYPL completano la selezione con gap robusti, trend allineato e volumi superiori al resto del gruppo rialzista. Escludo i titoli bearish (non coerenti con momentum long) e i Bullish con volumi troppo bassi (SHOP, SNOW, COIN, ADBE) che renderebbero il ritracciamento meno affidabile.",
   "candidates": [
     {
-      "ticker": "MU",
-      "sector": "Technology",
-      "last_price": 1182.13,
-      "prev_close": 1047.92,
-      "gap_pct": 12.8073,
-      "premarket_volume": 886420,
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 74.71,
+      "prev_close": 70.92,
+      "gap_pct": 5.344,
+      "premarket_volume": 1204348,
       "trend": "Bullish",
-      "ai_rationale": "Gap straordinario +12.81% con trend Bullish e volume solido (~886k): forte direzionalita' long, candidato ideale per ingresso su ritracciamento al rialzo nel Tech."
+      "ai_rationale": "Gap rialzista molto forte (+5.34%), il maggiore tra i Bullish, con volume elevato (~1.2M) e trend Bullish confermato. Communication Services in forza: ideale per ingresso su ritracciamento."
     },
     {
-      "ticker": "AAPL",
+      "ticker": "MSFT",
       "sector": "Technology",
-      "last_price": 277.02,
-      "prev_close": 293.32,
-      "gap_pct": -5.5571,
-      "premarket_volume": 1814029,
-      "trend": "Bearish",
-      "ai_rationale": "Gap -5.56% Bearish con volume molto elevato (~1.81M): massima liquidita' e direzionalita' short netta, ottimo per momentum ribassista dopo rimbalzo tecnico."
+      "last_price": 370.1,
+      "prev_close": 352.415,
+      "gap_pct": 5.0182,
+      "premarket_volume": 1004044,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +5.02% con volume tra i piu alti (~1M) e trend Bullish. Mega-cap Tech liquidissima, momentum solido e spread ridotto per entrate precise."
     },
     {
       "ticker": "PLTR",
       "sector": "Technology",
-      "last_price": 107.42,
-      "prev_close": 113.5,
-      "gap_pct": -5.3568,
-      "premarket_volume": 662246,
-      "trend": "Bearish",
-      "ai_rationale": "Gap -5.36% Bearish con buon volume (~662k): movimento direzionale ampio nel Tech, adatto a short su pullback."
-    },
-    {
-      "ticker": "QCOM",
-      "sector": "Technology",
-      "last_price": 204.8,
-      "prev_close": 197.39,
-      "gap_pct": 3.754,
-      "premarket_volume": 783767,
+      "last_price": 111.9,
+      "prev_close": 107.3,
+      "gap_pct": 4.287,
+      "premarket_volume": 566218,
       "trend": "Bullish",
-      "ai_rationale": "Gap +3.75% Bullish con volume forte (~784k): unica alternativa long oltre MU con buona spinta e liquidita', settore Tech."
+      "ai_rationale": "Gap +4.29% e volume robusto (~566k), trend Bullish. Tech ad alta volatilita, ottimo candidato per momentum dopo piccolo pullback."
     },
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "last_price": 195.67,
-      "prev_close": 198.94,
-      "gap_pct": -1.6437,
-      "premarket_volume": 1847186,
-      "trend": "Bearish",
-      "ai_rationale": "Gap -1.64% Bearish ma volume altissimo (~1.85M): liquidita' record che consente esecuzione pulita su momentum short intraday, leader di settore."
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "last_price": 74.56,
+      "prev_close": 72.24,
+      "gap_pct": 3.2115,
+      "premarket_volume": 510606,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.21% con volume elevato (~510k) e trend Bullish. Industrials liquido, direzionalita chiara e buona partecipazione."
+    },
+    {
+      "ticker": "PYPL",
+      "sector": "Financials",
+      "last_price": 43.88,
+      "prev_close": 42.4,
+      "gap_pct": 3.4906,
+      "premarket_volume": 400703,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.49% e volume alto (~400k), trend Bullish. Financials liquido con momentum confermato dai volumi, adatto a entrata su ritracciamento."
     }
   ]
 }
