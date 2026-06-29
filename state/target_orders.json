@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-06-29T18:24:04+02:00",
+  "session_date": "2026-06-29",
+  "buying_power": 388670.36,
+  "orders": [
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 74.45,
+      "allocated_capital": 194335.18
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 239.0,
+      "allocated_capital": 194335.18
+    }
+  ]
+}
