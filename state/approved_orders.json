@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-06-29T18:24:24+02:00",
+  "session_date": "2026-06-29",
+  "portfolio_value": 99996.88,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": [
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 74.45,
+      "allocated_capital": 4999.84,
+      "stop_loss_price": 73.33,
+      "take_profit_price": 76.68
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 239.0,
+      "allocated_capital": 4999.84,
+      "stop_loss_price": 235.41,
+      "take_profit_price": 246.17
+    }
+  ]
+}
