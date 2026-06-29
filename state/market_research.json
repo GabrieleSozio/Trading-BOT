@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-06-29T18:23:47+02:00",
+  "session_date": "2026-06-29",
+  "universe_size": 25,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il mercato mostra una chiara propensione rialzista nel pre-market, con i gap piu' forti concentrati su Consumer Discretionary, Communication Services e Technology, accompagnati da volumi elevati. Per una strategia momentum intraday con filtro di ritracciamento privilegio titoli con gap rialzista significativo, trend Bullish confermato e volumi solidi che garantiscano liquidita' e capacita' di assorbire un piccolo pullback prima della ripresa direzionale. Ho scartato i titoli con gap deboli (<1%) o trend ribassista. La selezione bilancia forza del gap e profondita' del book.",
+  "candidates": [
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "last_price": 402.99,
+      "prev_close": 379,
+      "gap_pct": 6.3298,
+      "premarket_volume": 543621,
+      "trend": "Bullish",
+      "ai_rationale": "Gap piu' forte della lista (+6.33%) con trend Bullish e volume buono (~544k). Consumer Discretionary ad alta volatilita', ideale per entrate su ritracciamento dopo l'apertura."
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "last_price": 240.205,
+      "prev_close": 230.6,
+      "gap_pct": 4.1652,
+      "premarket_volume": 2091474,
+      "trend": "Bullish",
+      "ai_rationale": "Gap robusto (+4.17%) con volume eccezionale (~2.09M), la combinazione migliore di forza direzionale e liquidita'. Pullback intraday facilmente tradabili."
+    },
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "last_price": 352.12,
+      "prev_close": 335.79,
+      "gap_pct": 4.8632,
+      "premarket_volume": 620880,
+      "trend": "Bullish",
+      "ai_rationale": "Gap molto forte (+4.86%) e volume elevato (~621k), trend Bullish solido. Communication Services in spinta, ottimo candidato momentum."
+    },
+    {
+      "ticker": "CSCO",
+      "sector": "Technology",
+      "last_price": 117.97,
+      "prev_close": 113.45,
+      "gap_pct": 3.9841,
+      "premarket_volume": 384438,
+      "trend": "Bullish",
+      "ai_rationale": "Gap consistente (+3.98%) con volume adeguato (~384k) e trend Bullish. Tech con direzionalita' marcata, buon profilo per ingresso su ritracciamento."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 74.82,
+      "prev_close": 73.63,
+      "gap_pct": 1.6162,
+      "premarket_volume": 2165048,
+      "trend": "Bullish",
+      "ai_rationale": "Gap moderato (+1.62%) ma volume tra i piu' alti (~2.17M), garantisce liquidita' eccellente e stabilita' nei pullback. Trend Bullish in Communication Services."
+    }
+  ]
+}
