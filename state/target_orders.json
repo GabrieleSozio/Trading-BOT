@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-06-29T18:24:04+02:00",
-  "session_date": "2026-06-29",
-  "buying_power": 388670.36,
+  "generated_at": "2026-06-30T17:11:19+02:00",
+  "session_date": "2026-06-30",
+  "buying_power": 381775.51,
   "orders": [
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
+      "ticker": "NVDA",
+      "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 74.45,
-      "allocated_capital": 194335.18
+      "target_entry_price": 196.79,
+      "allocated_capital": 190887.76
     },
     {
-      "ticker": "AMZN",
-      "sector": "Consumer Discretionary",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 239.0,
-      "allocated_capital": 194335.18
+      "target_entry_price": 138.36,
+      "allocated_capital": 190887.76
     }
   ]
 }
