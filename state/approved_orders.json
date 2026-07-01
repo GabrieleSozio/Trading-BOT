@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-30T17:11:38+02:00",
-  "session_date": "2026-06-30",
-  "portfolio_value": 99764.91,
+  "generated_at": "2026-07-01T17:19:29+02:00",
+  "session_date": "2026-07-01",
+  "portfolio_value": 100093.35,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
+      "ticker": "NFLX",
+      "sector": "Communication Services",
       "action": "buy",
-      "target_entry_price": 196.79,
-      "allocated_capital": 4988.25,
-      "stop_loss_price": 193.84,
-      "take_profit_price": 202.69
+      "target_entry_price": 73.0,
+      "allocated_capital": 5004.67,
+      "stop_loss_price": 71.91,
+      "take_profit_price": 75.19
     },
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "target_entry_price": 138.36,
-      "allocated_capital": 4988.25,
-      "stop_loss_price": 136.28,
-      "take_profit_price": 142.51
+      "target_entry_price": 240.4,
+      "allocated_capital": 5004.67,
+      "stop_loss_price": 236.79,
+      "take_profit_price": 247.61
     }
   ]
 }
