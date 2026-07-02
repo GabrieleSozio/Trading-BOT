@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-07-01T17:18:49+02:00",
-  "session_date": "2026-07-01",
+  "generated_at": "2026-07-02T16:38:41+02:00",
+  "session_date": "2026-07-02",
   "universe_size": 25,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Il mercato mostra un tono complessivamente bullish nella fascia tech/communication, con diversi titoli in gap up significativo accompagnati da volumi elevati. La strategia momentum intraday con filtro di ritracciamento privilegia titoli con forte direzionalità (gap ampio + trend bullish) e liquidità sufficiente per gestire ingressi su pullback. Ho scartato i titoli bearish (MU, INTC, SMCI, NVDA) perche la strategia opera long su momentum rialzista, e i gap deboli (<3%) con scarsa spinta. Ho privilegiato la combinazione gap elevato + volume alto, che offre volatilita e movimento sfruttabile intraday.",
+  "ai_analysis": "La strategia momentum intraday con filtro di ritracciamento privilegia titoli con forte direzionalità (gap ampio) confermata dal trend e sostenuta da alti volumi pre-market, che garantiscono liquidita' e continuazione del movimento. Ho selezionato prevalentemente candidati long (gap positivo + trend Bullish) con volumi elevati, aggiungendo un candidato short di alta convinzione (TSLA) per il gap fortemente negativo. Ho scartato titoli con gap modesto (<1.4%) o volumi troppo bassi che non offrono spunti direzionali affidabili.",
   "candidates": [
     {
-      "ticker": "META",
-      "sector": "Communication Services",
-      "last_price": 622.55,
-      "prev_close": 563.1,
-      "gap_pct": 10.5576,
-      "premarket_volume": 768621,
+      "ticker": "AAPL",
+      "sector": "Technology",
+      "last_price": 305.03,
+      "prev_close": 294.42,
+      "gap_pct": 3.6037,
+      "premarket_volume": 892852,
       "trend": "Bullish",
-      "ai_rationale": "Gap forte +10.56% con trend bullish e volume molto elevato (768k). Communication Services in forza: massima direzionalita, ideale per ingresso su ritracciamento del primo impulso."
+      "ai_rationale": "Gap +3.60% con trend Bullish e volume pre-market elevatissimo (~893k): forte direzionalita' long su tech mega-cap liquida, ideale per ingresso su ritracciamento."
     },
     {
       "ticker": "PLTR",
       "sector": "Technology",
-      "last_price": 127.3,
-      "prev_close": 116.64,
-      "gap_pct": 9.1392,
-      "premarket_volume": 760487,
+      "last_price": 131.455,
+      "prev_close": 125.75,
+      "gap_pct": 4.5368,
+      "premarket_volume": 468898,
       "trend": "Bullish",
-      "ai_rationale": "Gap +9.14% bullish con volume tra i piu alti della lista (760k). Tech ad alta volatilita, ottimo candidato momentum con liquidita per gestire pullback."
+      "ai_rationale": "Gap +4.54% Bullish con volume molto alto (~469k): momentum tecnologico deciso, buona volatilita' intraday per catturare la continuazione dopo pullback."
     },
     {
       "ticker": "NFLX",
       "sector": "Communication Services",
-      "last_price": 73.37,
-      "prev_close": 71.39,
-      "gap_pct": 2.7735,
-      "premarket_volume": 1043007,
+      "last_price": 76.415,
+      "prev_close": 74.19,
+      "gap_pct": 2.9991,
+      "premarket_volume": 839223,
       "trend": "Bullish",
-      "ai_rationale": "Gap +2.77% bullish ma volume eccezionale (1.04M), il piu alto tra i bullish. La forte partecipazione supporta continuazione del trend dopo eventuale ritracciamento."
+      "ai_rationale": "Gap +3.00% Bullish con volume tra i piu' alti della lista (~839k): forte spinta long su Communication Services, liquidita' eccellente."
     },
     {
-      "ticker": "AAPL",
-      "sector": "Technology",
-      "last_price": 295.41,
-      "prev_close": 289.24,
-      "gap_pct": 2.1332,
-      "premarket_volume": 722353,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +2.13% bullish con volume elevatissimo (722k). Titolo mega-cap liquidissimo, spread ridotti e movimenti ordinati: ideale per entry su pullback controllato."
-    },
-    {
-      "ticker": "AMZN",
+      "ticker": "TSLA",
       "sector": "Consumer Discretionary",
-      "last_price": 241.61,
-      "prev_close": 238.23,
-      "gap_pct": 1.4188,
-      "premarket_volume": 811275,
+      "last_price": 399.6,
+      "prev_close": 425.36,
+      "gap_pct": -6.056,
+      "premarket_volume": 407591,
+      "trend": "Bearish",
+      "ai_rationale": "Gap -6.06%, il piu' ampio in assoluto, trend Bearish: candidato short di alta convinzione su titolo liquido: rimbalzo tecnico offre ottimo punto d'ingresso short."
+    },
+    {
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 168.91,
+      "prev_close": 159.32,
+      "gap_pct": 6.0193,
+      "premarket_volume": 84053,
       "trend": "Bullish",
-      "ai_rationale": "Gap +1.42% bullish con volume molto alto (811k). Consumer Discretionary, liquidita eccellente e trend positivo: buon candidato per momentum con basso rischio di slippage."
+      "ai_rationale": "Gap +6.02% Bullish, il piu' forte tra i long: alta volatilita' tipica dei Financials cripto-correlati, momentum aggressivo per intraday."
     }
   ]
 }
