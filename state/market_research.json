@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-07-06T17:59:33+02:00",
+  "session_date": "2026-07-06",
+  "universe_size": 25,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La sessione pre-market mostra una chiara predominanza rialzista nel settore Technology, con diversi titoli che presentano gap significativi accompagnati da volumi elevati - condizioni ideali per una strategia momentum intraday con filtro di ritracciamento. Ho privilegiato titoli che combinano forza direzionale (gap ampio + trend Bullish) con liquidità robusta, che consente ingressi puliti dopo un piccolo ritracciamento e riduce lo slippage. Ho scartato i titoli con gap troppo ridotti (<1.5%) o volume insufficiente, e i titoli bearish (NFLX, UBER, PYPL, MSFT, ADBE) non coerenti con l'impostazione long momentum. La selezione bilancia gap esplosivi (AMD, TSLA) con nomi ad altissima liquidità (INTC, PLTR) per garantire eseguibilità.",
+  "candidates": [
+    {
+      "ticker": "AMD",
+      "sector": "Technology",
+      "last_price": 567.1,
+      "prev_close": 518.25,
+      "gap_pct": 9.426,
+      "premarket_volume": 452465,
+      "trend": "Bullish",
+      "ai_rationale": "Gap piu forte della lista (+9.43%) con trend Bullish e volume solido (452k). Semiconduttori in forte spinta: candidato ideale per ingresso su ritracciamento verso VWAP con target di continuazione."
+    },
+    {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "last_price": 414.105,
+      "prev_close": 392.82,
+      "gap_pct": 5.4185,
+      "premarket_volume": 514821,
+      "trend": "Bullish",
+      "ai_rationale": "Gap robusto (+5.42%), volume elevato (514k) e altissima liquidita intraday. Titolo ad alto beta e ampi range che favorisce setup momentum con buon rapporto rischio/rendimento dopo pullback."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 124.62,
+      "prev_close": 120.395,
+      "gap_pct": 3.5093,
+      "premarket_volume": 911792,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.51% con volume tra i piu alti (911k), settore Technology in tema. Liquidita eccellente per ingressi precisi e trend Bullish confermato: ottimo per continuazione post-ritracciamento."
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "last_price": 133.7,
+      "prev_close": 129.18,
+      "gap_pct": 3.499,
+      "premarket_volume": 653835,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.50% con volume molto forte (653k) e trend Bullish. Titolo momentum-driven e volatile, adatto a spunti direzionali intraday con filtro di rientro."
+    },
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "last_price": 1011.69,
+      "prev_close": 975.405,
+      "gap_pct": 3.72,
+      "premarket_volume": 355066,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.72% con volume consistente (355k) nel comparto semiconduttori in forza. Trend Bullish e prezzo elevato che offre ampiezza di movimento per catturare la continuazione dopo il pullback."
+    }
+  ]
+}
