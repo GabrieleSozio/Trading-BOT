@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-07-06T17:59:55+02:00",
+  "session_date": "2026-07-06",
+  "buying_power": 383355.98,
+  "orders": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 124.0,
+      "allocated_capital": 191677.99
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 133.03,
+      "allocated_capital": 191677.99
+    }
+  ]
+}
