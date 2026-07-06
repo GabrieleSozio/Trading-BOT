@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-07-06T18:00:22+02:00",
+  "session_date": "2026-07-06",
+  "portfolio_value": 100293.56,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 124.0,
+      "allocated_capital": 5014.68,
+      "stop_loss_price": 122.14,
+      "take_profit_price": 127.72
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 133.03,
+      "allocated_capital": 5014.68,
+      "stop_loss_price": 131.03,
+      "take_profit_price": 137.02
+    }
+  ]
+}
