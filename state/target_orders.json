@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-06T17:59:55+02:00",
-  "session_date": "2026-07-06",
-  "buying_power": 383355.98,
+  "generated_at": "2026-07-07T17:25:28+02:00",
+  "session_date": "2026-07-07",
+  "buying_power": 359755.4,
   "orders": [
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 124.0,
-      "allocated_capital": 191677.99
+      "action": "sell_short",
+      "target_entry_price": 109.61,
+      "allocated_capital": 179877.7
     },
     {
-      "ticker": "PLTR",
+      "ticker": "MU",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 133.03,
-      "allocated_capital": 191677.99
+      "action": "sell_short",
+      "target_entry_price": 914.0,
+      "allocated_capital": 179877.7
     }
   ]
 }
