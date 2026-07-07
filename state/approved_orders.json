@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-06T18:00:22+02:00",
-  "session_date": "2026-07-06",
-  "portfolio_value": 100293.56,
+  "generated_at": "2026-07-07T17:25:46+02:00",
+  "session_date": "2026-07-07",
+  "portfolio_value": 89938.85,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -12,20 +12,20 @@
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 124.0,
-      "allocated_capital": 5014.68,
-      "stop_loss_price": 122.14,
-      "take_profit_price": 127.72
+      "action": "sell_short",
+      "target_entry_price": 109.61,
+      "allocated_capital": 4496.94,
+      "stop_loss_price": 111.25,
+      "take_profit_price": 106.32
     },
     {
-      "ticker": "PLTR",
+      "ticker": "MU",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 133.03,
-      "allocated_capital": 5014.68,
-      "stop_loss_price": 131.03,
-      "take_profit_price": 137.02
+      "action": "sell_short",
+      "target_entry_price": 914.0,
+      "allocated_capital": 4496.94,
+      "stop_loss_price": 927.71,
+      "take_profit_price": 886.58
     }
   ]
 }
