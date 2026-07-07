@@ -1,7 +1,7 @@
 {
   "session_date": "2026-07-07",
   "opening_balance": 100567.27,
-  "closing_balance": null,
+  "closing_balance": 100411.52,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -19,6 +19,18 @@
       "type": "API_ERROR",
       "ticker": "MU",
       "detail": "POST https://paper-api.alpaca.markets/v2/orders -> HTTP 422: {\"base_price\":\"936.82\",\"code\":42210000,\"message\":\"stop_loss.stop_price must be \\u003e= base_price + 0.01\"}"
+    },
+    {
+      "ts": "2026-07-07T23:05:41+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "EOD flat",
+      "positions": [
+        "INTC",
+        "MSFT",
+        "NFLX",
+        "NVDA",
+        "PLTR"
+      ]
     }
   ]
 }
