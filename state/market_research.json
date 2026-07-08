@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-07-07T17:25:10+02:00",
-  "session_date": "2026-07-07",
+  "generated_at": "2026-07-08T16:55:44+02:00",
+  "session_date": "2026-07-08",
   "universe_size": 25,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Il quadro pre-market mostra una forte polarizzazione: i semiconduttori (INTC, AMD, ARM, MU, NVDA) presentano gap ribassisti marcati, mentre alcuni large cap e software mostrano gap rialzisti con buoni volumi. Per una strategia di momentum intraday con filtro di ritracciamento, privilegio titoli con direzionalità netta E volume elevato, che offrono liquidità e continuazione dopo il pullback iniziale. Sul lato short i candidati migliori sono INTC (gap enorme e altissimo volume) e MU (gap forte con volume solido). Sul lato long favorisco PLTR, MSFT e NFLX per gap rialzista supportato da volumi consistenti che permettono ingressi puliti dopo un ritracciamento. Evito titoli con volume troppo basso (AMD, ARM, COIN) nonostante gap ampi, perché la scarsa liquidità aumenta lo slippage e rende meno affidabile il pattern di ritracciamento.",
+  "ai_analysis": "Il pre-market mostra un mercato prevalentemente ribassista sul settore Technology, con alcuni titoli in controtendenza rialzista. Per la strategia di momentum intraday con filtro di ritracciamento privilegio i titoli con forte direzionalità (gap ampio) confermata dal trend e sostenuta da volumi elevati, che offrono liquidità e movimenti puliti. AVGO e SMCI offrono il miglior momentum rialzista con volumi robusti; sul lato ribassista INTC, PLTR e ORCL combinano gap negativi significativi, trend allineato e alti volumi, ideali per short su rimbalzo/ritracciamento. NVDA ha volume enorme ma gap troppo neutro per un setup direzionale netto.",
   "candidates": [
+    {
+      "ticker": "AVGO",
+      "sector": "Technology",
+      "last_price": 388.57,
+      "prev_close": 370.53,
+      "gap_pct": 4.8687,
+      "premarket_volume": 350763,
+      "trend": "Bullish",
+      "ai_rationale": "Gap rialzista molto forte (+4.87%) con trend Bullish confermato e volume solido (350k). Il gap piu ampio in direzione long del panel offre ottima direzionalita per un ingresso su ritracciamento; settore Technology liquido."
+    },
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 109.06,
-      "prev_close": 122.25,
-      "gap_pct": -10.7894,
-      "premarket_volume": 1865103,
+      "last_price": 106.6,
+      "prev_close": 110.35,
+      "gap_pct": -3.3983,
+      "premarket_volume": 810009,
       "trend": "Bearish",
-      "ai_rationale": "Gap ribassista estremo (-10.79%) con il volume pre-market piu alto della lista (1.86M). Trend Bearish netto nel Technology: candidato ideale per short momentum su rimbalzo/ritracciamento verso il gap."
-    },
-    {
-      "ticker": "MU",
-      "sector": "Technology",
-      "last_price": 909.45,
-      "prev_close": 981.8,
-      "gap_pct": -7.3691,
-      "premarket_volume": 751501,
-      "trend": "Bearish",
-      "ai_rationale": "Gap -7.37% con volume elevato (751k) e trend Bearish coerente col settore semiconduttori in vendita. Buona direzionalita per short intraday dopo pullback."
+      "ai_rationale": "Gap ribassista deciso (-3.40%) con trend Bearish e volume di gran lunga il piu alto tra i ribassisti (810k). Elevata liquidita e forte direzionalita ideali per short intraday dopo rimbalzo tecnico."
     },
     {
       "ticker": "PLTR",
       "sector": "Technology",
-      "last_price": 135.34,
-      "prev_close": 132.53,
-      "gap_pct": 2.1203,
-      "premarket_volume": 575396,
-      "trend": "Bullish",
-      "ai_rationale": "Gap rialzista +2.12% con volume molto forte (575k) e trend Bullish. Titolo liquido e volatile, ottimo per long momentum su ritracciamento."
+      "last_price": 128.375,
+      "prev_close": 134.37,
+      "gap_pct": -4.4616,
+      "premarket_volume": 370807,
+      "trend": "Bearish",
+      "ai_rationale": "Gap negativo marcato (-4.46%) con trend Bearish e volume elevato (370k). Titolo Technology molto liquido e volatile, ottimo per momentum short su ritracciamento."
     },
     {
-      "ticker": "MSFT",
+      "ticker": "SMCI",
       "sector": "Technology",
-      "last_price": 393.53,
-      "prev_close": 386.81,
-      "gap_pct": 1.7373,
-      "premarket_volume": 568949,
+      "last_price": 26.82,
+      "prev_close": 26.24,
+      "gap_pct": 2.2104,
+      "premarket_volume": 483334,
       "trend": "Bullish",
-      "ai_rationale": "Gap +1.74% con volume alto (569k), large cap tech liquidissima e trend Bullish. Ingressi puliti e slippage contenuto dopo il piccolo ritracciamento."
+      "ai_rationale": "Gap rialzista (+2.21%) con trend Bullish e volume tra i piu alti del panel (483k). Titolo ad alta volatilita che offre ampi movimenti intraday, buon candidato momentum long."
     },
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "last_price": 77.06,
-      "prev_close": 76.05,
-      "gap_pct": 1.3281,
-      "premarket_volume": 613938,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +1.33% con volume elevato (614k) e trend Bullish nel Communication Services. Direzionalita e liquidita adeguate per continuazione long intraday."
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "last_price": 138.59,
+      "prev_close": 141.68,
+      "gap_pct": -2.181,
+      "premarket_volume": 280127,
+      "trend": "Bearish",
+      "ai_rationale": "Gap ribassista (-2.18%) con trend Bearish e volume consistente (280k). Direzionalita chiara e liquidita adeguata per un setup short intraday su piccolo pullback."
     }
   ]
 }
