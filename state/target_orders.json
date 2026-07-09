@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-08T16:56:10+02:00",
-  "session_date": "2026-07-08",
-  "buying_power": 371857.51,
+  "generated_at": "2026-07-09T17:41:20+02:00",
+  "session_date": "2026-07-09",
+  "buying_power": 370700.7,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 107.13,
-      "allocated_capital": 185928.76
-    },
-    {
-      "ticker": "SMCI",
+      "ticker": "ORCL",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 26.69,
-      "allocated_capital": 185928.76
+      "target_entry_price": 145.6,
+      "allocated_capital": 185350.35
+    },
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 1012.7,
+      "allocated_capital": 185350.35
     }
   ]
 }
