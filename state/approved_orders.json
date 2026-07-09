@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-08T16:56:32+02:00",
-  "session_date": "2026-07-08",
-  "portfolio_value": 100092.36,
+  "generated_at": "2026-07-09T17:41:43+02:00",
+  "session_date": "2026-07-09",
+  "portfolio_value": 99868.17,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 107.13,
-      "allocated_capital": 5004.62,
-      "stop_loss_price": 108.74,
-      "take_profit_price": 103.92
-    },
-    {
-      "ticker": "SMCI",
+      "ticker": "ORCL",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 26.69,
-      "allocated_capital": 5004.62,
-      "stop_loss_price": 26.29,
-      "take_profit_price": 27.49
+      "target_entry_price": 145.6,
+      "allocated_capital": 4993.41,
+      "stop_loss_price": 143.42,
+      "take_profit_price": 149.97
+    },
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 1012.7,
+      "allocated_capital": 4993.41,
+      "stop_loss_price": 997.51,
+      "take_profit_price": 1043.08
     }
   ]
 }
