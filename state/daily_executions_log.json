@@ -1,7 +1,7 @@
 {
   "session_date": "2026-07-09",
   "opening_balance": 99926.47,
-  "closing_balance": null,
+  "closing_balance": 99909.58,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -23,6 +23,19 @@
       "entry": 1002.145,
       "stop_loss": 997.51,
       "take_profit": 1043.08
+    },
+    {
+      "ts": "2026-07-09T23:06:14+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "EOD flat",
+      "positions": [
+        "INTC",
+        "MSFT",
+        "NFLX",
+        "NVDA",
+        "ORCL",
+        "PLTR"
+      ]
     }
   ]
 }
