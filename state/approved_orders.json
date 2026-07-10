@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-09T17:41:43+02:00",
-  "session_date": "2026-07-09",
-  "portfolio_value": 99868.17,
+  "generated_at": "2026-07-10T17:12:30+02:00",
+  "session_date": "2026-07-10",
+  "portfolio_value": 99598.39,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "ORCL",
+      "ticker": "NVDA",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 145.6,
-      "allocated_capital": 4993.41,
-      "stop_loss_price": 143.42,
-      "take_profit_price": 149.97
+      "target_entry_price": 206.11,
+      "allocated_capital": 4979.92,
+      "stop_loss_price": 203.02,
+      "take_profit_price": 212.29
     },
     {
-      "ticker": "MU",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 1012.7,
-      "allocated_capital": 4993.41,
-      "stop_loss_price": 997.51,
-      "take_profit_price": 1043.08
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "sell_short",
+      "target_entry_price": 73.35,
+      "allocated_capital": 4979.92,
+      "stop_loss_price": 74.45,
+      "take_profit_price": 71.15
     }
   ]
 }
