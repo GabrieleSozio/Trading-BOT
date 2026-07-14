@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-13T17:22:09+02:00",
-  "session_date": "2026-07-13",
-  "portfolio_value": 99945.05,
+  "generated_at": "2026-07-14T16:25:19+02:00",
+  "session_date": "2026-07-14",
+  "portfolio_value": 99712.63,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "INTC",
+      "ticker": "NVDA",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 105.76,
-      "allocated_capital": 4997.25,
-      "stop_loss_price": 107.35,
-      "take_profit_price": 102.59
+      "action": "buy",
+      "target_entry_price": 204.63,
+      "allocated_capital": 4985.63,
+      "stop_loss_price": 201.56,
+      "take_profit_price": 210.77
     },
     {
-      "ticker": "ORCL",
+      "ticker": "PLTR",
       "sector": "Technology",
-      "action": "sell_short",
-      "target_entry_price": 137.03,
-      "allocated_capital": 4997.25,
-      "stop_loss_price": 139.09,
-      "take_profit_price": 132.92
+      "action": "buy",
+      "target_entry_price": 131.07,
+      "allocated_capital": 4985.63,
+      "stop_loss_price": 129.1,
+      "take_profit_price": 135.0
     }
   ]
 }
