@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-14T16:24:56+02:00",
-  "session_date": "2026-07-14",
-  "buying_power": 364949.04,
+  "generated_at": "2026-07-15T16:19:37+02:00",
+  "session_date": "2026-07-15",
+  "buying_power": 365156.58,
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
+      "ticker": "PYPL",
+      "sector": "Financials",
       "action": "buy",
-      "target_entry_price": 204.63,
-      "allocated_capital": 182474.52
+      "target_entry_price": 54.71,
+      "allocated_capital": 182578.29
     },
     {
-      "ticker": "PLTR",
+      "ticker": "INTC",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 131.07,
-      "allocated_capital": 182474.52
+      "action": "sell_short",
+      "target_entry_price": 104.63,
+      "allocated_capital": 182578.29
     }
   ]
 }
