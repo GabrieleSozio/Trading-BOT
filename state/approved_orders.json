@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-15T16:19:56+02:00",
-  "session_date": "2026-07-15",
-  "portfolio_value": 99939.3,
+  "generated_at": "2026-07-16T16:33:22+02:00",
+  "session_date": "2026-07-16",
+  "portfolio_value": 99853.13,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "action": "buy",
-      "target_entry_price": 54.71,
-      "allocated_capital": 4996.97,
-      "stop_loss_price": 53.89,
-      "take_profit_price": 56.35
-    },
-    {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 104.63,
-      "allocated_capital": 4996.97,
-      "stop_loss_price": 106.2,
-      "take_profit_price": 101.49
+      "target_entry_price": 100.24,
+      "allocated_capital": 4992.66,
+      "stop_loss_price": 101.74,
+      "take_profit_price": 97.23
+    },
+    {
+      "ticker": "PYPL",
+      "sector": "Financials",
+      "action": "buy",
+      "target_entry_price": 56.47,
+      "allocated_capital": 4992.66,
+      "stop_loss_price": 55.62,
+      "take_profit_price": 58.16
     }
   ]
 }
