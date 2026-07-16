@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-15T16:19:37+02:00",
-  "session_date": "2026-07-15",
-  "buying_power": 365156.58,
+  "generated_at": "2026-07-16T16:33:03+02:00",
+  "session_date": "2026-07-16",
+  "buying_power": 365455.08,
   "orders": [
-    {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "action": "buy",
-      "target_entry_price": 54.71,
-      "allocated_capital": 182578.29
-    },
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 104.63,
-      "allocated_capital": 182578.29
+      "target_entry_price": 100.24,
+      "allocated_capital": 182727.54
+    },
+    {
+      "ticker": "PYPL",
+      "sector": "Financials",
+      "action": "buy",
+      "target_entry_price": 56.47,
+      "allocated_capital": 182727.54
     }
   ]
 }
