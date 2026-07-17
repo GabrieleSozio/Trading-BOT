@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-16T16:33:03+02:00",
-  "session_date": "2026-07-16",
-  "buying_power": 365455.08,
+  "generated_at": "2026-07-17T16:12:09+02:00",
+  "session_date": "2026-07-17",
+  "buying_power": 365548.43,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "NFLX",
+      "sector": "Communication Services",
       "action": "sell_short",
-      "target_entry_price": 100.24,
-      "allocated_capital": 182727.54
+      "target_entry_price": 67.89,
+      "allocated_capital": 182774.21
     },
     {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "action": "buy",
-      "target_entry_price": 56.47,
-      "allocated_capital": 182727.54
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 206.36,
+      "allocated_capital": 182774.21
     }
   ]
 }
