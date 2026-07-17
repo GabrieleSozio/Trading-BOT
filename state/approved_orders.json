@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-16T16:33:22+02:00",
-  "session_date": "2026-07-16",
-  "portfolio_value": 99853.13,
+  "generated_at": "2026-07-17T16:12:31+02:00",
+  "session_date": "2026-07-17",
+  "portfolio_value": 99636.91,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "NFLX",
+      "sector": "Communication Services",
       "action": "sell_short",
-      "target_entry_price": 100.24,
-      "allocated_capital": 4992.66,
-      "stop_loss_price": 101.74,
-      "take_profit_price": 97.23
+      "target_entry_price": 67.89,
+      "allocated_capital": 4981.85,
+      "stop_loss_price": 68.91,
+      "take_profit_price": 65.85
     },
     {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "action": "buy",
-      "target_entry_price": 56.47,
-      "allocated_capital": 4992.66,
-      "stop_loss_price": 55.62,
-      "take_profit_price": 58.16
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 206.36,
+      "allocated_capital": 4981.85,
+      "stop_loss_price": 209.46,
+      "take_profit_price": 200.17
     }
   ]
 }
