@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-07-20T16:38:30+02:00",
+  "session_date": "2026-07-20",
+  "buying_power": 364719.33,
+  "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 204.46,
+      "allocated_capital": 182359.67
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 98.11,
+      "allocated_capital": 182359.67
+    }
+  ]
+}
