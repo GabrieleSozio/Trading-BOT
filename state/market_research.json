@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-07-20T16:38:11+02:00",
+  "session_date": "2026-07-20",
+  "universe_size": 25,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il pre-market mostra una chiara predominanza rialzista nel comparto tecnologico e semiconduttori, con gap positivi accompagnati da volumi robusti. La strategia momentum intraday con filtro di ritracciamento favorisce titoli con forte direzionalità (gap elevato e trend coerente) e liquidità sufficiente per entrare dopo un pullback. Ho privilegiato i titoli con il miglior bilanciamento tra ampiezza del gap e volume pre-market, evitando quelli con gap forte ma volume troppo basso (es. ARM, SNOW). NVDA e GOOGL offrono liquidità eccezionale che riduce lo slippage nelle entrate su ritracciamento. INTC e AMD combinano gap ampi con trend bullish confermato. MU chiude la selezione con gap forte e buon volume.",
+  "candidates": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 98.6,
+      "prev_close": 95.03,
+      "gap_pct": 3.7567,
+      "premarket_volume": 787257,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.76% con volume pre-market molto elevato (787k), trend Bullish nel settore Technology: ottima direzionalità e liquidità per entrare su un piccolo ritracciamento."
+    },
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "last_price": 205.49,
+      "prev_close": 202.8,
+      "gap_pct": 1.3264,
+      "premarket_volume": 1198602,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +1.33% ma volume enorme (1.2M), leader semiconduttori con trend Bullish: liquidità eccezionale che minimizza slippage sull'ingresso post-pullback."
+    },
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "last_price": 357.62,
+      "prev_close": 346.765,
+      "gap_pct": 3.1304,
+      "premarket_volume": 348191,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.13% con volume solido (348k), Communication Services, trend Bullish: forte spinta rialzista e ampia liquidità per operatività intraday."
+    },
+    {
+      "ticker": "AMD",
+      "sector": "Technology",
+      "last_price": 514.97,
+      "prev_close": 495.17,
+      "gap_pct": 3.9986,
+      "premarket_volume": 127027,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +4.00%, il più ampio della lista, trend Bullish nel Technology: forte momentum, volume adeguato per entrata su ritracciamento controllato."
+    },
+    {
+      "ticker": "MU",
+      "sector": "Technology",
+      "last_price": 879.48,
+      "prev_close": 849.46,
+      "gap_pct": 3.534,
+      "premarket_volume": 196992,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.53% con buon volume (197k), semiconduttori in trend Bullish: momentum consistente e settore in fase di forza, adatto al setup di ritracciamento."
+    }
+  ]
+}
