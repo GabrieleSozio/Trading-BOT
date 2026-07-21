@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-20T16:38:50+02:00",
-  "session_date": "2026-07-20",
-  "portfolio_value": 99444.53,
+  "generated_at": "2026-07-21T16:35:25+02:00",
+  "session_date": "2026-07-21",
+  "portfolio_value": 99538.09,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 204.46,
-      "allocated_capital": 4972.23,
-      "stop_loss_price": 201.39,
-      "take_profit_price": 210.59
-    },
-    {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 98.11,
-      "allocated_capital": 4972.23,
-      "stop_loss_price": 96.64,
-      "take_profit_price": 101.05
+      "target_entry_price": 102.29,
+      "allocated_capital": 4976.9,
+      "stop_loss_price": 100.76,
+      "take_profit_price": 105.36
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 24.73,
+      "allocated_capital": 4976.9,
+      "stop_loss_price": 24.36,
+      "take_profit_price": 25.47
     }
   ]
 }
