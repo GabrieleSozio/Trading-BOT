@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-21T16:35:25+02:00",
-  "session_date": "2026-07-21",
-  "portfolio_value": 99538.09,
+  "generated_at": "2026-07-22T16:34:09+02:00",
+  "session_date": "2026-07-22",
+  "portfolio_value": 99279.82,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 102.29,
-      "allocated_capital": 4976.9,
-      "stop_loss_price": 100.76,
-      "take_profit_price": 105.36
-    },
-    {
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 24.73,
-      "allocated_capital": 4976.9,
-      "stop_loss_price": 24.36,
-      "take_profit_price": 25.47
+      "target_entry_price": 31.25,
+      "allocated_capital": 4963.99,
+      "stop_loss_price": 30.78,
+      "take_profit_price": 32.19
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 70.04,
+      "allocated_capital": 4963.99,
+      "stop_loss_price": 68.99,
+      "take_profit_price": 72.14
     }
   ]
 }
