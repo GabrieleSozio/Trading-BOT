@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-21T16:35:08+02:00",
-  "session_date": "2026-07-21",
-  "buying_power": 364600.5,
+  "generated_at": "2026-07-22T16:33:45+02:00",
+  "session_date": "2026-07-22",
+  "buying_power": 363421.39,
   "orders": [
-    {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 102.29,
-      "allocated_capital": 182300.25
-    },
     {
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 24.73,
-      "allocated_capital": 182300.25
+      "target_entry_price": 31.25,
+      "allocated_capital": 181710.7
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 70.04,
+      "allocated_capital": 181710.7
     }
   ]
 }
