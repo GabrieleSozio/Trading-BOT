@@ -1,31 +1,18 @@
 {
-  "session_date": "2026-07-22",
-  "opening_balance": 98838.02,
-  "closing_balance": 98942.39,
+  "session_date": "2026-07-23",
+  "opening_balance": 98738.62,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-07-22T19:55:47+02:00",
+      "ts": "2026-07-23T16:41:37+02:00",
       "type": "ORDER_SUBMITTED",
       "ticker": "SMCI",
-      "alpaca_order_id": "44edbbb6-bf5d-4408-b904-1802a746bdfd",
-      "qty": 160,
-      "entry": 30.995,
-      "stop_loss": 30.78,
-      "take_profit": 32.19
-    },
-    {
-      "ts": "2026-07-22T22:32:55+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "EOD flat",
-      "positions": [
-        "INTC",
-        "MSFT",
-        "NFLX",
-        "NVDA",
-        "ORCL",
-        "PLTR"
-      ]
+      "alpaca_order_id": "b14e4af3-44a2-4404-9a03-09ec8f87fc1e",
+      "qty": 155,
+      "entry": 31.71,
+      "stop_loss": 31.34,
+      "take_profit": 32.77
     }
   ]
 }
