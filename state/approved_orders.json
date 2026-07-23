@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-22T16:34:09+02:00",
-  "session_date": "2026-07-22",
-  "portfolio_value": 99279.82,
+  "generated_at": "2026-07-23T16:41:06+02:00",
+  "session_date": "2026-07-23",
+  "portfolio_value": 98752.17,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
+      "ticker": "TSLA",
+      "sector": "Consumer Discretionary",
+      "action": "sell_short",
+      "target_entry_price": 326.12,
+      "allocated_capital": 4937.61,
+      "stop_loss_price": 331.01,
+      "take_profit_price": 316.34
+    },
+    {
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 31.25,
-      "allocated_capital": 4963.99,
-      "stop_loss_price": 30.78,
-      "take_profit_price": 32.19
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "action": "buy",
-      "target_entry_price": 70.04,
-      "allocated_capital": 4963.99,
-      "stop_loss_price": 68.99,
-      "take_profit_price": 72.14
+      "target_entry_price": 31.82,
+      "allocated_capital": 4937.61,
+      "stop_loss_price": 31.34,
+      "take_profit_price": 32.77
     }
   ]
 }
