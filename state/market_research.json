@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-07-23T16:40:28+02:00",
-  "session_date": "2026-07-23",
+  "generated_at": "2026-07-24T16:20:34+02:00",
+  "session_date": "2026-07-24",
   "universe_size": 25,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Il pre-market mostra una netta prevalenza di titoli in tendenza ribassista (Tech e Consumer Discretionary sotto pressione). Per una strategia di momentum intraday con filtro di ritracciamento cerchiamo forte direzionalita' + alti volumi, sia sul lato short (gap-down potenti su titoli liquidi) sia sul lato long (gap-up con trend rialzista). I candidati piu' promettenti combinano ampiezza del gap e liquidita' elevata, che consente ingressi/uscite pulite dopo un piccolo ritracciamento. TSLA e GOOGL offrono short di momentum con volumi enormi; SMCI e MU sono i migliori long direzionali con gap-up bullish; NVDA e INTC fungono da alternative liquide. Ho privilegiato la coerenza gap/trend e i volumi piu' alti.",
+  "ai_analysis": "Il pre-market mostra un mercato tech prevalentemente in pressione ribassista con diversi gap negativi accompagnati da volumi elevati, situazione ideale per momentum short intraday dopo un piccolo rimbalzo (ritracciamento). I candidati long sono più deboli in termini di volume, con l'eccezione di AAPL che presenta gap positivo su forte liquidità. Ho privilegiato titoli con la combinazione migliore tra direzionalità marcata del gap e volume elevato, che garantiscono liquidità e continuazione del movimento.",
   "candidates": [
     {
-      "ticker": "TSLA",
-      "sector": "Consumer Discretionary",
-      "last_price": 324.5,
-      "prev_close": 374.18,
-      "gap_pct": -13.277,
-      "premarket_volume": 1213959,
-      "trend": "Bearish",
-      "ai_rationale": "Gap-down estremo (-13.28%) con trend Bearish e volume enorme (~1.21M): fortissima direzionalita' short, ideale per rientro su rimbalzo/ritracciamento intraday. Consumer Discretionary molto liquido."
-    },
-    {
-      "ticker": "GOOGL",
-      "sector": "Communication Services",
-      "last_price": 319.66,
-      "prev_close": 342.06,
-      "gap_pct": -6.5486,
-      "premarket_volume": 887297,
-      "trend": "Bearish",
-      "ai_rationale": "Gap-down importante (-6.55%) allineato al trend Bearish, volume elevato (~887k). Ottimo candidato short di momentum su titolo mega-cap liquidissimo."
-    },
-    {
-      "ticker": "SMCI",
+      "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 31.98,
-      "prev_close": 30.55,
-      "gap_pct": 4.6809,
-      "premarket_volume": 918336,
-      "trend": "Bullish",
-      "ai_rationale": "Miglior long: gap-up +4.68% con trend Bullish e volume alto (~918k). Direzionalita' rialzista pulita, adatto a ingresso dopo piccolo pullback."
-    },
-    {
-      "ticker": "AMZN",
-      "sector": "Consumer Discretionary",
-      "last_price": 234.565,
-      "prev_close": 244.82,
-      "gap_pct": -4.1888,
-      "premarket_volume": 757948,
+      "last_price": 95.96,
+      "prev_close": 100.05,
+      "gap_pct": -4.088,
+      "premarket_volume": 1706525,
       "trend": "Bearish",
-      "ai_rationale": "Gap-down consistente (-4.19%) coerente con trend Bearish e buon volume (~758k). Titolo ultra-liquido per short di momentum intraday."
+      "ai_rationale": "Gap ribassista netto (-4.09%) con volume pre-market enorme (1.7M), il più liquido tra i gap forti. Direzionalità short chiara nel settore Technology, ideale per ingresso su rimbalzo tecnico."
     },
     {
       "ticker": "MU",
       "sector": "Technology",
-      "last_price": 997.15,
-      "prev_close": 959.27,
-      "gap_pct": 3.9488,
-      "premarket_volume": 231675,
+      "last_price": 921.81,
+      "prev_close": 988.595,
+      "gap_pct": -6.7555,
+      "premarket_volume": 272395,
+      "trend": "Bearish",
+      "ai_rationale": "Gap negativo molto ampio (-6.76%), il più forte della lista, con buon volume (272K). Trend bearish coerente, ottimo candidato momentum short su ritracciamento."
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 29.86,
+      "prev_close": 31.22,
+      "gap_pct": -4.3562,
+      "premarket_volume": 440014,
+      "trend": "Bearish",
+      "ai_rationale": "Gap ribassista consistente (-4.36%) con volume elevato (440K). Titolo storicamente molto volatile, direzionalità short pulita per intraday."
+    },
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "last_price": 206.7,
+      "prev_close": 208.76,
+      "gap_pct": -0.9868,
+      "premarket_volume": 712329,
+      "trend": "Bearish",
+      "ai_rationale": "Gap modesto (-0.99%) ma volume pre-market gigantesco (712K), massima liquidità. Trend bearish; adatto a movimenti direzionali con spread ristretti dopo ritracciamento."
+    },
+    {
+      "ticker": "AAPL",
+      "sector": "Technology",
+      "last_price": 328.21,
+      "prev_close": 321.575,
+      "gap_pct": 2.0633,
+      "premarket_volume": 322567,
       "trend": "Bullish",
-      "ai_rationale": "Long con gap-up +3.95% e trend Bullish; volume adeguato (~232k). Momentum rialzista nel settore Tech, buon setup per entrata su ritracciamento."
+      "ai_rationale": "Unico long solido: gap positivo (+2.06%) con volume alto (322K). Trend bullish e liquidità elevata offrono setup momentum rialzista affidabile su pullback."
     }
   ]
 }
