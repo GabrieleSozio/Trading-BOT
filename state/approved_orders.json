@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-23T16:41:06+02:00",
-  "session_date": "2026-07-23",
-  "portfolio_value": 98752.17,
+  "generated_at": "2026-07-24T16:21:16+02:00",
+  "session_date": "2026-07-24",
+  "portfolio_value": 98767.92,
   "guardrails_applied": [
     "R2_max_size",
     "R3_stop_loss",
@@ -10,22 +10,22 @@
   ],
   "orders": [
     {
-      "ticker": "TSLA",
-      "sector": "Consumer Discretionary",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 326.12,
-      "allocated_capital": 4937.61,
-      "stop_loss_price": 331.01,
-      "take_profit_price": 316.34
+      "target_entry_price": 96.44,
+      "allocated_capital": 4938.4,
+      "stop_loss_price": 97.89,
+      "take_profit_price": 93.55
     },
     {
-      "ticker": "SMCI",
+      "ticker": "NVDA",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 31.82,
-      "allocated_capital": 4937.61,
-      "stop_loss_price": 31.34,
-      "take_profit_price": 32.77
+      "action": "sell_short",
+      "target_entry_price": 207.73,
+      "allocated_capital": 4938.4,
+      "stop_loss_price": 210.85,
+      "take_profit_price": 201.5
     }
   ]
 }
