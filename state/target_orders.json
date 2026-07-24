@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-07-23T16:40:48+02:00",
-  "session_date": "2026-07-23",
-  "buying_power": 71314.18,
+  "generated_at": "2026-07-24T16:20:55+02:00",
+  "session_date": "2026-07-24",
+  "buying_power": 362831.64,
   "orders": [
     {
-      "ticker": "TSLA",
-      "sector": "Consumer Discretionary",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "sell_short",
-      "target_entry_price": 326.12,
-      "allocated_capital": 35657.09
+      "target_entry_price": 96.44,
+      "allocated_capital": 181415.82
     },
     {
-      "ticker": "SMCI",
+      "ticker": "NVDA",
       "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 31.82,
-      "allocated_capital": 35657.09
+      "action": "sell_short",
+      "target_entry_price": 207.73,
+      "allocated_capital": 181415.82
     }
   ]
 }
