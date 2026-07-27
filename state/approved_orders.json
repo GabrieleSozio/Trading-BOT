@@ -1,0 +1,31 @@
+{
+  "generated_at": "2026-07-27T17:24:38+02:00",
+  "session_date": "2026-07-27",
+  "portfolio_value": 99978.6,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 198.31,
+      "allocated_capital": 4998.93,
+      "stop_loss_price": 201.28,
+      "take_profit_price": 192.36
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "sell_short",
+      "target_entry_price": 89.82,
+      "allocated_capital": 4998.93,
+      "stop_loss_price": 91.17,
+      "take_profit_price": 87.13
+    }
+  ]
+}
