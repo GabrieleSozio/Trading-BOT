@@ -5,8 +5,9 @@
 name: routine-06-supervisor
 
 on:
-  schedule:
-    - cron: '0 8 * * 6'
+  # DISATTIVATO: lo scheduling e ora sul portatile (cron preciso).
+  # schedule:
+  # - cron: '0 8 * * 6'
   workflow_dispatch: {}
 
 permissions:

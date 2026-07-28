@@ -6,8 +6,9 @@
 name: routine-04-execution
 
 on:
-  schedule:
-    - cron: '*/10 13-19 * * 1-5'   # monitoraggio continuo + liquidazione EOD
+  # DISATTIVATO: lo scheduling e ora sul portatile (cron preciso).
+  # schedule:
+  # - cron: '*/10 13-19 * * 1-5'   # monitoraggio continuo + liquidazione EOD
   workflow_run:                     # esecuzione tempestiva appena la Routine 03 approva
     workflows: ["routine-03-risk"]
     types: [completed]

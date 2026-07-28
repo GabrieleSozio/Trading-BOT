@@ -2,8 +2,9 @@
 name: routine-05-reconciliation
 
 on:
-  schedule:
-    - cron: '0 21 * * 5'
+  # DISATTIVATO: lo scheduling e ora sul portatile (cron preciso).
+  # schedule:
+  # - cron: '0 21 * * 5'
   workflow_dispatch: {}
 
 permissions:

@@ -4,8 +4,9 @@
 name: routine-01-premarket
 
 on:
-  schedule:
-    - cron: '30 12 * * 1-5'
+  # DISATTIVATO: lo scheduling e ora sul portatile (cron preciso).
+  # schedule:
+  # - cron: '30 12 * * 1-5'
   workflow_dispatch: {}        # permette il lancio manuale dalla tab Actions
 
 permissions:
