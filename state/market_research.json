@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-28T23:20:43+02:00",
+  "generated_at": "2026-07-29T00:00:35+02:00",
   "session_date": "2026-07-28",
   "universe_size": 44,
   "capital_usd": 220.0,
@@ -7,8 +7,8 @@
   "tier": "micro",
   "mode": "swing",
   "max_price_per_share": 99.0,
-  "selected_by": "deterministico",
-  "ai_analysis": null,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "In un contesto swing multi-day privilegio titoli con gap significativo SUPPORTATO da volume reale in pre-market, che indica partecipazione istituzionale e maggiore probabilita' di prosecuzione del trend. Ho scartato i titoli con volume=0 (SNAP, PYPL, UBER, PINS, PFE, WBD, RIVN, T) nonostante gap interessanti, perche' senza conferma di volume il movimento rischia di essere un picco isolato che rientra. Tra i restanti seleziono quelli con miglior combinazione gap+volume+catalizzatore plausibile.",
   "candidates": [
     {
       "ticker": "F",
@@ -17,7 +17,8 @@
       "prev_close": 14.69,
       "gap_pct": 9.7345,
       "premarket_volume": 4114105,
-      "trend": "Bullish"
+      "trend": "Bullish",
+      "ai_rationale": "Gap piu' forte della lista (+9.73%) con volume di gran lunga il piu' alto (4.1M): combinazione ideale gap+volume che segnala catalizzatore forte e alta probabilita' di prosecuzione. Prezzo basso e liquido, buona tenuta attesa."
     },
     {
       "ticker": "HPQ",
@@ -26,16 +27,8 @@
       "prev_close": 26.545,
       "gap_pct": 6.5737,
       "premarket_volume": 1999116,
-      "trend": "Bullish"
-    },
-    {
-      "ticker": "SNAP",
-      "sector": "Communication Services",
-      "last_price": 4.77,
-      "prev_close": 4.515,
-      "gap_pct": 5.6478,
-      "premarket_volume": 0,
-      "trend": "Bullish"
+      "trend": "Bullish",
+      "ai_rationale": "Gap robusto (+6.57%) sostenuto da volume solido (~2M). Tech in trend rialzista, movimento convincente con partecipazione reale; buon profilo per continuazione multi-day."
     },
     {
       "ticker": "KO",
@@ -44,16 +37,28 @@
       "prev_close": 84.1,
       "gap_pct": 4.9822,
       "premarket_volume": 2940281,
-      "trend": "Bullish"
+      "trend": "Bullish",
+      "ai_rationale": "Gap notevole (+4.98%) per un titolo difensivo Consumer Staples, con volume elevato (2.9M). La bassa volatilita' del settore rende il movimento piu' stabile e adatto a mantenere overnight con minor rischio di reversal violento."
     },
     {
-      "ticker": "PYPL",
-      "sector": "Financials",
-      "last_price": 58.32,
-      "prev_close": 55.97,
-      "gap_pct": 4.1987,
-      "premarket_volume": 0,
-      "trend": "Bullish"
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 72.37,
+      "prev_close": 70.4,
+      "gap_pct": 2.7983,
+      "premarket_volume": 2730774,
+      "trend": "Bullish",
+      "ai_rationale": "Gap moderato (+2.80%) ma con volume forte (2.7M) e nome large-cap di qualita' in Communication Services. Movimento supportato, trend solido e buona tenuta attesa nei giorni successivi."
+    },
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "last_price": 15.36,
+      "prev_close": 14.965,
+      "gap_pct": 2.6395,
+      "premarket_volume": 3220887,
+      "trend": "Bullish",
+      "ai_rationale": "Volume molto elevato (3.2M) con gap +2.64%; forte partecipazione su titolo liquido a prezzo basso. Il volume convincente aumenta la probabilita' che il movimento prosegua oltre la sessione."
     }
   ]
 }
