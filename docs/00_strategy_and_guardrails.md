@@ -36,17 +36,45 @@ propria logica usando i tool MCP di Alpaca, (3) scrive il proprio JSON di output
 
 ---
 
-## 2. Strategia di Trading: Momentum Intraday
+## 2. Strategia di Trading: Momentum adattivo al capitale
 
-Operatività **esclusivamente intraday** (day-trading): si apre e si chiude tutto
-nella stessa giornata per azzerare il rischio overnight. Strategia base:
-**"Momentum con Filtro di Ritracciamento"**.
+Strategia base: **"Momentum con Filtro di Ritracciamento"** — si entra su titoli
+con forte direzionalità e alti volumi, ma **non sul picco**: si attende un leggero
+ritracciamento per un prezzo d'ingresso migliore.
 
-- **Identificazione:** asset con forte direzionalità e alti volumi in pre-market/apertura.
-- **Entry:** non si compra sul picco. Si attende un leggero ritracciamento
-  fisiologico per un prezzo d'ingresso migliore.
-- **Exit (Flat obbligatorio):** 15 minuti prima della chiusura tutte le posizioni
-  vengono liquidate. **Nessun titolo overnight, mai.**
+**La modalità di uscita, però, dipende dalla dimensione del conto.** Il motivo è
+regolamentare, non discrezionale: la regola USA **Pattern Day Trader (PDT)** vieta
+più di **3 operazioni intraday ogni 5 giorni lavorativi** ai conti sotto i
+**25.000 USD**. Un bot puramente intraday su un conto piccolo verrebbe bloccato
+dopo pochi giorni.
+
+Il bot legge quindi il proprio capitale e adotta la **fascia** corrispondente
+(definite in `config/trading_config.yaml` → `tiers`):
+
+| Fascia | Capitale | Modalità | Posizioni | Size | Stop / Target | Short | Uscita |
+|---|---|---|---|---|---|---|---|
+| **micro** | < $2.000 | **swing** | 2 | 45% | -3% / +6% | no | max 5 giorni di borsa |
+| **small** | $2k–25k | **swing** | 3 | 30% | -3% / +6% | no | max 5 giorni di borsa |
+| **standard** | ≥ $25.000 | **intraday** | 3 | 5% | -1,5% / +3% | sì | flat obbligatorio la sera |
+
+- **Swing** (capitale piccolo): le posizioni restano aperte più giorni — non sono
+  day-trade, quindi **non consumano crediti PDT**. Stop e take profit sono inviati
+  come **bracket GTC**, così restano attivi sul broker anche di notte. Una posizione
+  che supera `max_hold_days` viene chiusa comunque.
+- **Intraday** (capitale ≥ 25k): comportamento classico, **flat obbligatorio** 15
+  minuti prima della chiusura, nessun titolo overnight.
+
+### Accessibilità dei titoli
+Il bot opera con **azioni intere** (le frazioni non supportano lo stop-loss fisico).
+La Routine 01 scarta quindi automaticamente i titoli il cui prezzo per azione supera
+la quota allocabile (`capitale × max_position_size_pct`): con $220 e il 45%, sono
+operabili solo titoli sotto i ~$99.
+
+### Capitale operativo e simulazione
+Il dimensionamento non usa il buying power ma il **capitale operativo**
+(`config → capital.simulated_usd`). Se impostato > 0, il bot opera come se avesse
+quella cifra (mai più dell'equity reale): serve a **provare in paper la strategia
+che si userà davvero** con capitale ridotto. A 0 usa l'equity reale del conto.
 
 ---
 
@@ -57,15 +85,27 @@ valori in `config/trading_config.yaml` e applicate da **03 Risk Manager** e
 verificate/eseguite da **04 Execution Desk**. Una routine che non può rispettare
 una guardrail si ferma e logga, **non** improvvisa.
 
-| # | Regola | Valore | Owner |
-|---|--------|--------|-------|
-| **R1** | **Hard Daily Stop-Loss (Kill Switch)** — se il portafoglio scende del **-2%** vs apertura, chiudi tutte le posizioni a mercato, cancella gli ordini pendenti e iberna fino al giorno dopo. | `-2%` | 04 Execution |
-| **R2** | **Maximum Position Size** — nessun trade impegna più del **5%** del capitale totale. | `5%` | 03 Risk |
-| **R3** | **Mandatory Physical Stop Loss** — ogni acquisto va inviato come **Bracket Order** con stop loss tra **-1% e -1.5%** dal prezzo d'ingresso. | `-1.5%` | 03 Risk + 04 Execution |
-| **R4** | **Maximum Sector Correlation** — il capitale in un singolo settore (es. Tech) non supera il **15%** del totale. | `15%` | 03 Risk |
-| **R5** | **API Error & Latency Threshold** — dopo **3 errori consecutivi** dal broker (timeout/5xx), la routine si ferma, logga e si sospende. Niente loop disastrosi. | `3` | tutte |
+Le regole restano **cinque e inviolabili**; ciò che cambia con la fascia sono i
+**valori numerici** (definiti in `tiers`), non l'esistenza della regola.
 
-**Take Profit:** ogni Bracket Order include un take profit a **+3%** dal prezzo d'ingresso.
+| # | Regola | Valore (micro / standard) | Owner |
+|---|--------|--------|-------|
+| **R1** | **Hard Daily Stop-Loss (Kill Switch)** — se il capitale scende oltre soglia vs apertura, chiudi tutto, cancella gli ordini e iberna fino al giorno dopo. | `-6%` / `-2%` | 04 Execution |
+| **R2** | **Maximum Position Size** — nessun trade impegna più della quota della fascia. | `45%` / `5%` | 03 Risk |
+| **R3** | **Mandatory Physical Stop Loss** — ogni ingresso è un **Bracket Order** con stop fisico sul broker (GTC in swing, day in intraday). | `-3%` / `-1,5%` | 03 Risk + 04 Execution |
+| **R4** | **Maximum Sector Correlation** — capitale massimo su un singolo settore. | `100%`* / `15%` | 03 Risk |
+| **R5** | **API Error & Latency Threshold** — dopo **3 errori consecutivi** dal broker, la routine si ferma, logga e si sospende. | `3` (globale) | tutte |
+
+\* Con sole 2 posizioni la diversificazione settoriale non è materialmente
+possibile: il cap viene neutralizzato per non bloccare ogni operazione. È una
+scelta consapevole, non una dimenticanza — su capitale micro il rischio si
+controlla con size e stop, non con la diversificazione.
+
+**Take Profit:** ogni Bracket Order include un take profit (+6% micro / +3% standard).
+
+**Vincolo aggiuntivo (swing):** `max_hold_days` — una posizione aperta da più di
+N giorni di borsa viene chiusa a mercato, anche in utile/perdita, per non
+trasformare uno swing in un investimento a tempo indeterminato.
 
 ---
 

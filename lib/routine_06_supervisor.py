@@ -28,7 +28,7 @@ from .alpaca_rest import (
     now_cet,
     US_EASTERN,
 )
-from . import ai_client, gitsync
+from . import ai_client, capital as cap_mod, gitsync
 from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine06")
@@ -148,6 +148,10 @@ def run(dry_run: bool = False) -> str:
         sys.exit(1)
 
     current = {p: _current_value(cfg, p) for p in tunable}
+    # Contesto: il bot cambia strategia con il capitale, l'AI deve saperlo.
+    cap_usd, simulated = cap_mod.effective_capital(cfg, perf["equity"])
+    tier = cap_mod.resolve_tier(cfg, cap_usd)
+    log.info("%s", cap_mod.describe(tier, cap_usd, simulated))
     log.info("Performance: %s", perf)
     log.info("Parametri attuali (modificabili): %s", current)
 
@@ -165,6 +169,10 @@ def run(dry_run: bool = False) -> str:
         "Rispondi solo nel formato JSON richiesto, in italiano."
     )
     user = (
+        f"Contesto operativo: {cap_mod.describe(tier, cap_usd, simulated)}.\n"
+        f"(Il bot adatta da solo strategia e limiti al capitale: sotto i 25.000 USD opera "
+        f"in swing su piu' giorni per non incorrere nella regola Pattern Day Trader, "
+        f"sopra torna all'intraday. Questi limiti NON sono modificabili da te.)\n\n"
         f"Performance ultima settimana (dati reali dal broker):\n{perf}\n\n"
         f"Parametri modificabili e range consentiti:\n{bounds_desc}\n\n"
         f"Proponi 0 o più modifiche (param, new_value, reason). Sii conservativo: "
