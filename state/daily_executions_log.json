@@ -1,11 +1,11 @@
 {
-  "session_date": "2026-07-27",
-  "opening_balance": 99869.8,
-  "closing_balance": 99869.8,
+  "session_date": "2026-07-28",
+  "opening_balance": 99891.72,
+  "closing_balance": 99891.72,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-07-27T22:19:11+02:00",
+      "ts": "2026-07-28T21:54:43+02:00",
       "type": "LIQUIDATE_ALL",
       "reason": "EOD flat",
       "positions": [
