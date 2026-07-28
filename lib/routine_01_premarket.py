@@ -32,6 +32,7 @@ from .alpaca_rest import (
 from .sectors import sector_of
 from . import gitsync
 from . import ai_client
+from . import capital as cap_mod
 from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine01")
@@ -116,9 +117,10 @@ _AI_SCHEMA = {
 }
 
 
-def _ai_select(rows: list[dict], top_n: int, model: str | None):
-    """Fa selezionare a Claude i top_n candidati momentum, con motivazione.
-    Ritorna (lista candidati ordinata con campo ai_rationale, testo analisi).
+def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict):
+    """Fa selezionare a Claude i top_n candidati, con motivazione, adattando il
+    mandato alla strategia della fascia di capitale attiva (swing o intraday).
+    Ritorna (lista candidati con campo ai_rationale, testo analisi).
     Solleva AIUnavailable se l'AI non è usabile o restituisce dati incoerenti."""
     by_ticker = {r["ticker"]: r for r in rows}
     table = "\n".join(
@@ -126,18 +128,38 @@ def _ai_select(rows: list[dict], top_n: int, model: str | None):
         f"vol={r['premarket_volume']:>10} trend={r['trend']} last={r['last_price']}"
         for r in rows
     )
+    if cap_mod.is_intraday(tier):
+        mandate = (
+            "Strategia: MOMENTUM INTRADAY con filtro di ritracciamento. Le posizioni "
+            "vengono apert e chiuse nella stessa giornata (flat obbligatorio la sera). "
+            "Privilegia forte direzionalità odierna e volumi elevati: conta il movimento "
+            "delle prossime ore, non dei prossimi giorni."
+        )
+    else:
+        mandate = (
+            f"Strategia: SWING TRADING su piu' giorni (posizioni tenute fino a "
+            f"{tier.get('max_hold_days', 5)} giorni di borsa, stop -{tier['stop_loss_pct']*100:.0f}% "
+            f"/ target +{tier['take_profit_pct']*100:.0f}%). NON e' intraday: privilegia "
+            "titoli con un movimento che abbia ragionevoli probabilita' di PROSEGUIRE nei "
+            "giorni successivi (trend solido, volume convincente, catalizzatore plausibile), "
+            "evitando picchi isolati che rientrano subito. Considera che le posizioni "
+            "resteranno aperte durante la notte."
+        )
     system = (
-        "Sei un analista quantitativo di un piccolo hedge fund. Strategia: momentum "
-        "intraday con filtro di ritracciamento (si entra su titoli con forte "
-        "direzionalità e alti volumi, dopo un piccolo ritracciamento). Operatività "
-        "solo intraday su azioni USA liquide. Scegli i candidati più promettenti per "
-        "OGGI dai dati forniti. Rispondi solo nel formato JSON richiesto, in italiano."
+        "Sei un analista quantitativo di un piccolo fondo che opera su azioni USA liquide. "
+        f"{mandate} Scegli i candidati piu' promettenti dai dati forniti. "
+        "Rispondi solo nel formato JSON richiesto, in italiano."
+    )
+    only_long = "" if tier.get("allow_short") else (
+        " Tutti i candidati in lista sono rialzisti perche' questa fascia opera solo al rialzo."
     )
     user = (
-        f"Dati pre-market di oggi ({len(rows)} titoli):\n{table}\n\n"
-        f"Seleziona ESATTAMENTE i {top_n} migliori candidati momentum per oggi "
-        f"(usa solo ticker presenti nella lista). Per ciascuno una breve motivazione "
-        f"(forza del gap, volume, settore). Aggiungi una breve 'analysis' d'insieme."
+        f"Capitale operativo: {tier['positions_to_open']} posizioni da "
+        f"{tier['max_position_size_pct']*100:.0f}% ciascuna (fascia '{tier['name']}').{only_long}\n\n"
+        f"Dati pre-market di oggi ({len(rows)} titoli gia' filtrati per accessibilita'):\n{table}\n\n"
+        f"Seleziona ESATTAMENTE i {top_n} migliori candidati (usa solo ticker presenti "
+        f"nella lista). Per ciascuno una breve motivazione (forza del movimento, volume, "
+        f"settore, tenuta attesa). Aggiungi una breve 'analysis' d'insieme."
     )
     data = ai_client.ask_json(system, user, _AI_SCHEMA,
                               model=model, max_tokens=2000)
@@ -182,6 +204,18 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         log.error("R5: troppi errori broker durante il check calendario. Stop.")
         sys.exit(1)
 
+    # --- Capitale operativo e fascia di rischio attiva ---
+    try:
+        acct = client.account()
+    except GuardrailR5:
+        log.error("R5: troppi errori broker leggendo l'account. Stop.")
+        sys.exit(1)
+    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]))
+    tier = cap_mod.resolve_tier(cfg, capital)
+    max_price = cap_mod.max_affordable_price(capital, tier)
+    log.info("%s", cap_mod.describe(tier, capital, simulated))
+    log.info("Prezzo massimo per azione operabile: %.2f USD", max_price)
+
     # --- Dati di mercato ---
     try:
         snap = client.snapshots(tickers)
@@ -207,6 +241,16 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
                         t, gap, SANITY_MAX_GAP_PCT)
             skipped += 1
             continue
+        # --- Filtro di ACCESSIBILITA': con azioni intere serve prezzo <= quota
+        # allocabile, altrimenti il titolo non e' operabile con questo capitale.
+        if last > max_price:
+            skipped += 1
+            continue
+        trend = "Bullish" if gap > 0 else "Bearish"
+        # --- Filtro DIREZIONE: se la fascia non ammette short, niente ribassisti.
+        if trend == "Bearish" and not tier.get("allow_short"):
+            skipped += 1
+            continue
         rows.append({
             "ticker": t,
             "sector": sector_of(t),
@@ -214,13 +258,29 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
             "prev_close": round(pc, 4),
             "gap_pct": round(gap, 4),
             "premarket_volume": int(pm_vol.get(t, 0)),
-            "trend": "Bullish" if gap > 0 else "Bearish",
+            "trend": trend,
         })
         analyzed += 1
 
     if not rows:
-        log.error("Nessun ticker con dati validi: staffetta non avviabile. Stop senza output.")
-        sys.exit(1)
+        log.error("Nessun candidato operabile con %.2f USD (prezzo max/azione %.2f, short %s). "
+                  "Scrivo lista vuota: giornata in stand-by.",
+                  capital, max_price, tier.get("allow_short"))
+        payload = {
+            "generated_at": now_cet().isoformat(timespec="seconds"),
+            "session_date": session_date,
+            "universe_size": len(tickers),
+            "capital_usd": capital,
+            "tier": tier["name"],
+            "mode": tier["mode"],
+            "selected_by": "nessuno",
+            "ai_analysis": None,
+            "candidates": [],
+        }
+        if not dry_run:
+            atomic_write_json(out_path, payload)
+            gitsync.sync(f"routine 01 premarket {session_date} (nessun candidato)")
+        return payload
 
     # Fallback deterministico: |gap| desc, poi volume pre-market.
     rows.sort(key=lambda r: (abs(r["gap_pct"]), r["premarket_volume"]), reverse=True)
@@ -232,7 +292,7 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     candidates = rows[:top_n]
     if ai_cfg.get("enabled") and ai_client.ai_enabled():
         try:
-            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"))
+            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"), tier)
             selected_by = "AI (Claude)"
         except AIUnavailable as e:
             log.warning("AI non disponibile (%s): uso selezione deterministica.", e)
@@ -241,6 +301,11 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": session_date,
         "universe_size": len(tickers),
+        "capital_usd": capital,
+        "capital_simulated": simulated,
+        "tier": tier["name"],
+        "mode": tier["mode"],
+        "max_price_per_share": round(max_price, 2),
         "selected_by": selected_by,
         "ai_analysis": analysis,
         "candidates": candidates,

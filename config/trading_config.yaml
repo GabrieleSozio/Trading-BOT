@@ -1,7 +1,6 @@
 # =====================================================================
 #  Trading Bot — Configurazione centrale (fonte unica dei parametri)
-#  Le routine agentiche leggono questo file. Cambia i numeri QUI,
-#  non dentro le singole routine.
+#  Le routine leggono questo file. Cambia i numeri QUI, non nel codice.
 # =====================================================================
 
 meta:
@@ -10,10 +9,68 @@ meta:
   timezone: Europe/Rome          # CET/CEST — tutti gli orari delle routine sono in questa TZ
   market_timezone: America/New_York
 
-# --- Universo titoli analizzato da 01 Premarket Analyst ---
+# --- Capitale operativo -----------------------------------------------
+# Il bot dimensiona le operazioni su questo importo. Se `simulated_usd` > 0
+# usa QUELLO invece dell'equity reale del conto: serve a provare in paper la
+# strategia che userai davvero con capitale ridotto (es. 220 USD ~ 200 EUR).
+# Metti 0 per usare l'equity reale del conto.
+capital:
+  simulated_usd: 220
+  # Sicurezza: se il capitale simulato supera l'equity reale, il bot usa la
+  # piu' bassa delle due (non puo' operare con soldi che non ha).
+
+# --- Fasce di capitale ------------------------------------------------
+# Il bot legge il proprio saldo e adotta la fascia corrispondente: strategia,
+# numero di posizioni e limiti di rischio cambiano con la dimensione del conto.
+#
+# PERCHE' LA STRATEGIA CAMBIA: la regola USA "Pattern Day Trader" vieta piu' di
+# 3 operazioni intraday ogni 5 giorni lavorativi ai conti sotto i 25.000 USD.
+# Sotto quella soglia il bot opera quindi in SWING (posizioni tenute piu' giorni,
+# che non consumano crediti PDT); sopra, torna all'intraday con flat serale.
+tiers:
+  - name: micro
+    up_to_equity: 2000           # fascia attiva se equity <= 2000
+    mode: swing                  # swing = tiene le posizioni piu' giorni
+    positions_to_open: 2
+    max_position_size_pct: 0.45  # ~45% del capitale per posizione
+    stop_loss_pct: 0.03          # stop piu' largo: di notte i prezzi saltano
+    take_profit_pct: 0.06
+    max_sector_exposure_pct: 1.0 # con 2 posizioni la diversificazione non e' possibile
+    max_daily_drawdown_pct: 0.06 # kill switch piu' largo (su capitale piccolo il rumore e' %-grande)
+    allow_short: false           # niente short su capitale micro
+    max_hold_days: 5             # dopo N giorni di borsa la posizione si chiude comunque
+
+  - name: small
+    up_to_equity: 25000
+    mode: swing
+    positions_to_open: 3
+    max_position_size_pct: 0.30
+    stop_loss_pct: 0.03
+    take_profit_pct: 0.06
+    max_sector_exposure_pct: 0.60
+    max_daily_drawdown_pct: 0.04
+    allow_short: false
+    max_hold_days: 5
+
+  - name: standard
+    up_to_equity: null           # null = fascia finale, nessun limite superiore
+    mode: intraday               # sopra i 25k il PDT non si applica: si torna intraday
+    positions_to_open: 3
+    max_position_size_pct: 0.05
+    stop_loss_pct: 0.015
+    take_profit_pct: 0.03
+    max_sector_exposure_pct: 0.15
+    max_daily_drawdown_pct: 0.02
+    allow_short: true
+    max_hold_days: 0             # 0 = flat obbligatorio a fine giornata
+
+# --- Universo titoli analizzato da 01 Premarket Analyst ---------------
+# Include titoli liquidi di prezzo variabile: quelli troppo cari per il capitale
+# corrente vengono scartati AUTOMATICAMENTE dalla Routine 01 (se non si riesce a
+# comprare almeno 1 azione intera, il titolo non e' un candidato valido).
 universe:
-  # Lista di ticker liquidi (tech-heavy). Estendi/riduci liberamente.
   tickers:
+    # --- large cap (accessibili solo con capitale medio/alto) ---
     - AAPL
     - MSFT
     - NVDA
@@ -23,50 +80,69 @@ universe:
     - TSLA
     - AMD
     - AVGO
-    - NFLX
-    - INTC
-    - QCOM
+    - MU
     - ADBE
     - CRM
-    - ORCL
-    - CSCO
-    - PYPL
-    - MU
-    - PLTR
-    - SHOP
-    - UBER
-    - COIN
-    - SMCI
     - ARM
     - SNOW
+    - SHOP
+    - COIN
+    - QCOM
+    - ORCL
+    - CSCO
+    - PLTR
+    # --- fascia media (comprabili con poche centinaia di USD) ---
+    - INTC
+    - NFLX
+    - UBER
+    - PYPL
+    - SMCI
+    - HOOD
+    - GM
+    - KO
+    - WFC
+    - BAC
+    # --- fascia economica (adatta a capitale micro) ---
+    - AFRM
+    - NKE
+    - CSX
+    - HPQ
+    - PINS
+    - DKNG
+    - WBD
+    - PFE
+    - T
+    - SOFI
+    - RIVN
+    - F
+    - AAL
+    - SNAP
   top_candidates: 5              # quanti titoli passa l'Analista al Portfolio Manager
 
-# --- Allocazione (02 Portfolio Manager) ---
+# --- Allocazione (02 Portfolio Manager) -------------------------------
+# NB: il NUMERO di posizioni e la DIMENSIONE arrivano dalla fascia di capitale
+# attiva (sezione `tiers`), non da qui.
 allocation:
-  positions_to_open: 2          # quanti dei top_candidates effettivamente allocare
   selection_metric: premarket_volume   # criterio di scelta tra i candidati
-  entry_retracement_pct: 0.005  # Bullish: target entry = last_price * (1 - 0.005)
+  entry_retracement_pct: 0.005         # target entry = last_price * (1 - 0.005)
 
-# --- Guardrails inviolabili (vedi docs/00_strategy_and_guardrails.md) ---
+# --- Guardrails globali (validi in ogni fascia) -----------------------
+# I valori di rischio specifici (stop, take profit, size, drawdown, settore)
+# vivono nella fascia attiva in `tiers`. Qui restano solo quelli globali.
 guardrails:
-  max_daily_drawdown_pct: 0.02  # R1 Kill Switch: -2% sul portafoglio = chiudi tutto
-  max_position_size_pct: 0.05   # R2: max 5% del capitale per singolo trade
-  stop_loss_pct: 0.015          # R3: stop loss obbligatorio a -1.5% (range consentito 1.0–1.5%)
-  take_profit_pct: 0.03         # Take profit a +3%
-  max_sector_exposure_pct: 0.15 # R4: max 15% del capitale per singolo settore
-  max_consecutive_api_errors: 3 # R5: dopo 3 errori broker consecutivi -> stop
+  max_consecutive_api_errors: 3  # R5: dopo 3 errori broker consecutivi -> stop
 
-# --- Orari delle routine (CET) ---
+# --- Orari delle routine (CET) ----------------------------------------
 schedule_cet:
   premarket_analyst: "14:30"
   portfolio_manager: "15:00"
   risk_manager: "15:10"
   execution_start: "15:30"
-  execution_eod_flat: "21:45"   # liquidazione forzata di fine giornata
+  execution_eod_flat: "21:45"   # liquidazione forzata (solo in modalita' intraday)
   execution_stop: "21:46"
   friday_reconciliation: "Fri 23:00"
 
-# --- State management (file locali) ---
+# --- State management (file locali) -----------------------------------
 state:
   dir: state
   archive_dir: state/archive
@@ -76,28 +152,25 @@ state:
     approved_orders: state/approved_orders.json
     executions_log: state/daily_executions_log.json
 
-# --- Notifiche opzionali (05 Reconciliation) ---
+# --- Notifiche opzionali (05 Reconciliation) --------------------------
 notifications:
   enabled: false
   channel: none                 # none | discord | telegram
-  # Il webhook_url NON va scritto qui: è una variabile secret della Routine 05.
+  # Il webhook_url NON va scritto qui: e' una variabile secret della Routine 05.
 
-# --- AI (Claude) — usata SOLO da 01 ricerca e 06 supervisore ---
-# La chiave ANTHROPIC_API_KEY è una secret (GitHub Actions), non sta qui.
+# --- AI (Claude) — usata SOLO da 01 ricerca e 06 supervisore ----------
+# La chiave ANTHROPIC_API_KEY e' una secret, non sta qui.
 ai:
   enabled: true
   research_model: claude-opus-4-8     # ricerca di mercato (01)
   supervisor_model: claude-opus-4-8   # analisi e tuning (06)
 
-# --- Supervisore AI (06) — autonomia BILANCIATA, entro limiti rigidi ---
+# --- Supervisore AI (06) — autonomia BILANCIATA, entro limiti rigidi --
 supervisor:
   enabled: true
-  # SOLO questi parametri possono essere modificati dall'AI, dentro questi range.
-  # Tutto il resto (in particolare 'guardrails.*' e 'meta.paper_trading') è
-  # INVIOLABILE: il codice rifiuta qualsiasi modifica fuori da questa lista.
+  # SOLO questi parametri sono modificabili dall'AI, dentro questi range.
   tunable:
-    allocation.positions_to_open: { min: 1, max: 5, type: int }
     allocation.entry_retracement_pct: { min: 0.0, max: 0.02, type: float }
     universe.top_candidates: { min: 3, max: 10, type: int }
-  # Parametri che l'AI NON può MAI toccare (ridondante con la whitelist, ma esplicito):
-  forbidden_prefixes: [ "guardrails", "meta", "schedule_cet", "state" ]
+  # Prefissi che l'AI non puo' MAI toccare: rischio, fasce, capitale, orari, stato.
+  forbidden_prefixes: [ "guardrails", "tiers", "capital", "meta", "schedule_cet", "state" ]

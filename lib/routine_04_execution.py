@@ -39,6 +39,7 @@ from .alpaca_rest import (
     read_json,
     today_session_date,
 )
+from . import capital as cap_mod
 from . import gitsync
 
 log = logging.getLogger("routine04")
@@ -82,6 +83,54 @@ def _load_or_init_log(path: str, session_date: str, opening_balance: float) -> d
     }
 
 
+def _holdings_path(cfg: dict) -> Path:
+    return Path(cfg["state"]["dir"]) / "holdings.json"
+
+
+def _load_holdings(cfg: dict) -> dict:
+    """Mappa ticker -> data di apertura, per far rispettare max_hold_days in swing."""
+    p = _holdings_path(cfg)
+    if p.exists():
+        try:
+            return read_json(p)
+        except Exception:  # noqa: BLE001 — file corrotto: si riparte pulito
+            log.warning("holdings.json illeggibile: lo rigenero.")
+    return {}
+
+
+def _save_holdings(cfg: dict, holdings: dict, current: set, session_date: str) -> None:
+    """Registra le nuove posizioni con la data odierna e dimentica quelle chiuse."""
+    updated = {s: holdings.get(s, {"opened_session_date": session_date}) for s in current}
+    atomic_write_json(_holdings_path(cfg), updated)
+
+
+def _trading_days_between(client, start_date: str, end_date: str) -> int:
+    """Giorni di borsa trascorsi DALL'apertura (esclusa) a oggi (incluso)."""
+    if start_date >= end_date:
+        return 0
+    try:
+        cal = client.calendar(start_date, end_date)
+        return max(0, len(cal) - 1)
+    except Exception:  # noqa: BLE001 — se il calendario non risponde, non forzare chiusure
+        log.warning("Calendario broker non disponibile: salto il controllo giorni.")
+        return 0
+
+
+def _stale_positions(client, cfg: dict, holdings: dict, symbols: set,
+                     max_hold: int, session_date: str) -> list:
+    """Posizioni aperte da piu' di max_hold giorni di borsa."""
+    if max_hold <= 0:
+        return []
+    out = []
+    for s in sorted(symbols):
+        opened = (holdings.get(s) or {}).get("opened_session_date")
+        if not opened:
+            continue  # sconosciuta: la registriamo oggi, conta da adesso
+        if _trading_days_between(client, opened, session_date) >= max_hold:
+            out.append(s)
+    return out
+
+
 def _event(state: dict, etype: str, **fields):
     ev = {"ts": now_cet().isoformat(timespec="seconds"), "type": etype}
     ev.update(fields)
@@ -93,7 +142,6 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     cfg = load_config()
     g = cfg["guardrails"]
-    max_dd = g["max_daily_drawdown_pct"]
     log_path = cfg["state"]["files"]["executions_log"]
     approved_path = cfg["state"]["files"]["approved_orders"]
     session_date = today_session_date()
@@ -117,6 +165,14 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
         sys.exit(1)
     equity = float(acct["equity"])
 
+    # --- Capitale operativo e fascia attiva (determinano rischio e strategia) ---
+    capital, simulated = cap_mod.effective_capital(cfg, equity)
+    tier = cap_mod.resolve_tier(cfg, capital)
+    max_dd = float(tier["max_daily_drawdown_pct"])
+    intraday = cap_mod.is_intraday(tier)
+    max_hold = int(tier.get("max_hold_days", 0) or 0)
+    log.info("%s", cap_mod.describe(tier, capital, simulated))
+
     state = _load_or_init_log(log_path, session_date, equity)
     opening_balance = state["opening_balance"]
     events_before = len(state["events"])
@@ -133,6 +189,7 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
 
     pos_symbols = {p["symbol"] for p in positions}
     open_order_symbols = {o["symbol"] for o in open_orders}
+    holdings = _load_holdings(cfg)
 
     # --- 3. R1 Kill Switch (per primo) ---
     pnl = (equity - opening_balance) / opening_balance if opening_balance else 0.0
@@ -153,23 +210,44 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             gitsync.sync(f"routine 04 KILL_SWITCH {session_date}")
         return state
 
-    # --- 5. Liquidazione EOD ---
+    # --- 5. Fine giornata: il comportamento dipende dalla STRATEGIA della fascia ---
     if phase in ("eod", "close"):
-        if pos_symbols or open_order_symbols:
-            log.info("EOD flat: chiudo %d posizioni, cancello ordini.", len(pos_symbols))
-            if not dry_run:
-                try:
-                    client.close_all_positions(cancel_orders=True)
-                    client.cancel_all_orders()
-                except BrokerError as e:
-                    log.error("Errore durante liquidazione EOD: %s", e)
-            _event(state, "LIQUIDATE_ALL", reason="EOD flat", positions=sorted(pos_symbols))
+        if intraday:
+            # INTRADAY: flat obbligatorio, nessuna posizione overnight.
+            if pos_symbols or open_order_symbols:
+                log.info("EOD flat (intraday): chiudo %d posizioni, cancello ordini.", len(pos_symbols))
+                if not dry_run:
+                    try:
+                        client.close_all_positions(cancel_orders=True)
+                        client.cancel_all_orders()
+                    except BrokerError as e:
+                        log.error("Errore durante liquidazione EOD: %s", e)
+                _event(state, "LIQUIDATE_ALL", reason="EOD flat", positions=sorted(pos_symbols))
+            else:
+                log.info("EOD: nessuna posizione/ordine da chiudere.")
         else:
-            log.info("EOD: nessuna posizione/ordine da chiudere.")
+            # SWING: le posizioni restano aperte (protette dal bracket GTC sul
+            # broker). Si chiudono solo quelle che superano il limite di giorni.
+            stale = _stale_positions(client, cfg, holdings, pos_symbols, max_hold, session_date)
+            if stale:
+                log.info("SWING: %d posizioni oltre %d giorni di borsa -> chiudo: %s",
+                         len(stale), max_hold, stale)
+                for sym in stale:
+                    if dry_run:
+                        continue
+                    try:
+                        client.close_position(sym)
+                        _event(state, "LIQUIDATE_ALL", reason=f"max_hold_days {max_hold}", ticker=sym)
+                    except BrokerError as e:
+                        log.error("%s: chiusura per scadenza fallita: %s", sym, e)
+            else:
+                log.info("SWING: %d posizioni mantenute overnight (nessuna oltre %d giorni).",
+                         len(pos_symbols), max_hold)
         if phase == "close":
             state["closing_balance"] = round(equity, 2)
             log.info("Sessione chiusa. closing_balance=%.2f", equity)
         if not dry_run:
+            _save_holdings(cfg, holdings, pos_symbols, session_date)
             atomic_write_json(log_path, state)
             gitsync.sync(f"routine 04 execution {phase} {session_date}")
         return state
@@ -225,8 +303,11 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             continue
         side = "buy" if action == "buy" else "sell"
         coid = f"bot-{session_date}-{tkr}"  # client_order_id stabile -> doppia idempotenza
-        log.info("%s: incrocio target. Invio BRACKET %s qty=%d entry~%.2f sl=%.2f tp=%.2f",
-                 tkr, side, qty, price, o["stop_loss_price"], o["take_profit_price"])
+        # In swing la posizione resta aperta piu' giorni: stop e take profit devono
+        # sopravvivere alla notte -> GTC. In intraday basta 'day' (si chiude comunque).
+        tif = "day" if intraday else "gtc"
+        log.info("%s: incrocio target. Invio BRACKET %s qty=%d entry~%.2f sl=%.2f tp=%.2f (tif=%s)",
+                 tkr, side, qty, price, o["stop_loss_price"], o["take_profit_price"], tif)
         if dry_run:
             _event(state, "ORDER_SUBMITTED", ticker=tkr, dry_run=True, qty=qty,
                    entry=price, stop_loss=o["stop_loss_price"], take_profit=o["take_profit_price"])
@@ -237,10 +318,13 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
                 symbol=tkr, qty=qty, side=side,
                 take_profit_price=o["take_profit_price"],
                 stop_loss_price=o["stop_loss_price"],
+                tif=tif,
                 client_order_id=coid,
             )
             _event(state, "ORDER_SUBMITTED", ticker=tkr, alpaca_order_id=res.get("id"),
-                   qty=qty, entry=price, stop_loss=o["stop_loss_price"], take_profit=o["take_profit_price"])
+                   qty=qty, entry=price, stop_loss=o["stop_loss_price"],
+                   take_profit=o["take_profit_price"], tif=tif)
+            holdings.setdefault(tkr, {"opened_session_date": session_date})
             submitted += 1
         except BrokerError as e:
             log.error("%s: invio ordine fallito: %s", tkr, e)
@@ -248,6 +332,9 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
 
     log.info("Tick completato: ordini inviati=%d", submitted)
     if not dry_run:
+        # Registra le posizioni correnti + quelle appena aperte (per max_hold_days)
+        _save_holdings(cfg, holdings, pos_symbols | {o["ticker"] for o in authorized
+                                                    if o["ticker"] in holdings}, session_date)
         atomic_write_json(log_path, state)
         if len(state["events"]) > events_before:  # push solo se e' successo qualcosa
             gitsync.sync(f"routine 04 execution tick {session_date}")

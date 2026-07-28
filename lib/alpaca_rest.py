@@ -213,6 +213,10 @@ class AlpacaClient:
     def list_positions(self) -> list:
         return self._request("GET", self._t("/v2/positions"))
 
+    def close_position(self, symbol: str) -> dict:
+        """Chiude UNA posizione a mercato (usata dallo swing per il limite di giorni)."""
+        return self._request("DELETE", self._t(f"/v2/positions/{symbol}"))
+
     def close_all_positions(self, cancel_orders: bool = True) -> list:
         return self._request(
             "DELETE",

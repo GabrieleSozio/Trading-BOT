@@ -1,59 +1,59 @@
 {
-  "generated_at": "2026-07-28T16:58:29+02:00",
+  "generated_at": "2026-07-28T23:20:43+02:00",
   "session_date": "2026-07-28",
-  "universe_size": 25,
-  "selected_by": "AI (Claude)",
-  "ai_analysis": "Il pre-market mostra una netta biforcazione: forte pressione ribassista sui semiconduttori/tech ad alto beta (MU, AMD, PLTR, INTC) e un gruppo di titoli con gap rialzista e trend Bullish. Per una strategia di momentum intraday con filtro di ritracciamento privilegiamo i candidati con gap direzionale ampio e volume elevato, che offrono liquidità e follow-through. Sul lato short spiccano MU e AMD (gap molto negativi, alti volumi, trend Bearish confermato) e INTC (volume enorme oltre 2M, gap -5.8%). Sul lato long selezioniamo NFLX (gap +3.49%, oltre 1M di volume, Bullish) e CRM (gap +4.74%, volume solido, Bullish). Preferiamo questi rispetto a titoli con gap forte ma volume scarso (ARM, ADBE, SHOP) o gap troppo piccolo (AAPL, NVDA piatti). L'operativita' resta intraday: si attende un piccolo ritracciamento contro il gap prima dell'ingresso nella direzione del trend.",
+  "universe_size": 44,
+  "capital_usd": 220.0,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 99.0,
+  "selected_by": "deterministico",
+  "ai_analysis": null,
   "candidates": [
     {
-      "ticker": "MU",
-      "sector": "Technology",
-      "last_price": 814.995,
-      "prev_close": 899.92,
-      "gap_pct": -9.4369,
-      "premarket_volume": 592191,
-      "trend": "Bearish",
-      "ai_rationale": "Gap ribassista molto ampio (-9.44%) con volume elevato (~592k) e trend Bearish: forte direzionalita' short, ideale per entrata su rimbalzo tecnico contro-gap. Settore Technology ad alto beta."
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 16.12,
+      "prev_close": 14.69,
+      "gap_pct": 9.7345,
+      "premarket_volume": 4114105,
+      "trend": "Bullish"
     },
     {
-      "ticker": "AMD",
+      "ticker": "HPQ",
       "sector": "Technology",
-      "last_price": 451.5,
-      "prev_close": 494.9,
-      "gap_pct": -8.7694,
-      "premarket_volume": 667330,
-      "trend": "Bearish",
-      "ai_rationale": "Gap -8.77% con volume tra i piu' alti del gruppo tech (~667k) e trend Bearish. Elevata liquidita' e volatilita', ottimo per momentum short dopo ritracciamento."
+      "last_price": 28.29,
+      "prev_close": 26.545,
+      "gap_pct": 6.5737,
+      "premarket_volume": 1999116,
+      "trend": "Bullish"
     },
     {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "last_price": 86.345,
-      "prev_close": 91.66,
-      "gap_pct": -5.7986,
-      "premarket_volume": 2132876,
-      "trend": "Bearish",
-      "ai_rationale": "Volume enorme (~2.1M, il piu' liquido del gruppo tech) con gap -5.80% e trend Bearish: forte convinzione ribassista, spread ridotti e ottimo follow-through intraday."
-    },
-    {
-      "ticker": "NFLX",
+      "ticker": "SNAP",
       "sector": "Communication Services",
-      "last_price": 72.855,
-      "prev_close": 70.4,
-      "gap_pct": 3.4872,
-      "premarket_volume": 1030209,
-      "trend": "Bullish",
-      "ai_rationale": "Gap rialzista +3.49% con volume superiore a 1M e trend Bullish: momentum long solido su titolo liquido di Communication Services, entrata su piccolo pullback."
+      "last_price": 4.77,
+      "prev_close": 4.515,
+      "gap_pct": 5.6478,
+      "premarket_volume": 0,
+      "trend": "Bullish"
     },
     {
-      "ticker": "CRM",
-      "sector": "Technology",
-      "last_price": 181.77,
-      "prev_close": 173.55,
-      "gap_pct": 4.7364,
-      "premarket_volume": 276135,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +4.74%, il piu' forte tra i Bullish con volume adeguato (~276k) e trend Bullish confermato. Buon candidato long su ritracciamento in settore Technology."
+      "ticker": "KO",
+      "sector": "Consumer Staples",
+      "last_price": 88.29,
+      "prev_close": 84.1,
+      "gap_pct": 4.9822,
+      "premarket_volume": 2940281,
+      "trend": "Bullish"
+    },
+    {
+      "ticker": "PYPL",
+      "sector": "Financials",
+      "last_price": 58.32,
+      "prev_close": 55.97,
+      "gap_pct": 4.1987,
+      "premarket_volume": 0,
+      "trend": "Bullish"
     }
   ]
 }

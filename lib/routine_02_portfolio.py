@@ -23,6 +23,7 @@ from .alpaca_rest import (
     read_json,
     today_session_date,
 )
+from . import capital as cap_mod
 from . import gitsync
 
 log = logging.getLogger("routine02")
@@ -31,7 +32,6 @@ log = logging.getLogger("routine02")
 def run(dry_run: bool = False) -> dict | None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     cfg = load_config()
-    n_open = cfg["allocation"]["positions_to_open"]
     metric = cfg["allocation"]["selection_metric"]
     retr = cfg["allocation"]["entry_retracement_pct"]
     in_path = cfg["state"]["files"]["market_research"]
@@ -56,25 +56,51 @@ def run(dry_run: bool = False) -> dict | None:
     client = AlpacaClient(max_consecutive_errors=cfg["guardrails"]["max_consecutive_api_errors"])
     try:
         acct = client.account()
+        positions = client.list_positions()
     except GuardrailR5:
         log.error("R5: troppi errori broker leggendo l'account. Stop.")
         sys.exit(1)
-    buying_power = float(acct["buying_power"])
+
+    # --- Capitale operativo e fascia attiva ---
+    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]))
+    tier = cap_mod.resolve_tier(cfg, capital)
+    n_open = int(tier["positions_to_open"])
+    log.info("%s", cap_mod.describe(tier, capital, simulated))
+
+    # --- Capitale gia' impegnato: in swing le posizioni restano aperte piu'
+    # giorni, quindi vanno scalate dal capitale disponibile e dagli slot liberi.
+    held = {p["symbol"]: abs(float(p.get("market_value", 0))) for p in positions}
+    committed = sum(held.values())
+    available = max(0.0, capital - committed)
+    slots = max(0, n_open - len(held))
+    if held:
+        log.info("Posizioni gia' aperte: %s | capitale impegnato %.2f | disponibile %.2f | slot liberi %d",
+                 list(held), committed, available, slots)
 
     orders = []
-    if buying_power <= 1.0 or not candidates:
-        log.warning("Buying power insufficiente (%.2f) o nessun candidato -> giornata in stand-by.", buying_power)
+    per_pos_cap = capital * float(tier["max_position_size_pct"])
+    if not candidates:
+        log.warning("Nessun candidato in input -> giornata in stand-by.")
+    elif slots == 0:
+        log.info("Tutti gli slot (%d) sono gia' occupati: nessun nuovo ordine.", n_open)
+    elif available < 1.0:
+        log.warning("Capitale disponibile insufficiente (%.2f) -> stand-by.", available)
     else:
-        # Seleziona i top-N per metrica (default: premarket_volume)
-        chosen = sorted(candidates, key=lambda c: c.get(metric, 0), reverse=True)[:n_open]
-        per_pos = buying_power / n_open
+        per_pos = min(per_pos_cap, available / slots)
+        # Esclude i titoli gia' in portafoglio (mai raddoppiare la stessa posizione)
+        pool = [c for c in candidates if c["ticker"] not in held]
+        chosen = sorted(pool, key=lambda c: c.get(metric, 0), reverse=True)[:slots]
         for c in chosen:
             action = "buy" if c["trend"] == "Bullish" else "sell_short"
+            if action == "sell_short" and not tier.get("allow_short"):
+                log.info("%s scartato: short non consentito nella fascia '%s'.", c["ticker"], tier["name"])
+                continue
             last = c["last_price"]
-            if action == "buy":
-                target = last * (1 - retr)
-            else:
-                target = last * (1 + retr)
+            target = last * (1 - retr) if action == "buy" else last * (1 + retr)
+            if per_pos < last:
+                log.warning("%s scartato: quota %.2f < prezzo azione %.2f (serve 1 azione intera).",
+                            c["ticker"], per_pos, last)
+                continue
             orders.append({
                 "ticker": c["ticker"],
                 "sector": c["sector"],
@@ -86,11 +112,16 @@ def run(dry_run: bool = False) -> dict | None:
     payload = {
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": session_date,
-        "buying_power": round(buying_power, 2),
+        "capital_usd": capital,
+        "capital_simulated": simulated,
+        "tier": tier["name"],
+        "mode": tier["mode"],
+        "available_usd": round(available, 2),
+        "free_slots": slots,
         "orders": orders,
     }
 
-    log.info("Buying power=%.2f | posizioni scelte=%d", buying_power, len(orders))
+    log.info("Capitale=%.2f | disponibile=%.2f | nuove posizioni=%d", capital, available, len(orders))
     for o in orders:
         log.info("  %-5s %-22s %-10s entry=%.2f cap=%.2f",
                  o["ticker"], o["sector"], o["action"], o["target_entry_price"], o["allocated_capital"])

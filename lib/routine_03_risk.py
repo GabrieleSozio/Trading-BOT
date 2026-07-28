@@ -30,6 +30,7 @@ from .alpaca_rest import (
     read_json,
     today_session_date,
 )
+from . import capital as cap_mod
 from . import gitsync
 
 log = logging.getLogger("routine03")
@@ -42,10 +43,6 @@ def run(dry_run: bool = False) -> dict | None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s")
     cfg = load_config()
     g = cfg["guardrails"]
-    max_pos = g["max_position_size_pct"]
-    sl_pct = g["stop_loss_pct"]
-    tp_pct = g["take_profit_pct"]
-    max_sector = g["max_sector_exposure_pct"]
     in_path = cfg["state"]["files"]["target_orders"]
     out_path = cfg["state"]["files"]["approved_orders"]
     session_date = today_session_date()
@@ -62,17 +59,27 @@ def run(dry_run: bool = False) -> dict | None:
     target = read_json(in_path)
     in_orders = target.get("orders", [])
 
-    # --- portfolio_value REALE dal broker: senza, non si applicano le guardrail ---
+    # --- Equity REALE dal broker: senza, non si applicano le guardrail ---
     client = AlpacaClient(max_consecutive_errors=g["max_consecutive_api_errors"])
     try:
         acct = client.account()
     except GuardrailR5:
         log.error("R5: troppi errori broker leggendo l'account. Stop.")
         sys.exit(1)
-    portfolio_value = float(acct["portfolio_value"])
-    if portfolio_value <= 0:
-        log.error("portfolio_value non valido (%.2f). Stop senza output.", portfolio_value)
+    real_equity = float(acct["portfolio_value"])
+    if real_equity <= 0:
+        log.error("portfolio_value non valido (%.2f). Stop senza output.", real_equity)
         sys.exit(1)
+
+    # Il rischio si misura sul CAPITALE OPERATIVO (eventualmente simulato) e con
+    # i limiti della fascia attiva, non su valori fissi.
+    portfolio_value, simulated = cap_mod.effective_capital(cfg, real_equity)
+    tier = cap_mod.resolve_tier(cfg, portfolio_value)
+    max_pos = float(tier["max_position_size_pct"])
+    sl_pct = float(tier["stop_loss_pct"])
+    tp_pct = float(tier["take_profit_pct"])
+    max_sector = float(tier["max_sector_exposure_pct"])
+    log.info("%s", cap_mod.describe(tier, portfolio_value, simulated))
 
     pos_cap = portfolio_value * max_pos
     sector_cap = portfolio_value * max_sector
@@ -125,6 +132,13 @@ def run(dry_run: bool = False) -> dict | None:
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": session_date,
         "portfolio_value": round(portfolio_value, 2),
+        "capital_simulated": simulated,
+        "real_equity": round(real_equity, 2),
+        "tier": tier["name"],
+        "mode": tier["mode"],
+        "stop_loss_pct": sl_pct,
+        "take_profit_pct": tp_pct,
+        "max_hold_days": tier.get("max_hold_days", 0),
         "guardrails_applied": guardrails_applied,
         "orders": approved,
     }

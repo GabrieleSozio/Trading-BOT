@@ -32,6 +32,26 @@ SECTOR_MAP = {
     "SMCI": "Technology",
     "ARM": "Technology",
     "SNOW": "Technology",
+    # --- fascia media / economica (accessibile a capitale ridotto) ---
+    "HOOD": "Financials",
+    "GM": "Consumer Discretionary",
+    "KO": "Consumer Staples",
+    "WFC": "Financials",
+    "BAC": "Financials",
+    "AFRM": "Financials",
+    "NKE": "Consumer Discretionary",
+    "CSX": "Industrials",
+    "HPQ": "Technology",
+    "PINS": "Communication Services",
+    "DKNG": "Consumer Discretionary",
+    "WBD": "Communication Services",
+    "PFE": "Health Care",
+    "T": "Communication Services",
+    "SOFI": "Financials",
+    "RIVN": "Consumer Discretionary",
+    "F": "Consumer Discretionary",
+    "AAL": "Industrials",
+    "SNAP": "Communication Services",
 }
 
 
