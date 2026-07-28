@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-07-28T23:20:59+02:00",
+  "session_date": "2026-07-28",
+  "portfolio_value": 220.0,
+  "capital_simulated": true,
+  "real_equity": 99964.09,
+  "tier": "micro",
+  "mode": "swing",
+  "stop_loss_pct": 0.03,
+  "take_profit_pct": 0.06,
+  "max_hold_days": 5,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": []
+}
