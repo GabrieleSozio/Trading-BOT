@@ -91,15 +91,24 @@ def _perf_summary(client: AlpacaClient) -> dict:
     }
 
 
-def _current_value(cfg: dict, param: str):
+def _current_value(cfg: dict, param: str, tier: dict):
+    """Valore attuale. I parametri 'tier.<x>' si riferiscono alla FASCIA ATTIVA."""
+    if param.startswith("tier."):
+        return tier[param.split(".", 1)[1]]
     node = cfg
     for part in param.split("."):
         node = node[part]
     return node
 
 
-def _validate(param: str, raw_value, tunable: dict, forbidden: list) -> tuple[bool, object, str]:
-    """Ritorna (ok, valore_validato, motivo_rifiuto)."""
+def _validate(param: str, raw_value, tunable: dict, forbidden: list,
+              tier: dict) -> tuple[bool, object, str]:
+    """Ritorna (ok, valore_validato, motivo_rifiuto).
+
+    Oltre a whitelist e range, applica un INVARIANTE di sicurezza: il capitale
+    complessivamente allocabile (posizioni x size) non puo' superare il 100%.
+    Cosi' l'AI puo' cambiare il numero di posizioni senza mai creare sovra-esposizione.
+    """
     top = param.split(".")[0]
     if top in forbidden:
         return False, None, f"parametro vietato (prefisso '{top}')"
@@ -113,20 +122,49 @@ def _validate(param: str, raw_value, tunable: dict, forbidden: list) -> tuple[bo
     lo, hi = spec["min"], spec["max"]
     if val < lo or val > hi:
         return False, None, f"fuori range [{lo}, {hi}]"
+    if param == "tier.positions_to_open":
+        esposizione = val * float(tier["max_position_size_pct"])
+        if esposizione > 1.0:
+            return False, None, (f"sovra-esposizione: {val} posizioni x "
+                                 f"{tier['max_position_size_pct']*100:.0f}% = "
+                                 f"{esposizione*100:.0f}% del capitale (max 100%)")
+    if param == "tier.max_hold_days" and cap_mod.is_intraday(tier):
+        return False, None, "max_hold_days non ha effetto in modalita' intraday"
     return True, val, ""
 
 
-def _apply_to_config(param: str, new_value) -> bool:
-    """Sostituisce il valore del leaf-key nel file YAML preservando i commenti."""
+def _apply_to_config(param: str, new_value, tier_name: str | None = None) -> bool:
+    """Sostituisce il valore nel YAML preservando i commenti.
+
+    Per i parametri 'tier.<x>' la modifica e' circoscritta al blocco della fascia
+    indicata: senza questo, una sostituzione globale colpirebbe la prima fascia
+    del file invece di quella attiva.
+    """
     leaf = param.split(".")[-1]
-    text = CONFIG_FILE.read_text(encoding="utf-8")
-    pattern = re.compile(rf"^(\s*{re.escape(leaf)}:\s*)([^\s#]+)(.*)$", re.MULTILINE)
-    new_text, n = pattern.subn(rf"\g<1>{new_value}\g<3>", text, count=1)
-    if n != 1:
-        log.error("Impossibile localizzare '%s' nel config (match=%d).", leaf, n)
-        return False
-    CONFIG_FILE.write_text(new_text, encoding="utf-8")
-    return True
+    lines = CONFIG_FILE.read_text(encoding="utf-8").splitlines(keepends=True)
+    start, end = 0, len(lines)
+
+    if param.startswith("tier."):
+        if not tier_name:
+            log.error("Modifica di fascia senza nome fascia: rifiutata.")
+            return False
+        start = next((i for i, l in enumerate(lines)
+                      if re.match(rf"^\s*-\s*name:\s*{re.escape(tier_name)}\s*$", l)), -1)
+        if start < 0:
+            log.error("Fascia '%s' non trovata nel config.", tier_name)
+            return False
+        end = next((i for i in range(start + 1, len(lines))
+                    if re.match(r"^\s*-\s*name:\s*", lines[i])), len(lines))
+
+    pattern = re.compile(rf"^(\s*{re.escape(leaf)}:\s*)([^\s#]+)(.*)$")
+    for i in range(start, end):
+        m = pattern.match(lines[i])
+        if m:
+            lines[i] = f"{m.group(1)}{new_value}{m.group(3)}\n"
+            CONFIG_FILE.write_text("".join(lines), encoding="utf-8")
+            return True
+    log.error("Impossibile localizzare '%s' nel config (fascia=%s).", leaf, tier_name)
+    return False
 
 
 def run(dry_run: bool = False) -> str:
@@ -136,7 +174,6 @@ def run(dry_run: bool = False) -> str:
     if not sup.get("enabled"):
         log.info("Supervisore disabilitato in config. Esco.")
         return ""
-    tunable = sup.get("tunable", {})
     forbidden = sup.get("forbidden_prefixes", [])
     model = cfg.get("ai", {}).get("supervisor_model")
 
@@ -147,10 +184,17 @@ def run(dry_run: bool = False) -> str:
         log.error("R5: troppi errori broker. Stop.")
         sys.exit(1)
 
-    current = {p: _current_value(cfg, p) for p in tunable}
     # Contesto: il bot cambia strategia con il capitale, l'AI deve saperlo.
     cap_usd, simulated = cap_mod.effective_capital(cfg, perf["equity"])
     tier = cap_mod.resolve_tier(cfg, cap_usd)
+
+    # Parametri modificabili: globali + quelli DELLA FASCIA ATTIVA (prefissati
+    # 'tier.'). I limiti di protezione (stop, size, drawdown, short, mode)
+    # restano fuori dalla whitelist e quindi intoccabili.
+    tunable = dict(sup.get("tunable", {}))
+    for p, spec in (sup.get("tier_tunable") or {}).items():
+        tunable[f"tier.{p}"] = spec
+    current = {p: _current_value(cfg, p, tier) for p in tunable}
     log.info("%s", cap_mod.describe(tier, cap_usd, simulated))
     log.info("Performance: %s", perf)
     log.info("Parametri attuali (modificabili): %s", current)
@@ -164,8 +208,14 @@ def run(dry_run: bool = False) -> str:
         "Sei il Chief Investment Officer di un piccolo hedge fund algoritmico in fase "
         "PAPER. Analizzi la performance del bot e proponi miglioramenti PRUDENTI. "
         "Puoi modificare SOLO i parametri elencati, restando NEI RANGE indicati. "
-        "NON puoi toccare le regole di rischio (guardrail), il flag paper, gli orari. "
-        "Se i dati sono insufficienti o tutto va bene, restituisci changes vuoto. "
+        "I parametri che iniziano con 'tier.' agiscono sulla fascia di capitale ATTIVA. "
+        "NON puoi toccare i limiti di protezione (stop loss, dimensione massima per "
+        "posizione, kill switch, short, modalita' intraday/swing), il flag paper o gli "
+        "orari: sono esclusi apposta e ogni proposta in tal senso verra' rifiutata. "
+        "Un vincolo e' verificato dal codice: posizioni x dimensione non puo' superare "
+        "il 100% del capitale. "
+        "Se i dati sono insufficienti o tutto va bene, restituisci changes vuoto: "
+        "non modificare per il gusto di modificare. "
         "Rispondi solo nel formato JSON richiesto, in italiano."
     )
     user = (
@@ -189,7 +239,7 @@ def run(dry_run: bool = False) -> str:
     applied, rejected = [], []
     for ch in proposed:
         param = ch.get("param", "")
-        ok, val, why = _validate(param, ch.get("new_value"), tunable, forbidden)
+        ok, val, why = _validate(param, ch.get("new_value"), tunable, forbidden, tier)
         if not ok:
             rejected.append((param, ch.get("new_value"), why))
             log.warning("RIFIUTATA modifica %s=%s: %s", param, ch.get("new_value"), why)
@@ -201,7 +251,7 @@ def run(dry_run: bool = False) -> str:
             log.info("DRY-RUN: applicherei %s: %s -> %s (%s)", param, current[param], val, ch.get("reason"))
             applied.append((param, current[param], val, ch.get("reason")))
             continue
-        if _apply_to_config(param, val):
+        if _apply_to_config(param, val, tier["name"]):
             applied.append((param, current[param], val, ch.get("reason")))
             log.info("APPLICATA %s: %s -> %s (%s)", param, current[param], val, ch.get("reason"))
 

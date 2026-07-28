@@ -172,5 +172,12 @@ supervisor:
   tunable:
     allocation.entry_retracement_pct: { min: 0.0, max: 0.02, type: float }
     universe.top_candidates: { min: 3, max: 10, type: int }
+  # Parametri di STRATEGIA della fascia attiva, modificabili dall'AI entro i range.
+  # NB: qui NON compaiono i limiti di protezione (stop_loss_pct, take_profit_pct,
+  # max_position_size_pct, max_daily_drawdown_pct, allow_short, mode): restano
+  # intoccabili. Il codice verifica inoltre che posizioni x size <= 100%.
+  tier_tunable:
+    positions_to_open: { min: 1, max: 5, type: int }
+    max_hold_days: { min: 2, max: 10, type: int }
   # Prefissi che l'AI non puo' MAI toccare: rischio, fasce, capitale, orari, stato.
   forbidden_prefixes: [ "guardrails", "tiers", "capital", "meta", "schedule_cet", "state" ]
