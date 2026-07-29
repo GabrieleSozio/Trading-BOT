@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-07-29T14:30:29+02:00",
+  "generated_at": "2026-07-29T19:51:59+02:00",
   "session_date": "2026-07-29",
+  "source_generated_at": "2026-07-29T19:51:53+02:00",
   "portfolio_value": 220.0,
   "capital_simulated": true,
-  "real_equity": 99964.24,
+  "real_equity": 99941.63,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -15,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 15.42,
+      "allocated_capital": 99.0,
+      "stop_loss_price": 14.96,
+      "take_profit_price": 16.35
+    }
+  ]
 }

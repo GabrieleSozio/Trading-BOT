@@ -3,5 +3,30 @@
   "opening_balance": 99953.73,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": []
+  "events": [
+    {
+      "ts": "2026-07-29T19:51:04+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:52:04+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:52:08+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:53:04+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    }
+  ]
 }
