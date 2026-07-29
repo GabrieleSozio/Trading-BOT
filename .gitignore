@@ -9,6 +9,7 @@ secrets/
 # --- Stato runtime ---
 # I JSON di stato SONO tracciati e pushati (backup/audit, vedi lib/gitsync.py).
 # Si ignorano solo i log di processo del loop di esecuzione (Routine 04).
+state/*.log
 state/*.out
 state/*.err
 
