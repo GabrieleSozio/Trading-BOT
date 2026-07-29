@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-28T23:20:59+02:00",
-  "session_date": "2026-07-28",
+  "generated_at": "2026-07-29T14:30:29+02:00",
+  "session_date": "2026-07-29",
   "portfolio_value": 220.0,
   "capital_simulated": true,
-  "real_equity": 99964.09,
+  "real_equity": 99964.24,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,

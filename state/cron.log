@@ -12,3 +12,7 @@
 2026-07-29 14:30:26,009 INFO routine02: Tutti gli slot (2) sono gia' occupati: nessun nuovo ordine.
 2026-07-29 14:30:26,010 INFO routine02: Capitale=220.00 | disponibile=0.00 | nuove posizioni=0
 2026-07-29 14:30:26,012 INFO routine02: Scritto state/target_orders.json
+2026-07-29 14:30:28,055 INFO gitsync: gitsync: push OK (2 file) -> routine 02 portfolio 2026-07-29
+2026-07-29 14:30:29,379 INFO routine03: capitale 220.00 USD (SIMULATO) -> fascia 'micro' [swing] 2 posizioni x 45% | stop -3.0% / target +6.0% | short no | max hold 5gg
+2026-07-29 14:30:29,380 INFO routine03: portfolio_value=220.00 | in=0 approvati=0 | R2 ridotti=0 | scartati R4=0
+2026-07-29 14:30:29,381 INFO routine03: Scritto state/approved_orders.json
