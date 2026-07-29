@@ -47,17 +47,25 @@ def run(dry_run: bool = False) -> dict | None:
     out_path = cfg["state"]["files"]["approved_orders"]
     session_date = today_session_date()
 
-    # --- Idempotenza: output di oggi gia' presente -> non rifare. ---
-    if Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
-        log.info("approved_orders di oggi gia' presente: skip (idempotente).")
-        return read_json(out_path)
-
     # --- Input non pronto = ATTESA (no-op, exit 0), non errore. ---
     if not Path(in_path).exists() or read_json(in_path).get("session_date") != session_date:
         log.info("Input 02 non ancora pronto per oggi (%s): no-op, riprovo al prossimo trigger.", session_date)
         return None
     target = read_json(in_path)
     in_orders = target.get("orders", [])
+    source_stamp = target.get("generated_at")
+
+    # --- Idempotenza LEGATA ALL'INPUT: si rielabora quando il Portfolio Manager
+    # ripianifica (nuovo generated_at), non si salta solo perche' esiste un output
+    # di oggi. Senza questo, la ripianificazione infragiornaliera non arriverebbe
+    # mai all'esecuzione.
+    if Path(out_path).exists():
+        prev = read_json(out_path)
+        if (prev.get("session_date") == session_date
+                and prev.get("source_generated_at") == source_stamp):
+            log.info("approved_orders gia' allineato al piano corrente: skip (idempotente).")
+            return prev
+        log.info("Piano aggiornato dal Portfolio Manager: rielaboro le guardrail.")
 
     # --- Equity REALE dal broker: senza, non si applicano le guardrail ---
     client = AlpacaClient(max_consecutive_errors=g["max_consecutive_api_errors"])
@@ -131,6 +139,7 @@ def run(dry_run: bool = False) -> dict | None:
     payload = {
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": session_date,
+        "source_generated_at": source_stamp,
         "portfolio_value": round(portfolio_value, 2),
         "capital_simulated": simulated,
         "real_equity": round(real_equity, 2),

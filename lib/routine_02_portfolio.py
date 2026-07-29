@@ -38,15 +38,14 @@ def run(dry_run: bool = False) -> dict | None:
     out_path = cfg["state"]["files"]["target_orders"]
     session_date = today_session_date()
 
-    # --- Idempotenza: se ho gia' prodotto l'output di oggi, non rifare. ---
-    if Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
-        log.info("target_orders di oggi gia' presente: skip (idempotente).")
-        return read_json(out_path)
-
     # --- Input non pronto = ATTESA (no-op, exit 0), non errore. ---
     if not Path(in_path).exists() or read_json(in_path).get("session_date") != session_date:
         log.info("Input 01 non ancora pronto per oggi (%s): no-op, riprovo al prossimo trigger.", session_date)
         return None
+
+    existing = None
+    if Path(out_path).exists() and read_json(out_path).get("session_date") == session_date:
+        existing = read_json(out_path)
     research = read_json(in_path)
     candidates = research.get("candidates", [])
     if not candidates:
@@ -77,6 +76,33 @@ def run(dry_run: bool = False) -> dict | None:
         log.info("Posizioni gia' aperte: %s | capitale impegnato %.2f | disponibile %.2f | slot liberi %d",
                  list(held), committed, available, slots)
 
+    # --- Titoli gia' operati OGGI: esclusi da nuovi piani. Rientrare sullo stesso
+    # titolo in giornata creerebbe un round-trip intragiornaliero (day trade, che
+    # consuma crediti PDT) e produrrebbe churn senza vantaggio atteso.
+    try:
+        traded_today = {o["symbol"] for o in client.list_orders(status="all")
+                        if (o.get("submitted_at") or o.get("created_at") or "")[:10] >= session_date}
+    except GuardrailR5:
+        log.error("R5: troppi errori broker. Stop.")
+        sys.exit(1)
+
+    # --- RIPIANIFICAZIONE INFRAGIORNALIERA ---
+    # Non si salta piu' "perche' esiste gia' un piano di oggi": si salta solo se il
+    # piano corrente copre gia' tutti gli slot liberi. Cosi', quando una posizione
+    # chiude e libera capitale, il bot ripianifica invece di restare fermo fino a domani.
+    if existing is not None:
+        pendenti = [o for o in existing.get("orders", [])
+                    if o["ticker"] not in held and o["ticker"] not in traded_today]
+        if slots <= 0:
+            log.info("Piano di oggi presente e nessuno slot libero: skip.")
+            return existing
+        if len(pendenti) >= slots:
+            log.info("Piano di oggi gia' copre gli %d slot liberi (%s): skip.",
+                     slots, [o["ticker"] for o in pendenti])
+            return existing
+        log.info("RIPIANIFICO: slot liberi=%d, ordini ancora validi nel piano=%d.",
+                 slots, len(pendenti))
+
     orders = []
     per_pos_cap = capital * float(tier["max_position_size_pct"])
     if not candidates:
@@ -87,15 +113,25 @@ def run(dry_run: bool = False) -> dict | None:
         log.warning("Capitale disponibile insufficiente (%.2f) -> stand-by.", available)
     else:
         per_pos = min(per_pos_cap, available / slots)
-        # Esclude i titoli gia' in portafoglio (mai raddoppiare la stessa posizione)
-        pool = [c for c in candidates if c["ticker"] not in held]
+        # Esclude i titoli gia' in portafoglio o gia' operati oggi
+        pool = [c for c in candidates
+                if c["ticker"] not in held and c["ticker"] not in traded_today]
+        if not pool:
+            log.info("Nessun candidato disponibile (tutti gia' in portafoglio o gia' operati oggi).")
         chosen = sorted(pool, key=lambda c: c.get(metric, 0), reverse=True)[:slots]
+        # Prezzi FRESCHI: ripianificando a meta' giornata, il prezzo delle 14:30
+        # sarebbe obsoleto e il target d'ingresso non avrebbe piu' senso.
         for c in chosen:
             action = "buy" if c["trend"] == "Bullish" else "sell_short"
             if action == "sell_short" and not tier.get("allow_short"):
                 log.info("%s scartato: short non consentito nella fascia '%s'.", c["ticker"], tier["name"])
                 continue
-            last = c["last_price"]
+            try:
+                live = client.latest_trade(c["ticker"])
+            except GuardrailR5:
+                log.error("R5: troppi errori broker. Stop.")
+                sys.exit(1)
+            last = float(live or c["last_price"])
             target = last * (1 - retr) if action == "buy" else last * (1 + retr)
             if per_pos < last:
                 log.warning("%s scartato: quota %.2f < prezzo azione %.2f (serve 1 azione intera).",
@@ -105,6 +141,7 @@ def run(dry_run: bool = False) -> dict | None:
                 "ticker": c["ticker"],
                 "sector": c["sector"],
                 "action": action,
+                "reference_price": round(last, 2),
                 "target_entry_price": round(target, 2),
                 "allocated_capital": round(per_pos, 2),
             })

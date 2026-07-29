@@ -41,6 +41,7 @@ from .alpaca_rest import (
 )
 from . import capital as cap_mod
 from . import gitsync
+from . import pdt
 
 log = logging.getLogger("routine04")
 
@@ -273,6 +274,22 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
     seen_symbols = {o["symbol"] for o in all_today
                     if (o.get("submitted_at") or o.get("created_at") or "")[:10] >= today_iso}
     handled = pos_symbols | open_order_symbols | seen_symbols
+
+    # --- 3-bis. Guard Pattern Day Trader ---
+    # Anche operando in swing puo' capitare un round-trip in giornata (una posizione
+    # aperta stamattina che colpisce il take profit nel pomeriggio): e' un day trade
+    # a tutti gli effetti. Sotto i 25k USD se ne possono fare solo 3 ogni 5 giorni,
+    # pena il blocco del conto. Qui ci fermiamo PRIMA di arrivarci.
+    # Si valuta sul CAPITALE OPERATIVO (eventualmente simulato): cosi' il test in
+    # paper riproduce fedelmente cio' che accadra' sul conto reale da ~220 USD.
+    pdt_ok, pdt_msg = pdt.can_open_new_position(client, capital)
+    log.info("%s", pdt_msg)
+    if not pdt_ok:
+        _event(state, "SUSPENDED", reason="PDT_limit", detail=pdt_msg[:180])
+        log.warning("Nessuna nuova apertura: le posizioni esistenti restano gestite normalmente.")
+        if not dry_run:
+            atomic_write_json(log_path, state)
+        return state
 
     # --- 4. Esecuzione sul ritracciamento ---
     submitted = 0
