@@ -6,3 +6,9 @@
 2026-07-29 14:30:20,619 INFO routine01:   F     Consumer Discretionary gap=+4.61% vol=3822 Bullish
 2026-07-29 14:30:20,619 INFO routine01:   INTC  Technology             gap=+0.55% vol=225 Bullish
 2026-07-29 14:30:20,695 INFO routine01: Scritto state/market_research.json
+2026-07-29 14:30:23,430 INFO gitsync: gitsync: push OK (2 file) -> routine 01 premarket 2026-07-29
+2026-07-29 14:30:26,008 INFO routine02: capitale 220.00 USD (SIMULATO) -> fascia 'micro' [swing] 2 posizioni x 45% | stop -3.0% / target +6.0% | short no | max hold 5gg
+2026-07-29 14:30:26,009 INFO routine02: Posizioni gia' aperte: ['INTC', 'MSFT', 'NFLX', 'NVDA', 'ORCL', 'PLTR'] | capitale impegnato 26780.71 | disponibile 0.00 | slot liberi 0
+2026-07-29 14:30:26,009 INFO routine02: Tutti gli slot (2) sono gia' occupati: nessun nuovo ordine.
+2026-07-29 14:30:26,010 INFO routine02: Capitale=220.00 | disponibile=0.00 | nuove posizioni=0
+2026-07-29 14:30:26,012 INFO routine02: Scritto state/target_orders.json
