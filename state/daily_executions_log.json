@@ -27,6 +27,29 @@
       "type": "SUSPENDED",
       "reason": "PDT_limit",
       "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:54:04+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:55:04+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (SMCI@2026-07-22, SMCI@2026-07-23): non apro per non sforare"
+    },
+    {
+      "ts": "2026-07-29T19:58:05+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "F",
+      "alpaca_order_id": "1bb8d2c5-72d5-4f29-9627-9cd7cd26797e",
+      "qty": 6,
+      "entry": 15.415,
+      "stop_loss": 14.96,
+      "take_profit": 16.35,
+      "tif": "gtc"
     }
   ]
 }
