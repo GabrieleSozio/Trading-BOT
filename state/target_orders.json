@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-07-29T19:51:53+02:00",
+  "generated_at": "2026-07-29T20:00:03+02:00",
   "session_date": "2026-07-29",
   "capital_usd": 220.0,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 220.0,
-  "free_slots": 2,
-  "orders": [
-    {
-      "ticker": "F",
-      "sector": "Consumer Discretionary",
-      "action": "buy",
-      "reference_price": 15.49,
-      "target_entry_price": 15.42,
-      "allocated_capital": 99.0
-    }
-  ]
+  "available_usd": 127.0,
+  "free_slots": 1,
+  "orders": []
 }
