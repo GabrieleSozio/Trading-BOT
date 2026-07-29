@@ -50,14 +50,21 @@ def sync(message: str) -> bool:
             log.warning("gitsync: commit fallito: %s", (c.stderr or c.stdout).strip()[:300])
             return False
 
-        p = _git(["push", "origin", "HEAD"])
+        branch = _git(["rev-parse", "--abbrev-ref", "HEAD"]).stdout.strip() or "main"
+        p = _git(["push", "origin", branch])
         if p.returncode != 0:
-            # Il remote potrebbe essere avanti (un'altra routine ha pushato in
-            # contemporanea, tipico nel cloud): rebase e riprova una volta.
-            branch = _git(["rev-parse", "--abbrev-ref", "HEAD"]).stdout.strip() or "main"
-            log.warning("gitsync: push rifiutato, provo pull --rebase + retry...")
-            _git(["pull", "--rebase", "origin", branch])
-            p = _git(["push", "origin", "HEAD"])
+            # Il remote e' avanti (un'altra macchina ha pushato). Si rebasa
+            # preferendo SEMPRE la versione locale sui file di stato: il bot che
+            # sta operando e' la fonte di verita' del proprio stato.
+            log.warning("gitsync: push rifiutato, riallineo con il remoto...")
+            r = _git(["pull", "--rebase", "-X", "theirs", "origin", branch])
+            if r.returncode != 0:
+                # Un rebase lasciato a meta' bloccherebbe OGNI operazione futura
+                # del bot: si annulla e si rinuncia al push di questo giro.
+                log.error("gitsync: rebase fallito, annullo per non lasciare il repo bloccato.")
+                _git(["rebase", "--abort"])
+                return False
+            p = _git(["push", "origin", branch])
             if p.returncode != 0:
                 log.error("gitsync: PUSH FALLITO (anche dopo rebase): %s", (p.stderr or p.stdout).strip()[:300])
                 return False
