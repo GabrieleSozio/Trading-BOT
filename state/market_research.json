@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-29T00:00:35+02:00",
-  "session_date": "2026-07-28",
+  "generated_at": "2026-07-29T14:30:20+02:00",
+  "session_date": "2026-07-29",
   "universe_size": 44,
   "capital_usd": 220.0,
   "capital_simulated": true,
@@ -8,57 +8,27 @@
   "mode": "swing",
   "max_price_per_share": 99.0,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "In un contesto swing multi-day privilegio titoli con gap significativo SUPPORTATO da volume reale in pre-market, che indica partecipazione istituzionale e maggiore probabilita' di prosecuzione del trend. Ho scartato i titoli con volume=0 (SNAP, PYPL, UBER, PINS, PFE, WBD, RIVN, T) nonostante gap interessanti, perche' senza conferma di volume il movimento rischia di essere un picco isolato che rientra. Tra i restanti seleziono quelli con miglior combinazione gap+volume+catalizzatore plausibile.",
+  "ai_analysis": "La lista contiene solo 2 titoli, quindi non e' possibile selezionarne 5. Seleziono entrambi i candidati disponibili in ordine di attrattivita' per lo swing trading. F presenta un gap significativo (+4.61%) con volume pre-market nettamente superiore, segnale di un movimento con maggiore probabilita' di continuazione. INTC mostra un gap marginale (+0.55%) e volume molto basso, quindi un setup piu' debole e a rischio di rientro.",
   "candidates": [
     {
       "ticker": "F",
       "sector": "Consumer Discretionary",
-      "last_price": 16.12,
-      "prev_close": 14.69,
-      "gap_pct": 9.7345,
-      "premarket_volume": 4114105,
+      "last_price": 15.65,
+      "prev_close": 14.96,
+      "gap_pct": 4.6123,
+      "premarket_volume": 3822,
       "trend": "Bullish",
-      "ai_rationale": "Gap piu' forte della lista (+9.73%) con volume di gran lunga il piu' alto (4.1M): combinazione ideale gap+volume che segnala catalizzatore forte e alta probabilita' di prosecuzione. Prezzo basso e liquido, buona tenuta attesa."
+      "ai_rationale": "Gap robusto (+4.61%) accompagnato da volume convincente (3822), trend rialzista confermato. Movimento con reale momentum che ha buone probabilita' di proseguire nei giorni successivi; il gap ampio giustifica l'esposizione overnight con stop -3% / target +6%."
     },
     {
-      "ticker": "HPQ",
+      "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 28.29,
-      "prev_close": 26.545,
-      "gap_pct": 6.5737,
-      "premarket_volume": 1999116,
+      "last_price": 86.71,
+      "prev_close": 86.24,
+      "gap_pct": 0.545,
+      "premarket_volume": 225,
       "trend": "Bullish",
-      "ai_rationale": "Gap robusto (+6.57%) sostenuto da volume solido (~2M). Tech in trend rialzista, movimento convincente con partecipazione reale; buon profilo per continuazione multi-day."
-    },
-    {
-      "ticker": "KO",
-      "sector": "Consumer Staples",
-      "last_price": 88.29,
-      "prev_close": 84.1,
-      "gap_pct": 4.9822,
-      "premarket_volume": 2940281,
-      "trend": "Bullish",
-      "ai_rationale": "Gap notevole (+4.98%) per un titolo difensivo Consumer Staples, con volume elevato (2.9M). La bassa volatilita' del settore rende il movimento piu' stabile e adatto a mantenere overnight con minor rischio di reversal violento."
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "last_price": 72.37,
-      "prev_close": 70.4,
-      "gap_pct": 2.7983,
-      "premarket_volume": 2730774,
-      "trend": "Bullish",
-      "ai_rationale": "Gap moderato (+2.80%) ma con volume forte (2.7M) e nome large-cap di qualita' in Communication Services. Movimento supportato, trend solido e buona tenuta attesa nei giorni successivi."
-    },
-    {
-      "ticker": "AAL",
-      "sector": "Industrials",
-      "last_price": 15.36,
-      "prev_close": 14.965,
-      "gap_pct": 2.6395,
-      "premarket_volume": 3220887,
-      "trend": "Bullish",
-      "ai_rationale": "Volume molto elevato (3.2M) con gap +2.64%; forte partecipazione su titolo liquido a prezzo basso. Il volume convincente aumenta la probabilita' che il movimento prosegua oltre la sessione."
+      "ai_rationale": "Trend rialzista ma gap minimo (+0.55%) e volume pre-market molto basso (225): setup piu' fragile e a rischio di picco isolato. Incluso solo perche' e' l'unico altro titolo disponibile in lista; posizione da monitorare con attenzione."
     }
   ]
 }

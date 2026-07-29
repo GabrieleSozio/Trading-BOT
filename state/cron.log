@@ -1,0 +1,8 @@
+2026-07-29 14:30:04,623 INFO routine01: capitale 220.00 USD (SIMULATO) -> fascia 'micro' [swing] 2 posizioni x 45% | stop -3.0% / target +6.0% | short no | max hold 5gg
+2026-07-29 14:30:04,625 INFO routine01: Prezzo massimo per azione operabile: 99.00 USD
+2026-07-29 14:30:20,472 INFO httpx: HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-07-29 14:30:20,619 INFO routine01: Selezione candidati: AI (Claude)
+2026-07-29 14:30:20,619 INFO routine01: Analizzati=2 scartati=42. Top 2 candidati:
+2026-07-29 14:30:20,619 INFO routine01:   F     Consumer Discretionary gap=+4.61% vol=3822 Bullish
+2026-07-29 14:30:20,619 INFO routine01:   INTC  Technology             gap=+0.55% vol=225 Bullish
+2026-07-29 14:30:20,695 INFO routine01: Scritto state/market_research.json
