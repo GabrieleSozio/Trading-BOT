@@ -265,13 +265,19 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             else:
                 log.info("SWING: %d posizioni mantenute overnight (nessuna oltre %d giorni).",
                          len(pos_symbols), max_hold)
+        first_close = False
         if phase == "close":
+            first_close = state.get("closing_balance") is None
             state["closing_balance"] = round(equity, 2)
             log.info("Sessione chiusa. closing_balance=%.2f", equity)
         if not dry_run:
             _save_holdings(cfg, holdings, pos_symbols, session_date)
             atomic_write_json(log_path, state)
-            gitsync.sync(f"routine 04 execution {phase} {session_date}")
+            # Si pubblica solo se e' successo qualcosa (o alla prima chiusura):
+            # la fase di chiusura dura diversi minuti e altrimenti genererebbe
+            # un commit al minuto tutti identici.
+            if len(state["events"]) > events_before or first_close:
+                gitsync.sync(f"routine 04 execution {phase} {session_date}")
         return state
 
     # --- 1. Carica ordini approvati (fase execute) ---
