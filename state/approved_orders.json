@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-30T14:30:27+02:00",
+  "generated_at": "2026-07-30T15:47:02+02:00",
   "session_date": "2026-07-30",
-  "source_generated_at": "2026-07-30T14:30:23+02:00",
+  "source_generated_at": "2026-07-30T15:45:04+02:00",
   "portfolio_value": 220.0,
   "capital_simulated": true,
-  "real_equity": 99941.17,
+  "real_equity": 99940.87,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,13 +18,13 @@
   ],
   "orders": [
     {
-      "ticker": "SOFI",
-      "sector": "Financials",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 15.36,
+      "target_entry_price": 88.77,
       "allocated_capital": 99.0,
-      "stop_loss_price": 14.9,
-      "take_profit_price": 16.28
+      "stop_loss_price": 86.11,
+      "take_profit_price": 94.1
     }
   ]
 }
