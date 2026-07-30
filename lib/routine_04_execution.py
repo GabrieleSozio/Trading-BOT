@@ -45,6 +45,10 @@ from . import pdt
 
 log = logging.getLogger("routine04")
 
+# Oltre questa distanza fra due tick si considera che il bot sia stato fermo
+# (riavvio, black-out, sospensione) e lo si registra come interruzione.
+GAP_ALERT_MINUTES = 5
+
 
 def _hhmm(s: str) -> dt.time:
     h, m = s.split(":")
@@ -177,6 +181,23 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
     state = _load_or_init_log(log_path, session_date, equity)
     opening_balance = state["opening_balance"]
     events_before = len(state["events"])
+
+    # --- Rilevatore di interruzioni ---
+    # Il bot gira su una macchina fisica: un'assenza di corrente, un riavvio o una
+    # sospensione lo fermano senza preavviso. Le posizioni restano protette (stop e
+    # take profit vivono sul broker), ma in quella finestra non si opera. Qui il
+    # buco viene registrato, cosi' resta visibile nell'audit invece di passare inosservato.
+    prev_tick = state.get("last_tick_at")
+    if prev_tick:
+        try:
+            gap_min = (now - dt.datetime.fromisoformat(prev_tick)).total_seconds() / 60.0
+            if gap_min > GAP_ALERT_MINUTES:
+                log.warning("INTERRUZIONE RILEVATA: %.0f minuti senza tick (ultimo: %s). "
+                            "Il bot non ha operato in quella finestra.", gap_min, prev_tick[11:19])
+                _event(state, "GAP_DETECTED", minutes=round(gap_min), last_tick=prev_tick)
+        except ValueError:
+            pass
+    state["last_tick_at"] = now.isoformat(timespec="seconds")
 
     # Se gia' ibernato dal kill switch oggi: non fare piu' nulla.
     if state.get("kill_switch_triggered"):
