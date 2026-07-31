@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-31T16:02:02+02:00",
+  "generated_at": "2026-07-31T16:17:03+02:00",
   "session_date": "2026-07-31",
-  "source_generated_at": "2026-07-31T16:00:04+02:00",
+  "source_generated_at": "2026-07-31T16:15:04+02:00",
   "portfolio_value": 220.0,
   "capital_simulated": true,
   "real_equity": 99950.44,
@@ -21,10 +21,10 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 93.24,
+      "target_entry_price": 92.56,
       "allocated_capital": 99.0,
-      "stop_loss_price": 90.44,
-      "take_profit_price": 98.83
+      "stop_loss_price": 89.78,
+      "take_profit_price": 98.11
     }
   ]
 }
