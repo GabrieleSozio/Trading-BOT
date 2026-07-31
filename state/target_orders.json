@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-31T16:00:04+02:00",
+  "generated_at": "2026-07-31T16:15:04+02:00",
   "session_date": "2026-07-31",
   "capital_usd": 220.0,
   "capital_simulated": true,
@@ -12,8 +12,8 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 93.7,
-      "target_entry_price": 93.24,
+      "reference_price": 93.03,
+      "target_entry_price": 92.56,
       "allocated_capital": 99.0
     }
   ]
