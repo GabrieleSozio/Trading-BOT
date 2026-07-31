@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-30T14:30:18+02:00",
-  "session_date": "2026-07-30",
+  "generated_at": "2026-07-31T14:30:23+02:00",
+  "session_date": "2026-07-31",
   "universe_size": 44,
   "capital_usd": 220.0,
   "capital_simulated": true,
@@ -8,27 +8,27 @@
   "mode": "swing",
   "max_price_per_share": 99.0,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista contiene solo 2 titoli, quindi non e' possibile selezionarne 5. Entrambi sono rialzisti. SOFI mostra volume pre-market decisamente convincente (2841) che supporta la sostenibilita' del movimento nei giorni successivi, mentre INTC ha un gap piu' ampio (+3.78%) ma volume molto basso (245), segnale di scarsa partecipazione e maggior rischio di rientro del picco. Per una strategia swing multi-giorno con hold overnight, il volume e' il fattore chiave di tenuta.",
+  "ai_analysis": "La lista contiene solo 2 titoli, entrambi rialzisti con gap modesti in pre-market. Il volume riportato e' pari a zero (dato pre-market incompleto), quindi la conferma del movimento e' debole. RIVN mostra un gap piu' consistente (+1.13%) tipico di un titolo volatile del Consumer Discretionary, mentre INTC ha un gap piu' contenuto (+0.61%) ma appartiene a un settore tech con trend positivo. Non e' possibile selezionare 5 candidati perche' la lista ne contiene solo 2: seleziono entrambi come richiesto dalla strategia a 2 posizioni.",
   "candidates": [
     {
-      "ticker": "SOFI",
-      "sector": "Financials",
-      "last_price": 15.44,
-      "prev_close": 15.235,
-      "gap_pct": 1.3456,
-      "premarket_volume": 2841,
+      "ticker": "RIVN",
+      "sector": "Consumer Discretionary",
+      "last_price": 16.97,
+      "prev_close": 16.78,
+      "gap_pct": 1.1323,
+      "premarket_volume": 0,
       "trend": "Bullish",
-      "ai_rationale": "Volume pre-market elevato (2841) che indica forte partecipazione e maggiore probabilita' di prosecuzione del trend rialzista nei giorni successivi. Gap moderato (+1.35%) piu' sostenibile di un picco isolato, settore Financials solido. Buon profilo per hold overnight con target +6%."
+      "ai_rationale": "Gap rialzista piu' marcato (+1.13%) e trend Bullish; titolo Consumer Discretionary volatile con buon potenziale di prosecuzione multi-day se accompagnato da volume. Prezzo basso (16.97) favorevole al sizing micro. Attenzione al volume non confermato."
     },
     {
       "ticker": "INTC",
       "sector": "Technology",
-      "last_price": 85.01,
-      "prev_close": 81.915,
-      "gap_pct": 3.7783,
-      "premarket_volume": 245,
+      "last_price": 91.72,
+      "prev_close": 91.16,
+      "gap_pct": 0.6143,
+      "premarket_volume": 0,
       "trend": "Bullish",
-      "ai_rationale": "Gap piu' ampio (+3.78%) e trend Bullish nel settore Technology, ma volume molto basso (245) che riduce l'affidabilita' della prosecuzione: rischio di rientro del picco. Incluso solo perche' unico altro candidato disponibile; da monitorare con attenzione allo stop -3%."
+      "ai_rationale": "Gap positivo (+0.61%) e trend Bullish nel settore Technology, storicamente favorevole allo swing su piu' giorni con catalizzatori plausibili. Movimento piu' contenuto ma piu' stabile, adatto a tenuta overnight. Volume da confermare in apertura."
     }
   ]
 }
