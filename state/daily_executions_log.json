@@ -1,31 +1,20 @@
 {
-  "session_date": "2026-07-30",
-  "opening_balance": 99940.75,
-  "closing_balance": 99944.04,
+  "session_date": "2026-07-31",
+  "opening_balance": 99949.32,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-07-30T15:30:05+02:00",
+      "ts": "2026-07-31T15:32:05+02:00",
       "type": "ORDER_SUBMITTED",
-      "ticker": "SOFI",
-      "alpaca_order_id": "a012db40-02fc-49da-a9c7-4a5556dc6f81",
+      "ticker": "RIVN",
+      "alpaca_order_id": "a0beedb1-bece-437c-bad1-c766ece736dd",
       "qty": 6,
-      "entry": 15.35,
-      "stop_loss": 14.9,
-      "take_profit": 16.28,
-      "tif": "gtc"
-    },
-    {
-      "ts": "2026-07-30T21:25:05+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "INTC",
-      "alpaca_order_id": "55a7b3dd-e960-4eb4-862b-86ec0ff7588f",
-      "qty": 1,
-      "entry": 91.75,
-      "stop_loss": 89.02,
-      "take_profit": 97.28,
+      "entry": 16.46,
+      "stop_loss": 16.38,
+      "take_profit": 17.9,
       "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-07-30T21:59:01+02:00"
+  "last_tick_at": "2026-07-31T15:32:02+02:00"
 }
