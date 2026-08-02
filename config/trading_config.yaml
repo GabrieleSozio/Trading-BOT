@@ -15,8 +15,15 @@ meta:
 # strategia che userai davvero con capitale ridotto (es. 220 USD ~ 200 EUR).
 # Metti 0 per usare l'equity reale del conto.
 capital:
-  simulated_usd: 220
-  # Sicurezza: se il capitale simulato supera l'equity reale, il bot usa la
+  base_usd: 220              # capitale di partenza (0 = usa l'equity reale del conto)
+  compound: true             # true = i guadagni vengono REINVESTITI (effetto valanga):
+                             # il capitale operativo = base + risultati cumulati della
+                             # strategia. Le perdite riducono l'esposizione allo stesso modo.
+  # Da quando contare i risultati: esclude le operazioni della vecchia strategia
+  # (le posizioni da 100k chiuse la mattina del 29/07).
+  strategy_start: "2026-07-29T16:00:00Z"
+  min_usd: 50                # sotto questa soglia logga un avviso (capitale eroso)
+  # Sicurezza: se il capitale calcolato supera l'equity reale, il bot usa la
   # piu' bassa delle due (non puo' operare con soldi che non ha).
 
 # --- Fasce di capitale ------------------------------------------------

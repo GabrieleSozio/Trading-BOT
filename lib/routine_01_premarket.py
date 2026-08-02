@@ -210,7 +210,7 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     except GuardrailR5:
         log.error("R5: troppi errori broker leggendo l'account. Stop.")
         sys.exit(1)
-    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]))
+    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]), client)
     tier = cap_mod.resolve_tier(cfg, capital)
     max_price = cap_mod.max_affordable_price(capital, tier)
     log.info("%s", cap_mod.describe(tier, capital, simulated))

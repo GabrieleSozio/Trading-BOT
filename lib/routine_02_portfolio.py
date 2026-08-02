@@ -61,7 +61,7 @@ def run(dry_run: bool = False) -> dict | None:
         sys.exit(1)
 
     # --- Capitale operativo e fascia attiva ---
-    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]))
+    capital, simulated = cap_mod.effective_capital(cfg, float(acct["equity"]), client)
     tier = cap_mod.resolve_tier(cfg, capital)
     n_open = int(tier["positions_to_open"])
     log.info("%s", cap_mod.describe(tier, capital, simulated))

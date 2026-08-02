@@ -23,23 +23,59 @@ class TierError(RuntimeError):
     """Configurazione delle fasce assente o malformata."""
 
 
-def effective_capital(cfg: dict, real_equity: float) -> tuple[float, bool]:
+def strategy_pnl(client, start_iso: str) -> float:
+    """Profitto/perdita cumulato della strategia dal suo avvio.
+
+    Si ricava dal broker, non da un contatore interno: cosi' non puo' andare fuori
+    sincrono e si auto-corregge. Somma il flusso di cassa di tutti i fill dall'avvio
+    (negativo per gli acquisti, positivo per le vendite) e ci aggiunge il valore di
+    mercato di cio' che e' ancora aperto.
+    """
+    fills = client.activities("FILL", after=start_iso)
+    net = 0.0
+    for f in fills:
+        try:
+            qty, price, side = float(f["qty"]), float(f["price"]), f.get("side", "")
+        except (KeyError, TypeError, ValueError):
+            continue
+        net += qty * price * (1 if side.startswith("sell") else -1)
+    market_value = sum(float(p.get("market_value", 0)) for p in client.list_positions())
+    return net + market_value
+
+
+def effective_capital(cfg: dict, real_equity: float, client=None) -> tuple[float, bool]:
     """Capitale su cui dimensionare le operazioni.
 
-    Se `capital.simulated_usd` > 0 usa quell'importo (per provare in paper la
-    strategia con capitale ridotto), ma MAI piu' dell'equity realmente
-    disponibile. Ritorna (capitale, is_simulated).
+    Con `capital.base_usd` > 0 il bot opera su quell'importo invece che sull'equity
+    reale (serve a provare in paper la strategia che si usera' con capitale ridotto).
+    Se `capital.compound` e' true, al capitale base si somma il P&L cumulato della
+    strategia: i guadagni vengono reinvestiti e le perdite riducono l'esposizione,
+    esattamente come accadrebbe su un conto reale.
+
+    In ogni caso non si opera mai per piu' dell'equity realmente disponibile.
+    Ritorna (capitale, is_simulated).
     """
-    sim = float((cfg.get("capital") or {}).get("simulated_usd") or 0)
-    if sim > 0:
-        cap = min(sim, real_equity)
-        if cap < sim:
-            log.warning(
-                "Capitale simulato %.2f > equity reale %.2f: uso %.2f.",
-                sim, real_equity, cap,
-            )
-        return round(cap, 2), True
-    return round(real_equity, 2), False
+    c = cfg.get("capital") or {}
+    base = float(c.get("base_usd") or c.get("simulated_usd") or 0)
+    if base <= 0:
+        return round(real_equity, 2), False
+
+    cap = base
+    if c.get("compound") and client is not None:
+        try:
+            pnl = strategy_pnl(client, c.get("strategy_start") or "2000-01-01T00:00:00Z")
+            cap = base + pnl
+            log.info("Compounding: base %.2f %+.2f di risultati = %.2f USD operativi",
+                     base, pnl, cap)
+        except Exception as e:  # noqa: BLE001 — mai bloccare il bot per il calcolo
+            log.warning("P&L cumulato non calcolabile (%s): uso il capitale base.", e)
+            cap = base
+
+    floor_usd = float(c.get("min_usd") or 0)
+    if cap < floor_usd:
+        log.warning("Capitale sceso a %.2f, sotto il minimo operativo %.2f.", cap, floor_usd)
+    cap = min(cap, real_equity)
+    return round(max(cap, 0.0), 2), True
 
 
 def resolve_tier(cfg: dict, capital: float) -> dict:

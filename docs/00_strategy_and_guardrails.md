@@ -70,11 +70,19 @@ La Routine 01 scarta quindi automaticamente i titoli il cui prezzo per azione su
 la quota allocabile (`capitale × max_position_size_pct`): con $220 e il 45%, sono
 operabili solo titoli sotto i ~$99.
 
-### Capitale operativo e simulazione
+### Capitale operativo, simulazione e compounding
 Il dimensionamento non usa il buying power ma il **capitale operativo**
-(`config → capital.simulated_usd`). Se impostato > 0, il bot opera come se avesse
-quella cifra (mai più dell'equity reale): serve a **provare in paper la strategia
-che si userà davvero** con capitale ridotto. A 0 usa l'equity reale del conto.
+(`config → capital`). Con `base_usd` > 0 il bot opera come se avesse quella cifra
+(mai più dell'equity reale): serve a **provare in paper la strategia che si userà
+davvero** con capitale ridotto. Con `base_usd: 0` usa l'equity reale del conto.
+
+Con `compound: true` il capitale operativo diventa **base + risultati cumulati
+della strategia**: i guadagni vengono reinvestiti (la quota per posizione cresce)
+e le perdite riducono l'esposizione, esattamente come su un conto reale. Il P&L
+non è tenuto da un contatore interno ma **ricavato dal broker** a ogni run (flusso
+di cassa dei fill dall'avvio + valore di mercato delle posizioni aperte): così non
+può andare fuori sincrono e si auto-corregge. `strategy_start` delimita da quando
+contare, per escludere le operazioni di strategie precedenti.
 
 ---
 

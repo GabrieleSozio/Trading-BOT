@@ -185,7 +185,7 @@ def run(dry_run: bool = False) -> str:
         sys.exit(1)
 
     # Contesto: il bot cambia strategia con il capitale, l'AI deve saperlo.
-    cap_usd, simulated = cap_mod.effective_capital(cfg, perf["equity"])
+    cap_usd, simulated = cap_mod.effective_capital(cfg, perf["equity"], client)
     tier = cap_mod.resolve_tier(cfg, cap_usd)
 
     # Parametri modificabili: globali + quelli DELLA FASCIA ATTIVA (prefissati

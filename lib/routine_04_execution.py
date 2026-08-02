@@ -171,7 +171,7 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
     equity = float(acct["equity"])
 
     # --- Capitale operativo e fascia attiva (determinano rischio e strategia) ---
-    capital, simulated = cap_mod.effective_capital(cfg, equity)
+    capital, simulated = cap_mod.effective_capital(cfg, equity, client)
     tier = cap_mod.resolve_tier(cfg, capital)
     max_dd = float(tier["max_daily_drawdown_pct"])
     intraday = cap_mod.is_intraday(tier)

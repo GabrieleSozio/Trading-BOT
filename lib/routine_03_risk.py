@@ -81,7 +81,7 @@ def run(dry_run: bool = False) -> dict | None:
 
     # Il rischio si misura sul CAPITALE OPERATIVO (eventualmente simulato) e con
     # i limiti della fascia attiva, non su valori fissi.
-    portfolio_value, simulated = cap_mod.effective_capital(cfg, real_equity)
+    portfolio_value, simulated = cap_mod.effective_capital(cfg, real_equity, client)
     tier = cap_mod.resolve_tier(cfg, portfolio_value)
     max_pos = float(tier["max_position_size_pct"])
     sl_pct = float(tier["stop_loss_pct"])
