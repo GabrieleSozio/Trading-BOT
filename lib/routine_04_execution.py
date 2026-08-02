@@ -347,27 +347,44 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             continue
         side = "buy" if action == "buy" else "sell"
         coid = f"bot-{session_date}-{tkr}"  # client_order_id stabile -> doppia idempotenza
+
+        # --- Protezioni ancorate al prezzo REALE d'ingresso ---
+        # Il Risk Manager calcola stop e target sul prezzo PIANIFICATO delle 14:30.
+        # Se il titolo si muove molto prima dell'ingresso, quelle soglie diventano
+        # sbagliate: si e' visto uno stop finire a distanza zero dall'acquisto e
+        # scattare dopo 3 minuti. Le percentuali di rischio restano quelle della
+        # fascia (decise dal Risk Manager), ma vanno applicate al prezzo di adesso.
+        sl_pct = float(tier["stop_loss_pct"])
+        tp_pct = float(tier["take_profit_pct"])
+        if action == "buy":
+            stop_px, tp_px = price * (1 - sl_pct), price * (1 + tp_pct)
+        else:
+            stop_px, tp_px = price * (1 + sl_pct), price * (1 - tp_pct)
+        stop_px, tp_px = round(stop_px, 2), round(tp_px, 2)
+        if abs(stop_px - o["stop_loss_price"]) > 0.01:
+            log.info("%s: protezioni ricalcolate sul prezzo reale %.2f -> stop %.2f / target %.2f "
+                     "(da piano erano %.2f / %.2f)", tkr, price, stop_px, tp_px,
+                     o["stop_loss_price"], o["take_profit_price"])
         # In swing la posizione resta aperta piu' giorni: stop e take profit devono
         # sopravvivere alla notte -> GTC. In intraday basta 'day' (si chiude comunque).
         tif = "day" if intraday else "gtc"
         log.info("%s: incrocio target. Invio BRACKET %s qty=%d entry~%.2f sl=%.2f tp=%.2f (tif=%s)",
-                 tkr, side, qty, price, o["stop_loss_price"], o["take_profit_price"], tif)
+                 tkr, side, qty, price, stop_px, tp_px, tif)
         if dry_run:
             _event(state, "ORDER_SUBMITTED", ticker=tkr, dry_run=True, qty=qty,
-                   entry=price, stop_loss=o["stop_loss_price"], take_profit=o["take_profit_price"])
+                   entry=price, stop_loss=stop_px, take_profit=tp_px)
             submitted += 1
             continue
         try:
             res = client.submit_bracket_order(
                 symbol=tkr, qty=qty, side=side,
-                take_profit_price=o["take_profit_price"],
-                stop_loss_price=o["stop_loss_price"],
+                take_profit_price=tp_px,
+                stop_loss_price=stop_px,
                 tif=tif,
                 client_order_id=coid,
             )
             _event(state, "ORDER_SUBMITTED", ticker=tkr, alpaca_order_id=res.get("id"),
-                   qty=qty, entry=price, stop_loss=o["stop_loss_price"],
-                   take_profit=o["take_profit_price"], tif=tif)
+                   qty=qty, entry=price, stop_loss=stop_px, take_profit=tp_px, tif=tif)
             holdings.setdefault(tkr, {"opened_session_date": session_date})
             submitted += 1
         except BrokerError as e:
