@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T19:00:04+02:00",
+  "generated_at": "2026-08-03T19:15:05+02:00",
   "session_date": "2026-08-03",
   "capital_usd": 228.87,
   "capital_simulated": true,
@@ -13,7 +13,7 @@
       "sector": "Communication Services",
       "action": "buy",
       "reference_price": 4.99,
-      "target_entry_price": 4.97,
+      "target_entry_price": 4.96,
       "allocated_capital": 102.99
     }
   ]
