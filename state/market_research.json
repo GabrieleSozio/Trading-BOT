@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-08-03T14:30:19+02:00",
+  "session_date": "2026-08-03",
+  "universe_size": 44,
+  "capital_usd": 228.87,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 102.99,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La lista contiene un solo titolo (SNAP), quindi non e' possibile selezionare 5 candidati distinti come richiesto: viene indicato l'unico titolo disponibile. Il quadro tecnico e' debole: gap pre-market modesto (+0.64%) e volume estremamente ridotto (100 azioni), del tutto insufficiente per confermare una spinta direzionale credibile. Un gap cosi' contenuto con volume irrisorio ha alta probabilita' di rientrare e non offre un catalizzatore chiaro per una prosecuzione multi-day. Per una strategia swing con stop -3%/target +6% e overnight risk, questo setup e' poco convincente e andrebbe monitorato con conferme di volume prima di ogni ingresso.",
+  "candidates": [
+    {
+      "ticker": "SNAP",
+      "sector": "Communication Services",
+      "last_price": 4.72,
+      "prev_close": 4.69,
+      "gap_pct": 0.6397,
+      "premarket_volume": 100,
+      "trend": "Bullish",
+      "ai_rationale": "Unico titolo disponibile in lista, trend etichettato Bullish e gap lievemente positivo (+0.64%). Tuttavia il volume e' minimo (100), quindi la tenuta attesa e' bassa: setup speculativo da confermare con volumi reali prima di aprire posizione overnight."
+    }
+  ]
+}
