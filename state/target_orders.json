@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-08-03T14:30:25+02:00",
+  "session_date": "2026-08-03",
+  "capital_usd": 228.87,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "available_usd": 228.87,
+  "free_slots": 2,
+  "orders": [
+    {
+      "ticker": "SNAP",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 4.72,
+      "target_entry_price": 4.7,
+      "allocated_capital": 102.99
+    }
+  ]
+}
