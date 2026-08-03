@@ -105,7 +105,85 @@
       "type": "SUSPENDED",
       "reason": "PDT_limit",
       "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:47:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:48:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:49:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:50:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:51:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:52:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:53:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:54:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:55:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:56:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:57:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:58:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:59:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
     }
   ],
-  "last_tick_at": "2026-08-03T15:46:02+02:00"
+  "last_tick_at": "2026-08-03T15:59:02+02:00"
 }
