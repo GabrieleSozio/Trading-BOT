@@ -1,0 +1,21 @@
+{
+  "session_date": "2026-08-03",
+  "opening_balance": 99950.42,
+  "closing_balance": null,
+  "kill_switch_triggered": false,
+  "events": [
+    {
+      "ts": "2026-08-03T15:30:06+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    },
+    {
+      "ts": "2026-08-03T15:31:06+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 2/3 day trade negli ultimi 5 giorni (RIVN@2026-07-31, SOFI@2026-07-30): non apro per non sforare"
+    }
+  ],
+  "last_tick_at": "2026-08-03T15:31:02+02:00"
+}
