@@ -23,7 +23,10 @@ from collections import defaultdict
 log = logging.getLogger("pdt")
 
 PDT_EQUITY_THRESHOLD = 25_000.0   # sotto questa soglia si applica il limite
-PDT_MAX_DAY_TRADES = 3            # in 5 giorni lavorativi
+# La regola FINRA marca come Pattern Day Trader chi esegue QUATTRO o piu' day trade
+# in 5 giorni lavorativi: tre sono quindi consentiti senza conseguenze.
+PDT_FLAG_AT = 4
+PDT_MAX_SAFE = PDT_FLAG_AT - 1    # 3 day trade tollerati nella finestra
 
 
 def applies(equity: float) -> bool:
@@ -58,14 +61,17 @@ def count_recent_day_trades(client, days_back: int = 7) -> tuple[int, list]:
 def can_open_new_position(client, equity: float) -> tuple[bool, str]:
     """Si puo' aprire una nuova posizione senza rischiare di sforare il PDT?
 
-    Prudenza: si lascia sempre **un credito di margine**, perche' una posizione
-    aperta oggi potrebbe chiudersi oggi stesso (take profit) e diventare essa
-    stessa un day trade.
+    Il caso peggiore per una nuova posizione e' che si chiuda in giornata (take
+    profit colpito subito), diventando essa stessa un day trade. Quindi si blocca
+    quando i day trade gia' usati sono 3: un altro sarebbe il QUARTO, cioe' quello
+    che fa scattare la marcatura. Con 2 usati si puo' ancora aprire, perche' al
+    massimo si arriva a 3, che e' consentito.
     """
     if not applies(equity):
         return True, "equity >= 25k: limite PDT non applicabile"
     used, detail = count_recent_day_trades(client)
-    if used >= PDT_MAX_DAY_TRADES - 1:
-        return False, (f"PDT: {used}/{PDT_MAX_DAY_TRADES} day trade negli ultimi 5 giorni "
-                       f"({', '.join(detail)}): non apro per non sforare")
-    return True, f"PDT: {used}/{PDT_MAX_DAY_TRADES} usati, margine sufficiente"
+    if used >= PDT_MAX_SAFE:
+        return False, (f"PDT: {used}/{PDT_MAX_SAFE} day trade negli ultimi 5 giorni "
+                       f"({', '.join(detail)}): un altro sarebbe il {PDT_FLAG_AT}o e "
+                       f"farebbe scattare la marcatura. Non apro.")
+    return True, f"PDT: {used}/{PDT_MAX_SAFE} usati, margine sufficiente"
