@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T16:45:04+02:00",
+  "generated_at": "2026-08-03T17:00:05+02:00",
   "session_date": "2026-08-03",
   "capital_usd": 228.87,
   "capital_simulated": true,
@@ -12,8 +12,8 @@
       "ticker": "SNAP",
       "sector": "Communication Services",
       "action": "buy",
-      "reference_price": 4.88,
-      "target_entry_price": 4.86,
+      "reference_price": 4.92,
+      "target_entry_price": 4.9,
       "allocated_capital": 102.99
     }
   ]
