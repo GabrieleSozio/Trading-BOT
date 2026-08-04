@@ -1,20 +1,28 @@
 {
-  "generated_at": "2026-08-04T14:30:33+02:00",
+  "generated_at": "2026-08-04T15:45:05+02:00",
   "session_date": "2026-08-04",
-  "capital_usd": 235.93,
+  "capital_usd": 237.47,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 129.47,
-  "free_slots": 1,
+  "available_usd": 237.47,
+  "free_slots": 2,
   "orders": [
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 95.57,
-      "target_entry_price": 95.09,
-      "allocated_capital": 106.17
+      "reference_price": 97.67,
+      "target_entry_price": 97.18,
+      "allocated_capital": 106.86
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 29.31,
+      "target_entry_price": 29.16,
+      "allocated_capital": 106.86
     }
   ]
 }
