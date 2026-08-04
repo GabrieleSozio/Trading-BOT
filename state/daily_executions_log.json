@@ -3,6 +3,18 @@
   "opening_balance": 99957.51,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-08-04T15:46:01+02:00"
+  "events": [
+    {
+      "ts": "2026-08-04T15:57:06+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "INTC",
+      "alpaca_order_id": "e1c441f4-9723-448d-8eec-f9fceba5d113",
+      "qty": 1,
+      "entry": 96.87,
+      "stop_loss": 93.96,
+      "take_profit": 102.68,
+      "tif": "gtc"
+    }
+  ],
+  "last_tick_at": "2026-08-04T15:57:02+02:00"
 }
