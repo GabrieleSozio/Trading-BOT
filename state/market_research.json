@@ -1,24 +1,64 @@
 {
-  "generated_at": "2026-08-03T14:30:19+02:00",
-  "session_date": "2026-08-03",
+  "generated_at": "2026-08-04T14:30:27+02:00",
+  "session_date": "2026-08-04",
   "universe_size": 44,
-  "capital_usd": 228.87,
+  "capital_usd": 235.87,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 102.99,
+  "max_price_per_share": 106.14,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista contiene un solo titolo (SNAP), quindi non e' possibile selezionare 5 candidati distinti come richiesto: viene indicato l'unico titolo disponibile. Il quadro tecnico e' debole: gap pre-market modesto (+0.64%) e volume estremamente ridotto (100 azioni), del tutto insufficiente per confermare una spinta direzionale credibile. Un gap cosi' contenuto con volume irrisorio ha alta probabilita' di rientrare e non offre un catalizzatore chiaro per una prosecuzione multi-day. Per una strategia swing con stop -3%/target +6% e overnight risk, questo setup e' poco convincente e andrebbe monitorato con conferme di volume prima di ogni ingresso.",
+  "ai_analysis": "La lista contiene 5 titoli tutti rialzisti; ne seleziono 5 come richiesto ordinandoli per qualita' del setup swing. I candidati piu' solidi sono INTC e SMCI, che uniscono gap significativi a volume pre-market presente e confermato, coerente con un movimento sostenibile nei giorni successivi. SNAP mostra il gap piu' ampio ma con volume nullo nei dati, segnale di possibile picco isolato poco affidabile per il tenuta overnight. F ha volume ma gap trascurabile. NFLX ha gap e volume praticamente assenti. Per il capitale operativo (2 posizioni da 45%) i primi due della lista, INTC e SMCI, sono i candidati operativamente preferibili.",
   "candidates": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 95.57,
+      "prev_close": 90.99,
+      "gap_pct": 5.0335,
+      "premarket_volume": 403,
+      "trend": "Bullish",
+      "ai_rationale": "Gap solido +5.03% con volume pre-market presente (403), settore Technology in momentum. Movimento credibile con catalizzatore plausibile e buona probabilita' di prosecuzione multi-day: primo candidato operativo."
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 29.72,
+      "prev_close": 28.64,
+      "gap_pct": 3.7709,
+      "premarket_volume": 390,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +3.77% accompagnato da volume convincente (390), settore Technology correlato al trend di INTC. Trend bullish con tenuta attesa buona: secondo candidato operativo."
+    },
     {
       "ticker": "SNAP",
       "sector": "Communication Services",
-      "last_price": 4.72,
-      "prev_close": 4.69,
-      "gap_pct": 0.6397,
-      "premarket_volume": 100,
+      "last_price": 5.46,
+      "prev_close": 5.07,
+      "gap_pct": 7.6923,
+      "premarket_volume": 0,
       "trend": "Bullish",
-      "ai_rationale": "Unico titolo disponibile in lista, trend etichettato Bullish e gap lievemente positivo (+0.64%). Tuttavia il volume e' minimo (100), quindi la tenuta attesa e' bassa: setup speculativo da confermare con volumi reali prima di aprire posizione overnight."
+      "ai_rationale": "Gap piu' ampio (+7.69%) ma volume pre-market pari a 0: rischio picco isolato senza conferma. Interessante come watch ma affidabilita' overnight inferiore."
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 14.52,
+      "prev_close": 14.43,
+      "gap_pct": 0.6237,
+      "premarket_volume": 160,
+      "trend": "Bullish",
+      "ai_rationale": "Volume presente (160) ma gap trascurabile (+0.62%): movimento troppo debole per un target +6% in pochi giorni. Setup marginale."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 73.32,
+      "prev_close": 73.31,
+      "gap_pct": 0.0136,
+      "premarket_volume": 0,
+      "trend": "Bullish",
+      "ai_rationale": "Gap quasi nullo (+0.01%) e volume 0: assenza di catalizzatore e di conferma, minima probabilita' di prosecuzione. Ultimo per priorita'."
     }
   ]
 }
