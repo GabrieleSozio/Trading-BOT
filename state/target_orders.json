@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-08-03T21:45:04+02:00",
-  "session_date": "2026-08-03",
-  "capital_usd": 230.07,
+  "generated_at": "2026-08-04T14:30:33+02:00",
+  "session_date": "2026-08-04",
+  "capital_usd": 235.93,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
   "available_usd": 129.47,
   "free_slots": 1,
-  "orders": []
+  "orders": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 95.57,
+      "target_entry_price": 95.09,
+      "allocated_capital": 106.17
+    }
+  ]
 }
