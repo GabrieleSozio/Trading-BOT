@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-08-04T15:45:05+02:00",
-  "session_date": "2026-08-04",
-  "capital_usd": 237.47,
+  "generated_at": "2026-08-05T16:40:05+02:00",
+  "session_date": "2026-08-05",
+  "capital_usd": 238.76,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 237.47,
-  "free_slots": 2,
+  "available_usd": 140.6,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 97.67,
-      "target_entry_price": 97.18,
-      "allocated_capital": 106.86
-    },
-    {
-      "ticker": "SMCI",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 29.31,
-      "target_entry_price": 29.16,
-      "allocated_capital": 106.86
+      "reference_price": 41.88,
+      "target_entry_price": 41.67,
+      "allocated_capital": 107.44
     }
   ]
 }
