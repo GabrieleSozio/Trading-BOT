@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-08-05T16:40:05+02:00",
+  "generated_at": "2026-08-05T21:15:04+02:00",
   "session_date": "2026-08-05",
-  "capital_usd": 238.76,
+  "capital_usd": 244.01,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 140.6,
+  "available_usd": 159.89,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
+      "ticker": "BAC",
+      "sector": "Financials",
       "action": "buy",
-      "reference_price": 41.88,
-      "target_entry_price": 41.67,
-      "allocated_capital": 107.44
+      "reference_price": 63.44,
+      "target_entry_price": 63.12,
+      "allocated_capital": 109.8
     }
   ]
 }
