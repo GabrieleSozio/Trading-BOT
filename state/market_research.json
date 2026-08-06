@@ -1,64 +1,24 @@
 {
-  "generated_at": "2026-08-05T16:39:58+02:00",
-  "session_date": "2026-08-05",
+  "generated_at": "2026-08-06T14:30:18+02:00",
+  "session_date": "2026-08-06",
   "universe_size": 44,
-  "capital_usd": 238.95,
+  "capital_usd": 244.67,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 107.53,
+  "max_price_per_share": 110.1,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "In un contesto di swing trading multi-giorno, privilegio titoli che combinano un gap rialzista significativo con volume convincente per sostenere la prosecuzione del movimento oltre la notte. AAL spicca per il gap piu' ampio (+2.87%) accompagnato da buon volume, segnale di momentum reale. BAC e NKE offrono gap moderati ma con volumi molto elevati, indicando partecipazione istituzionale e maggiore probabilita' di tenuta. AFRM ha un gap forte (+2.14%) ma volume basso, tuttavia il momentum sul settore fintech resta interessante. NFLX unisce gap positivo e volume solido nel settore comunicazione. Evito i titoli con gap troppo piccolo (<0.5%) che rischiano di essere movimenti di rumore, e quelli con volume troppo esiguo che potrebbero non sostenere il trend.",
+  "ai_analysis": "La lista fornita contiene un solo titolo (PFE), quindi non e' possibile selezionare 5 candidati distinti come richiesto: seleziono l'unico ticker disponibile. Attenzione: i dati sono deboli per una strategia swing. Il gap di +0.43% e' molto contenuto e il volume pre-market di appena 100 azioni e' irrisorio, non offre alcuna conferma di partecipazione o di catalizzatore reale. Il trend e' indicato come rialzista ma senza volume convincente il rischio e' un movimento che rientra subito. Con tenuta overnight su target +6%/stop -3%, questo setup e' marginale e richiederebbe conferma all'apertura.",
   "candidates": [
     {
-      "ticker": "AAL",
-      "sector": "Industrials",
-      "last_price": 17.045,
-      "prev_close": 16.57,
-      "gap_pct": 2.8666,
-      "premarket_volume": 279373,
+      "ticker": "PFE",
+      "sector": "Health Care",
+      "last_price": 25.9,
+      "prev_close": 25.79,
+      "gap_pct": 0.4265,
+      "premarket_volume": 100,
       "trend": "Bullish",
-      "ai_rationale": "Gap piu' ampio della lista (+2.87%) con volume elevato (~279k): momentum forte e partecipazione convincente. Trend rialzista solido con buone probabilita' di prosecuzione multi-giorno; prezzo basso adatto alla fascia micro."
-    },
-    {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
-      "last_price": 41.89,
-      "prev_close": 41.51,
-      "gap_pct": 0.9154,
-      "premarket_volume": 701764,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +0.92% con volume tra i piu' alti (~702k): forte interesse istituzionale che sostiene la tenuta del movimento overnight. Consumer discretionary con catalizzatore plausibile, buona base per target +6%."
-    },
-    {
-      "ticker": "BAC",
-      "sector": "Financials",
-      "last_price": 63.35,
-      "prev_close": 62.91,
-      "gap_pct": 0.6994,
-      "premarket_volume": 680342,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +0.70% con volume massiccio (~680k): liquidita' eccellente e momentum finanziario ampio. Settore Financials in fase costruttiva, movimento con buona probabilita' di continuazione nei giorni successivi."
-    },
-    {
-      "ticker": "AFRM",
-      "sector": "Financials",
-      "last_price": 79.81,
-      "prev_close": 78.14,
-      "gap_pct": 2.1372,
-      "premarket_volume": 22549,
-      "trend": "Bullish",
-      "ai_rationale": "Secondo gap piu' forte (+2.14%) nel fintech, settore volatile ma con trend rialzista deciso. Volume basso e' un rischio, ma la forza del gap suggerisce un catalizzatore che puo' proseguire; posizione da monitorare con stop stretto."
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "last_price": 74.25,
-      "prev_close": 73.54,
-      "gap_pct": 0.9655,
-      "premarket_volume": 409987,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +0.97% con volume solido (~410k) nel settore Communication Services. Trend rialzista con buona liquidita' che favorisce la tenuta overnight e la prosecuzione verso il target."
+      "ai_rationale": "Unico titolo disponibile in lista. Trend segnalato come Bullish e gap positivo (+0.43%), settore Health Care difensivo che regge bene le posizioni overnight. Tuttavia il gap e' debole e il volume pre-market (100) e' quasi assente: catalizzatore non evidente, quindi da monitorare per conferma di volume in apertura prima di impegnare capitale pieno."
     }
   ]
 }
