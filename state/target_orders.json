@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-05T21:15:04+02:00",
-  "session_date": "2026-08-05",
-  "capital_usd": 244.01,
+  "generated_at": "2026-08-06T14:30:25+02:00",
+  "session_date": "2026-08-06",
+  "capital_usd": 244.67,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
@@ -9,12 +9,12 @@
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "BAC",
-      "sector": "Financials",
+      "ticker": "PFE",
+      "sector": "Health Care",
       "action": "buy",
-      "reference_price": 63.44,
-      "target_entry_price": 63.12,
-      "allocated_capital": 109.8
+      "reference_price": 25.9,
+      "target_entry_price": 25.77,
+      "allocated_capital": 110.1
     }
   ]
 }
