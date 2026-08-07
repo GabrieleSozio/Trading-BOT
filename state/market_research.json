@@ -1,24 +1,34 @@
 {
-  "generated_at": "2026-08-06T14:30:18+02:00",
-  "session_date": "2026-08-06",
+  "generated_at": "2026-08-07T14:30:25+02:00",
+  "session_date": "2026-08-07",
   "universe_size": 44,
-  "capital_usd": 244.67,
+  "capital_usd": 244.15,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 110.1,
+  "max_price_per_share": 109.87,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista fornita contiene un solo titolo (PFE), quindi non e' possibile selezionare 5 candidati distinti come richiesto: seleziono l'unico ticker disponibile. Attenzione: i dati sono deboli per una strategia swing. Il gap di +0.43% e' molto contenuto e il volume pre-market di appena 100 azioni e' irrisorio, non offre alcuna conferma di partecipazione o di catalizzatore reale. Il trend e' indicato come rialzista ma senza volume convincente il rischio e' un movimento che rientra subito. Con tenuta overnight su target +6%/stop -3%, questo setup e' marginale e richiederebbe conferma all'apertura.",
+  "ai_analysis": "La lista contiene solo 2 titoli, quindi e' impossibile selezionarne 5. Seleziono entrambi i disponibili, ordinati per qualita' del setup swing. Entrambi sono rialzisti ma con volumi pre-market molto bassi, che riducono l'affidabilita' della continuazione del movimento. INTC mostra un gap piu' consistente e settore tech piu' reattivo, mentre F ha un gap marginale.",
   "candidates": [
     {
-      "ticker": "PFE",
-      "sector": "Health Care",
-      "last_price": 25.9,
-      "prev_close": 25.79,
-      "gap_pct": 0.4265,
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 101.18,
+      "prev_close": 99.87,
+      "gap_pct": 1.3117,
       "premarket_volume": 100,
       "trend": "Bullish",
-      "ai_rationale": "Unico titolo disponibile in lista. Trend segnalato come Bullish e gap positivo (+0.43%), settore Health Care difensivo che regge bene le posizioni overnight. Tuttavia il gap e' debole e il volume pre-market (100) e' quasi assente: catalizzatore non evidente, quindi da monitorare per conferma di volume in apertura prima di impegnare capitale pieno."
+      "ai_rationale": "Gap piu' solido (+1.31%) con trend rialzista nel settore Technology, storicamente piu' reattivo ai catalizzatori. Movimento con maggiore potenziale di prosecuzione oltre la notte, adatto a target +6%. Volume pre-market pero' molto basso: da confermare all'apertura."
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 13.83,
+      "prev_close": 13.79,
+      "gap_pct": 0.2901,
+      "premarket_volume": 320,
+      "trend": "Bullish",
+      "ai_rationale": "Trend rialzista ma gap marginale (+0.29%) e prezzo basso (13.83). Consumer Discretionary offre esposizione difensiva/ciclica; movimento debole che richiede conferma di volume per giustificare una tenuta multi-day. Candidato secondario con convinzione ridotta."
     }
   ]
 }
