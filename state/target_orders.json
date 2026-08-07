@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-06T14:30:25+02:00",
-  "session_date": "2026-08-06",
-  "capital_usd": 244.67,
+  "generated_at": "2026-08-07T14:30:32+02:00",
+  "session_date": "2026-08-07",
+  "capital_usd": 244.15,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
@@ -9,12 +9,12 @@
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "PFE",
-      "sector": "Health Care",
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 25.9,
-      "target_entry_price": 25.77,
-      "allocated_capital": 110.1
+      "reference_price": 13.83,
+      "target_entry_price": 13.76,
+      "allocated_capital": 109.87
     }
   ]
 }
