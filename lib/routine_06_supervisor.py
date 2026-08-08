@@ -222,6 +222,19 @@ def run(dry_run: bool = False) -> str:
     cap_usd, simulated = cap_mod.effective_capital(cfg, perf["equity"], client)
     tier = cap_mod.resolve_tier(cfg, cap_usd)
 
+    # Il conto paper ha ~100k, ma la strategia opera su una frazione simulata.
+    # Senza chiarirlo l'AI legge due cifre incoerenti e diffida dei propri dati.
+    perf["saldo_conto_paper"] = perf.pop("equity")
+    perf["capitale_operativo_strategia"] = cap_usd
+    if cap_usd:
+        perf["rendimento_settimana_pct"] = round(
+            perf["realized_pnl_closed_trades"] / cap_usd * 100, 2)
+    perf["nota_capitale"] = (
+        "Il conto paper ha un saldo grande, ma la strategia dimensiona le posizioni "
+        "SOLO su 'capitale_operativo_strategia' (simulazione di un conto reale piccolo). "
+        "Valuta le performance in rapporto a quest'ultimo, non al saldo del conto."
+    )
+
     # Parametri modificabili: globali + quelli DELLA FASCIA ATTIVA (prefissati
     # 'tier.'). I limiti di protezione (stop, size, drawdown, short, mode)
     # restano fuori dalla whitelist e quindi intoccabili.
