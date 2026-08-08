@@ -56,6 +56,47 @@ _AI_SCHEMA = {
 }
 
 
+def _closed_round_trips(fills: list) -> list:
+    """P&L dei round-trip effettivamente CHIUSI, abbinando acquisti e vendite.
+
+    Non si puo' raggruppare per (titolo, giorno): in swing una posizione dura piu'
+    giorni, quindi l'acquisto e la vendita finirebbero in due "operazioni" distinte
+    (una enorme perdita e un enorme guadagno, entrambi falsi). Qui si segue la
+    posizione nel tempo con il suo prezzo medio e si realizza il P&L solo quando
+    viene ridotta o chiusa. Gestisce sia long sia short.
+    """
+    by_symbol = defaultdict(list)
+    for f in sorted(fills, key=lambda x: x.get("transaction_time", "")):
+        if f.get("symbol"):
+            by_symbol[f["symbol"]].append(f)
+
+    out = []
+    for sym, lst in by_symbol.items():
+        qty_pos, avg, realized = 0.0, 0.0, 0.0
+        for f in lst:
+            try:
+                q = float(f["qty"]) * (1 if f.get("side", "").startswith("buy") else -1)
+                price = float(f["price"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            if qty_pos == 0 or (qty_pos > 0) == (q > 0):
+                # apertura o incremento: aggiorna il prezzo medio di carico
+                tot = abs(qty_pos) + abs(q)
+                avg = (avg * abs(qty_pos) + price * abs(q)) / tot if tot else 0.0
+                qty_pos += q
+            else:
+                # riduzione o chiusura: qui si realizza il risultato
+                closing = min(abs(q), abs(qty_pos))
+                realized += closing * (price - avg) * (1 if qty_pos > 0 else -1)
+                qty_pos += q
+                if abs(qty_pos) < 1e-9:          # posizione chiusa del tutto
+                    out.append((sym, round(realized, 2)))
+                    qty_pos, avg, realized = 0.0, 0.0, 0.0
+                elif (qty_pos > 0) != (q < 0):   # ribaltata: riparte da capo
+                    avg = price
+    return out
+
+
 def _perf_summary(client: AlpacaClient) -> dict:
     """Performance reale dell'ultima settimana lavorativa, dal broker."""
     now = now_cet().astimezone(US_EASTERN)
@@ -64,30 +105,23 @@ def _perf_summary(client: AlpacaClient) -> dict:
     fills = client.activities("FILL", after=start.isoformat())
     acct = client.account()
     positions = client.list_positions()
-    open_symbols = {p["symbol"] for p in positions}
-    # PnL realizzato attendibile solo per i simboli NON più aperti (round-trip chiusi).
-    trades = defaultdict(float)
-    for f in fills:
-        try:
-            qty = float(f["qty"]); price = float(f["price"]); side = f["side"]
-        except (KeyError, ValueError):
-            continue
-        cash = qty * price * (1 if side.startswith("sell") else -1)
-        trades[(f.get("symbol"), f.get("transaction_time", "")[:10])] += cash
-    closed = [c for (sym, _d), c in trades.items() if sym not in open_symbols]
-    wins = [c for c in closed if c > 0]
+
+    trips = _closed_round_trips(fills)
+    pnls = [p for _s, p in trips]
+    wins = [p for p in pnls if p > 0]
     unrealized = sum(float(p.get("unrealized_pl", 0)) for p in positions)
     return {
         "equity": float(acct["equity"]),
-        "realized_pnl_closed_trades": round(sum(closed), 2),
-        "n_closed_trades_week": len(closed),
-        "win_rate_pct": round(len(wins) / len(closed) * 100, 1) if closed else 0.0,
-        "best_trade": round(max(closed), 2) if closed else 0.0,
-        "worst_trade": round(min(closed), 2) if closed else 0.0,
+        "realized_pnl_closed_trades": round(sum(pnls), 2),
+        "n_closed_trades_week": len(pnls),
+        "win_rate_pct": round(len(wins) / len(pnls) * 100, 1) if pnls else 0.0,
+        "best_trade": round(max(pnls), 2) if pnls else 0.0,
+        "worst_trade": round(min(pnls), 2) if pnls else 0.0,
+        "closed_detail": [f"{s} {p:+.2f}" for s, p in trips],
         "open_positions": [f"{p['symbol']} qty={p['qty']} uPL={p.get('unrealized_pl')}" for p in positions],
         "unrealized_pnl_open": round(unrealized, 2),
         "n_fills_week": len(fills),
-        "note": "PnL realizzato = solo round-trip chiusi; le posizioni aperte sono a parte. Affidabile al meglio nel run di fine settimana (flat).",
+        "note": "P&L per round-trip effettivamente chiusi (acquisti e vendite abbinati, anche su piu' giorni). Le posizioni ancora aperte sono conteggiate a parte.",
     }
 
 
