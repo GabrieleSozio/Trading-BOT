@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-08-10T14:30:33+02:00",
+  "session_date": "2026-08-10",
+  "source_generated_at": "2026-08-10T14:30:28+02:00",
+  "portfolio_value": 242.97,
+  "capital_simulated": true,
+  "real_equity": 99964.46,
+  "tier": "micro",
+  "mode": "swing",
+  "stop_loss_pct": 0.03,
+  "take_profit_pct": 0.06,
+  "max_hold_days": 5,
+  "guardrails_applied": [
+    "R2_max_size",
+    "R3_stop_loss",
+    "take_profit",
+    "R4_sector_cap"
+  ],
+  "orders": [
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 31.69,
+      "allocated_capital": 109.34,
+      "stop_loss_price": 30.74,
+      "take_profit_price": 33.59
+    }
+  ]
+}
