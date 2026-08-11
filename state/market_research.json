@@ -1,34 +1,11 @@
 {
-  "generated_at": "2026-08-10T14:30:22+02:00",
-  "session_date": "2026-08-10",
+  "generated_at": "2026-08-11T14:30:07+02:00",
+  "session_date": "2026-08-11",
   "universe_size": 44,
-  "capital_usd": 242.97,
-  "capital_simulated": true,
+  "capital_usd": 244.13,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 109.34,
-  "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista contiene solo due titoli, quindi seleziono entrambi nonostante la richiesta di 5 candidati (non e' possibile superare i ticker disponibili). SMCI mostra un gap pre-market piu' consistente (+2.40%) con trend rialzista e volume relativamente superiore, indicando maggiore momentum e migliore probabilita' di prosecuzione nei giorni successivi. HOOD ha un gap modesto (+0.48%) ma trend rialzista in un settore finanziario liquido; movimento meno convincente ma comunque coerente con impostazione long. Da preferire SMCI come posizione principale per forza del movimento.",
-  "candidates": [
-    {
-      "ticker": "SMCI",
-      "sector": "Technology",
-      "last_price": 31.85,
-      "prev_close": 31.105,
-      "gap_pct": 2.3951,
-      "premarket_volume": 110,
-      "trend": "Bullish",
-      "ai_rationale": "Gap pre-market piu' forte (+2.40%) con trend Bullish confermato e volume superiore; il momentum tecnologico offre buone probabilita' di continuazione multi-day, adatto a target +6% con stop -3%. Prezzo accessibile (31.85) per la fascia micro."
-    },
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "last_price": 93.73,
-      "prev_close": 93.28,
-      "gap_pct": 0.4824,
-      "premarket_volume": 100,
-      "trend": "Bullish",
-      "ai_rationale": "Trend Bullish in settore Financials liquido; gap contenuto (+0.48%) ma direzione coerente. Movimento meno esplosivo, tenuta overnight ragionevole ma con minore spinta rispetto a SMCI; posizione di supporto."
-    }
-  ]
+  "selected_by": "nessuno",
+  "ai_analysis": null,
+  "candidates": []
 }
