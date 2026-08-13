@@ -1,54 +1,24 @@
 {
-  "generated_at": "2026-08-12T14:30:24+02:00",
-  "session_date": "2026-08-12",
+  "generated_at": "2026-08-13T14:30:17+02:00",
+  "session_date": "2026-08-13",
   "universe_size": 44,
-  "capital_usd": 251.08,
+  "capital_usd": 250.78,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 112.99,
+  "max_price_per_share": 112.85,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista contiene solo 4 titoli, quindi seleziono tutti i disponibili nonostante la richiesta di 5 (impossibile superare i candidati presenti). I volumi pre-market sono estremamente bassi o nulli, quindi la conferma di volume e' debole per tutti e va monitorata all'apertura. SMCI mostra il gap piu' forte (+8.61%) e un trend rialzista tecnologico, potenzialmente il piu' interessante per uno swing ma anche il piu' a rischio di rientro se il volume non conferma. INTC e HOOD offrono gap moderati e piu' sostenibili, coerenti con una prosecuzione multi-day. NKE ha un gap praticamente nullo e scarso interesse direzionale. Per un book di 2 posizioni da 45%, i migliori sono SMCI (momentum) e HOOD/INTC (movimento piu' ordinato).",
+  "ai_analysis": "La lista fornita contiene un solo titolo accessibile (SMCI), quindi non e' possibile selezionare 5 candidati come richiesto. Seleziono l'unico titolo disponibile. Va segnalato che il volume pre-market e' molto basso (1003), il che rende il segnale poco convincente per uno swing multi-giorno; il gap +0.64% e' modesto. Il trend risulta Bullish e il settore Technology e' favorevole, ma la scarsa partecipazione di volume aumenta il rischio che il movimento non prosegua. Suggerisco cautela e size ridotta.",
   "candidates": [
     {
       "ticker": "SMCI",
       "sector": "Technology",
-      "last_price": 34.42,
-      "prev_close": 31.69,
-      "gap_pct": 8.6147,
-      "premarket_volume": 0,
+      "last_price": 37.82,
+      "prev_close": 37.58,
+      "gap_pct": 0.6386,
+      "premarket_volume": 1003,
       "trend": "Bullish",
-      "ai_rationale": "Gap piu' forte della lista (+8.61%) con trend Bullish nel settore Tech ad alta beta: potenziale prosecuzione se il volume conferma. Da sorvegliare per possibile rientro, ma il catalizzatore di momentum lo rende candidato principale."
-    },
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "last_price": 95.34,
-      "prev_close": 94.37,
-      "gap_pct": 1.0279,
-      "premarket_volume": 100,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +1.03% ordinato, settore Financials in trend rialzista, movimento sostenibile con minor rischio di picco isolato rispetto a SMCI. Buon profilo per tenuta overnight."
-    },
-    {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "last_price": 99.02,
-      "prev_close": 97.67,
-      "gap_pct": 1.3822,
-      "premarket_volume": 100,
-      "trend": "Bullish",
-      "ai_rationale": "Gap +1.38% con trend Bullish nel Tech; movimento contenuto ma coerente, adatto a prosecuzione multi-day con stop stretto. Volume da confermare in apertura."
-    },
-    {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
-      "last_price": 41.3,
-      "prev_close": 41.29,
-      "gap_pct": 0.0242,
-      "premarket_volume": 0,
-      "trend": "Bullish",
-      "ai_rationale": "Gap quasi nullo (+0.02%) e volume assente: momentum debole, incluso solo per completare la selezione ma con priorita' minima e size ridotta."
+      "ai_rationale": "Unico titolo disponibile in lista. Trend Bullish e settore Technology favorevole; gap pre-market lieve (+0.64%) coerente con direzione rialzista. Criticita': volume pre-market molto basso (1003), segnale debole per tenuta overnight; consigliata size prudente con stop -3% e target +6%."
     }
   ]
 }
