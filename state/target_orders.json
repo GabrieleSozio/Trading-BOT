@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-08-12T15:45:04+02:00",
-  "session_date": "2026-08-12",
-  "capital_usd": 249.97,
+  "generated_at": "2026-08-13T14:30:23+02:00",
+  "session_date": "2026-08-13",
+  "capital_usd": 250.89,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 168.12,
-  "free_slots": 1,
-  "orders": [
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "action": "buy",
-      "reference_price": 94.92,
-      "target_entry_price": 94.45,
-      "allocated_capital": 112.49
-    }
-  ]
+  "available_usd": 73.78,
+  "free_slots": 0,
+  "orders": []
 }
