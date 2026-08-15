@@ -15,3 +15,22 @@ CRON_TZ=Europe/Rome
 
 # Supervisore AI: sabato 10:00
 0 10 * * 6 /PERCORSO/deploy/run.sh lib.routine_06_supervisor >> /PERCORSO/state/cron.log 2>&1
+
+# ===== DIVISIONE CRIPTO =====
+# Conto separato, mercato aperto 24 ore su 24, 7 giorni su 7: niente vincoli di
+# giorni feriali o orari di borsa. Si usa crypto_run.sh, NON run.sh: quello
+# esporterebbe le chiavi del conto azionario nell'ambiente.
+# Gli orari sono sfalsati di 5 minuti per non accavallarsi con le routine
+# azionarie sulle operazioni git.
+
+# Classifica di momentum: una volta al giorno, tutti i giorni
+0 8 * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c1_scan >> /PERCORSO/state/cron.log 2>&1
+
+# Gestione posizioni, trailing stop e ingressi: ogni 30 minuti, sempre
+5,35 * * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c2_trade >> /PERCORSO/state/cron.log 2>&1
+
+# Rendiconto settimanale con analisi AI: domenica 22:00
+0 22 * * 0 /PERCORSO/deploy/crypto_run.sh crypto.routine_c3_report >> /PERCORSO/state/cron.log 2>&1
+
+# Il log di cron cresce senza limite: lunedi' alle 04:20 si tiene solo la coda.
+20 4 * * 1 tail -n 5000 /PERCORSO/state/cron.log > /PERCORSO/state/cron.log.tmp && mv /PERCORSO/state/cron.log.tmp /PERCORSO/state/cron.log

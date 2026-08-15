@@ -25,6 +25,8 @@ meta:
 # compounding e' automatico (l'equity cresce, le posizioni crescono).
 capital:
   base_usd: 0                    # 0 = usa l'equity reale del conto
+  initial_usd: 550               # con quanto e' nato il conto, per calcolare il rendimento
+  strategy_start: "2026-08-15T00:00:00Z"   # da quando contare i risultati
   min_usd: 50                    # sotto questa soglia: avviso di capitale eroso
 
 # --- Universo ---------------------------------------------------------
