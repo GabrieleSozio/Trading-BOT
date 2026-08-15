@@ -15,7 +15,10 @@ meta:
 # strategia che userai davvero con capitale ridotto (es. 220 USD ~ 200 EUR).
 # Metti 0 per usare l'equity reale del conto.
 capital:
-  base_usd: 220              # capitale di partenza (0 = usa l'equity reale del conto)
+  base_usd: 550              # capitale di partenza (~500 EUR). 0 = usa l'equity reale.
+                             # Alzato da 220 il 2026-08-15: i guadagni gia' accumulati
+                             # NON si perdono, si sommano a questa nuova base perche'
+                             # il P&L viene ricalcolato dal broker da `strategy_start`.
   compound: true             # true = i guadagni vengono REINVESTITI (effetto valanga):
                              # il capitale operativo = base + risultati cumulati della
                              # strategia. Le perdite riducono l'esposizione allo stesso modo.
