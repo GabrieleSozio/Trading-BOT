@@ -1,0 +1,114 @@
+# =====================================================================
+#  DIVISIONE CRIPTO — Configurazione
+#
+#  Divisione autonoma della societa' di trading simulata. Opera su un
+#  SECONDO conto paper Alpaca (PA3KDARZ86JB), fisicamente separato da
+#  quello azionario: chiavi diverse, quindi non puo' nemmeno leggere le
+#  posizioni dell'altra divisione, tanto meno modificarle.
+#
+#  Filosofia: momentum trasversale, sempre investito, vincitori senza
+#  tetto di guadagno. Il rischio si governa con la DIMENSIONE e con stop
+#  tarati sulla volatilita', non rinunciando a operare.
+# =====================================================================
+
+meta:
+  division: crypto
+  paper_trading: true            # NON mettere false senza revisione
+  account_hint: PA3KDARZ86JB     # solo per verifica: se il conto non e' questo, ferma
+  base_currency: USD
+  timezone: Europe/Rome
+  secrets_file: secrets/alpaca_crypto_keys.env
+
+# --- Capitale ---------------------------------------------------------
+# Il conto e' nato con esattamente 550 USD (~500 EUR), quindi si usa
+# l'equity REALE: niente simulazione, niente disallineamenti. Il
+# compounding e' automatico (l'equity cresce, le posizioni crescono).
+capital:
+  base_usd: 0                    # 0 = usa l'equity reale del conto
+  min_usd: 50                    # sotto questa soglia: avviso di capitale eroso
+
+# --- Universo ---------------------------------------------------------
+# Le coppie si scoprono dal broker a ogni giro (auto_discover), non sono
+# scritte a mano: se Alpaca ne aggiunge una, entra da sola. I filtri sono
+# misurati sui dati, non decisi a tavolino.
+universe:
+  auto_discover: true
+  quote_currency: USD
+  exclude:                       # escluse per natura, non per prudenza
+    - USDC/USD                   # stablecoin: non si muovono, niente momentum
+    - USDT/USD
+    - USDG/USD
+    - PAXG/USD                   # oro tokenizzato: altra classe, spread 120bp
+  max_spread_bps: 70             # costo di andata+ritorno accettabile
+  min_history_days: 90           # serve storico per calcolare il momentum
+
+# --- Strategia --------------------------------------------------------
+strategy:
+  positions_to_open: 3
+  target_deployment_pct: 0.96    # quasi tutto investito: la cassa non rende
+
+  # Momentum trasversale: si comprano le piu' forti IN CLASSIFICA, senza
+  # chiedersi se il mercato nel complesso sale. Pesi sulle finestre che la
+  # ricerca trova significative sulle cripto (1 settimana / 1 mese).
+  momentum_weights:
+    7: 0.45
+    30: 0.40
+    90: 0.15
+
+  # Uscita per debolezza relativa: si vende se la moneta esce dalla top N.
+  # Piu' largo di positions_to_open per non entrare/uscire sul rumore.
+  rank_exit_threshold: 5
+
+  # --- Dimensionamento a rischio costante ---
+  # Ogni posizione rischia la stessa quota di capitale se lo stop scatta:
+  #   peso = risk_per_position_pct / distanza_stop
+  # Cosi' BTC (poco volatile) pesa piu' di PEPE (molto volatile) a parita'
+  # di rischio, invece di dare a entrambe la stessa fetta.
+  risk_per_position_pct: 0.05    # 5% del capitale a rischio per posizione
+  max_position_pct: 0.45
+  min_position_pct: 0.12
+
+  # --- Stop tarato sulla volatilita' ---
+  # Uno stop fisso in percentuale e' sbagliato: 8% e' enorme su BTC
+  # (1,7%/giorno) e viene toccato dal rumore su PEPE (8,2%/giorno).
+  atr_days: 14
+  atr_stop_mult: 2.5             # stop = entrata - 2,5 x ATR giornaliero
+  min_stop_pct: 0.04             # pavimento: mai piu' stretto del 4%
+  max_stop_pct: 0.30             # tetto: mai piu' largo del 30%
+
+  # Lo stop e' uno stop-LIMIT (Alpaca non ha stop di mercato sulle cripto).
+  # Il limite si mette sotto lo stop, altrimenti in una caduta veloce il
+  # prezzo lo scavalca e l'ordine non si riempie.
+  stop_limit_offset_pct: 0.025
+
+  # Nessun take profit: il trailing stop sale con il prezzo e i vincitori
+  # corrono senza tetto. Si alza solo se il guadagno supera questa soglia,
+  # per non tempestare il broker di modifiche irrilevanti.
+  trail_update_min_move_pct: 0.01
+
+  min_order_usd: 10              # minimo imposto da Alpaca
+
+# --- Guardrail --------------------------------------------------------
+# Sicurezza di base: protezione sempre presente sul broker e un freno di
+# emergenza largo. Non servono a evitare il rischio, servono a evitare la
+# rovina mentre il bot e' spento o impazzito.
+guardrails:
+  max_consecutive_api_errors: 3
+  max_drawdown_from_peak_pct: 0.25   # -25% dal massimo: stop ai NUOVI ingressi
+  require_protective_stop: true      # una posizione senza stop viene protetta subito
+  max_orders_per_tick: 6             # freno anti-loop
+
+# --- Orari (CET) — il mercato cripto e' aperto 24/7 -------------------
+schedule_cet:
+  scan: "08:00"                  # classifica e selezione, una volta al giorno
+  trade_every_minutes: 30        # gestione posizioni e trailing stop
+  weekly_report: "Sun 22:00"
+
+# --- Stato ------------------------------------------------------------
+state:
+  dir: state/crypto
+  files:
+    universe: state/crypto/universe.json
+    ranking: state/crypto/ranking.json
+    positions: state/crypto/positions.json
+    log: state/crypto/executions_log.json

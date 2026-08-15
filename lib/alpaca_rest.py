@@ -41,11 +41,17 @@ def load_config() -> dict:
         return yaml.safe_load(fh)
 
 
-def _load_keys() -> dict:
-    """Carica le chiavi da secrets/alpaca_keys.env, con fallback su os.environ."""
+def _load_keys(secrets_file: Path | None = None) -> dict:
+    """Carica le chiavi da secrets/alpaca_keys.env, con fallback su os.environ.
+
+    `secrets_file` permette di puntare a un file diverso: serve alla divisione
+    cripto, che opera su un SECONDO conto paper con chiavi proprie. Omettendolo
+    il comportamento e' identico a prima (conto azioni).
+    """
+    path = Path(secrets_file) if secrets_file else SECRETS_FILE
     env: dict[str, str] = {}
-    if SECRETS_FILE.exists():
-        for line in SECRETS_FILE.read_text(encoding="utf-8").splitlines():
+    if path.exists():
+        for line in path.read_text(encoding="utf-8").splitlines():
             line = line.strip()
             if not line or line.startswith("#") or "=" not in line:
                 continue
@@ -55,7 +61,7 @@ def _load_keys() -> dict:
     sec = env.get("ALPACA_SECRET_KEY") or os.environ.get("ALPACA_SECRET_KEY")
     if not api or not sec:
         raise RuntimeError(
-            "Credenziali Alpaca assenti: attese in secrets/alpaca_keys.env "
+            f"Credenziali Alpaca assenti: attese in {path.name} "
             "(ALPACA_API_KEY / ALPACA_SECRET_KEY) o nelle variabili d'ambiente."
         )
     base = env.get("ALPACA_BASE_URL") or os.environ.get(
@@ -81,8 +87,9 @@ class GuardrailR5(RuntimeError):
 class AlpacaClient:
     """Client REST minimale con conteggio errori consecutivi (R5)."""
 
-    def __init__(self, max_consecutive_errors: int = 3, timeout: int = 30):
-        k = _load_keys()
+    def __init__(self, max_consecutive_errors: int = 3, timeout: int = 30,
+                 secrets_file: Path | None = None):
+        k = _load_keys(secrets_file)
         self._base = k["base"]
         self._data = k["data"]
         self._is_paper = "paper" in k["base"]
