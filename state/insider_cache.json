@@ -1,0 +1,108 @@
+{
+ "NKE": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "NKE",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 6,
+   "buy_value_usd": 0,
+   "sell_value_usd": 1203533.79,
+   "buyers": [],
+   "sellers": [
+    "Alagirisamy Venkatesh (EVP: CHIEF OPERATING OFFICER)",
+    "Friend Matthew (EVP: CFO)",
+    "Leinwand Robert (EVP: Chief Legal Officer)"
+   ]
+  }
+ },
+ "SMCI": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "SMCI",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "HOOD": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "HOOD",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "INTC": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "INTC",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 1,
+   "n_sells": 1,
+   "buy_value_usd": 9999985.0,
+   "sell_value_usd": 2486697.7,
+   "buyers": [
+    "TAN LIP BU (CEO)"
+   ],
+   "sellers": [
+    "Chandrasekaran Nagasubramaniyan (EVP, CT & Ops Off, GM Foundry)"
+   ]
+  }
+ },
+ "SOFI": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "SOFI",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "F": {
+  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "data": {
+   "ticker": "F",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "BAC": {
+  "fetched_at": "2026-08-15T14:34:27+00:00",
+  "data": {
+   "ticker": "BAC",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ }
+}

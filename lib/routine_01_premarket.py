@@ -33,6 +33,7 @@ from .sectors import sector_of
 from . import gitsync
 from . import ai_client
 from . import capital as cap_mod
+from . import insider
 from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine01")
@@ -117,7 +118,8 @@ _AI_SCHEMA = {
 }
 
 
-def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict):
+def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict,
+               insider_data: dict | None = None):
     """Fa selezionare a Claude i top_n candidati, con motivazione, adattando il
     mandato alla strategia della fascia di capitale attiva (swing o intraday).
     Ritorna (lista candidati con campo ai_rationale, testo analisi).
@@ -153,10 +155,23 @@ def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict):
     only_long = "" if tier.get("allow_short") else (
         " Tutti i candidati in lista sono rialzisti perche' questa fascia opera solo al rialzo."
     )
+    # Segnale accessorio: cosa hanno fatto gli insider con i propri soldi.
+    ins_block = ""
+    if insider_data:
+        in_lista = {r["ticker"] for r in rows}
+        righe = insider.summarize({k: v for k, v in insider_data.items() if k in in_lista})
+        if righe.strip():
+            ins_block = (
+                "Operazioni degli INSIDER dichiarate alla SEC (Form 4). Gli ACQUISTI sul "
+                "mercato aperto indicano che dirigenti o amministratori hanno investito "
+                "denaro proprio: e' un segnale di fiducia. Le vendite sono piu' ambigue "
+                "(spesso pianificate o per esigenze personali). Consideralo UNO dei "
+                "criteri, non quello principale:\n" + righe + "\n\n")
     user = (
         f"Capitale operativo: {tier['positions_to_open']} posizioni da "
         f"{tier['max_position_size_pct']*100:.0f}% ciascuna (fascia '{tier['name']}').{only_long}\n\n"
         f"Dati pre-market di oggi ({len(rows)} titoli gia' filtrati per accessibilita'):\n{table}\n\n"
+        f"{ins_block}"
         f"Seleziona ESATTAMENTE i {top_n} migliori candidati (usa solo ticker presenti "
         f"nella lista). Per ciascuno una breve motivazione (forza del movimento, volume, "
         f"settore, tenuta attesa). Aggiungi una breve 'analysis' d'insieme."
@@ -285,6 +300,24 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     # Fallback deterministico: |gap| desc, poi volume pre-market.
     rows.sort(key=lambda r: (abs(r["gap_pct"]), r["premarket_volume"]), reverse=True)
 
+    # --- Segnale aggiuntivo: operazioni degli insider (SEC Form 4) ---
+    # Non decide nulla da solo: entra fra gli elementi che l'AI valuta. Limitato ai
+    # primi candidati per non allungare la routine (cache di 12 ore).
+    ins_cfg = cfg.get("insider") or {}
+    insider_data = {}
+    if ins_cfg.get("enabled", True):
+        top = [r["ticker"] for r in rows[: int(ins_cfg.get("max_tickers", 12))]]
+        try:
+            insider_data = insider.activity(top, cache_dir=cfg["state"]["dir"],
+                                            days=int(ins_cfg.get("window_days", 90)))
+            for r in rows:
+                d = insider_data.get(r["ticker"])
+                if d and d.get("available"):
+                    r["insider_buys"], r["insider_sells"] = d["n_buys"], d["n_sells"]
+                    r["insider_buy_usd"] = d["buy_value_usd"]
+        except Exception as e:  # noqa: BLE001 — accessorio, mai bloccante
+            log.warning("Analisi insider non disponibile (%s): proseguo senza.", e)
+
     # --- Selezione: l'AI fa la ricerca; se non disponibile, fallback deterministico ---
     ai_cfg = cfg.get("ai", {})
     analysis = None
@@ -292,7 +325,7 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     candidates = rows[:top_n]
     if ai_cfg.get("enabled") and ai_client.ai_enabled():
         try:
-            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"), tier)
+            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"), tier, insider_data)
             selected_by = "AI (Claude)"
         except AIUnavailable as e:
             log.warning("AI non disponibile (%s): uso selezione deterministica.", e)
