@@ -1,0 +1,69 @@
+{
+  "positions": {
+    "LINK/USD": {
+      "entry_price": 9.58864,
+      "qty": 20.133293451,
+      "high_water": 9.58864,
+      "stop_distance_pct": 0.08778,
+      "opened_at": "2026-08-15T19:30:00+02:00",
+      "entry_rank": 1,
+      "stop_order_id": "9781f4a8-183f-40ec-920e-a61e771c2a6d",
+      "stop_price": 8.7469491808
+    },
+    "CRV/USD": {
+      "entry_price": 0.24096,
+      "qty": 546.319180126,
+      "high_water": 0.24096,
+      "stop_distance_pct": 0.16307,
+      "opened_at": "2026-08-15T19:30:06+02:00",
+      "entry_rank": 2,
+      "stop_order_id": "2aa44e2c-ad96-418c-bb03-409d4fe58118",
+      "stop_price": 0.20166665279999998
+    }
+  },
+  "peak_equity": 549.67,
+  "events": [
+    {
+      "at": "2026-08-15T19:30:00+02:00",
+      "event": "ingresso",
+      "pair": "LINK/USD",
+      "prezzo": 9.58864,
+      "qty": 20.133293451,
+      "usd": 196.8
+    },
+    {
+      "at": "2026-08-15T19:30:02+02:00",
+      "event": "stop_creato",
+      "pair": "LINK/USD",
+      "stop": 8.74694918,
+      "qty": 20.082960217
+    },
+    {
+      "at": "2026-08-15T19:30:06+02:00",
+      "event": "ingresso",
+      "pair": "CRV/USD",
+      "prezzo": 0.24096,
+      "qty": 546.319180126,
+      "usd": 134.09
+    },
+    {
+      "at": "2026-08-15T19:30:08+02:00",
+      "event": "stop_creato",
+      "pair": "CRV/USD",
+      "stop": 0.20166665,
+      "qty": 544.953382175
+    },
+    {
+      "at": "2026-08-15T19:30:34+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "HYPE/USD"
+    }
+  ],
+  "fill_failures": {
+    "HYPE/USD": {
+      "count": 1,
+      "last_at": "2026-08-15T19:30:34+02:00"
+    }
+  },
+  "updated_at": "2026-08-15T19:30:34+02:00"
+}
