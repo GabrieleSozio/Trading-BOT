@@ -13,15 +13,15 @@
     "CRV/USD": {
       "entry_price": 0.24096,
       "qty": 546.319180126,
-      "high_water": 0.247561,
+      "high_water": 0.2540475,
       "stop_distance_pct": 0.16307,
       "opened_at": "2026-08-15T19:30:06+02:00",
       "entry_rank": 2,
-      "stop_order_id": "32363f99-0044-4f44-8659-c50b4040db0b",
-      "stop_price": 0.20719122772999998
+      "stop_order_id": "b0f6e0b8-e68e-42fb-acca-1f695cde7cd2",
+      "stop_price": 0.21261997417499998
     }
   },
-  "peak_equity": 549.7,
+  "peak_equity": 551.97,
   "events": [
     {
       "at": "2026-08-15T19:30:00+02:00",
@@ -75,6 +75,13 @@
       "pair": "CRV/USD",
       "da": 0.20166665,
       "a": 0.20719123
+    },
+    {
+      "at": "2026-08-16T19:05:04+02:00",
+      "event": "trailing_alzato",
+      "pair": "CRV/USD",
+      "da": 0.20719123,
+      "a": 0.21261997
     }
   ],
   "fill_failures": {
@@ -84,5 +91,5 @@
       "quarantine_until": "2026-08-16T19:35:29+02:00"
     }
   },
-  "updated_at": "2026-08-16T18:05:04+02:00"
+  "updated_at": "2026-08-16T19:05:04+02:00"
 }
