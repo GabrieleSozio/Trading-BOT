@@ -1,0 +1,130 @@
+{
+  "generato_il": "2026-08-16T22:00:04+02:00",
+  "divisione": "cripto",
+  "conto": "PA3KDARZ86JB",
+  "riconciliazione": {
+    "realizzato_dalle_operazioni_usd": -0.2,
+    "realizzato_dal_saldo_usd": -1.13,
+    "commissioni_vendita_stimate_usd": 0.93,
+    "nota": "Alpaca non dichiara le commissioni via API. Quella sull'acquisto e' dedotta dalle unita' trattenute; quella sulla vendita e' la differenza residua. Il saldo del conto e' il dato attendibile."
+  },
+  "capitale": {
+    "iniziale_usd": 550.0,
+    "equity_usd": 551.97,
+    "rendimento_pct": 0.36,
+    "giorni": 1
+  },
+  "statistiche": {
+    "n": 3,
+    "vincenti": 0,
+    "perdenti": 3,
+    "win_rate_pct": 0.0,
+    "pl_totale_usd": -0.2,
+    "vincita_media_usd": 0.0,
+    "perdita_media_usd": -0.07,
+    "migliore": {
+      "pair": "LINK/USD",
+      "qty": 2.084553474,
+      "entry": 9.6,
+      "exit": 9.5978,
+      "pl_usd": -0.05,
+      "pl_pct": -0.25,
+      "opened_at": "2026-08-15T17:16:14.277662Z",
+      "closed_at": "2026-08-15T17:20:52.641778Z",
+      "commissione_usd": 0.0502
+    },
+    "peggiore": {
+      "pair": "CRV/USD",
+      "qty": 56.655213715,
+      "entry": 0.2416,
+      "exit": 0.240583,
+      "pl_usd": -0.09,
+      "pl_pct": -0.66,
+      "opened_at": "2026-08-15T17:16:21.607564Z",
+      "closed_at": "2026-08-15T17:20:51.931277Z",
+      "commissione_usd": 0.0343
+    }
+  },
+  "operazioni": [
+    {
+      "pair": "LINK/USD",
+      "qty": 1.220829218,
+      "entry": 9.62025,
+      "exit": 9.59312,
+      "pl_usd": -0.06,
+      "pl_pct": -0.51,
+      "opened_at": "2026-08-15T17:14:39.016218Z",
+      "closed_at": "2026-08-15T17:14:53.430858Z",
+      "commissione_usd": 0.0294
+    },
+    {
+      "pair": "CRV/USD",
+      "qty": 56.655213715,
+      "entry": 0.2416,
+      "exit": 0.240583,
+      "pl_usd": -0.09,
+      "pl_pct": -0.66,
+      "opened_at": "2026-08-15T17:16:21.607564Z",
+      "closed_at": "2026-08-15T17:20:51.931277Z",
+      "commissione_usd": 0.0343
+    },
+    {
+      "pair": "LINK/USD",
+      "qty": 2.084553474,
+      "entry": 9.6,
+      "exit": 9.5978,
+      "pl_usd": -0.05,
+      "pl_pct": -0.25,
+      "opened_at": "2026-08-15T17:16:14.277662Z",
+      "closed_at": "2026-08-15T17:20:52.641778Z",
+      "commissione_usd": 0.0502
+    }
+  ],
+  "posizioni_aperte": [
+    {
+      "pair": "CRV/USD",
+      "qty": 544.953382175,
+      "carico": 0.24096,
+      "prezzo": 0.2540475,
+      "valore_usd": 138.44,
+      "pl_usd": 7.13,
+      "pl_pct": 5.43
+    },
+    {
+      "pair": "LINK/USD",
+      "qty": 20.082960217,
+      "carico": 9.58864,
+      "prezzo": 9.3882,
+      "valore_usd": 188.54,
+      "pl_usd": -4.03,
+      "pl_pct": -2.09
+    }
+  ],
+  "classifica_top5": [
+    {
+      "pair": "LINK/USD",
+      "rank": 1,
+      "momentum_pct": 11.49
+    },
+    {
+      "pair": "CRV/USD",
+      "rank": 2,
+      "momentum_pct": 4.58
+    },
+    {
+      "pair": "HYPE/USD",
+      "rank": 3,
+      "momentum_pct": 3.48
+    },
+    {
+      "pair": "SHIB/USD",
+      "rank": 4,
+      "momentum_pct": -0.9
+    },
+    {
+      "pair": "ETH/USD",
+      "rank": 5,
+      "momentum_pct": -1.69
+    }
+  ]
+}
