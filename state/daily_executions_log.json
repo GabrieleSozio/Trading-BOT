@@ -3,6 +3,18 @@
   "opening_balance": 99976.03,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-08-17T15:46:01+02:00"
+  "events": [
+    {
+      "ts": "2026-08-17T18:26:06+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "SOFI",
+      "alpaca_order_id": "372615e1-993b-484d-a4fb-92f55603c4f7",
+      "qty": 14,
+      "entry": 18.27,
+      "stop_loss": 17.72,
+      "take_profit": 19.37,
+      "tif": "gtc"
+    }
+  ],
+  "last_tick_at": "2026-08-17T18:26:01+02:00"
 }
