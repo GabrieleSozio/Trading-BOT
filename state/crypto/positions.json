@@ -98,14 +98,18 @@
       "at": "2026-08-16T20:35:28+02:00",
       "event": "ingresso_non_eseguito",
       "pair": "HYPE/USD"
+    },
+    {
+      "at": "2026-08-17T21:05:28+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "HYPE/USD"
     }
   ],
   "fill_failures": {
     "HYPE/USD": {
-      "count": 2,
-      "last_at": "2026-08-16T20:35:28+02:00",
-      "quarantine_until": "2026-08-17T20:35:28+02:00"
+      "count": 1,
+      "last_at": "2026-08-17T21:05:28+02:00"
     }
   },
-  "updated_at": "2026-08-17T18:05:03+02:00"
+  "updated_at": "2026-08-17T21:05:29+02:00"
 }
