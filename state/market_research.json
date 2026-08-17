@@ -1,24 +1,53 @@
 {
-  "generated_at": "2026-08-13T14:30:17+02:00",
-  "session_date": "2026-08-13",
+  "generated_at": "2026-08-17T14:31:37+02:00",
+  "session_date": "2026-08-17",
   "universe_size": 44,
-  "capital_usd": 250.78,
+  "capital_usd": 584.96,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 112.85,
+  "max_price_per_share": 263.23,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "La lista fornita contiene un solo titolo accessibile (SMCI), quindi non e' possibile selezionare 5 candidati come richiesto. Seleziono l'unico titolo disponibile. Va segnalato che il volume pre-market e' molto basso (1003), il che rende il segnale poco convincente per uno swing multi-giorno; il gap +0.64% e' modesto. Il trend risulta Bullish e il settore Technology e' favorevole, ma la scarsa partecipazione di volume aumenta il rischio che il movimento non prosegua. Suggerisco cautela e size ridotta.",
+  "ai_analysis": "La lista contiene solo 3 titoli, quindi seleziono i migliori disponibili (non e' possibile arrivare a 5). SOFI mostra il gap piu' consistente (+2.13%) con volume convincente e trend rialzista; INTC ha un catalizzatore forte grazie all'acquisto insider del CEO per circa $10M, un chiaro segnale di fiducia, con gap positivo e volume presente. SMCI ha gap marginale (+0.25%) e volume nullo, quindi meno affidabile per una tenuta multi-day.",
   "candidates": [
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "last_price": 18.68,
+      "prev_close": 18.29,
+      "gap_pct": 2.1323,
+      "premarket_volume": 202,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap piu' ampio (+2.13%) con volume convincente (202) e trend Bullish; movimento con buona probabilita' di proseguire nei giorni successivi, settore Financials in momentum. Prezzo accessibile."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 103.66,
+      "prev_close": 102.53,
+      "gap_pct": 1.1021,
+      "premarket_volume": 220,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 1,
+      "insider_buy_usd": 9999985.0,
+      "ai_rationale": "Catalizzatore forte: acquisto insider del CEO per ~$10M, segnale di fiducia. Gap positivo (+1.10%), volume presente (220), trend Bullish. Tenuta attesa sostenuta dal segnale insider."
+    },
     {
       "ticker": "SMCI",
       "sector": "Technology",
-      "last_price": 37.82,
-      "prev_close": 37.58,
-      "gap_pct": 0.6386,
-      "premarket_volume": 1003,
+      "last_price": 39.95,
+      "prev_close": 39.85,
+      "gap_pct": 0.2509,
+      "premarket_volume": 0,
       "trend": "Bullish",
-      "ai_rationale": "Unico titolo disponibile in lista. Trend Bullish e settore Technology favorevole; gap pre-market lieve (+0.64%) coerente con direzione rialzista. Criticita': volume pre-market molto basso (1003), segnale debole per tenuta overnight; consigliata size prudente con stop -3% e target +6%."
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Incluso solo per completare la lista: trend Bullish ma gap minimo (+0.25%) e volume nullo lo rendono il candidato piu' debole, da monitorare con cautela e stop stretto."
     }
   ]
 }
