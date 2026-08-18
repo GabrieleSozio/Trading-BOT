@@ -27,6 +27,7 @@ import datetime as dt
 import logging
 import math
 import sys
+import time
 from pathlib import Path
 
 from .alpaca_rest import (
@@ -134,6 +135,80 @@ def _stale_positions(client, cfg: dict, holdings: dict, symbols: set,
         if _trading_days_between(client, opened, session_date) >= max_hold:
             out.append(s)
     return out
+
+
+def _protective_legs(client, symbol: str) -> list[dict]:
+    """Gambe di protezione ancora vive per un titolo.
+
+    ATTENZIONE: la normale interrogazione degli ordini aperti NON restituisce la
+    gamba di stop di un bracket, perche' sta in stato 'held' (e' la gamba non
+    eseguibile della coppia OCO). Serve la vista annidata su TUTTI gli ordini,
+    altrimenti si vede solo il take profit e si crede che lo stop non esista.
+    """
+    try:
+        orders = client._request(
+            "GET", client._t("/v2/orders"),
+            params={"status": "all", "symbols": symbol, "limit": 50, "nested": "true"},
+        )
+    except BrokerError as e:
+        log.warning("%s: elenco ordini non leggibile (%s).", symbol, e)
+        return []
+    vive = []
+    for o in orders:
+        for l in (o.get("legs") or []):
+            if l.get("status") in ("new", "held", "accepted", "partially_filled"):
+                vive.append(l)
+        if not o.get("legs") and o.get("status") in ("new", "held", "accepted") \
+                and o.get("side") == "sell":
+            vive.append(o)
+    return vive
+
+
+def _close_stale(client, state: dict, symbol: str, position: dict, max_hold: int) -> None:
+    """Chiude una posizione scaduta liberando prima le azioni.
+
+    Le azioni di una posizione con bracket sono PRENOTATE dalle gambe di
+    protezione: finche' quegli ordini vivono, il broker rifiuta la chiusura con
+    "insufficient qty available". E' lo stesso vincolo gia' incontrato sulle
+    cripto, dove una vendita aperta impegna tutte le unita'.
+    """
+    avail = float(position.get("qty_available") or 0)
+    if avail <= 0:
+        legs = _protective_legs(client, symbol)
+        if not legs:
+            log.error("%s: azioni impegnate ma nessuna gamba trovata: non chiudo.", symbol)
+            return
+        for l in legs:
+            try:
+                client._request("DELETE", client._t(f"/v2/orders/{l['id']}"))
+            except BrokerError as e:
+                # Su una coppia OCO cancellarne una puo' portarsi via anche l'altra:
+                # il secondo tentativo fallisce ed e' normale, non un problema.
+                log.info("%s: gamba %s gia' cancellata o non cancellabile (%s).",
+                         symbol, l.get("type"), str(e)[:100])
+        # Il broker impiega un istante a liberare le azioni.
+        for _ in range(3):
+            time.sleep(1)
+            try:
+                p = client._request("GET", client._t(f"/v2/positions/{symbol}"))
+            except BrokerError:
+                return  # posizione sparita: gia' chiusa
+            if float(p.get("qty_available") or 0) > 0:
+                break
+        else:
+            log.error("%s: azioni ancora impegnate dopo la cancellazione. "
+                      "POSIZIONE SENZA PROTEZIONE: ritento al prossimo tick.", symbol)
+            _event(state, "POSITION_UNPROTECTED", ticker=symbol,
+                   detail="qty_available resta 0 dopo cancellazione gambe")
+            return
+    try:
+        client.close_position(symbol)
+        _event(state, "LIQUIDATE_ALL", reason=f"max_hold_days {max_hold}", ticker=symbol)
+        log.info("%s: chiusa per scadenza (%d giorni di borsa).", symbol, max_hold)
+    except BrokerError as e:
+        log.error("%s: chiusura fallita dopo aver liberato le azioni (%s). "
+                  "POSIZIONE SENZA PROTEZIONE: ritento al prossimo tick.", symbol, e)
+        _event(state, "POSITION_UNPROTECTED", ticker=symbol, detail=str(e)[:180])
 
 
 def _event(state: dict, etype: str, **fields):
@@ -254,14 +329,11 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             if stale:
                 log.info("SWING: %d posizioni oltre %d giorni di borsa -> chiudo: %s",
                          len(stale), max_hold, stale)
+                by_symbol = {p["symbol"]: p for p in positions}
                 for sym in stale:
                     if dry_run:
                         continue
-                    try:
-                        client.close_position(sym)
-                        _event(state, "LIQUIDATE_ALL", reason=f"max_hold_days {max_hold}", ticker=sym)
-                    except BrokerError as e:
-                        log.error("%s: chiusura per scadenza fallita: %s", sym, e)
+                    _close_stale(client, state, sym, by_symbol.get(sym, {}), max_hold)
             else:
                 log.info("SWING: %d posizioni mantenute overnight (nessuna oltre %d giorni).",
                          len(pos_symbols), max_hold)
