@@ -1,28 +1,11 @@
 {
-  "generated_at": "2026-08-17T15:45:05+02:00",
-  "session_date": "2026-08-17",
-  "capital_usd": 582.42,
+  "generated_at": "2026-08-18T14:30:12+02:00",
+  "session_date": "2026-08-18",
+  "capital_usd": 578.92,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 582.42,
-  "free_slots": 2,
-  "orders": [
-    {
-      "ticker": "INTC",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 102.81,
-      "target_entry_price": 102.3,
-      "allocated_capital": 262.09
-    },
-    {
-      "ticker": "SOFI",
-      "sector": "Financials",
-      "action": "buy",
-      "reference_price": 18.36,
-      "target_entry_price": 18.27,
-      "allocated_capital": 262.09
-    }
-  ]
+  "available_usd": 326.5,
+  "free_slots": 1,
+  "orders": []
 }
