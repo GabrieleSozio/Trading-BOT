@@ -1,0 +1,502 @@
+{
+ "PRODUZIONE (stop -3% / target +6%, 5gg)": {
+  "capitale_finale": 787.89,
+  "rendimento_pct": 43.3,
+  "annuo_pct": 18.9,
+  "max_drawdown_pct": 27.8,
+  "n_operazioni": 450,
+  "win_rate_pct": 42.0,
+  "R_medio": 0.112,
+  "R_vincita_media": 2.13,
+  "R_perdita_media": -1.35,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 249,
+   "target": 147,
+   "scadenza": 54
+  }
+ },
+ "_produzione": {
+  "capitale_finale": 787.89,
+  "rendimento_pct": 43.3,
+  "annuo_pct": 18.9,
+  "max_drawdown_pct": 27.8,
+  "n_operazioni": 450,
+  "win_rate_pct": 42.0,
+  "R_medio": 0.112,
+  "R_vincita_media": 2.13,
+  "R_perdita_media": -1.35,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 249,
+   "target": 147,
+   "scadenza": 54
+  }
+ },
+ "_ultime_operazioni": [
+  {
+   "sym": "NVDA",
+   "in": "2026-06-30",
+   "out": "2026-07-08",
+   "entry": 196.3519269,
+   "exit": 204.01794,
+   "qty": 1,
+   "pl": 7.67,
+   "pct": 3.9,
+   "r": 1.301,
+   "why": "scadenza"
+  },
+  {
+   "sym": "PINS",
+   "in": "2026-07-07",
+   "out": "2026-07-08",
+   "entry": 22.747117875,
+   "exit": 22.05367198658063,
+   "qty": 13,
+   "pl": -9.01,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "WBD",
+   "in": "2026-07-08",
+   "out": "2026-07-15",
+   "entry": 26.281133999999994,
+   "exit": 27.256365000000002,
+   "qty": 11,
+   "pl": 10.73,
+   "pct": 3.71,
+   "r": 1.237,
+   "why": "scadenza"
+  },
+  {
+   "sym": "CSX",
+   "in": "2026-07-08",
+   "out": "2026-07-15",
+   "entry": 48.610142925,
+   "exit": 49.405285,
+   "qty": 6,
+   "pl": 4.77,
+   "pct": 1.64,
+   "r": 0.545,
+   "why": "scadenza"
+  },
+  {
+   "sym": "COIN",
+   "in": "2026-07-15",
+   "out": "2026-07-17",
+   "entry": 164.4213445875,
+   "exit": 153.28332000000003,
+   "qty": 1,
+   "pl": -11.14,
+   "pct": -6.77,
+   "r": -2.258,
+   "why": "stop"
+  },
+  {
+   "sym": "T",
+   "in": "2026-07-17",
+   "out": "2026-07-20",
+   "entry": 22.27923405,
+   "exit": 21.5892,
+   "qty": 14,
+   "pl": -9.66,
+   "pct": -3.1,
+   "r": -1.032,
+   "why": "stop"
+  },
+  {
+   "sym": "INTC",
+   "in": "2026-07-20",
+   "out": "2026-07-21",
+   "entry": 97.14064605,
+   "exit": 103.138405,
+   "qty": 3,
+   "pl": 17.99,
+   "pct": 6.17,
+   "r": 2.058,
+   "why": "target"
+  },
+  {
+   "sym": "PYPL",
+   "in": "2026-07-15",
+   "out": "2026-07-22",
+   "entry": 54.59806038749999,
+   "exit": 55.482245,
+   "qty": 5,
+   "pl": 4.42,
+   "pct": 1.62,
+   "r": 0.54,
+   "why": "scadenza"
+  },
+  {
+   "sym": "INTC",
+   "in": "2026-07-21",
+   "out": "2026-07-23",
+   "entry": 102.72538702499999,
+   "exit": 99.59380360154286,
+   "qty": 3,
+   "pl": -9.39,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "SMCI",
+   "in": "2026-07-22",
+   "out": "2026-07-23",
+   "entry": 28.759922775,
+   "exit": 30.470275382429254,
+   "qty": 11,
+   "pl": 18.81,
+   "pct": 5.95,
+   "r": 1.982,
+   "why": "target"
+  },
+  {
+   "sym": "SNOW",
+   "in": "2026-07-23",
+   "out": "2026-07-24",
+   "entry": 272.616990375,
+   "exit": 264.30626142341816,
+   "qty": 1,
+   "pl": -8.31,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "AAL",
+   "in": "2026-07-24",
+   "out": "2026-07-27",
+   "entry": 13.8025728375,
+   "exit": 14.882555000000002,
+   "qty": 23,
+   "pl": 24.84,
+   "pct": 7.82,
+   "r": 2.608,
+   "why": "target"
+  },
+  {
+   "sym": "CSX",
+   "in": "2026-07-23",
+   "out": "2026-07-30",
+   "entry": 51.7260501,
+   "exit": 50.149181462701506,
+   "qty": 6,
+   "pl": -9.46,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "ARM",
+   "in": "2026-07-30",
+   "out": "2026-07-31",
+   "entry": 256.838355,
+   "exit": 249.008637747825,
+   "qty": 1,
+   "pl": -7.83,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "AMZN",
+   "in": "2026-07-31",
+   "out": "2026-08-03",
+   "entry": 263.8068375,
+   "exit": 279.495430126125,
+   "qty": 1,
+   "pl": 15.69,
+   "pct": 5.95,
+   "r": 1.982,
+   "why": "target"
+  },
+  {
+   "sym": "KO",
+   "in": "2026-07-28",
+   "out": "2026-08-04",
+   "entry": 87.8974517625,
+   "exit": 85.21789794552019,
+   "qty": 3,
+   "pl": -8.04,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "PLTR",
+   "in": "2026-08-04",
+   "out": "2026-08-05",
+   "entry": 144.49148463749998,
+   "exit": 161.919,
+   "qty": 2,
+   "pl": 34.86,
+   "pct": 12.06,
+   "r": 4.02,
+   "why": "target"
+  },
+  {
+   "sym": "ARM",
+   "in": "2026-08-04",
+   "out": "2026-08-05",
+   "entry": 252.2590665,
+   "exit": 274.42272,
+   "qty": 1,
+   "pl": 22.16,
+   "pct": 8.79,
+   "r": 2.929,
+   "why": "target"
+  },
+  {
+   "sym": "SHOP",
+   "in": "2026-08-05",
+   "out": "2026-08-06",
+   "entry": 149.324625,
+   "exit": 143.62815,
+   "qty": 2,
+   "pl": -11.39,
+   "pct": -3.81,
+   "r": -1.272,
+   "why": "stop"
+  },
+  {
+   "sym": "AFRM",
+   "in": "2026-08-05",
+   "out": "2026-08-06",
+   "entry": 79.6398,
+   "exit": 76.9615,
+   "qty": 4,
+   "pl": -10.71,
+   "pct": -3.36,
+   "r": -1.121,
+   "why": "stop"
+  },
+  {
+   "sym": "T",
+   "in": "2026-08-06",
+   "out": "2026-08-13",
+   "entry": 23.35437135,
+   "exit": 24.567709999999998,
+   "qty": 14,
+   "pl": 16.99,
+   "pct": 5.2,
+   "r": 1.732,
+   "why": "scadenza"
+  },
+  {
+   "sym": "NFLX",
+   "in": "2026-08-06",
+   "out": "2026-08-13",
+   "entry": 74.80168215,
+   "exit": 78.20088,
+   "qty": 4,
+   "pl": 13.6,
+   "pct": 4.54,
+   "r": 1.515,
+   "why": "scadenza"
+  },
+  {
+   "sym": "HPQ",
+   "in": "2026-08-13",
+   "out": "2026-08-14",
+   "entry": 31.178981699999998,
+   "exit": 30.2284904428755,
+   "qty": 11,
+   "pl": -10.46,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  },
+  {
+   "sym": "NFLX",
+   "in": "2026-08-13",
+   "out": "2026-08-19",
+   "entry": 75.667764975,
+   "exit": 80.16772695806326,
+   "qty": 4,
+   "pl": 18.0,
+   "pct": 5.95,
+   "r": 1.982,
+   "why": "target"
+  },
+  {
+   "sym": "UBER",
+   "in": "2026-08-14",
+   "out": "2026-08-19",
+   "entry": 76.74290227499999,
+   "exit": 74.40339489914662,
+   "qty": 4,
+   "pl": -9.36,
+   "pct": -3.05,
+   "r": -1.016,
+   "why": "stop"
+  }
+ ],
+ "target +10%": {
+  "capitale_finale": 917.53,
+  "rendimento_pct": 66.8,
+  "annuo_pct": 28.0,
+  "max_drawdown_pct": 32.6,
+  "n_operazioni": 390,
+  "win_rate_pct": 39.0,
+  "R_medio": 0.187,
+  "R_vincita_media": 2.57,
+  "R_perdita_media": -1.33,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 228,
+   "target": 84,
+   "scadenza": 78
+  }
+ },
+ "target +12%, stop -4%": {
+  "capitale_finale": 972.5,
+  "rendimento_pct": 76.8,
+  "annuo_pct": 31.7,
+  "max_drawdown_pct": 30.4,
+  "n_operazioni": 343,
+  "win_rate_pct": 42.3,
+  "R_medio": 0.166,
+  "R_vincita_media": 1.97,
+  "R_perdita_media": -1.16,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 180,
+   "target": 66,
+   "scadenza": 97
+  }
+ },
+ "stop -2% / target +6%": {
+  "capitale_finale": 727.12,
+  "rendimento_pct": 32.2,
+  "annuo_pct": 14.4,
+  "max_drawdown_pct": 35.6,
+  "n_operazioni": 524,
+  "win_rate_pct": 37.2,
+  "R_medio": 0.123,
+  "R_vincita_media": 3.19,
+  "R_perdita_media": -1.69,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 321,
+   "target": 164,
+   "scadenza": 39
+  }
+ },
+ "stop -5% / target +6%": {
+  "capitale_finale": 787.24,
+  "rendimento_pct": 43.1,
+  "annuo_pct": 18.9,
+  "max_drawdown_pct": 33.8,
+  "n_operazioni": 382,
+  "win_rate_pct": 51.3,
+  "R_medio": 0.083,
+  "R_vincita_media": 1.19,
+  "R_perdita_media": -1.08,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 2,
+  "uscite": {
+   "stop": 163,
+   "target": 147,
+   "scadenza": 72
+  }
+ },
+ "tenuta max 10 giorni": {
+  "capitale_finale": 1103.04,
+  "rendimento_pct": 100.6,
+  "annuo_pct": 39.9,
+  "max_drawdown_pct": 19.3,
+  "n_operazioni": 383,
+  "win_rate_pct": 42.6,
+  "R_medio": 0.196,
+  "R_vincita_media": 2.37,
+  "R_perdita_media": -1.42,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 216,
+   "target": 151,
+   "scadenza": 16
+  }
+ },
+ "tenuta max 3 giorni": {
+  "capitale_finale": 669.18,
+  "rendimento_pct": 21.7,
+  "annuo_pct": 9.9,
+  "max_drawdown_pct": 37.8,
+  "n_operazioni": 538,
+  "win_rate_pct": 42.9,
+  "R_medio": 0.081,
+  "R_vincita_media": 1.96,
+  "R_perdita_media": -1.33,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 5,
+  "uscite": {
+   "stop": 268,
+   "target": 153,
+   "scadenza": 117
+  }
+ },
+ "ingresso senza ritracciamento": {
+  "capitale_finale": 966.87,
+  "rendimento_pct": 75.8,
+  "annuo_pct": 31.3,
+  "max_drawdown_pct": 34.0,
+  "n_operazioni": 508,
+  "win_rate_pct": 44.1,
+  "R_medio": 0.152,
+  "R_vincita_media": 2.12,
+  "R_perdita_media": -1.4,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 3,
+  "uscite": {
+   "stop": 272,
+   "target": 180,
+   "scadenza": 56
+  }
+ },
+ "ritracciamento piu' profondo (1,5%)": {
+  "capitale_finale": 619.13,
+  "rendimento_pct": 12.6,
+  "annuo_pct": 5.9,
+  "max_drawdown_pct": 37.8,
+  "n_operazioni": 378,
+  "win_rate_pct": 39.9,
+  "R_medio": 0.048,
+  "R_vincita_media": 2.17,
+  "R_perdita_media": -1.36,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 5,
+  "uscite": {
+   "stop": 219,
+   "target": 128,
+   "scadenza": 31
+  }
+ },
+ "3 posizioni da 30%": {
+  "capitale_finale": 1046.49,
+  "rendimento_pct": 90.3,
+  "annuo_pct": 36.4,
+  "max_drawdown_pct": 21.4,
+  "n_operazioni": 637,
+  "win_rate_pct": 43.8,
+  "R_medio": 0.153,
+  "R_vincita_media": 2.05,
+  "R_perdita_media": -1.32,
+  "giorni_borsa": 522,
+  "giorni_senza_candidati": 5,
+  "uscite": {
+   "stop": 335,
+   "target": 216,
+   "scadenza": 86
+  }
+ }
+}
