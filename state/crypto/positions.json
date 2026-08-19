@@ -10,15 +10,15 @@
       "stop_order_id": "9781f4a8-183f-40ec-920e-a61e771c2a6d",
       "stop_price": 8.7469491808
     },
-    "CRV/USD": {
-      "entry_price": 0.24096,
-      "qty": 546.319180126,
-      "high_water": 0.2540475,
-      "stop_distance_pct": 0.16307,
-      "opened_at": "2026-08-15T19:30:06+02:00",
-      "entry_rank": 2,
-      "stop_order_id": "b0f6e0b8-e68e-42fb-acca-1f695cde7cd2",
-      "stop_price": 0.212619974
+    "ETH/USD": {
+      "entry_price": 1908.6,
+      "qty": 0.090054562,
+      "high_water": 1908.6,
+      "stop_distance_pct": 0.04352,
+      "opened_at": "2026-08-19T08:05:34+02:00",
+      "entry_rank": 3,
+      "stop_order_id": "af08659b-0bdc-418a-8b39-61485a134337",
+      "stop_price": 1825.537728
     }
   },
   "peak_equity": 554.47,
@@ -130,6 +130,33 @@
       "at": "2026-08-18T22:35:28+02:00",
       "event": "ingresso_non_eseguito",
       "pair": "HYPE/USD"
+    },
+    {
+      "at": "2026-08-19T08:05:05+02:00",
+      "event": "uscita",
+      "pair": "CRV/USD",
+      "motivo": "scesa al 6o posto (soglia 5)",
+      "pl_usd": -1.42
+    },
+    {
+      "at": "2026-08-19T08:05:31+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "POL/USD"
+    },
+    {
+      "at": "2026-08-19T08:05:34+02:00",
+      "event": "ingresso",
+      "pair": "ETH/USD",
+      "prezzo": 1908.6,
+      "qty": 0.090054562,
+      "usd": 175.38
+    },
+    {
+      "at": "2026-08-19T08:05:36+02:00",
+      "event": "stop_creato",
+      "pair": "ETH/USD",
+      "stop": 1825.537728,
+      "qty": 0.089829425
     }
   ],
   "fill_failures": {
@@ -137,7 +164,11 @@
       "count": 2,
       "last_at": "2026-08-18T22:35:28+02:00",
       "quarantine_until": "2026-08-19T22:35:28+02:00"
+    },
+    "POL/USD": {
+      "count": 1,
+      "last_at": "2026-08-19T08:05:31+02:00"
     }
   },
-  "updated_at": "2026-08-19T07:35:03+02:00"
+  "updated_at": "2026-08-19T08:05:37+02:00"
 }
