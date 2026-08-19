@@ -28,7 +28,7 @@ from .alpaca_rest import (
     now_cet,
     US_EASTERN,
 )
-from . import ai_client, capital as cap_mod, gitsync
+from . import ai_client, capital as cap_mod, gitsync, trades
 from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine06")
@@ -110,7 +110,25 @@ def _perf_summary(client: AlpacaClient) -> dict:
     pnls = [p for _s, p in trips]
     wins = [p for p in pnls if p > 0]
     unrealized = sum(float(p.get("unrealized_pl", 0)) for p in positions)
+
+    # Misura normalizzata per il rischio: un +6% con stop al 3% non vale come un
+    # +6% con stop al 6%. E' il numero che dice se esiste un vantaggio reale,
+    # indipendentemente dalla dimensione delle posizioni.
+    rischio = {}
+    try:
+        chiuse = trades.closed_trades(client, start.date().isoformat())
+        rischio = trades.summarize(chiuse)
+        rischio["dettaglio"] = [
+            f"{t['symbol']} {t['pl_pct']:+.2f}% "
+            f"({t['r_multiple']:+.2f}R)" if t.get("r_multiple") is not None
+            else f"{t['symbol']} {t['pl_pct']:+.2f}% (rischio non misurabile)"
+            for t in chiuse
+        ]
+    except Exception as e:  # noqa: BLE001 — misura accessoria, non deve fermare il supervisore
+        log.warning("Fattori di rischio non calcolabili: %s", e)
+
     return {
+        "per_fattore_di_rischio": rischio,
         "equity": float(acct["equity"]),
         "realized_pnl_closed_trades": round(sum(pnls), 2),
         "n_closed_trades_week": len(pnls),

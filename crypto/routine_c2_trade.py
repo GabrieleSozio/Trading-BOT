@@ -54,6 +54,69 @@ def _save_state(cfg: dict, st: dict) -> None:
     atomic_write_json(cfg["state"]["files"]["positions"], st)
 
 
+def _record_closed(st: dict, pair: str, rec: dict, exit_px: float,
+                   pl_usd: float, motivo: str) -> None:
+    """Registra un'operazione conclusa con il RISCHIO che era stato assunto.
+
+    Serve per misurare i risultati in fattori di rischio. Su questa divisione e'
+    indispensabile: gli stop vanno dal 4% (BTC) al 30% (monete molto volatili),
+    quindi confrontare fra loro le percentuali di guadagno non dice nulla. Un
+    +5% con stop al 4% e un +5% con stop al 20% sono risultati diversissimi.
+
+    Il rischio va calcolato QUI e non dopo: una volta chiusa la posizione, la
+    distanza dello stop di ingresso non e' piu' ricostruibile dal broker.
+    """
+    entry = float(rec.get("entry_price") or 0)
+    qty = float(rec.get("qty") or 0)
+    dist = float(rec.get("stop_distance_pct") or 0)
+    risk = entry * qty * dist
+    st.setdefault("closed_trades", []).append({
+        "pair": pair,
+        "opened_at": rec.get("opened_at"),
+        "closed_at": now_cet().isoformat(timespec="seconds"),
+        "entry": entry,
+        "exit": round(exit_px, 10) if exit_px else None,
+        "qty": qty,
+        "stop_distance_pct": dist,
+        "pl_usd": round(pl_usd, 2),
+        "pl_pct": round((exit_px / entry - 1) * 100, 2) if entry and exit_px else None,
+        "risk_usd": round(risk, 2) if risk else None,
+        "r_multiple": round(pl_usd / risk, 2) if risk > 0 else None,
+        "motivo": motivo,
+    })
+    st["closed_trades"] = st["closed_trades"][-300:]
+
+
+def _reconcile_closed(cli, st: dict, positions: dict) -> None:
+    """Posizioni sparite dal broker senza che il bot le abbia chiuse.
+
+    Significa che e' scattato lo stop depositato: e' l'esito piu' frequente e
+    finora non veniva registrato da nessuna parte. Senza questo, le operazioni
+    perdenti sparivano dal conteggio e lo stato conservava per sempre posizioni
+    che non esistono piu'.
+    """
+    for pair in list(st.get("positions", {})):
+        if pair in positions:
+            continue
+        rec = st["positions"].pop(pair)
+        exit_px, pl = 0.0, 0.0
+        try:
+            vendite = [o for o in cli.list_orders(status="closed", symbols=[pair])
+                       if o.get("side") == "sell" and o.get("status") == "filled"
+                       and o.get("filled_avg_price")]
+            vendite.sort(key=lambda o: o.get("filled_at") or "")
+            if vendite:
+                ultima = vendite[-1]
+                exit_px = float(ultima["filled_avg_price"])
+                qty = float(ultima.get("filled_qty") or rec.get("qty") or 0)
+                pl = (exit_px - float(rec.get("entry_price") or exit_px)) * qty
+        except BrokerError as e:
+            log.warning("%s: uscita non ricostruibile (%s).", pair, str(e)[:120])
+        log.info("%s: chiusa dal broker (stop) a %.8f, risultato $%+.2f", pair, exit_px, pl)
+        _record_closed(st, pair, rec, exit_px, pl, "stop sul broker")
+        _event(st, "chiusa_da_stop", pair=pair, prezzo=exit_px, pl_usd=round(pl, 2))
+
+
 def _event(st: dict, kind: str, **fields) -> None:
     st.setdefault("events", []).append(
         {"at": now_cet().isoformat(timespec="seconds"), "event": kind, **fields}
@@ -210,7 +273,9 @@ def _exit_position(cli, cfg: dict, st: dict, pair: str, pos: dict,
                   pair, str(e)[:200])
         _event(st, "uscita_fallita", pair=pair, errore=str(e)[:200])
         return 1
-    st["positions"].pop(pair, None)
+    rec = st["positions"].pop(pair, None)
+    if rec:
+        _record_closed(st, pair, rec, float(pos.get("current_price") or 0), pl, motivo)
     _event(st, "uscita", pair=pair, motivo=motivo, pl_usd=round(pl, 2))
     return 1
 
@@ -343,6 +408,12 @@ def run(dry_run: bool = False) -> dict:
     pending_buys = {to_pair(o["symbol"]): o for o in all_open if o.get("side") == "buy"}
     log.info("Posizioni aperte: %d | protezioni attive: %d | acquisti in coda: %d",
              len(positions), len(open_sells), len(pending_buys))
+
+    # Prima di ogni altra cosa: registrare cio' che si e' chiuso da solo mentre
+    # il bot non guardava. Altrimenti quelle operazioni non entrano mai nel
+    # conteggio dei risultati.
+    if not dry_run:
+        _reconcile_closed(cli, st, positions)
 
     # classifica del giorno
     try:

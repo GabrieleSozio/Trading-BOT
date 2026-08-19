@@ -236,11 +236,40 @@ def run(dry_run: bool = False) -> dict:
                  "differenza residua. Il saldo del conto e' il dato attendibile."),
     }
 
+    # Risultati in FATTORI DI RISCHIO. Su questa divisione e' la misura che
+    # conta: gli stop vanno dal 4% al 30% a seconda della volatilita' della
+    # moneta, quindi confrontare fra loro le percentuali di guadagno non dice
+    # nulla. Il rischio viene registrato alla chiusura da routine_c2, perche'
+    # dopo non e' piu' ricostruibile dal broker.
+    per_rischio = {}
+    try:
+        stato = read_json(cfg["state"]["files"]["positions"])
+        chiuse_r = [t for t in (stato.get("closed_trades") or [])
+                    if t.get("r_multiple") is not None]
+        if chiuse_r:
+            rs = [t["r_multiple"] for t in chiuse_r]
+            v = [r for r in rs if r > 0]
+            p = [r for r in rs if r <= 0]
+            per_rischio = {
+                "n": len(rs),
+                "R_medio": round(sum(rs) / len(rs), 2),
+                "R_totale": round(sum(rs), 2),
+                "R_migliore": round(max(rs), 2),
+                "R_peggiore": round(min(rs), 2),
+                "R_vincita_media": round(sum(v) / len(v), 2) if v else 0.0,
+                "R_perdita_media": round(sum(p) / len(p), 2) if p else 0.0,
+                "dettaglio": [f"{t['pair']} {t['pl_pct']:+.2f}% ({t['r_multiple']:+.2f}R, "
+                              f"stop {t['stop_distance_pct']*100:.0f}%)" for t in chiuse_r],
+            }
+    except Exception as e:  # noqa: BLE001 — misura accessoria
+        log.warning("Fattori di rischio non disponibili: %s", e)
+
     payload = {
         "generato_il": now_cet().isoformat(timespec="seconds"),
         "divisione": "cripto",
         "conto": acct["account_number"],
         "riconciliazione": riconciliazione,
+        "per_fattore_di_rischio": per_rischio,
         "capitale": {
             "iniziale_usd": round(initial, 2),
             "equity_usd": round(equity, 2),
@@ -267,6 +296,19 @@ def run(dry_run: bool = False) -> dict:
         log.info("  nessuna operazione ancora chiusa.")
     for p in positions:
         log.info("  aperta %-10s %+7.2f%%  ($%+.2f)", p["pair"], p["pl_pct"], p["pl_usd"])
+    if per_rischio:
+        log.info("  --- per fattore di rischio (%d operazioni) ---", per_rischio["n"])
+        for d in per_rischio["dettaglio"][-8:]:
+            log.info("    %s", d)
+        log.info("  R medio %+.2f | vincita media %+.2fR | perdita media %+.2fR",
+                 per_rischio["R_medio"], per_rischio["R_vincita_media"],
+                 per_rischio["R_perdita_media"])
+        if per_rischio["R_medio"] > 0:
+            log.info("  R medio positivo: la strategia guadagna piu' di quanto rischia.")
+        else:
+            log.info("  R medio negativo: finora la strategia rischia piu' di quanto rende.")
+    else:
+        log.info("  fattori di rischio: nessuna operazione ancora chiusa dopo la modifica.")
     log.info("=" * 62)
 
     an = ai_analysis(payload, (cfg.get("ai") or {}).get("model"))
