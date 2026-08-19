@@ -65,8 +65,26 @@ def main():
         a = (snap.get("AAPL") or {}).get("latestTrade", {}).get("p")
         n = (snap.get("NVDA") or {}).get("latestTrade", {}).get("p")
         assert a and n, "snapshot vuoto"
-        return f"AAPL={a} NVDA={n} (feed IEX)"
-    check("Alpaca: market data", _data)
+        return f"AAPL={a} NVDA={n} (feed IEX, tempo reale — usato per operare)"
+    check("Alpaca: market data (esecuzione)", _data)
+
+    def _sip():
+        """Il feed consolidato alimenta l'ANALISI: se cade, il bot resta cieco
+        in pre-apertura e va in stand-by senza un motivo evidente. E' successo
+        per tre giornate prima che il controllo esistesse."""
+        cli = cli_holder["cli"]
+        oggi = R.today_session_date()
+        sip = cli.bars(["AAPL"], "1Day", "2026-01-02", feed="sip", limit=10)
+        assert sip.get("AAPL"), "nessuna barra dal feed consolidato"
+        # Confronto diretto: il consolidato deve vedere molti piu' scambi di IEX.
+        iex = cli.bars(["AAPL"], "1Day", "2026-01-02", feed="iex", limit=10)
+        ns, ni = sip["AAPL"][-1].get("n", 0), (iex.get("AAPL") or [{}])[-1].get("n", 0)
+        assert ns > ni, f"il consolidato ({ns}) non supera IEX ({ni}): sospetto"
+        snap = cli.snapshots(["AAPL"], feed="delayed_sip")
+        assert (snap.get("AAPL") or {}).get("latestTrade"), "snapshot differito vuoto"
+        return (f"consolidato attivo: {ns:,} scambi/giorno contro {ni:,} di IEX "
+                f"({ns/max(ni,1):.0f}x), ritardo {R.SIP_DELAY_MINUTES} min")
+    check("Alpaca: feed consolidato SIP (analisi)", _sip)
 
     def _state():
         d = Path(cfg_holder["cfg"]["state"]["dir"])

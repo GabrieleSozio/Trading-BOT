@@ -41,6 +41,9 @@ log = logging.getLogger("routine01")
 # Oltre questa soglia un "gap" e' quasi sempre un print IEX sporco o un titolo
 # sospeso/split: si scarta per non operare su dati spazzatura (fail-loud sul singolo).
 SANITY_MAX_GAP_PCT = 50.0
+# Sotto questo scarto il titolo si considera FERMO, non ribassista: con il feed
+# consolidato uno zero esatto e' quasi impossibile, quindi resta come sentinella.
+FLAT_GAP_PCT = 0.02
 
 
 def _setup_logging():
@@ -51,48 +54,34 @@ def _setup_logging():
 
 
 def _prev_close_from_bars(client: AlpacaClient, symbols: list[str], session_date: str) -> dict:
-    """Ultima chiusura giornaliera *completata* (data < session_date) per ticker."""
+    """Ultima chiusura giornaliera *completata* (data < session_date) per ticker.
+
+    Dal nastro consolidato (SIP): e' la chiusura ufficiale di tutte le borse,
+    non quella parziale vista dalla sola IEX.
+    """
     start = (dt.date.fromisoformat(session_date) - dt.timedelta(days=12)).isoformat()
+    bars = client.bars(symbols, "1Day", start, feed="sip", limit=1000)
     out: dict[str, float] = {}
-    for i in range(0, len(symbols), 100):
-        chunk = symbols[i : i + 100]
-        res = client._request(  # plumbing GET; conta gli errori R5
-            "GET",
-            client._d("/v2/stocks/bars"),
-            params={
-                "symbols": ",".join(chunk),
-                "timeframe": "1Day",
-                "start": start,
-                "feed": "iex",
-                "limit": 1000,
-            },
-        )
-        for sym, bars in res.get("bars", {}).items():
-            completed = [b for b in bars if b["t"][:10] < session_date]
-            if completed:
-                out[sym] = completed[-1]["c"]
+    for sym, rows in bars.items():
+        completed = [b for b in rows if b["t"][:10] < session_date]
+        if completed:
+            out[sym] = completed[-1]["c"]
     return out
 
 
 def _premarket_volume(client: AlpacaClient, symbols: list[str], session_date: str) -> dict:
-    """Volume scambiato oggi (pre-market incluso): somma delle barre 1-min odierne."""
-    start = session_date  # mezzanotte ET del giorno di sessione
+    """Volume scambiato oggi (pre-apertura inclusa): somma delle barre da 1 minuto.
+
+    Qui il feed consolidato non e' un miglioramento marginale ma la differenza
+    fra avere e non avere il dato: in pre-apertura IEX registra una manciata di
+    scambi, il consolidato centinaia di migliaia. Con IEX questa misura era
+    sostanzialmente vuota, e il volume e' il criterio con cui il Portfolio
+    Manager sceglie fra i candidati.
+    """
+    bars = client.bars(symbols, "1Min", session_date, feed="sip", limit=10000)
     out: dict[str, int] = {s: 0 for s in symbols}
-    for i in range(0, len(symbols), 100):
-        chunk = symbols[i : i + 100]
-        res = client._request(
-            "GET",
-            client._d("/v2/stocks/bars"),
-            params={
-                "symbols": ",".join(chunk),
-                "timeframe": "1Min",
-                "start": start,
-                "feed": "iex",
-                "limit": 10000,
-            },
-        )
-        for sym, bars in res.get("bars", {}).items():
-            out[sym] = sum(b.get("v", 0) for b in bars)
+    for sym, rows in bars.items():
+        out[sym] = sum(b.get("v", 0) for b in rows)
     return out
 
 
@@ -233,7 +222,10 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
 
     # --- Dati di mercato ---
     try:
-        snap = client.snapshots(tickers)
+        # Feed consolidato differito: l'Analista gira alle 14:30 e gli ordini
+        # partono alle 15:30, quindi 15 minuti di ritardo non cambiano nulla,
+        # mentre la completezza del dato cambia tutto.
+        snap = client.snapshots(tickers, feed="delayed_sip")
         prev_close = _prev_close_from_bars(client, tickers, session_date)
         pm_vol = _premarket_volume(client, tickers, session_date)
     except GuardrailR5:
@@ -241,6 +233,11 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         sys.exit(1)
 
     analyzed, skipped = 0, 0
+    # Conteggio dei motivi di scarto: se un giorno l'universo si svuota, il log
+    # deve dire PERCHE'. Senza questo, una giornata in stand-by per dati mancanti
+    # e una per mercato in ribasso sono indistinguibili.
+    motivi = {"dati assenti": 0, "gap anomalo": 0, "troppo caro": 0,
+              "in ribasso": 0, "fermo": 0}
     rows = []
     for t in tickers:
         d = snap.get(t) or {}
@@ -249,22 +246,36 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         if last is None or not pc:
             log.warning("%s: dati insufficienti (last=%s prev_close=%s) -> scartato", t, last, pc)
             skipped += 1
+            motivi["dati assenti"] += 1
             continue
         gap = (last - pc) / pc * 100.0
         if abs(gap) > SANITY_MAX_GAP_PCT:
             log.warning("%s: gap %.1f%% oltre soglia di sanita' (%.0f%%): probabile dato sporco -> scartato",
                         t, gap, SANITY_MAX_GAP_PCT)
             skipped += 1
+            motivi["gap anomalo"] += 1
             continue
         # --- Filtro di ACCESSIBILITA': con azioni intere serve prezzo <= quota
         # allocabile, altrimenti il titolo non e' operabile con questo capitale.
         if last > max_price:
             skipped += 1
+            motivi["troppo caro"] += 1
+            continue
+        # --- Filtro DIREZIONE: se la fascia non ammette short, niente ribassisti.
+        # Un titolo FERMO non e' ribassista: va distinto, altrimenti un giorno
+        # senza dati (in cui ogni scarto risulta zero) sembra un mercato in
+        # ribasso. E' esattamente cio' che accadeva leggendo il feed IEX in
+        # pre-apertura, dove spesso non c'erano scambi e l'ultimo prezzo noto
+        # coincideva al centesimo con la chiusura del giorno prima.
+        if abs(gap) < FLAT_GAP_PCT:
+            trend = "Flat"
+            skipped += 1
+            motivi["fermo"] += 1
             continue
         trend = "Bullish" if gap > 0 else "Bearish"
-        # --- Filtro DIREZIONE: se la fascia non ammette short, niente ribassisti.
         if trend == "Bearish" and not tier.get("allow_short"):
             skipped += 1
+            motivi["in ribasso"] += 1
             continue
         rows.append({
             "ticker": t,
@@ -281,6 +292,11 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
         log.error("Nessun candidato operabile con %.2f USD (prezzo max/azione %.2f, short %s). "
                   "Scrivo lista vuota: giornata in stand-by.",
                   capital, max_price, tier.get("allow_short"))
+        log.error("Motivi dello scarto su %d titoli: %s", len(tickers),
+                  ", ".join(f"{k}={v}" for k, v in motivi.items() if v))
+        if motivi["fermo"] > len(tickers) * 0.5:
+            log.error("Oltre meta' dell'universo risulta FERMO: e' il sintomo di dati "
+                      "di mercato mancanti, non di un mercato immobile. Controllare il feed.")
         payload = {
             "generated_at": now_cet().isoformat(timespec="seconds"),
             "session_date": session_date,

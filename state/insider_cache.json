@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "fetched_at": "2026-08-19T17:16:47+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -64,7 +64,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-08-17T12:30:06+00:00",
+  "fetched_at": "2026-08-19T17:16:47+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -95,6 +95,146 @@
   "fetched_at": "2026-08-15T14:34:27+00:00",
   "data": {
    "ticker": "BAC",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "COIN": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "COIN",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "AFRM": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "AFRM",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "CRM": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "CRM",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "DKNG": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "DKNG",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "UBER": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "UBER",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "RIVN": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "RIVN",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "NFLX": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "NFLX",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "PFE": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "PFE",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "SNAP": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "SNAP",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "HPQ": {
+  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "data": {
+   "ticker": "HPQ",
    "available": true,
    "window_days": 90,
    "n_buys": 0,

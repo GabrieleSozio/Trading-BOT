@@ -157,7 +157,48 @@ class AlpacaClient:
         cal = self.calendar(s, s)
         return any(c.get("date") == s for c in cal)
 
-    # --- MARKET DATA (feed IEX) ---
+    # --- MARKET DATA ---
+    # Due feed, per due usi diversi:
+    #
+    #   iex          in tempo reale ma parziale: IEX e' una sola borsa e vede
+    #                circa il 2-3% degli scambi americani. Serve quando conta il
+    #                prezzo ADESSO (fissare un ingresso, decidere un'esecuzione).
+    #   sip          il nastro CONSOLIDATO di tutte le borse, quindi il dato
+    #                completo. Il piano gratuito lo concede solo oltre i 15
+    #                minuti di ritardo: chiedere dati piu' recenti da' HTTP 403.
+    #                Serve per l'ANALISI, dove il ritardo e' irrilevante.
+    #
+    # La differenza non e' cosmetica: in pre-apertura IEX registra una manciata
+    # di scambi mentre il consolidato ne registra centinaia di migliaia.
+    def bars(self, symbols: list[str], timeframe: str, start: str,
+             end: str | None = None, feed: str = "sip", limit: int = 10000) -> dict:
+        """Barre storiche, con paginazione e rispetto del ritardo SIP.
+
+        Con feed='sip' la fine viene automaticamente arretrata oltre la soglia
+        del piano gratuito: senza, il broker rifiuta l'intera richiesta.
+        """
+        if feed == "sip":
+            cap = sip_safe_end()
+            end = min(end, cap) if end else cap
+        out: dict[str, list] = {}
+        for i in range(0, len(symbols), 100):
+            chunk = symbols[i : i + 100]
+            page = None
+            while True:
+                params = {"symbols": ",".join(chunk), "timeframe": timeframe,
+                          "start": start, "feed": feed, "limit": limit}
+                if end:
+                    params["end"] = end
+                if page:
+                    params["page_token"] = page
+                res = self._request("GET", self._d("/v2/stocks/bars"), params=params)
+                for sym, rows in (res.get("bars") or {}).items():
+                    out.setdefault(sym, []).extend(rows)
+                page = res.get("next_page_token")
+                if not page:
+                    break
+        return out
+
     def snapshots(self, symbols: list[str], feed: str = "iex") -> dict:
         out: dict = {}
         # batch da 100 simboli
@@ -244,6 +285,19 @@ class AlpacaClient:
 # =====================================================================
 #  Utilità
 # =====================================================================
+# Il piano dati gratuito concede il nastro consolidato (SIP) solo oltre i 15
+# minuti. Misurato sul campo: una richiesta che finisce 16 minuti fa passa, una
+# che finisce 10 minuti fa viene rifiutata con 403. Si tiene un minuto di
+# margine per non inciampare sullo scarto di orologio fra noi e il broker.
+SIP_DELAY_MINUTES = 16
+
+
+def sip_safe_end() -> str:
+    """Istante piu' recente per cui il piano gratuito concede il feed SIP."""
+    t = dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=SIP_DELAY_MINUTES)
+    return t.isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
 def now_cet() -> dt.datetime:
     return dt.datetime.now(CET)
 
