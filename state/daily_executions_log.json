@@ -3,6 +3,13 @@
   "opening_balance": 99965.91,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-08-19T19:16:02+02:00"
+  "events": [
+    {
+      "ts": "2026-08-19T19:25:04+02:00",
+      "type": "GAP_DETECTED",
+      "minutes": 9,
+      "last_tick": "2026-08-19T19:16:02+02:00"
+    }
+  ],
+  "last_tick_at": "2026-08-19T19:25:02+02:00"
 }
