@@ -21,4 +21,8 @@ if [ -f secrets/alpaca_keys.env ]; then
   unset _k
 fi
 
-exec .venv/bin/python -m "$1"
+# Si passano TUTTI gli argomenti, non solo il nome del modulo: con "$1"
+# soltanto, un --dry-run veniva scartato in silenzio e la routine girava
+# per davvero mentre si credeva di simulare.
+mod="$1"; shift
+exec .venv/bin/python -m "$mod" "$@"

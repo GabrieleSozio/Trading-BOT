@@ -118,6 +118,9 @@ def stats(trips: list[dict]) -> dict:
 # =====================================================================
 SCHEMA = {
     "type": "object",
+    # additionalProperties DEVE essere esplicito: l'API rifiuta lo schema senza,
+    # e il rendiconto degraderebbe a soli numeri senza che nessuno se ne accorga.
+    "additionalProperties": False,
     "properties": {
         "giudizio": {"type": "string"},
         "cosa_ha_funzionato": {"type": "array", "items": {"type": "string"}},
@@ -126,6 +129,7 @@ SCHEMA = {
             "type": "array",
             "items": {
                 "type": "object",
+                "additionalProperties": False,
                 "properties": {
                     "parametro": {"type": "string"},
                     "da": {"type": "string"},
