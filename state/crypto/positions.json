@@ -157,6 +157,17 @@
       "pair": "ETH/USD",
       "stop": 1825.537728,
       "qty": 0.089829425
+    },
+    {
+      "at": "2026-08-19T08:35:29+02:00",
+      "event": "quarantena",
+      "pair": "POL/USD",
+      "fino": "2026-08-20T08:35:29+02:00"
+    },
+    {
+      "at": "2026-08-19T08:35:29+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "POL/USD"
     }
   ],
   "fill_failures": {
@@ -166,9 +177,10 @@
       "quarantine_until": "2026-08-19T22:35:28+02:00"
     },
     "POL/USD": {
-      "count": 1,
-      "last_at": "2026-08-19T08:05:31+02:00"
+      "count": 2,
+      "last_at": "2026-08-19T08:35:29+02:00",
+      "quarantine_until": "2026-08-20T08:35:29+02:00"
     }
   },
-  "updated_at": "2026-08-19T08:05:37+02:00"
+  "updated_at": "2026-08-19T08:35:29+02:00"
 }
