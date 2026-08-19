@@ -143,6 +143,49 @@ def _perf_summary(client: AlpacaClient) -> dict:
     }
 
 
+def _resolve_decisions(client, cfg: dict, model: str | None, dry_run: bool) -> dict:
+    """Chiude le decisioni in sospeso con il loro esito e ne ricava una lezione.
+
+    E' il pezzo che mancava: finora il supervisore vedeva solo aggregati e non
+    sapeva cosa avesse pensato il bot quando ha aperto una posizione. Ora ogni
+    decisione viene riletta sapendo com'e' finita, e la lezione resta a
+    disposizione delle analisi successive.
+    """
+    from . import decisions, trades, benchmark
+    reg = decisions.DecisionLog(Path(cfg["state"]["dir"]) / "decisions_log.json")
+    sospese = reg.pending()
+    if not sospese:
+        return {"in_sospeso": 0, "risolte": 0}
+
+    start = min(e["date"] for e in sospese)
+    chiuse = trades.closed_trades(client, start)
+    chiuse = benchmark.add_alpha(chiuse, benchmark.stock_series(client, start))
+    # Una decisione si abbina all'operazione chiusa piu' vicina nel tempo.
+    per_titolo: dict[str, list] = {}
+    for t in chiuse:
+        per_titolo.setdefault(t["symbol"], []).append(t)
+
+    risolte = 0
+    for e in sospese:
+        cand = [t for t in per_titolo.get(e["ticker"], [])
+                if (t.get("opened_at") or "")[:10] >= e["date"]]
+        if not cand:
+            continue          # posizione ancora aperta: si riprova la settimana prossima
+        t = sorted(cand, key=lambda x: x.get("opened_at") or "")[0]
+        outcome = {k: t.get(k) for k in
+                   ("pl_pct", "pl_usd", "r_multiple", "alpha_pct",
+                    "benchmark_pct", "closed_by")}
+        lezione = None if dry_run else decisions.reflect(e["decision"], outcome, model)
+        if lezione:
+            log.info("Lezione su %s (%.2f%% | alpha %s): %s", e["ticker"],
+                     outcome.get("pl_pct") or 0,
+                     outcome.get("alpha_pct"), lezione[:160])
+        if not dry_run:
+            if reg.resolve(e["ticker"], e["date"], outcome, lezione or ""):
+                risolte += 1
+    return {"in_sospeso": len(sospese), "risolte": risolte, **reg.stats()}
+
+
 def _current_value(cfg: dict, param: str, tier: dict):
     """Valore attuale. I parametri 'tier.<x>' si riferiscono alla FASCIA ATTIVA."""
     if param.startswith("tier."):
@@ -252,6 +295,22 @@ def run(dry_run: bool = False) -> str:
         "SOLO su 'capitale_operativo_strategia' (simulazione di un conto reale piccolo). "
         "Valuta le performance in rapporto a quest'ultimo, non al saldo del conto."
     )
+
+    # --- Alpha: quanto abbiamo fatto IN PIU' del comprare l'indice e stare fermi ---
+    # Senza questo confronto un rendimento positivo puo' nascondere un fallimento:
+    # guadagnare il 4% mentre il mercato ne fa il 6% significa aver perso tempo,
+    # corso rischi e ottenuto meno di chi non ha fatto nulla.
+    from . import benchmark as bmk
+    start_strategia = (cfg.get("capital", {}).get("strategy_start") or "")[:10]
+    if start_strategia and cap_usd:
+        rend = (cap_usd / float(cfg["capital"].get("base_usd") or cap_usd) - 1) * 100
+        perf["confronto_con_indice"] = bmk.period_alpha(client, "stock", start_strategia, rend)
+
+    # --- Decisioni passate: esito noto e lezione ---
+    try:
+        perf["registro_decisioni"] = _resolve_decisions(client, cfg, model, dry_run)
+    except Exception as e:  # noqa: BLE001 — memoria accessoria, mai bloccante
+        log.warning("Registro decisioni non elaborato: %s", e)
 
     # Parametri modificabili: globali + quelli DELLA FASCIA ATTIVA (prefissati
     # 'tier.'). I limiti di protezione (stop, size, drawdown, short, mode)

@@ -137,6 +137,35 @@ def _stale_positions(client, cfg: dict, holdings: dict, symbols: set,
     return out
 
 
+def _log_decision(cfg: dict, tkr: str, order: dict, price: float,
+                  stop: float, target: float, tier: dict) -> None:
+    """Registra PERCHE' si e' aperta questa posizione, in attesa dell'esito.
+
+    La motivazione dell'AI vive in market_research.json e andrebbe persa
+    all'archiviazione settimanale: qui viene conservata insieme alla decisione,
+    cosi' il supervisore potra' rileggerla quando sapra' com'e' andata.
+    """
+    try:
+        from . import decisions
+        motivo = ""
+        try:
+            mr = read_json(cfg["state"]["files"]["market_research"])
+            for c in mr.get("candidates", []):
+                if c.get("ticker") == tkr:
+                    motivo = c.get("ai_rationale") or ""
+                    break
+        except Exception:  # noqa: BLE001 — la motivazione e' un di piu'
+            pass
+        testo = motivo or (f"Selezione deterministica: scarto {order.get('gap_pct', '?')}%, "
+                           f"ingresso su ritracciamento.")
+        log_ = decisions.DecisionLog(Path(cfg["state"]["dir"]) / "decisions_log.json")
+        log_.record(tkr, testo, entry=round(price, 2), stop=stop, target=target,
+                    settore=order.get("sector"), fascia=tier.get("name"),
+                    azione=order.get("action"))
+    except Exception as e:  # noqa: BLE001 — MAI far cadere l'esecuzione per il registro
+        log.warning("Registro decisioni non aggiornato per %s: %s", tkr, e)
+
+
 def _protective_legs(client, symbol: str) -> list[dict]:
     """Gambe di protezione ancora vive per un titolo.
 
@@ -458,6 +487,7 @@ def run(dry_run: bool = False, force_phase: str | None = None) -> dict | None:
             _event(state, "ORDER_SUBMITTED", ticker=tkr, alpaca_order_id=res.get("id"),
                    qty=qty, entry=price, stop_loss=stop_px, take_profit=tp_px, tif=tif)
             holdings.setdefault(tkr, {"opened_session_date": session_date})
+            _log_decision(cfg, tkr, o, price, stop_px, tp_px, tier)
             submitted += 1
         except BrokerError as e:
             log.error("%s: invio ordine fallito: %s", tkr, e)

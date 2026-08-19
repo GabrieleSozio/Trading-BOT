@@ -21,6 +21,7 @@ import argparse
 import datetime as dt
 import logging
 import sys
+from pathlib import Path
 
 from lib import ai_client
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet
@@ -159,6 +160,57 @@ bastano, metti dati_sufficienti a false e non proporre modifiche.
 Rispondi in italiano."""
 
 
+def _resolve_decisions(cfg: dict, cli, dry_run: bool) -> dict:
+    """Chiude le decisioni cripto in sospeso e ne ricava una lezione.
+
+    L'esito arriva dalle operazioni che routine_c2 registra alla chiusura, dove
+    il rischio d'ingresso e' ancora noto. L'alpha si misura contro Bitcoin, non
+    contro lo zero.
+    """
+    from lib import decisions, benchmark as bmk
+    reg = decisions.DecisionLog(Path(cfg["state"]["dir"]) / "decisions_log.json")
+    sospese = reg.pending()
+    if not sospese:
+        return {"in_sospeso": 0, "risolte": 0}
+
+    try:
+        stato = read_json(cfg["state"]["files"]["positions"])
+        chiuse = stato.get("closed_trades") or []
+    except Exception:  # noqa: BLE001
+        chiuse = []
+    if not chiuse:
+        return {"in_sospeso": len(sospese), "risolte": 0}
+
+    start = min(e["date"] for e in sospese)
+    btc = bmk.crypto_series(cli, start)
+    chiuse = bmk.add_alpha(chiuse, btc, key_in="opened_at",
+                           key_out="closed_at", key_pct="pl_pct")
+
+    per_coppia: dict[str, list] = {}
+    for t in chiuse:
+        per_coppia.setdefault(t["pair"], []).append(t)
+
+    model = (cfg.get("ai") or {}).get("model")
+    risolte = 0
+    for e in sospese:
+        cand = [t for t in per_coppia.get(e["ticker"], [])
+                if (t.get("opened_at") or "")[:10] >= e["date"]]
+        if not cand:
+            continue           # posizione ancora aperta
+        t = sorted(cand, key=lambda x: x.get("opened_at") or "")[0]
+        outcome = {k: t.get(k) for k in
+                   ("pl_pct", "pl_usd", "r_multiple", "alpha_pct",
+                    "benchmark_pct")}
+        outcome["closed_by"] = t.get("motivo")
+        lezione = None if dry_run else decisions.reflect(e["decision"], outcome, model)
+        if lezione:
+            log.info("Lezione su %s (%s%% | alpha %s): %s", e["ticker"],
+                     outcome.get("pl_pct"), outcome.get("alpha_pct"), lezione[:150])
+        if not dry_run and reg.resolve(e["ticker"], e["date"], outcome, lezione or ""):
+            risolte += 1
+    return {"in_sospeso": len(sospese), "risolte": risolte, **reg.stats()}
+
+
 def ai_analysis(payload: dict, model: str | None) -> dict | None:
     if not ai_client.ai_enabled():
         log.warning("ANTHROPIC_API_KEY assente: rendiconto senza analisi AI.")
@@ -268,12 +320,33 @@ def run(dry_run: bool = False) -> dict:
     except Exception as e:  # noqa: BLE001 — misura accessoria
         log.warning("Fattori di rischio non disponibili: %s", e)
 
+    # --- Alpha rispetto a Bitcoin ---
+    # Sulle cripto il metro non e' lo zero, e' BTC: una moneta che sale meno di
+    # Bitcoin sta di fatto perdendo, perche' gli stessi soldi fermi su BTC
+    # avrebbero reso di piu' con meno movimento e meno costi.
+    confronto = {}
+    try:
+        from lib import benchmark as bmk
+        confronto = bmk.period_alpha(cli, "crypto", (start or "")[:10],
+                                     (equity / initial - 1) * 100 if initial else 0.0)
+    except Exception as e:  # noqa: BLE001 — misura accessoria
+        log.warning("Confronto con Bitcoin non disponibile: %s", e)
+
+    # --- Decisioni passate: esito noto e lezione ---
+    registro = {}
+    try:
+        registro = _resolve_decisions(cfg, cli, dry_run)
+    except Exception as e:  # noqa: BLE001
+        log.warning("Registro decisioni non elaborato: %s", e)
+
     payload = {
         "generato_il": now_cet().isoformat(timespec="seconds"),
         "divisione": "cripto",
         "conto": acct["account_number"],
         "riconciliazione": riconciliazione,
         "per_fattore_di_rischio": per_rischio,
+        "confronto_con_bitcoin": confronto,
+        "registro_decisioni": registro,
         "capitale": {
             "iniziale_usd": round(initial, 2),
             "equity_usd": round(equity, 2),

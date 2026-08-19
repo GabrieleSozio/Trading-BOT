@@ -25,6 +25,7 @@ import datetime as dt
 import logging
 import sys
 import time
+from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
 from crypto.broker import CryptoClient, load_config, to_pair
@@ -338,6 +339,22 @@ def _enter(cli, cfg: dict, st: dict, sel: dict, usd: float, dry: bool) -> int:
     }
     _event(st, "ingresso", pair=pair, prezzo=price, qty=qty, usd=round(usd, 2))
     log.info("%s: eseguito a %.6f per %.9f unita'.", pair, price, qty)
+
+    # Registra il PERCHE', per poterlo rileggere quando l'esito sara' noto.
+    # Qui la decisione e' deterministica, quindi la motivazione e' il posto in
+    # classifica e i numeri che ce l'hanno portata.
+    try:
+        from lib import decisions
+        reg = decisions.DecisionLog(Path(cfg["state"]["dir"]) / "decisions_log.json")
+        reg.record(pair, (
+            f"Entrata al {sel['rank']}o posto della classifica di momentum "
+            f"(punteggio {sel['momentum_score']*100:+.2f}%), stop a "
+            f"-{dist*100:.1f}% tarato sulla volatilita' giornaliera. "
+            f"Peso assegnato {sel.get('target_weight', 0)*100:.1f}% del capitale."
+        ), rank=sel["rank"], momentum=sel["momentum_score"],
+            stop_distance_pct=dist, usd=round(usd, 2))
+    except Exception as e:  # noqa: BLE001 — il registro non deve mai fermare un ordine
+        log.warning("%s: registro decisioni non aggiornato (%s).", pair, e)
 
     # Protezione IMMEDIATA, nello stesso giro. Aspettare il tick successivo
     # lascerebbe la posizione scoperta per mezz'ora: inaccettabile, ed e'

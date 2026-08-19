@@ -107,8 +107,38 @@ _AI_SCHEMA = {
 }
 
 
+def _lessons_block(cfg: dict, tickers: list[str]) -> str:
+    """Lezioni dalle decisioni passate di cui ora si conosce l'esito.
+
+    Serve a non ripetere lo stesso errore senza accorgersene: l'AI vedeva ogni
+    giorno i dati da zero, senza memoria di cosa avesse gia' provato e come
+    fosse andata.
+    """
+    try:
+        from . import decisions
+        reg = decisions.DecisionLog(Path(cfg["state"]["dir"]) / "decisions_log.json")
+        pezzi = []
+        visti = set()
+        for t in tickers[:5]:
+            testo = reg.recent_lessons(ticker=t, n_same=2, n_other=0)
+            if testo and testo not in visti:
+                visti.add(testo)
+                pezzi.append(testo)
+        generali = reg.recent_lessons(ticker=None, n_same=0, n_other=4)
+        if generali:
+            pezzi.append(generali)
+        if not pezzi:
+            return ""
+        return ("Esperienza passata di questo stesso sistema, con esiti gia' noti. "
+                "Usala per non ripetere errori, NON come regola assoluta: le "
+                "condizioni di mercato cambiano.\n" + "\n".join(pezzi) + "\n\n")
+    except Exception as e:  # noqa: BLE001 — la memoria e' un di piu'
+        log.warning("Lezioni passate non disponibili: %s", e)
+        return ""
+
+
 def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict,
-               insider_data: dict | None = None):
+               insider_data: dict | None = None, lessons: str = ""):
     """Fa selezionare a Claude i top_n candidati, con motivazione, adattando il
     mandato alla strategia della fascia di capitale attiva (swing o intraday).
     Ritorna (lista candidati con campo ai_rationale, testo analisi).
@@ -161,6 +191,7 @@ def _ai_select(rows: list[dict], top_n: int, model: str | None, tier: dict,
         f"{tier['max_position_size_pct']*100:.0f}% ciascuna (fascia '{tier['name']}').{only_long}\n\n"
         f"Dati pre-market di oggi ({len(rows)} titoli gia' filtrati per accessibilita'):\n{table}\n\n"
         f"{ins_block}"
+        f"{lessons}"
         f"Seleziona ESATTAMENTE i {top_n} migliori candidati (usa solo ticker presenti "
         f"nella lista). Per ciascuno una breve motivazione (forza del movimento, volume, "
         f"settore, tenuta attesa). Aggiungi una breve 'analysis' d'insieme."
@@ -341,7 +372,9 @@ def run(dry_run: bool = False, force: bool = False) -> dict | None:
     candidates = rows[:top_n]
     if ai_cfg.get("enabled") and ai_client.ai_enabled():
         try:
-            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"), tier, insider_data)
+            lessons = _lessons_block(cfg, [r["ticker"] for r in rows])
+            candidates, analysis = _ai_select(rows, top_n, ai_cfg.get("research_model"),
+                                              tier, insider_data, lessons)
             selected_by = "AI (Claude)"
         except AIUnavailable as e:
             log.warning("AI non disponibile (%s): uso selezione deterministica.", e)
