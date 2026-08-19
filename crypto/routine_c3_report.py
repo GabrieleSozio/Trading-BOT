@@ -386,6 +386,12 @@ def run(dry_run: bool = False) -> dict:
             log.info("  R medio negativo: finora la strategia rischia piu' di quanto rende.")
     else:
         log.info("  fattori di rischio: nessuna operazione ancora chiusa dopo la modifica.")
+    if confronto:
+        log.info("  --- confronto con Bitcoin ---")
+        log.info("    strategia %+.2f%%  |  BTC %+.2f%%  |  alpha %+.2f%%",
+                 confronto["strategia_pct"], confronto["riferimento_pct"],
+                 confronto["alpha_pct"])
+        log.info("    %s", confronto["giudizio"])
     log.info("=" * 62)
 
     an = ai_analysis(payload, (cfg.get("ai") or {}).get("model"))
