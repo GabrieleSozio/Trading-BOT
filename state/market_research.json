@@ -1,11 +1,79 @@
 {
-  "generated_at": "2026-08-19T14:30:07+02:00",
-  "session_date": "2026-08-19",
+  "generated_at": "2026-08-20T14:31:06+02:00",
+  "session_date": "2026-08-20",
   "universe_size": 44,
   "capital_usd": 574.58,
+  "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "selected_by": "nessuno",
-  "ai_analysis": null,
-  "candidates": []
+  "max_price_per_share": 258.56,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il gruppo Financials mostra il momentum piu' convincente in pre-market. COIN e HOOD combinano gap significativi con volume elevato e trend rialzista, ideali per uno swing multi-day. SOFI ha il volume piu' alto ma gap piu' contenuto. NFLX e CSX hanno gap marginali e, soprattutto CSX, volume irrisorio (227) che rende il segnale inaffidabile e rischioso overnight. Nessun segnale insider a differenziare. Le due posizioni migliori sono COIN e HOOD per forza del movimento e liquidita'.",
+  "candidates": [
+    {
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 169.22,
+      "prev_close": 160.2,
+      "gap_pct": 5.6305,
+      "premarket_volume": 967081,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap piu' forte (+5.63%) con volume solido e trend rialzista deciso; catalizzatore plausibile legato al momentum crypto. Miglior candidato per prosecuzione multi-day."
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "last_price": 99,
+      "prev_close": 95.77,
+      "gap_pct": 3.3727,
+      "premarket_volume": 959908,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap robusto (+3.37%) con volume alto e trend bullish; settore Financials in forza, buona probabilita' di continuazione nei giorni successivi."
+    },
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "last_price": 18.8,
+      "prev_close": 18.42,
+      "gap_pct": 2.063,
+      "premarket_volume": 1276397,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Volume piu' elevato della lista (1.27M) che conferma partecipazione; gap moderato (+2.06%) ma trend rialzista sostenibile. Terza scelta valida."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 80.84,
+      "prev_close": 80.22,
+      "gap_pct": 0.7729,
+      "premarket_volume": 289917,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Trend rialzista ma gap contenuto (+0.77%) e volume piu' basso; movimento poco convincente per uno swing con target +6%, ruolo marginale."
+    },
+    {
+      "ticker": "CSX",
+      "sector": "Industrials",
+      "last_price": 50.8873,
+      "prev_close": 50.68,
+      "gap_pct": 0.409,
+      "premarket_volume": 227,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap minimo (+0.41%) e volume quasi assente (227), segnale poco affidabile e rischioso overnight; ultimo per priorita'."
+    }
+  ]
 }
