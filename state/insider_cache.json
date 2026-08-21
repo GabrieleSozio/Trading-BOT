@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-08-17T12:30:06+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-08-20T12:30:08+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-08-17T12:30:06+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -64,7 +64,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-08-20T12:30:08+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -106,7 +106,7 @@
   }
  },
  "COIN": {
-  "fetched_at": "2026-08-20T12:30:08+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "COIN",
    "available": true,
@@ -120,7 +120,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -148,7 +148,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -162,7 +162,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -218,7 +218,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "fetched_at": "2026-08-21T12:30:07+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -257,6 +257,50 @@
    "sell_value_usd": 0,
    "buyers": [],
    "sellers": []
+  }
+ },
+ "AAL": {
+  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "data": {
+   "ticker": "AAL",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "ARM": {
+  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "data": {
+   "ticker": "ARM",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "ORCL": {
+  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "data": {
+   "ticker": "ORCL",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 11,
+   "buy_value_usd": 0,
+   "sell_value_usd": 63664039.59,
+   "buyers": [],
+   "sellers": [
+    "HENLEY JEFFREY (Vice Chairman)"
+   ]
   }
  }
 }
