@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-08-20T17:45:05+02:00",
-  "session_date": "2026-08-20",
-  "capital_usd": 566.74,
+  "generated_at": "2026-08-21T14:33:09+02:00",
+  "session_date": "2026-08-21",
+  "capital_usd": 576.61,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 566.74,
-  "free_slots": 2,
+  "available_usd": 396.51,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "COIN",
-      "sector": "Financials",
+      "ticker": "NVDA",
+      "sector": "Technology",
       "action": "buy",
-      "reference_price": 171.14,
-      "target_entry_price": 170.28,
-      "allocated_capital": 255.03
-    },
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "action": "buy",
-      "reference_price": 94.13,
-      "target_entry_price": 93.66,
-      "allocated_capital": 255.03
+      "reference_price": 217.92,
+      "target_entry_price": 216.83,
+      "allocated_capital": 259.47
     }
   ]
 }
