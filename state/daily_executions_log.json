@@ -14,7 +14,18 @@
       "stop_loss": 209.1,
       "take_profit": 228.5,
       "tif": "gtc"
+    },
+    {
+      "ts": "2026-08-21T16:42:06+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "HOOD",
+      "alpaca_order_id": "757d5053-2a5d-4e48-8281-71e8016b8a3a",
+      "qty": 2,
+      "entry": 105.49,
+      "stop_loss": 102.33,
+      "take_profit": 111.82,
+      "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-08-21T16:14:01+02:00"
+  "last_tick_at": "2026-08-21T16:42:02+02:00"
 }
