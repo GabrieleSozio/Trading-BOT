@@ -31,7 +31,7 @@
       "stop_price": 0.24506638539
     }
   },
-  "peak_equity": 613.78,
+  "peak_equity": 615.8,
   "events": [
     {
       "at": "2026-08-15T19:30:00+02:00",
@@ -209,13 +209,17 @@
       "pair": "CRV/USD",
       "stop": 0.24506639,
       "qty": 410.27323517
+    },
+    {
+      "at": "2026-08-21T09:05:29+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "HYPE/USD"
     }
   ],
   "fill_failures": {
     "HYPE/USD": {
-      "count": 2,
-      "last_at": "2026-08-20T08:35:28+02:00",
-      "quarantine_until": "2026-08-21T08:35:28+02:00"
+      "count": 1,
+      "last_at": "2026-08-21T09:05:29+02:00"
     },
     "POL/USD": {
       "count": 2,
@@ -223,5 +227,5 @@
       "quarantine_until": "2026-08-20T08:35:29+02:00"
     }
   },
-  "updated_at": "2026-08-21T08:05:09+02:00"
+  "updated_at": "2026-08-21T09:05:29+02:00"
 }
