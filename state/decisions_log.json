@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-20T18:14:06+02:00",
+  "updated_at": "2026-08-21T16:14:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -26,6 +26,21 @@
         "stop": 165.06,
         "target": 180.38,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-08-21",
+      "opened_at": "2026-08-21T16:14:06+02:00",
+      "decision": "Massima liquidita' (1.56M vol) e leadership nel settore semiconduttori. Gap modesto ma trend strutturale solido riduce il rischio overnight; movimento sostenibile con basso rischio di rientro immediato.",
+      "meta": {
+        "entry": 215.57,
+        "stop": 209.1,
+        "target": 228.5,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
