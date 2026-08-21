@@ -31,7 +31,7 @@
       "stop_price": 0.24506638539
     }
   },
-  "peak_equity": 615.8,
+  "peak_equity": 631.4,
   "events": [
     {
       "at": "2026-08-15T19:30:00+02:00",
@@ -214,12 +214,24 @@
       "at": "2026-08-21T09:05:29+02:00",
       "event": "ingresso_non_eseguito",
       "pair": "HYPE/USD"
+    },
+    {
+      "at": "2026-08-21T09:35:28+02:00",
+      "event": "quarantena",
+      "pair": "HYPE/USD",
+      "fino": "2026-08-22T09:35:28+02:00"
+    },
+    {
+      "at": "2026-08-21T09:35:28+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "HYPE/USD"
     }
   ],
   "fill_failures": {
     "HYPE/USD": {
-      "count": 1,
-      "last_at": "2026-08-21T09:05:29+02:00"
+      "count": 2,
+      "last_at": "2026-08-21T09:35:28+02:00",
+      "quarantine_until": "2026-08-22T09:35:28+02:00"
     },
     "POL/USD": {
       "count": 2,
@@ -227,5 +239,5 @@
       "quarantine_until": "2026-08-20T08:35:29+02:00"
     }
   },
-  "updated_at": "2026-08-21T09:05:29+02:00"
+  "updated_at": "2026-08-21T09:35:29+02:00"
 }
