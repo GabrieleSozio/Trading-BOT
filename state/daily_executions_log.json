@@ -1,31 +1,8 @@
 {
-  "session_date": "2026-08-20",
-  "opening_balance": 99965.91,
-  "closing_balance": 99959.91,
+  "session_date": "2026-08-21",
+  "opening_balance": 99970.55,
+  "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [
-    {
-      "ts": "2026-08-20T15:39:06+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "SOFI",
-      "alpaca_order_id": "8e9493a4-f674-4e9f-814c-70893bae51ab",
-      "qty": 14,
-      "entry": 18.34,
-      "stop_loss": 17.79,
-      "take_profit": 19.44,
-      "tif": "gtc"
-    },
-    {
-      "ts": "2026-08-20T18:14:06+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "COIN",
-      "alpaca_order_id": "9ef2df41-d024-4dec-a695-c8c429a29d62",
-      "qty": 1,
-      "entry": 170.17,
-      "stop_loss": 165.06,
-      "take_profit": 180.38,
-      "tif": "gtc"
-    }
-  ],
-  "last_tick_at": "2026-08-20T21:59:01+02:00"
+  "events": [],
+  "last_tick_at": "2026-08-21T15:44:02+02:00"
 }
