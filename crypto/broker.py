@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import logging
 import urllib.parse
+from decimal import Decimal, ROUND_DOWN, ROUND_HALF_UP
 from pathlib import Path
 
 import yaml
@@ -153,15 +154,32 @@ class CryptoClient(AlpacaClient):
     # -----------------------------------------------------------------
     #  Arrotondamenti imposti dal broker
     # -----------------------------------------------------------------
-    def round_qty(self, pair: str, qty: float) -> float:
+    # Aritmetica ESATTA, non in virgola mobile. Su una moneta da quattro
+    # milionesimi di dollaro si possiedono decine di milioni di unita': dividere
+    # 25.811.523,058252426 per un miliardesimo da' 2,6 x 10^16, che supera la
+    # precisione dei numeri decimali del computer. L'arrotondamento finiva verso
+    # l'ALTO e il broker rifiutava l'ordine perche' chiedevamo di vendere piu' di
+    # quanto avevamo. Una posizione e' rimasta scoperta per ore per questo.
+    def round_qty(self, pair: str, qty: float) -> Decimal:
         a = self.crypto_assets().get(pair, {})
-        inc = float(a.get("min_trade_increment") or 0) or 1e-9
-        return (int(qty / inc)) * inc
+        inc = Decimal(str(a.get("min_trade_increment") or "0.000000001"))
+        d = Decimal(str(qty))
+        return (d / inc).to_integral_value(rounding=ROUND_DOWN) * inc
 
-    def round_price(self, pair: str, price: float) -> float:
+    def round_price(self, pair: str, price: float) -> Decimal:
         a = self.crypto_assets().get(pair, {})
-        inc = float(a.get("price_increment") or 0) or 0.01
-        return round(round(price / inc) * inc, 10)
+        inc = Decimal(str(a.get("price_increment") or "0.01"))
+        d = Decimal(str(price))
+        return (d / inc).to_integral_value(rounding=ROUND_HALF_UP) * inc
+
+    @staticmethod
+    def fmt(value: Decimal) -> str:
+        """Numero per il broker, MAI in notazione scientifica.
+
+        str(2.828e-06) produce '2.828e-06', che l'API non accetta. Con format
+        'f' si ottiene '0.000002828'.
+        """
+        return format(value.normalize(), "f")
 
     def min_order_size(self, pair: str) -> float:
         a = self.crypto_assets().get(pair, {})
@@ -190,12 +208,12 @@ class CryptoClient(AlpacaClient):
         posizione: finche' e' aperto, le unita' sono prenotate."""
         body = {
             "symbol": pair,
-            "qty": f"{self.round_qty(pair, qty):.9f}".rstrip("0"),
+            "qty": self.fmt(self.round_qty(pair, qty)),
             "side": "sell",
             "type": "stop_limit",
             "time_in_force": "gtc",
-            "stop_price": str(self.round_price(pair, stop)),
-            "limit_price": str(self.round_price(pair, limit)),
+            "stop_price": self.fmt(self.round_price(pair, stop)),
+            "limit_price": self.fmt(self.round_price(pair, limit)),
         }
         if client_order_id:
             body["client_order_id"] = client_order_id
@@ -211,9 +229,9 @@ class CryptoClient(AlpacaClient):
         """
         body: dict = {}
         if stop is not None:
-            body["stop_price"] = str(self.round_price(pair or "", stop))
+            body["stop_price"] = self.fmt(self.round_price(pair or "", stop))
         if limit is not None:
-            body["limit_price"] = str(self.round_price(pair or "", limit))
+            body["limit_price"] = self.fmt(self.round_price(pair or "", limit))
         return self._request("PATCH", self._t(f"/v2/orders/{order_id}"), json=body)
 
     def cancel_order(self, order_id: str) -> dict:
@@ -223,7 +241,7 @@ class CryptoClient(AlpacaClient):
         """Uscita a mercato (uscita per debolezza relativa, non per stop)."""
         body = {
             "symbol": pair,
-            "qty": f"{self.round_qty(pair, qty):.9f}".rstrip("0"),
+            "qty": self.fmt(self.round_qty(pair, qty)),
             "side": "sell",
             "type": "market",
             "time_in_force": "gtc",

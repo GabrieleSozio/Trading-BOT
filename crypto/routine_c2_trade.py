@@ -176,7 +176,13 @@ def _ensure_protection(cli, cfg: dict, st: dict, pair: str, pos: dict,
                        open_sells: dict, dry: bool) -> int:
     """Crea o alza lo stop di una posizione. Ritorna il numero di ordini inviati."""
     rec = st["positions"].setdefault(pair, {})
-    qty = float(pos["qty_available"] or pos["qty"])
+    # La quantita' si prende come STRINGA dal broker e non si fa passare da un
+    # numero in virgola mobile: 25811523.058252426 diventerebbe ...428, cioe'
+    # cinque miliardesimi in piu' di quanto possediamo, e l'ordine verrebbe
+    # rifiutato per saldo insufficiente. Su monete da milionesimi di dollaro si
+    # detengono decine di milioni di unita' e l'errore diventa reale.
+    qty_str = pos.get("qty_available") or pos.get("qty") or "0"
+    qty = float(qty_str)
     if qty <= 0:
         return 0
 
@@ -207,7 +213,7 @@ def _ensure_protection(cli, cfg: dict, st: dict, pair: str, pos: dict,
                     pair, want_stop, want_limit)
         if dry:
             return 1
-        o = cli.sell_stop_limit(pair, qty, want_stop, want_limit)
+        o = cli.sell_stop_limit(pair, qty_str, want_stop, want_limit)
         rec["stop_order_id"] = o["id"]
         rec["stop_price"] = want_stop
         _event(st, "stop_creato", pair=pair, stop=round(want_stop, 8), qty=qty)
@@ -368,14 +374,15 @@ def _enter(cli, cfg: dict, st: dict, sel: dict, usd: float, dry: bool) -> int:
             pos = {to_pair(p["symbol"]): p for p in cli.crypto_positions()}.get(pair)
             if not pos:
                 continue
-            avail = float(pos["qty_available"] or 0)
+            avail_str = pos.get("qty_available") or "0"
+            avail = float(avail_str)
             if avail <= 0:
                 continue
             if avail < cli.min_order_size(pair):
                 log.warning("%s: %.9f unita' sotto il minimo negoziabile: "
                             "impossibile proteggere.", pair, avail)
                 break
-            o2 = cli.sell_stop_limit(pair, avail, stop, limit)
+            o2 = cli.sell_stop_limit(pair, avail_str, stop, limit)
             st["positions"][pair]["stop_order_id"] = o2["id"]
             st["positions"][pair]["stop_price"] = stop
             log.info("%s: protetto subito con stop-limit a %.6f (-%.1f%%).",
