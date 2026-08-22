@@ -1,25 +1,5 @@
 {
   "positions": {
-    "LINK/USD": {
-      "entry_price": 9.58864,
-      "qty": 20.133293451,
-      "high_water": 9.58864,
-      "stop_distance_pct": 0.08778,
-      "opened_at": "2026-08-15T19:30:00+02:00",
-      "entry_rank": 1,
-      "stop_order_id": "9781f4a8-183f-40ec-920e-a61e771c2a6d",
-      "stop_price": 8.7469491808
-    },
-    "ETH/USD": {
-      "entry_price": 1908.6,
-      "qty": 0.090054562,
-      "high_water": 1908.6,
-      "stop_distance_pct": 0.04352,
-      "opened_at": "2026-08-19T08:05:34+02:00",
-      "entry_rank": 3,
-      "stop_order_id": "af08659b-0bdc-418a-8b39-61485a134337",
-      "stop_price": 1825.537728
-    },
     "CRV/USD": {
       "entry_price": 0.312493,
       "qty": 411.301488893,
@@ -29,6 +9,24 @@
       "entry_rank": 1,
       "stop_order_id": "3521499b-a9e2-4d4c-8f65-2244775739f2",
       "stop_price": 0.24506638539
+    },
+    "TRUMP/USD": {
+      "entry_price": 2.911,
+      "qty": 17.32519931,
+      "high_water": 2.911,
+      "stop_distance_pct": 0.3,
+      "opened_at": "2026-08-22T08:05:09+02:00",
+      "entry_rank": 1,
+      "stop_order_id": "d87a79c3-ad59-4e34-b226-3081c697ad7d",
+      "stop_price": 2.0377
+    },
+    "PEPE/USD": {
+      "entry_price": 4.04e-06,
+      "qty": 25876213.59223301,
+      "high_water": 4.04e-06,
+      "stop_distance_pct": 0.3,
+      "opened_at": "2026-08-22T08:05:15+02:00",
+      "entry_rank": 2
     }
   },
   "peak_equity": 673.8,
@@ -225,6 +223,53 @@
       "at": "2026-08-21T09:35:28+02:00",
       "event": "ingresso_non_eseguito",
       "pair": "HYPE/USD"
+    },
+    {
+      "at": "2026-08-22T08:05:05+02:00",
+      "event": "uscita",
+      "pair": "ETH/USD",
+      "motivo": "scesa al 11o posto (soglia 5)",
+      "pl_usd": 47.47
+    },
+    {
+      "at": "2026-08-22T08:05:06+02:00",
+      "event": "uscita",
+      "pair": "LINK/USD",
+      "motivo": "scesa al 9o posto (soglia 5)",
+      "pl_usd": 45.21
+    },
+    {
+      "at": "2026-08-22T08:05:09+02:00",
+      "event": "ingresso",
+      "pair": "TRUMP/USD",
+      "prezzo": 2.911,
+      "qty": 17.32519931,
+      "usd": 51.46
+    },
+    {
+      "at": "2026-08-22T08:05:12+02:00",
+      "event": "stop_creato",
+      "pair": "TRUMP/USD",
+      "stop": 2.0377,
+      "qty": 17.281886311
+    },
+    {
+      "at": "2026-08-22T08:05:15+02:00",
+      "event": "ingresso",
+      "pair": "PEPE/USD",
+      "prezzo": 4.04e-06,
+      "qty": 25876213.59223301,
+      "usd": 106.61
+    },
+    {
+      "at": "2026-08-22T08:05:21+02:00",
+      "event": "aperta_senza_stop",
+      "pair": "PEPE/USD"
+    },
+    {
+      "at": "2026-08-22T08:05:47+02:00",
+      "event": "ingresso_non_eseguito",
+      "pair": "WIF/USD"
     }
   ],
   "fill_failures": {
@@ -237,7 +282,41 @@
       "count": 2,
       "last_at": "2026-08-19T08:35:29+02:00",
       "quarantine_until": "2026-08-20T08:35:29+02:00"
+    },
+    "WIF/USD": {
+      "count": 1,
+      "last_at": "2026-08-22T08:05:47+02:00"
     }
   },
-  "updated_at": "2026-08-22T07:35:03+02:00"
+  "updated_at": "2026-08-22T08:05:47+02:00",
+  "closed_trades": [
+    {
+      "pair": "ETH/USD",
+      "opened_at": "2026-08-19T08:05:34+02:00",
+      "closed_at": "2026-08-22T08:05:05+02:00",
+      "entry": 1908.6,
+      "exit": 2437.07,
+      "qty": 0.090054562,
+      "stop_distance_pct": 0.04352,
+      "pl_usd": 47.47,
+      "pl_pct": 27.69,
+      "risk_usd": 7.48,
+      "r_multiple": 6.35,
+      "motivo": "scesa al 11o posto (soglia 5)"
+    },
+    {
+      "pair": "LINK/USD",
+      "opened_at": "2026-08-15T19:30:00+02:00",
+      "closed_at": "2026-08-22T08:05:06+02:00",
+      "entry": 9.58864,
+      "exit": 11.84,
+      "qty": 20.133293451,
+      "stop_distance_pct": 0.08778,
+      "pl_usd": 45.21,
+      "pl_pct": 23.48,
+      "risk_usd": 16.95,
+      "r_multiple": 2.67,
+      "motivo": "scesa al 9o posto (soglia 5)"
+    }
+  ]
 }

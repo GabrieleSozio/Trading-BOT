@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T08:05:06+02:00",
+  "updated_at": "2026-08-22T08:05:15+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -11,6 +11,32 @@
         "momentum": 0.37879,
         "stop_distance_pct": 0.21577,
         "usd": 130.88
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "TRUMP/USD",
+      "date": "2026-08-22",
+      "opened_at": "2026-08-22T08:05:09+02:00",
+      "decision": "Entrata al 1o posto della classifica di momentum (punteggio +92.13%), stop a -30.0% tarato sulla volatilita' giornaliera. Peso assegnato 16.7% del capitale.",
+      "meta": {
+        "rank": 1,
+        "momentum": 0.9213,
+        "stop_distance_pct": 0.3,
+        "usd": 51.46
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PEPE/USD",
+      "date": "2026-08-22",
+      "opened_at": "2026-08-22T08:05:15+02:00",
+      "decision": "Entrata al 2o posto della classifica di momentum (punteggio +45.96%), stop a -30.0% tarato sulla volatilita' giornaliera. Peso assegnato 16.7% del capitale.",
+      "meta": {
+        "rank": 2,
+        "momentum": 0.45961,
+        "stop_distance_pct": 0.3,
+        "usd": 106.61
       },
       "status": "in_sospeso"
     }
