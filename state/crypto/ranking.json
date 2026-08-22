@@ -1,635 +1,635 @@
 {
-  "generated_at": "2026-08-21T08:00:05+02:00",
-  "session_date": "2026-08-21",
+  "generated_at": "2026-08-22T08:00:05+02:00",
+  "session_date": "2026-08-22",
   "account": "PA3KDARZ86JB",
-  "equity_usd": 612.48,
+  "equity_usd": 639.68,
   "universe_size": 31,
   "universe_diagnostics": [
     {
       "pair": "AAVE/USD",
       "ok": true,
-      "spread_bps": 18.8,
-      "mid": 100.905
+      "spread_bps": 19.0,
+      "mid": 120.21449999999999
     },
     {
       "pair": "ADA/USD",
       "ok": true,
-      "spread_bps": 36.2,
-      "mid": 0.208609
+      "spread_bps": 34.8,
+      "mid": 0.232535
     },
     {
       "pair": "ARB/USD",
       "ok": true,
-      "spread_bps": 33.6,
-      "mid": 0.09195239999999999
+      "spread_bps": 30.0,
+      "mid": 0.10029350000000001
     },
     {
       "pair": "AVAX/USD",
       "ok": true,
-      "spread_bps": 59.0,
-      "mid": 7.3842
+      "spread_bps": 62.0,
+      "mid": 7.692835
     },
     {
       "pair": "BAT/USD",
       "ok": true,
-      "spread_bps": 57.6,
-      "mid": 0.06598000000000001
+      "spread_bps": 61.5,
+      "mid": 0.07550799999999999
     },
     {
       "pair": "BCH/USD",
       "ok": true,
-      "spread_bps": 63.8,
-      "mid": 238.2405
+      "spread_bps": 60.9,
+      "mid": 280.95500000000004
     },
     {
       "pair": "BONK/USD",
       "ok": false,
-      "spread_bps": 73.5,
-      "reason": "spread 74bp > 70bp"
+      "spread_bps": 92.4,
+      "reason": "spread 92bp > 70bp"
     },
     {
       "pair": "BTC/USD",
       "ok": true,
-      "spread_bps": 1.4,
-      "mid": 75388.81049999999
+      "spread_bps": 1.8,
+      "mid": 77344.5
     },
     {
       "pair": "CRV/USD",
       "ok": true,
-      "spread_bps": 23.7,
-      "mid": 0.31237000000000004
+      "spread_bps": 21.2,
+      "mid": 0.31933100000000003
     },
     {
       "pair": "DOGE/USD",
       "ok": true,
-      "spread_bps": 31.2,
-      "mid": 0.08263129999999999
+      "spread_bps": 34.4,
+      "mid": 0.0917183
     },
     {
       "pair": "DOT/USD",
       "ok": true,
-      "spread_bps": 20.5,
-      "mid": 0.850973
+      "spread_bps": 18.4,
+      "mid": 0.96519
     },
     {
       "pair": "ETH/USD",
       "ok": true,
-      "spread_bps": 2.0,
-      "mid": 2365.965
+      "spread_bps": 3.5,
+      "mid": 2439.325
     },
     {
       "pair": "FIL/USD",
       "ok": true,
-      "spread_bps": 29.5,
-      "mid": 0.7558865
+      "spread_bps": 37.4,
+      "mid": 0.789725
     },
     {
       "pair": "GRT/USD",
       "ok": true,
-      "spread_bps": 41.0,
-      "mid": 0.01532855
+      "spread_bps": 42.5,
+      "mid": 0.01708635
     },
     {
       "pair": "HYPE/USD",
       "ok": true,
-      "spread_bps": 48.0,
-      "mid": 72.98505
+      "spread_bps": 50.5,
+      "mid": 79.30510000000001
     },
     {
       "pair": "LDO/USD",
       "ok": true,
-      "spread_bps": 53.4,
-      "mid": 0.34283549999999996
+      "spread_bps": 49.3,
+      "mid": 0.37074399999999996
     },
     {
       "pair": "LINK/USD",
       "ok": true,
-      "spread_bps": 17.6,
-      "mid": 10.9269
+      "spread_bps": 20.7,
+      "mid": 11.83325
     },
     {
       "pair": "LTC/USD",
       "ok": true,
-      "spread_bps": 59.7,
-      "mid": 48.620149999999995
+      "spread_bps": 57.1,
+      "mid": 51.9885
     },
     {
       "pair": "ONDO/USD",
       "ok": true,
-      "spread_bps": 46.4,
-      "mid": 0.365591
+      "spread_bps": 49.4,
+      "mid": 0.390374
     },
     {
       "pair": "PEPE/USD",
       "ok": true,
-      "spread_bps": 29.6,
-      "mid": 3.375e-06
+      "spread_bps": 49.1,
+      "mid": 4.07e-06
     },
     {
       "pair": "POL/USD",
       "ok": true,
-      "spread_bps": 43.8,
-      "mid": 0.084385
+      "spread_bps": 38.3,
+      "mid": 0.1078035
     },
     {
       "pair": "RENDER/USD",
       "ok": true,
-      "spread_bps": 25.7,
-      "mid": 1.418175
+      "spread_bps": 39.6,
+      "mid": 1.5139999999999998
     },
     {
       "pair": "SHIB/USD",
       "ok": true,
-      "spread_bps": 59.6,
-      "mid": 5.035e-06
+      "spread_bps": 52.7,
+      "mid": 5.6950000000000005e-06
     },
     {
       "pair": "SKY/USD",
       "ok": true,
-      "spread_bps": 16.0,
-      "mid": 0.0652577
+      "spread_bps": 18.6,
+      "mid": 0.0656582
     },
     {
       "pair": "SOL/USD",
       "ok": true,
-      "spread_bps": 5.2,
-      "mid": 90.3463
+      "spread_bps": 8.5,
+      "mid": 94.15
     },
     {
       "pair": "SUSHI/USD",
       "ok": true,
-      "spread_bps": 20.3,
-      "mid": 0.1857115
+      "spread_bps": 21.4,
+      "mid": 0.209925
     },
     {
       "pair": "TRUMP/USD",
       "ok": true,
-      "spread_bps": 33.4,
-      "mid": 1.699835
+      "spread_bps": 32.3,
+      "mid": 3.00615
     },
     {
       "pair": "UNI/USD",
       "ok": true,
-      "spread_bps": 21.6,
-      "mid": 3.83785
+      "spread_bps": 20.6,
+      "mid": 4.12455
     },
     {
       "pair": "WIF/USD",
       "ok": true,
-      "spread_bps": 33.6,
-      "mid": 0.169815
+      "spread_bps": 36.8,
+      "mid": 0.2088155
     },
     {
       "pair": "XRP/USD",
       "ok": true,
-      "spread_bps": 42.8,
-      "mid": 1.3084
+      "spread_bps": 35.7,
+      "mid": 1.526675
     },
     {
       "pair": "XTZ/USD",
       "ok": true,
-      "spread_bps": 58.8,
-      "mid": 0.2218475
+      "spread_bps": 65.7,
+      "mid": 0.238273
     },
     {
       "pair": "YFI/USD",
       "ok": true,
-      "spread_bps": 18.1,
-      "mid": 2195.7115
+      "spread_bps": 22.7,
+      "mid": 2382.89
     }
   ],
   "ranking": [
     {
-      "pair": "CRV/USD",
-      "last": 0.3125,
+      "pair": "TRUMP/USD",
+      "last": 2.98477,
       "bars": 111,
       "returns": {
-        "7": 0.31,
-        "30": 0.4726,
-        "90": 0.3349
+        "7": 1.1258,
+        "30": 0.8684,
+        "90": 0.449
       },
-      "momentum_score": 0.37879,
-      "atr_pct": 0.08631,
+      "momentum_score": 0.9213,
+      "atr_pct": 0.30565,
       "rank": 1
     },
     {
-      "pair": "HYPE/USD",
-      "last": 73.0326,
+      "pair": "PEPE/USD",
+      "last": 4.075e-06,
       "bars": 111,
       "returns": {
-        "7": 0.2935,
-        "30": 0.2299,
-        "90": 0.2445
+        "7": 0.5583,
+        "30": 0.4685,
+        "90": 0.1399
       },
-      "momentum_score": 0.26072,
-      "atr_pct": 0.05567,
+      "momentum_score": 0.45961,
+      "atr_pct": 0.12083,
       "rank": 2
     },
     {
-      "pair": "LINK/USD",
-      "last": 10.9293,
+      "pair": "WIF/USD",
+      "last": 0.20899,
       "bars": 111,
       "returns": {
-        "7": 0.2195,
-        "30": 0.2664,
-        "90": 0.1439
+        "7": 0.5356,
+        "30": 0.4569,
+        "90": 0.1155
       },
-      "momentum_score": 0.22693,
-      "atr_pct": 0.04276,
+      "momentum_score": 0.44108,
+      "atr_pct": 0.07111,
       "rank": 3
     },
     {
-      "pair": "ETH/USD",
-      "last": 2367.1,
+      "pair": "CRV/USD",
+      "last": 0.318195,
       "bars": 111,
       "returns": {
-        "7": 0.259,
-        "30": 0.2242,
-        "90": 0.1192
+        "7": 0.3163,
+        "30": 0.5238,
+        "90": 0.4037
       },
-      "momentum_score": 0.22409,
-      "atr_pct": 0.03349,
+      "momentum_score": 0.4124,
+      "atr_pct": 0.09983,
       "rank": 4
     },
     {
       "pair": "XRP/USD",
-      "last": 1.309555,
+      "last": 1.52825,
       "bars": 111,
       "returns": {
-        "7": 0.3113,
-        "30": 0.147,
-        "90": -0.0345
+        "7": 0.5265,
+        "30": 0.3807,
+        "90": 0.1324
       },
-      "momentum_score": 0.1937,
-      "atr_pct": 0.04493,
+      "momentum_score": 0.40906,
+      "atr_pct": 0.06543,
       "rank": 5
     },
     {
-      "pair": "PEPE/USD",
-      "last": 3.375e-06,
+      "pair": "POL/USD",
+      "last": 0.107746,
       "bars": 111,
       "returns": {
-        "7": 0.2712,
-        "30": 0.1698,
-        "90": -0.0728
+        "7": 0.4312,
+        "30": 0.412,
+        "90": 0.1929
       },
-      "momentum_score": 0.17905,
-      "atr_pct": 0.08453,
+      "momentum_score": 0.38775,
+      "atr_pct": 0.05457,
       "rank": 6
     },
     {
-      "pair": "SOL/USD",
-      "last": 90.37845,
+      "pair": "HYPE/USD",
+      "last": 79.2295,
       "bars": 111,
       "returns": {
-        "7": 0.2001,
-        "30": 0.1597,
-        "90": 0.0549
+        "7": 0.3934,
+        "30": 0.3788,
+        "90": 0.2621
       },
-      "momentum_score": 0.16215,
-      "atr_pct": 0.03784,
+      "momentum_score": 0.36785,
+      "atr_pct": 0.06467,
       "rank": 7
     },
     {
-      "pair": "BTC/USD",
-      "last": 75440.4565,
+      "pair": "AAVE/USD",
+      "last": 120.15,
       "bars": 111,
       "returns": {
-        "7": 0.1979,
-        "30": 0.1416,
-        "90": -0.0157
+        "7": 0.3952,
+        "30": 0.2658,
+        "90": 0.4054
       },
-      "momentum_score": 0.14335,
-      "atr_pct": 0.02602,
+      "momentum_score": 0.34498,
+      "atr_pct": 0.0594,
       "rank": 8
     },
     {
-      "pair": "WIF/USD",
-      "last": 0.169895,
+      "pair": "LINK/USD",
+      "last": 11.83325,
       "bars": 111,
       "returns": {
-        "7": 0.2267,
-        "30": 0.1116,
-        "90": -0.1197
+        "7": 0.2512,
+        "30": 0.398,
+        "90": 0.256
       },
-      "momentum_score": 0.12867,
-      "atr_pct": 0.04873,
+      "momentum_score": 0.31066,
+      "atr_pct": 0.05906,
       "rank": 9
     },
     {
       "pair": "ADA/USD",
-      "last": 0.2086265,
+      "last": 0.232655,
       "bars": 111,
       "returns": {
-        "7": 0.1593,
-        "30": 0.1962,
-        "90": -0.1513
+        "7": 0.3204,
+        "30": 0.3818,
+        "90": -0.0386
       },
-      "momentum_score": 0.12748,
-      "atr_pct": 0.04565,
+      "momentum_score": 0.29111,
+      "atr_pct": 0.0675,
       "rank": 10
     },
     {
-      "pair": "SKY/USD",
-      "last": 0.065289,
+      "pair": "ETH/USD",
+      "last": 2440.6675,
       "bars": 111,
       "returns": {
-        "7": 0.2761,
-        "30": 0.0289,
-        "90": -0.069
+        "7": 0.2973,
+        "30": 0.3004,
+        "90": 0.1631
       },
-      "momentum_score": 0.12547,
-      "atr_pct": 0.03961,
+      "momentum_score": 0.27844,
+      "atr_pct": 0.0417,
       "rank": 11
     },
     {
-      "pair": "AAVE/USD",
-      "last": 100.947,
+      "pair": "BCH/USD",
+      "last": 281.15,
       "bars": 111,
       "returns": {
-        "7": 0.1687,
-        "30": 0.0368,
-        "90": 0.1657
+        "7": 0.3814,
+        "30": 0.3284,
+        "90": -0.189
       },
-      "momentum_score": 0.1155,
-      "atr_pct": 0.0384,
+      "momentum_score": 0.27467,
+      "atr_pct": 0.0587,
       "rank": 12
     },
     {
-      "pair": "UNI/USD",
-      "last": 3.83785,
+      "pair": "SHIB/USD",
+      "last": 5.695e-06,
       "bars": 111,
       "returns": {
-        "7": 0.2005,
-        "30": 0.0154,
-        "90": 0.1091
+        "7": 0.2656,
+        "30": 0.3773,
+        "90": 0.0215
       },
-      "momentum_score": 0.11278,
-      "atr_pct": 0.05765,
+      "momentum_score": 0.27364,
+      "atr_pct": 0.06724,
       "rank": 13
     },
     {
       "pair": "DOGE/USD",
-      "last": 0.08272,
+      "last": 0.09179225,
       "bars": 111,
       "returns": {
-        "7": 0.182,
-        "30": 0.1337,
-        "90": -0.1964
+        "7": 0.32,
+        "30": 0.3275,
+        "90": -0.1014
       },
-      "momentum_score": 0.10593,
-      "atr_pct": 0.03547,
+      "momentum_score": 0.25978,
+      "atr_pct": 0.06065,
       "rank": 14
     },
     {
       "pair": "SUSHI/USD",
-      "last": 0.1857115,
+      "last": 0.209825,
       "bars": 111,
       "returns": {
-        "7": 0.1787,
-        "30": 0.0854,
-        "90": -0.1023
+        "7": 0.3143,
+        "30": 0.2051,
+        "90": 0.0442
       },
-      "momentum_score": 0.09927,
-      "atr_pct": 0.05137,
+      "momentum_score": 0.2301,
+      "atr_pct": 0.07134,
       "rank": 15
     },
     {
-      "pair": "SHIB/USD",
-      "last": 5.04e-06,
+      "pair": "ARB/USD",
+      "last": 0.1002935,
       "bars": 111,
       "returns": {
-        "7": 0.0909,
-        "30": 0.1859,
-        "90": -0.1111
+        "7": 0.3791,
+        "30": 0.1653,
+        "90": -0.0499
       },
-      "momentum_score": 0.0986,
-      "atr_pct": 0.0415,
+      "momentum_score": 0.2292,
+      "atr_pct": 0.06829,
       "rank": 16
     },
     {
-      "pair": "ARB/USD",
-      "last": 0.0919735,
+      "pair": "SOL/USD",
+      "last": 94.15,
       "bars": 111,
       "returns": {
-        "7": 0.2349,
-        "30": 0.0205,
-        "90": -0.1591
+        "7": 0.2506,
+        "30": 0.2418,
+        "90": 0.1057
       },
-      "momentum_score": 0.09004,
-      "atr_pct": 0.05222,
+      "momentum_score": 0.22532,
+      "atr_pct": 0.05061,
       "rank": 17
     },
     {
-      "pair": "AVAX/USD",
-      "last": 7.39186,
+      "pair": "UNI/USD",
+      "last": 4.12455,
       "bars": 111,
       "returns": {
-        "7": 0.1432,
-        "30": 0.1163,
-        "90": -0.2117
+        "7": 0.2748,
+        "30": 0.0991,
+        "90": 0.2189
       },
-      "momentum_score": 0.0792,
-      "atr_pct": 0.04601,
+      "momentum_score": 0.19611,
+      "atr_pct": 0.07348,
       "rank": 18
     },
     {
-      "pair": "TRUMP/USD",
-      "last": 1.69894,
+      "pair": "BTC/USD",
+      "last": 77372.1315,
       "bars": 111,
       "returns": {
-        "7": 0.1881,
-        "30": 0.0566,
-        "90": -0.1902
+        "7": 0.2277,
+        "30": 0.1891,
+        "90": 0.0051
       },
-      "momentum_score": 0.07875,
-      "atr_pct": 0.21458,
+      "momentum_score": 0.17885,
+      "atr_pct": 0.03125,
       "rank": 19
     },
     {
-      "pair": "POL/USD",
-      "last": 0.0842503,
+      "pair": "AVAX/USD",
+      "last": 7.69667,
       "bars": 111,
       "returns": {
-        "7": 0.1256,
-        "30": 0.0642,
-        "90": -0.0762
+        "7": 0.217,
+        "30": 0.2287,
+        "90": -0.1638
       },
-      "momentum_score": 0.07079,
-      "atr_pct": 0.03704,
+      "momentum_score": 0.16458,
+      "atr_pct": 0.063,
       "rank": 20
     },
     {
-      "pair": "YFI/USD",
-      "last": 2194.17,
+      "pair": "DOT/USD",
+      "last": 0.965155,
       "bars": 111,
       "returns": {
-        "7": 0.1393,
-        "30": 0.0459,
-        "90": -0.1261
+        "7": 0.2691,
+        "30": 0.185,
+        "90": -0.2242
       },
-      "momentum_score": 0.06212,
-      "atr_pct": 0.0354,
+      "momentum_score": 0.16144,
+      "atr_pct": 0.0514,
       "rank": 21
     },
     {
-      "pair": "BCH/USD",
-      "last": 237.99,
+      "pair": "SKY/USD",
+      "last": 0.0656582,
       "bars": 111,
       "returns": {
-        "7": 0.1625,
-        "30": 0.082,
-        "90": -0.3302
+        "7": 0.2925,
+        "30": 0.0747,
+        "90": -0.061
       },
-      "momentum_score": 0.05639,
-      "atr_pct": 0.03511,
+      "momentum_score": 0.15234,
+      "atr_pct": 0.0477,
       "rank": 22
     },
     {
-      "pair": "LTC/USD",
-      "last": 48.62275,
+      "pair": "YFI/USD",
+      "last": 2382.89,
       "bars": 111,
       "returns": {
-        "7": 0.1102,
-        "30": 0.0317,
-        "90": -0.0896
+        "7": 0.2251,
+        "30": 0.1229,
+        "90": -0.0263
       },
-      "momentum_score": 0.04882,
-      "atr_pct": 0.02523,
+      "momentum_score": 0.14649,
+      "atr_pct": 0.04925,
       "rank": 23
     },
     {
-      "pair": "LDO/USD",
-      "last": 0.343082,
+      "pair": "LTC/USD",
+      "last": 51.9885,
       "bars": 111,
       "returns": {
-        "7": 0.1609,
-        "30": -0.1391,
-        "90": -0.0205
+        "7": 0.1799,
+        "30": 0.108,
+        "90": -0.0132
       },
-      "momentum_score": 0.01366,
-      "atr_pct": 0.04744,
+      "momentum_score": 0.12215,
+      "atr_pct": 0.03972,
       "rank": 24
     },
     {
-      "pair": "FIL/USD",
-      "last": 0.75623,
+      "pair": "LDO/USD",
+      "last": 0.370744,
       "bars": 111,
       "returns": {
-        "7": 0.1119,
-        "30": -0.0075,
-        "90": -0.2291
+        "7": 0.2445,
+        "30": -0.0469,
+        "90": 0.0857
       },
-      "momentum_score": 0.01299,
-      "atr_pct": 0.05552,
+      "momentum_score": 0.10413,
+      "atr_pct": 0.06282,
       "rank": 25
     },
     {
-      "pair": "DOT/USD",
-      "last": 0.85074,
+      "pair": "GRT/USD",
+      "last": 0.01709745,
       "bars": 111,
       "returns": {
-        "7": 0.1131,
-        "30": 0.0181,
-        "90": -0.3423
+        "7": 0.2678,
+        "30": 0.0792,
+        "90": -0.3379
       },
-      "momentum_score": 0.00677,
-      "atr_pct": 0.03561,
+      "momentum_score": 0.10152,
+      "atr_pct": 0.06288,
       "rank": 26
     },
     {
-      "pair": "XTZ/USD",
-      "last": 0.22195,
+      "pair": "BAT/USD",
+      "last": 0.075508,
       "bars": 111,
       "returns": {
-        "7": 0.1299,
-        "30": -0.024,
-        "90": -0.3573
+        "7": 0.2916,
+        "30": -0.0191,
+        "90": -0.2319
       },
-      "momentum_score": -0.00478,
-      "atr_pct": 0.04285,
+      "momentum_score": 0.08881,
+      "atr_pct": 0.06193,
       "rank": 27
     },
     {
-      "pair": "RENDER/USD",
-      "last": 1.418175,
+      "pair": "FIL/USD",
+      "last": 0.789595,
       "bars": 111,
       "returns": {
-        "7": 0.1246,
-        "30": -0.0605,
-        "90": -0.2685
+        "7": 0.1689,
+        "30": 0.0853,
+        "90": -0.1735
       },
-      "momentum_score": -0.00838,
-      "atr_pct": 0.03365,
+      "momentum_score": 0.0841,
+      "atr_pct": 0.06878,
       "rank": 28
     },
     {
       "pair": "ONDO/USD",
-      "last": 0.365591,
+      "last": 0.390097,
       "bars": 111,
       "returns": {
-        "7": 0.1182,
-        "30": -0.1138,
-        "90": -0.1419
+        "7": 0.2067,
+        "30": -0.027,
+        "90": -0.1122
       },
-      "momentum_score": -0.01364,
-      "atr_pct": 0.0502,
+      "momentum_score": 0.0654,
+      "atr_pct": 0.07089,
       "rank": 29
     },
     {
-      "pair": "GRT/USD",
-      "last": 0.01532855,
+      "pair": "RENDER/USD",
+      "last": 1.5145,
       "bars": 111,
       "returns": {
-        "7": 0.1341,
-        "30": -0.0726,
-        "90": -0.4269
+        "7": 0.1987,
+        "30": 0.0282,
+        "90": -0.2495
       },
-      "momentum_score": -0.03273,
-      "atr_pct": 0.04196,
+      "momentum_score": 0.06328,
+      "atr_pct": 0.06492,
       "rank": 30
     },
     {
-      "pair": "BAT/USD",
-      "last": 0.06598,
+      "pair": "XTZ/USD",
+      "last": 0.238273,
       "bars": 111,
       "returns": {
-        "7": 0.1636,
-        "30": -0.1583,
-        "90": -0.3481
+        "7": 0.204,
+        "30": 0.0127,
+        "90": -0.2893
       },
-      "momentum_score": -0.04196,
-      "atr_pct": 0.05238,
+      "momentum_score": 0.05347,
+      "atr_pct": 0.06161,
       "rank": 31
     }
   ],
   "selection": [
     {
-      "pair": "CRV/USD",
+      "pair": "TRUMP/USD",
       "rank": 1,
-      "momentum_score": 0.37879,
-      "atr_pct": 0.08631,
-      "stop_distance_pct": 0.21577,
-      "target_weight": 0.2137,
-      "target_usd": 130.88
+      "momentum_score": 0.9213,
+      "atr_pct": 0.30565,
+      "stop_distance_pct": 0.3,
+      "target_weight": 0.16667,
+      "target_usd": 106.61
     },
     {
-      "pair": "HYPE/USD",
+      "pair": "PEPE/USD",
       "rank": 2,
-      "momentum_score": 0.26072,
-      "atr_pct": 0.05567,
-      "stop_distance_pct": 0.13917,
-      "target_weight": 0.33131,
-      "target_usd": 202.92
+      "momentum_score": 0.45961,
+      "atr_pct": 0.12083,
+      "stop_distance_pct": 0.3,
+      "target_weight": 0.16667,
+      "target_usd": 106.61
     },
     {
-      "pair": "LINK/USD",
+      "pair": "WIF/USD",
       "rank": 3,
-      "momentum_score": 0.22693,
-      "atr_pct": 0.04276,
-      "stop_distance_pct": 0.1069,
-      "target_weight": 0.41499,
-      "target_usd": 254.17
+      "momentum_score": 0.44108,
+      "atr_pct": 0.07111,
+      "stop_distance_pct": 0.17778,
+      "target_weight": 0.28125,
+      "target_usd": 179.91
     }
   ]
 }
