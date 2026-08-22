@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-21T16:42:06+02:00",
+  "updated_at": "2026-08-22T10:00:25+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -14,7 +14,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.05,
+        "pl_usd": -7.84,
+        "r_multiple": -1.0,
+        "alpha_pct": -3.05,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.05% con uscita sullo stop a -1.00R conferma che la tesi rialzista non ha retto. Ha ceduto l'assunto centrale, ossia che volume elevato piu' gap del +2.06% implicassero continuazione: il volume confermava partecipazione ma non la sua direzione, e il gap moderato non ha trovato follow-through. La lezione concreta: non trattare il volume come segnale direzionale di per se', ma richiedere una conferma di prezzo oltre il livello del gap prima di entrare, evitando ingressi basati solo su partecipazione e trend presunto.",
+      "closed_at": "2026-08-22T10:00:16+02:00"
     },
     {
       "ticker": "COIN",
@@ -29,7 +39,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.88,
+        "pl_usd": 11.72,
+        "r_multiple": 2.27,
+        "alpha_pct": 6.47,
+        "benchmark_pct": 0.41,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta e ampiamente premiata: +6.47% di alpha con uscita a target a +2.27R confermano che il gap forte con volume era il candidato giusto per la prosecuzione multi-day. Ha tenuto la logica del combinare gap ampio, volume solido e trend deciso come filtro di qualita', mentre la parte piu' fragile restava il catalizzatore crypto, plausibile ma non verificato, che avrebbe potuto invertire il momentum. La lezione: quando gap, volume e trend allineano un segnale cosi' netto, vale la pena dimensionare per catturare la prosecuzione invece di uscire prematuramente, ma continuare a etichettare esplicitamente i catalizzatori 'plausibili' come ipotesi non confermate per non sovrastim",
+      "closed_at": "2026-08-22T10:00:25+02:00"
     },
     {
       "ticker": "NVDA",
