@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T08:05:15+02:00",
+  "updated_at": "2026-08-23T22:00:15+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -25,7 +25,17 @@
         "stop_distance_pct": 0.3,
         "usd": 51.46
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -31.75,
+        "pl_usd": -15.97,
+        "r_multiple": -1.06,
+        "alpha_pct": -31.75,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop sul broker"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -31,75% contro un indice piatto conferma che l'ingresso sul primo posto di momentum non ha catturato alcuna extra-performance, ma solo il rovescio del rally precedente. Ha ceduto proprio la tesi centrale, cioe' che un punteggio momentum di +92% fosse segnale di continuazione: era piuttosto un titolo in fase di esaurimento, e lo stop a -30% tarato sulla volatilita' era troppo largo per proteggere un peso del 16,7%. La lezione: su nomi con momentum estremo ridurre il peso e stringere lo stop, perche' l'ampiezza della salita gia' scontata amplifica il rischio di reversal invece di ridurlo.",
+      "closed_at": "2026-08-23T22:00:15+02:00"
     },
     {
       "ticker": "PEPE/USD",
