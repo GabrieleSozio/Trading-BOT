@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T22:00:15+02:00",
+  "updated_at": "2026-08-24T08:05:06+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -47,6 +47,19 @@
         "momentum": 0.45961,
         "stop_distance_pct": 0.3,
         "usd": 106.61
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "AAVE/USD",
+      "date": "2026-08-24",
+      "opened_at": "2026-08-24T08:05:06+02:00",
+      "decision": "Entrata al 2o posto della classifica di momentum (punteggio +60.56%), stop a -17.7% tarato sulla volatilita' giornaliera. Peso assegnato 28.3% del capitale.",
+      "meta": {
+        "rank": 2,
+        "momentum": 0.60556,
+        "stop_distance_pct": 0.1766,
+        "usd": 176.0
       },
       "status": "in_sospeso"
     }
