@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-22T10:00:25+02:00",
+  "updated_at": "2026-08-24T16:41:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -76,6 +76,21 @@
         "stop": 102.33,
         "target": 111.82,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "WBD",
+      "date": "2026-08-24",
+      "opened_at": "2026-08-24T16:41:06+02:00",
+      "decision": "Volume pre-market piu' alto della lista (880k) con gap +1.06% e trend Bullish. La forte partecipazione conferma interesse reale, buona probabilita' di follow-through nei giorni successivi.",
+      "meta": {
+        "entry": 28.79,
+        "stop": 27.93,
+        "target": 30.52,
+        "settore": "Communication Services",
         "fascia": "micro",
         "azione": "buy"
       },
