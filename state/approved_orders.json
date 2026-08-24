@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-24T14:32:14+02:00",
+  "generated_at": "2026-08-24T16:02:03+02:00",
   "session_date": "2026-08-24",
-  "source_generated_at": "2026-08-24T14:32:10+02:00",
-  "portfolio_value": 581.82,
+  "source_generated_at": "2026-08-24T16:00:05+02:00",
+  "portfolio_value": 574.12,
   "capital_simulated": true,
-  "real_equity": 99973.09,
+  "real_equity": 99965.35,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "WBD",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 28.79,
+      "allocated_capital": 258.32,
+      "stop_loss_price": 27.93,
+      "take_profit_price": 30.52
+    }
+  ]
 }
