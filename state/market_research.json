@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-08-24T14:32:04+02:00",
+  "session_date": "2026-08-24",
+  "universe_size": 44,
+  "capital_usd": 581.35,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 261.61,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Cerco combinazione di gap significativo, volume convincente e trend solido per prosecuzione multi-day. I candidati con gap forte E volume elevato (RIVN, WBD) sono i piu' promettenti perche' il volume conferma partecipazione reale. COIN e' gia' stato premiato in passato con logica gap+volume+trend e resta liquido. Evito titoli con gap alto ma volume irrisorio (CSX vol=123, T vol=15847, WFC vol=4327) perche' privi di conferma. KO ha gap buono ma pesanti vendite insider ($139M) che raffreddano la fiducia. Amazzon offre trend istituzionale solido con volume ampio. La lezione SOFI impone conferma di prezzo oltre il gap: privilegio quindi movimenti supportati da volume reale piuttosto che solo partecipazione.",
+  "candidates": [
+    {
+      "ticker": "RIVN",
+      "sector": "Consumer Discretionary",
+      "last_price": 17.16,
+      "prev_close": 16.97,
+      "gap_pct": 1.1196,
+      "premarket_volume": 423091,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.12% con volume pre-market molto elevato (423k), il piu' convincente in rapporto al prezzo basso. Trend Bullish e settore Discretionary reattivo. Partecipazione ampia che supporta la prosecuzione multi-day."
+    },
+    {
+      "ticker": "WBD",
+      "sector": "Communication Services",
+      "last_price": 28.8539,
+      "prev_close": 28.55,
+      "gap_pct": 1.0644,
+      "premarket_volume": 880744,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Volume pre-market piu' alto della lista (880k) con gap +1.06% e trend Bullish. La forte partecipazione conferma interesse reale, buona probabilita' di follow-through nei giorni successivi."
+    },
+    {
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 187,
+      "prev_close": 186.49,
+      "gap_pct": 0.2735,
+      "premarket_volume": 311698,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Esperienza passata positiva (+6.88%, +2.27R) con la stessa logica gap+volume+trend. Volume solido (311k), settore Financials/crypto ad alta volatilita' favorevole al target +6%. Catalizzatore crypto plausibile ma da monitorare."
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "last_price": 259.45,
+      "prev_close": 258.63,
+      "gap_pct": 0.3171,
+      "premarket_volume": 271062,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Trend Bullish con volume elevato (271k) e liquidita' istituzionale. Gap moderato +0.32% ma tenuta attesa alta grazie alla robustezza del titolo, minor rischio overnight."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 79.9592,
+      "prev_close": 79.59,
+      "gap_pct": 0.4639,
+      "premarket_volume": 196378,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Volume buono (196k) con gap +0.46% e trend Bullish nel Communication Services. Titolo momentum-driven con storico di prosecuzioni pluriennali, buon profilo rischio/rendimento per swing."
+    }
+  ]
+}
