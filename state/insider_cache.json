@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -64,7 +64,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -120,7 +120,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -176,7 +176,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -218,7 +218,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -260,7 +260,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -274,7 +274,7 @@
   }
  },
  "ARM": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "ARM",
    "available": true,
@@ -288,7 +288,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -353,6 +353,48 @@
   "fetched_at": "2026-08-24T12:30:07+00:00",
   "data": {
    "ticker": "AMZN",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "CSCO": {
+  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "data": {
+   "ticker": "CSCO",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "QCOM": {
+  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "data": {
+   "ticker": "QCOM",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "NVDA": {
+  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "data": {
+   "ticker": "NVDA",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
