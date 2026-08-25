@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-08-24T16:00:05+02:00",
-  "session_date": "2026-08-24",
-  "capital_usd": 574.04,
+  "generated_at": "2026-08-25T14:33:39+02:00",
+  "session_date": "2026-08-25",
+  "capital_usd": 569.07,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 361.24,
-  "free_slots": 1,
-  "orders": [
-    {
-      "ticker": "WBD",
-      "sector": "Communication Services",
-      "action": "buy",
-      "reference_price": 28.93,
-      "target_entry_price": 28.79,
-      "allocated_capital": 258.32
-    }
-  ]
+  "available_usd": 130.71,
+  "free_slots": 0,
+  "orders": []
 }
