@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-25T14:33:43+02:00",
+  "generated_at": "2026-08-25T20:17:03+02:00",
   "session_date": "2026-08-25",
-  "source_generated_at": "2026-08-25T14:33:39+02:00",
-  "portfolio_value": 569.07,
+  "source_generated_at": "2026-08-25T20:15:05+02:00",
+  "portfolio_value": 585.06,
   "capital_simulated": true,
-  "real_equity": 99960.32,
+  "real_equity": 99976.3,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 87.03,
+      "allocated_capital": 263.28,
+      "stop_loss_price": 84.42,
+      "take_profit_price": 92.25
+    }
+  ]
 }
