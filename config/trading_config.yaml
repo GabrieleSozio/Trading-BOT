@@ -41,11 +41,25 @@ tiers:
   - name: micro
     up_to_equity: 2000           # fascia attiva se equity <= 2000
     mode: swing                  # swing = tiene le posizioni piu' giorni
-    positions_to_open: 2
-    max_position_size_pct: 0.45  # ~45% del capitale per posizione
+    # 3 posizioni da 30% invece di 2 da 45% (dal 2026-08-26).
+    # Con due sole posizioni quasi tutto il capitale stava in due titoli: una
+    # sorpresa societaria su uno dei due muoveva il conto del 4-5%, per quanto
+    # buono fosse il segnale. Il rumore del singolo titolo sovrastava il
+    # vantaggio della strategia. Tutta la ricerca sistematica va nella direzione
+    # opposta: il vantaggio per scommessa e' piccolo, e' la diversificazione a
+    # renderlo affidabile (Moskowitz-Ooi-Pedersen lo misurano su 58 strumenti).
+    # Costo del cambio: la soglia di accessibilita' scende da ~264 a ~176 USD,
+    # quindi i titoli comprabili passano da 34 a 28 su 44. Capitale investito
+    # invariato al 90%. NON e' una messa a punto sui numeri del backtest: e' una
+    # riduzione di concentrazione, che vale a prescindere dal risultato storico.
+    positions_to_open: 3
+    max_position_size_pct: 0.30
     stop_loss_pct: 0.03          # stop piu' largo: di notte i prezzi saltano
     take_profit_pct: 0.06
-    max_sector_exposure_pct: 1.0 # con 2 posizioni la diversificazione non e' possibile
+    # Senza questo tetto le tre posizioni potrebbero finire tutte nello stesso
+    # settore e la diversificazione sarebbe finta (e' gia' successo: COIN, HOOD,
+    # SOFI e AFRM erano tutte Financials). Al 65% ne passano due su tre.
+    max_sector_exposure_pct: 0.65
     max_daily_drawdown_pct: 0.06 # kill switch piu' largo (su capitale piccolo il rumore e' %-grande)
     allow_short: false           # niente short su capitale micro
     max_hold_days: 5             # dopo N giorni di borsa la posizione si chiude comunque
