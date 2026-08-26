@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-24T16:41:06+02:00",
+  "updated_at": "2026-08-26T16:40:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -91,6 +91,21 @@
         "stop": 27.93,
         "target": 30.52,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "AAL",
+      "date": "2026-08-26",
+      "opened_at": "2026-08-26T16:40:06+02:00",
+      "decision": "Volume pre-market piu' elevato della lista (319k) con gap discreto (+0.71%) e trend rialzista. Alta partecipazione con conferma direzionale del gap, settore Industrials coerente con UBER. Prezzo basso ma liquido.",
+      "meta": {
+        "entry": 13.88,
+        "stop": 13.46,
+        "target": 14.71,
+        "settore": "Industrials",
         "fascia": "micro",
         "azione": "buy"
       },
