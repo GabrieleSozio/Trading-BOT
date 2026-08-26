@@ -92,7 +92,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-08-15T14:34:27+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -162,7 +162,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-08-21T12:30:07+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -176,7 +176,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -232,7 +232,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-08-19T17:16:47+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -260,7 +260,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -288,7 +288,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -304,15 +304,15 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 19,
+   "n_sells": 22,
    "buy_value_usd": 0,
-   "sell_value_usd": 139345582.95,
+   "sell_value_usd": 149472035.81,
    "buyers": [],
    "sellers": [
     "MANN JENNIFER K (Executive Vice President)",
@@ -336,7 +336,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -350,7 +350,7 @@
   }
  },
  "AMZN": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "AMZN",
    "available": true,
@@ -364,7 +364,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-08-25T12:30:06+00:00",
+  "fetched_at": "2026-08-26T12:30:06+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -395,6 +395,20 @@
   "fetched_at": "2026-08-25T12:30:06+00:00",
   "data": {
    "ticker": "NVDA",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "GM": {
+  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "data": {
+   "ticker": "GM",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
