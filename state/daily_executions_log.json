@@ -1,7 +1,7 @@
 {
   "session_date": "2026-08-26",
   "opening_balance": 99976.63,
-  "closing_balance": null,
+  "closing_balance": 99976.61,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -14,7 +14,13 @@
       "stop_loss": 13.46,
       "take_profit": 14.71,
       "tif": "gtc"
+    },
+    {
+      "ts": "2026-08-26T21:46:04+02:00",
+      "type": "GAP_DETECTED",
+      "minutes": 306,
+      "last_tick": "2026-08-26T16:40:01+02:00"
     }
   ],
-  "last_tick_at": "2026-08-26T16:40:01+02:00"
+  "last_tick_at": "2026-08-26T21:46:02+02:00"
 }
