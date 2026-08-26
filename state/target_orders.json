@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-08-25T20:15:05+02:00",
-  "session_date": "2026-08-25",
-  "capital_usd": 585.06,
+  "generated_at": "2026-08-26T14:34:01+02:00",
+  "session_date": "2026-08-26",
+  "capital_usd": 584.98,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
@@ -9,12 +9,12 @@
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "AAL",
+      "sector": "Industrials",
       "action": "buy",
-      "reference_price": 87.47,
-      "target_entry_price": 87.03,
-      "allocated_capital": 263.28
+      "reference_price": 13.96,
+      "target_entry_price": 13.89,
+      "allocated_capital": 263.24
     }
   ]
 }
