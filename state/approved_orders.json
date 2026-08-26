@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-25T20:17:03+02:00",
-  "session_date": "2026-08-25",
-  "source_generated_at": "2026-08-25T20:15:05+02:00",
-  "portfolio_value": 585.06,
+  "generated_at": "2026-08-26T14:34:05+02:00",
+  "session_date": "2026-08-26",
+  "source_generated_at": "2026-08-26T14:34:01+02:00",
+  "portfolio_value": 584.98,
   "capital_simulated": true,
-  "real_equity": 99976.3,
+  "real_equity": 99976.19,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,13 +18,13 @@
   ],
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "AAL",
+      "sector": "Industrials",
       "action": "buy",
-      "target_entry_price": 87.03,
-      "allocated_capital": 263.28,
-      "stop_loss_price": 84.42,
-      "take_profit_price": 92.25
+      "target_entry_price": 13.89,
+      "allocated_capital": 263.24,
+      "stop_loss_price": 13.47,
+      "take_profit_price": 14.72
     }
   ]
 }
