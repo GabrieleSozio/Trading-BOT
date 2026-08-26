@@ -124,6 +124,27 @@ def _event(st: dict, kind: str, **fields) -> None:
     )
 
 
+def _safe(st: dict, pair: str, cosa: str, fn, *args, **kw) -> int:
+    """Esegue un'azione su UNA coppia contenendo i suoi errori.
+
+    Senza questo, un guasto su una singola posizione fa cadere l'intera routine
+    al primo passo: niente trailing stop alzati, niente uscite, niente ingressi,
+    su NESSUNA delle altre posizioni. E' successo davvero — un errore di
+    arrotondamento su PEPE ha fermato tutto il bot cripto per ore, ripetendosi
+    identico a ogni giro da cron.
+
+    Il contenimento e' per coppia: la posizione problematica viene registrata e
+    si prosegue con le altre.
+    """
+    try:
+        return int(fn(*args, **kw) or 0)
+    except Exception as e:  # noqa: BLE001 — deliberato: nessuna coppia puo' fermare il giro
+        log.error("%s: %s fallita (%s: %s). Proseguo con le altre.",
+                  pair, cosa, type(e).__name__, str(e)[:200])
+        _event(st, "errore_isolato", pair=pair, fase=cosa, errore=str(e)[:200])
+        return 0
+
+
 # =====================================================================
 #  Quarantena delle coppie non eseguibili
 # =====================================================================
@@ -456,7 +477,8 @@ def run(dry_run: bool = False) -> dict:
     for pair, pos in positions.items():
         if sent >= budget:
             break
-        sent += _ensure_protection(cli, cfg, st, pair, pos, open_sells, dry_run)
+        sent += _safe(st, pair, "protezione", _ensure_protection,
+                      cli, cfg, st, pair, pos, open_sells, dry_run)
 
     # --- 2) uscite per debolezza relativa ---
     threshold = int(cfg["strategy"]["rank_exit_threshold"])
@@ -467,11 +489,12 @@ def run(dry_run: bool = False) -> dict:
         if not ranking.get("ranking"):
             continue  # senza classifica non si giudica
         if r is None:
-            sent += _exit_position(cli, cfg, st, pair, pos, open_sells,
-                                   "uscita dall'universo", dry_run)
+            sent += _safe(st, pair, "uscita", _exit_position, cli, cfg, st, pair,
+                          pos, open_sells, "uscita dall'universo", dry_run)
         elif r > threshold:
-            sent += _exit_position(cli, cfg, st, pair, pos, open_sells,
-                                   f"scesa al {r}o posto (soglia {threshold})", dry_run)
+            sent += _safe(st, pair, "uscita", _exit_position, cli, cfg, st, pair,
+                          pos, open_sells,
+                          f"scesa al {r}o posto (soglia {threshold})", dry_run)
 
     # --- 3) ingressi ---
     if not entries_blocked:
@@ -492,7 +515,7 @@ def run(dry_run: bool = False) -> dict:
             if usd < float(cfg["strategy"]["min_order_usd"]):
                 log.info("%s: liquidita' insufficiente ($%.2f).", pair, cash)
                 continue
-            n = _enter(cli, cfg, st, sel, usd, dry_run)
+            n = _safe(st, pair, "ingresso", _enter, cli, cfg, st, sel, usd, dry_run)
             sent += n
             if n and not dry_run:
                 cash = float(cli.account()["cash"])

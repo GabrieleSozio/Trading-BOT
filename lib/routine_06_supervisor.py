@@ -28,7 +28,7 @@ from .alpaca_rest import (
     now_cet,
     US_EASTERN,
 )
-from . import ai_client, capital as cap_mod, gitsync, trades
+from . import ai_client, benchmark, capital as cap_mod, gitsync, trades
 from .ai_client import AIUnavailable
 
 log = logging.getLogger("routine06")
@@ -94,6 +94,39 @@ def _closed_round_trips(fills: list) -> list:
                     qty_pos, avg, realized = 0.0, 0.0, 0.0
                 elif (qty_pos > 0) != (q < 0):   # ribaltata: riparte da capo
                     avg = price
+    return out
+
+
+def _cumulative_summary(client: AlpacaClient, cfg: dict) -> dict:
+    """Storico COMPLETO dall'avvio della strategia, non solo l'ultima settimana.
+
+    Senza questo il supervisore ripartiva da zero ogni lunedi'. Con tre o quattro
+    operazioni a settimana non poteva concludere nulla, e infatti scriveva ogni
+    volta "il campione e' troppo piccolo" — un giudizio corretto sui dati che
+    aveva, ma sbagliato sui dati che esistevano: lo storico ne conta gia' quindici.
+
+    Un supervisore che dimentica non e' un supervisore: e' un osservatore
+    settimanale. La memoria delle decisioni (registro con le lezioni) risolveva
+    solo meta' del problema, perche' restituiva i singoli casi ma non le
+    statistiche d'insieme.
+    """
+    start = (cfg.get("capital", {}).get("strategy_start") or "")[:10]
+    if not start:
+        return {}
+    chiuse = trades.closed_trades(client, start)
+    if not chiuse:
+        return {"da": start, "n": 0}
+    chiuse = benchmark.add_alpha(chiuse, benchmark.stock_series(client, start))
+    out = {"da": start, **trades.summarize(chiuse)}
+    out["alpha"] = benchmark.summarize_alpha(chiuse)
+    # Le ultime dieci in chiaro: servono a vedere se qualcosa sta cambiando nel
+    # tempo, cosa che una media complessiva nasconderebbe.
+    out["ultime_10"] = [
+        f"{t['symbol']} {t['pl_pct']:+.2f}% "
+        f"({t['r_multiple']:+.2f}R)" if t.get("r_multiple") is not None
+        else f"{t['symbol']} {t['pl_pct']:+.2f}%"
+        for t in chiuse[-10:]
+    ]
     return out
 
 
@@ -300,11 +333,23 @@ def run(dry_run: bool = False) -> str:
     # Senza questo confronto un rendimento positivo puo' nascondere un fallimento:
     # guadagnare il 4% mentre il mercato ne fa il 6% significa aver perso tempo,
     # corso rischi e ottenuto meno di chi non ha fatto nulla.
-    from . import benchmark as bmk
+    bmk = benchmark
     start_strategia = (cfg.get("capital", {}).get("strategy_start") or "")[:10]
     if start_strategia and cap_usd:
         rend = (cap_usd / float(cfg["capital"].get("base_usd") or cap_usd) - 1) * 100
         perf["confronto_con_indice"] = bmk.period_alpha(client, "stock", start_strategia, rend)
+
+    # --- Storico COMPLETO: il giudizio va dato su questo, non sulla settimana ---
+    try:
+        perf["storico_dall_avvio"] = _cumulative_summary(client, cfg)
+        perf["nota_storico"] = (
+            "'storico_dall_avvio' contiene TUTTE le operazioni dall'inizio della "
+            "strategia ed e' la base su cui giudicare. I campi settimanali servono "
+            "solo a vedere cosa e' successo di recente: non trarne conclusioni "
+            "statistiche, una settimana contiene troppe poche operazioni."
+        )
+    except Exception as e:  # noqa: BLE001 — misura accessoria
+        log.warning("Storico completo non calcolabile: %s", e)
 
     # --- Decisioni passate: esito noto e lezione ---
     try:
@@ -338,6 +383,14 @@ def run(dry_run: bool = False) -> str:
         "orari: sono esclusi apposta e ogni proposta in tal senso verra' rifiutata. "
         "Un vincolo e' verificato dal codice: posizioni x dimensione non puo' superare "
         "il 100% del capitale. "
+        "GIUDICA SULLO STORICO COMPLETO, non sulla settimana. Il campo "
+        "'storico_dall_avvio' contiene tutte le operazioni dall'inizio della "
+        "strategia ed e' la base su cui ragionare; i dati settimanali servono solo "
+        "a vedere se qualcosa e' cambiato di recente. Una settimana contiene tre o "
+        "quattro operazioni: da sola non permette alcuna conclusione statistica. "
+        "Il numero che conta di piu' e' l'ALPHA, cioe' quanto il bot ha reso IN PIU' "
+        "dell'indice di riferimento: un rendimento positivo mentre il mercato faceva "
+        "meglio e' un fallimento, non un successo. "
         "Se i dati sono insufficienti o tutto va bene, restituisci changes vuoto: "
         "non modificare per il gusto di modificare. "
         "Rispondi solo nel formato JSON richiesto, in italiano."
@@ -347,7 +400,9 @@ def run(dry_run: bool = False) -> str:
         f"(Il bot adatta da solo strategia e limiti al capitale: sotto i 25.000 USD opera "
         f"in swing su piu' giorni per non incorrere nella regola Pattern Day Trader, "
         f"sopra torna all'intraday. Questi limiti NON sono modificabili da te.)\n\n"
-        f"Performance ultima settimana (dati reali dal broker):\n{perf}\n\n"
+        f"Dati reali dal broker. Contengono sia lo STORICO COMPLETO dall'avvio "
+        f"(campo 'storico_dall_avvio', su cui basare il giudizio) sia i dati "
+        f"dell'ultima settimana (contesto recente):\n{perf}\n\n"
         f"Parametri modificabili e range consentiti:\n{bounds_desc}\n\n"
         f"Proponi 0 o più modifiche (param, new_value, reason). Sii conservativo: "
         f"cambia solo se c'è una motivazione chiara dai dati."
