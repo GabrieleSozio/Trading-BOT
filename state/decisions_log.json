@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T16:40:06+02:00",
+  "updated_at": "2026-08-27T15:56:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -106,6 +106,21 @@
         "stop": 13.46,
         "target": 14.71,
         "settore": "Industrials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-08-27",
+      "opened_at": "2026-08-27T15:56:06+02:00",
+      "decision": "Acquisto insider del CEO da ~$10M: fortissimo segnale di fiducia. Gap +2.33% con volume dominante (3.9M) e trend bullish. Tech liquido, ottima tenuta attesa per prosecuzione multi-day.",
+      "meta": {
+        "entry": 89.56,
+        "stop": 86.87,
+        "target": 94.93,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
