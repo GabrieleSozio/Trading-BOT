@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -78,7 +78,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-08-15T14:31:26+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -120,7 +120,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -148,7 +148,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -190,7 +190,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -218,7 +218,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -246,7 +246,7 @@
   }
  },
  "CSX": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "CSX",
    "available": true,
@@ -260,7 +260,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -304,7 +304,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -406,9 +406,37 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "GM",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "SHOP": {
+  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "data": {
+   "ticker": "SHOP",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "PINS": {
+  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "data": {
+   "ticker": "PINS",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
