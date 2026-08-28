@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-26T08:05:34+02:00",
+  "updated_at": "2026-08-28T08:05:36+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -73,6 +73,19 @@
         "momentum": 0.37025,
         "stop_distance_pct": 0.19455,
         "usd": 150.58
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOL/USD",
+      "date": "2026-08-28",
+      "opened_at": "2026-08-28T08:05:36+02:00",
+      "decision": "Entrata al 3o posto della classifica di momentum (punteggio +29.29%), stop a -16.9% tarato sulla volatilita' giornaliera. Peso assegnato 29.5% del capitale.",
+      "meta": {
+        "rank": 3,
+        "momentum": 0.29293,
+        "stop_distance_pct": 0.16928,
+        "usd": 177.45
       },
       "status": "in_sospeso"
     }
