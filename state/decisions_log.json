@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-27T15:56:06+02:00",
+  "updated_at": "2026-08-29T10:00:20+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -64,7 +64,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.93,
+        "pl_usd": -6.32,
+        "r_multiple": -1.0,
+        "alpha_pct": -2.64,
+        "benchmark_pct": -0.29,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha negativo di -2.64% contro un indice sostanzialmente piatto, quindi la perdita e' attribuzione mia e non del mercato. La tesi sulla liquidita' e sulla leadership settoriale ha tenuto, ma l'assunzione che il gap modesto fosse sostenibile con basso rischio di rientro ha ceduto subito, portando allo stop a -1R. La prossima volta non uso il trend strutturale come scusa per ignorare la fragilita' di un gap: valuto esplicitamente il rischio di riempimento del gap prima di entrare, indipendentemente dalla qualita' del nome.",
+      "closed_at": "2026-08-29T10:00:15+02:00"
     },
     {
       "ticker": "HOOD",
@@ -79,7 +89,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 5.99,
+        "pl_usd": 12.64,
+        "r_multiple": 1.99,
+        "alpha_pct": 5.97,
+        "benchmark_pct": 0.02,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta e l'alpha di +5.97% conferma che il segnale ha catturato movimento reale, non semplice deriva dell'indice fermo a +0.02%. La tesi centrale ha tenuto: gap piu' forte della lista con volume elevato indicava momentum autentico, e la prosecuzione fino al target +6% ha validato sia la lettura del volume sia il rapporto rischio/rendimento a +1.99R; nessuna parte del ragionamento ha ceduto in modo evidente. Per la prossima analisi simile, continuare a privilegiare il gap piu' forte confermato da volume superiore alla media, ma verificare esplicitamente la forza settoriale relativa prima di attribuire il momentum al singolo titolo.",
+      "closed_at": "2026-08-29T10:00:20+02:00"
     },
     {
       "ticker": "WBD",
