@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-28T08:05:36+02:00",
+  "updated_at": "2026-08-30T22:00:39+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -12,7 +12,17 @@
         "stop_distance_pct": 0.21577,
         "usd": 130.88
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 3.06,
+        "pl_usd": 3.92,
+        "r_multiple": 0.14,
+        "alpha_pct": 3.69,
+        "benchmark_pct": -0.63,
+        "closed_by": "scesa al 6o posto (soglia 5)"
+      },
+      "lesson": "La direzione era corretta: +3.69% di alpha contro l'indice a -0.63% conferma che il segnale di momentum al primo posto aveva sostanza. Ha tenuto la logica di ingresso sul leader di classifica, mentre lo stop a -21.6% si e' rivelato troppo largo per essere mai testato dato che l'uscita e' arrivata dalla regola di ranking (6o posto) con un rischio realizzato di soli +0.14R. La lezione: quando l'uscita e' governata dalla soglia di classifica, calibrare lo stop sulla volatilita' e' quasi irrilevante e concentra troppo capitale (21.4%) su una singola posizione; conviene ridurre il peso o stringere il criterio di rotazione per catturare piu' alpha per unita' di rischio.",
+      "closed_at": "2026-08-30T22:00:16+02:00"
     },
     {
       "ticker": "TRUMP/USD",
@@ -48,7 +58,17 @@
         "stop_distance_pct": 0.3,
         "usd": 106.61
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -5.2,
+        "pl_usd": -5.42,
+        "r_multiple": -0.17,
+        "alpha_pct": -7.75,
+        "benchmark_pct": 2.55,
+        "closed_by": "scesa al 7o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -7.75% contro un indice in rialzo, quindi non e' stata sfortuna ma un segnale che non ha tenuto. Il ranking di momentum al 2o posto ha retto solo in apparenza, perche' il punteggio +45.96% era gia' probabilmente in fase di esaurimento e la mia lettura ha ignorato la decelerazione sottostante; lo stop a -30% era troppo largo e ha lasciato correre la perdita mentre l'uscita reale l'ha data la caduta al 7o posto. La lezione: affiancare al livello di momentum la sua derivata, cioe' non entrare su punteggi elevati ma gia' in rallentamento, e stringere lo stop verso la soglia di ranking invece di tararlo solo sulla volatilita'.",
+      "closed_at": "2026-08-30T22:00:24+02:00"
     },
     {
       "ticker": "AAVE/USD",
@@ -61,7 +81,17 @@
         "stop_distance_pct": 0.1766,
         "usd": 176.0
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -8.2,
+        "pl_usd": -14.13,
+        "r_multiple": -0.46,
+        "alpha_pct": -7.63,
+        "benchmark_pct": -0.57,
+        "closed_by": "scesa al 6o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -7.63% contro un indice sostanzialmente piatto significa che il titolo ha ceduto per ragioni proprie, non di mercato. Il ragionamento sul momentum come segnale d'ingresso ha tenuto poco - il punteggio +60.56% descriveva il passato, non la persistenza - mentre lo stop largo a -17.7% ha lasciato scorrere la perdita finche' la regola di classifica non e' scattata al 6o posto. Il vero errore e' stato il peso del 28.3% su un singolo nome momentum: la prossima volta ridurre l'esposizione quando lo stop tecnico e' cosi' distante, perche' la combinazione di stop largo e peso alto amplifica ogni singolo cedimento idiosincratico.",
+      "closed_at": "2026-08-30T22:00:31+02:00"
     },
     {
       "ticker": "AAVE/USD",
@@ -74,7 +104,17 @@
         "stop_distance_pct": 0.19455,
         "usd": 150.58
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -1.71,
+        "pl_usd": -2.52,
+        "r_multiple": -0.09,
+        "alpha_pct": -0.21,
+        "benchmark_pct": -1.5,
+        "closed_by": "scesa al 7o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sostanzialmente neutra: un alpha di -0.21% indica che non ho aggiunto nulla rispetto all'indice, quindi la tesi di momentum non ha prodotto sovraperformance reale. La logica del ranking ha tenuto quanto basta a evitare un tracollo, ma la premessa che il 3o posto garantisse persistenza ha ceduto quando il titolo e' scivolato al 7o, segnale che lo slancio si stava gia' esaurendo all'ingresso. L'esito e' comunque contenuto e coerente con il rischio assunto (-0.09R), piu' vicino allo sfortunato che allo sbagliato. Lezione: con un peso del 25.7% pretendere un margine di ranking piu' ampio rispetto alla soglia di uscita, per non entrare gia' a ridosso del livello che innesca la ch",
+      "closed_at": "2026-08-30T22:00:39+02:00"
     },
     {
       "ticker": "SOL/USD",
