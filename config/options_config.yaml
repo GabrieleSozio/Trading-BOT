@@ -1,0 +1,126 @@
+# =====================================================================
+#  DIVISIONE OPZIONI — Configurazione
+#
+#  Terza divisione, su conto paper separato (PA3YKSS69ZE0).
+#
+#  SCOPO: confronto A/B. Usa lo STESSO segnale della divisione azioni
+#  (la selezione della Routine 01) ma lo esprime comprando opzioni invece
+#  che azioni. Cosi' l'unica variabile che cambia e' lo strumento, e la
+#  domanda diventa netta: lo stesso segnale rende di piu' in opzioni?
+#
+#  Non c'e' un segnale nuovo. Se ne inventassimo uno, un risultato diverso
+#  non ci direbbe se il merito e' dello strumento o della selezione.
+# =====================================================================
+
+meta:
+  division: options
+  paper_trading: true
+  account_hint: PA3YKSS69ZE0     # se il conto non e' questo, si ferma
+  base_currency: USD
+  timezone: Europe/Rome
+  market_timezone: America/New_York
+  secrets_file: secrets/alpaca_options_keys.env
+
+capital:
+  base_usd: 0                    # 0 = usa l'equity reale (il conto e' nato con 550)
+  initial_usd: 550
+  strategy_start: "2026-08-31T00:00:00Z"
+  min_usd: 100                   # sotto questa soglia un contratto non e' piu' comprabile
+
+# --- Universo PROPRIO ----------------------------------------------------
+# Non si eredita piu' l'universo azionario: li' un contratto vicino al denaro
+# costa spesso piu' del nostro intero capitale (HOOD 562$, QCOM 578$), oppure
+# il titolo e' cosi' sottile che lo spread arriva al 132%.
+#
+# Questi 30 sono stati scelti MISURANDO la liquidita' delle loro OPZIONI, non
+# delle azioni: per ognuno esiste un contratto entro il 5% dal denaro, sotto i
+# 385 dollari e con spread sotto l'8%. Vanno riverificati ogni tanto, perche'
+# prezzi e liquidita' cambiano.
+universe:
+  tickers: [BABA, BAC, BMY, CCL, CSCO, CVS, DAL, DIS, DKNG, EEM, GM, HPQ, INTC,
+            KO, NFLX, NKE, PFE, RIOT, RIVN, SLV, SMCI, SOFI, T, UAL, UBER, VZ,
+            WFC, WMT, XLE, XLF]
+  top_candidates: 5
+
+# --- Le due modalita' ---------------------------------------------------
+modes:
+  # INTRADAY: apre e chiude nella stessa giornata. Consuma i crediti PDT.
+  # Riservato al candidato piu' forte, quando il movimento e' ampio abbastanza
+  # da giustificare il costo dello strumento.
+  intraday:
+    enabled: true
+    min_gap_pct: 3.0             # sotto questo scarto non vale la pena
+    only_top_rank: 1             # solo il candidato numero uno
+    expiry_min_days: 0           # scadenza ravvicinata: massima reattivita'
+    expiry_max_days: 7
+    close_by: "21:40"            # CET — si chiude prima della campana
+    max_premium_pct: 0.70        # quota massima del capitale in un contratto
+
+  # SWING: tenute piu' giorni. NON consumano crediti PDT (il conteggio
+  # scatta solo su apri-e-chiudi nella stessa giornata). E' il grosso
+  # dell'attivita' e continua anche a crediti esauriti.
+  swing:
+    enabled: true
+    expiry_min_days: 14          # lontano dalla scadenza: il decadimento
+    expiry_max_days: 35          # temporale su 5 giorni resta sopportabile
+    max_hold_days: 7             # due giorni piu' delle azioni: serve spazio
+    max_premium_pct: 0.70        # tetto per SINGOLO contratto
+    # Il vincolo vero e' sull'IMPORTO complessivo, non sul numero: se i contratti
+    # sono economici se ne tengono piu' d'uno, purche' la somma dei premi resti
+    # entro il tetto. Limitare il conteggio lasciava fermo l'86% del capitale
+    # quando il contratto scelto costava 79 dollari.
+    max_total_premium_pct: 0.70
+    max_positions: 4             # solo un freno anti-frammentazione
+
+# --- Scelta del contratto ----------------------------------------------
+contract:
+  type: call                     # solo acquisto: perdita massima = premio
+  strike_offset: 0               # 0 = al denaro; 1 = uno sopra (piu' economico)
+  max_spread_pct: 8.0            # piu' permissivo della soglia usata sulle azioni
+  min_open_interest: 100         # contratti poco scambiati non si rivendono
+  min_premium_usd: 20            # sotto, il contratto e' una scommessa da lotteria
+  # Il contratto deve stare VICINO al denaro: il segnale azionario punta a +6%,
+  # e un contratto molto fuori dal denaro pagherebbe solo con il doppio di quel
+  # movimento. Comprarlo sarebbe cambiare la scommessa, non lo strumento.
+  max_otm_pct: 5.0
+  max_premium_usd: 400
+
+# --- Uscite: SPECULARI a quelle azionarie -------------------------------
+# I livelli si misurano sul SOTTOSTANTE, non sul premio: cosi' il confronto
+# con la divisione azioni resta pulito. Il valore dell'opzione fa quello che
+# fa, ma la decisione di uscire nasce dallo stesso identico evento.
+# PIU' AGGRESSIVO della divisione azioni, per scelta esplicita: lo stop resta
+# stretto (-3%, la perdita e' comunque limitata al premio) ma l'obiettivo e'
+# piu' lontano. Con un rendimento convesso, chiudere a +6% come le azioni
+# taglierebbe proprio le operazioni che giustificano lo strumento.
+exits:
+  underlying_stop_pct: 0.03      # -3% sul titolo
+  underlying_target_pct: 0.08    # +8%: si lascia piu' spazio al movimento
+  premium_stop_pct: 0.50         # rete di sicurezza: -50% sul premio, si esce
+  premium_target_pct: 1.00       # +100% sul premio: si incassa comunque
+
+# --- Guardrail ----------------------------------------------------------
+guardrails:
+  max_consecutive_api_errors: 3
+  # Dei 3 crediti PDT se ne usano solo 2: il terzo resta di RISERVA per le
+  # uscite d'emergenza. Senza, una posizione swing che crolla il giorno stesso
+  # in cui e' stata aperta non potrebbe essere chiusa senza far marcare il
+  # conto come Pattern Day Trader, con blocco di 90 giorni.
+  day_trades_usable: 2
+  day_trades_total: 3
+  max_drawdown_from_peak_pct: 0.35   # le opzioni oscillano: freno largo
+  max_orders_per_tick: 4
+
+# --- Orari (CET) --------------------------------------------------------
+schedule_cet:
+  select: "15:35"                # dopo l'apertura di New York
+  trade_every_minutes: 15
+  close_intraday: "21:40"
+  weekly_report: "Sat 11:00"
+
+state:
+  dir: state/options
+  files:
+    selection: state/options/selection.json
+    positions: state/options/positions.json
+    log: state/options/executions_log.json
