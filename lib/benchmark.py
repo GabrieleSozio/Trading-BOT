@@ -78,21 +78,54 @@ def add_alpha(trades: list[dict], bars: list[dict],
     return trades
 
 
-def summarize_alpha(trades: list[dict]) -> dict:
-    """Sintesi dell'alpha: quante operazioni hanno davvero battuto il mercato."""
+def summarize_alpha(trades: list[dict], capital: float | None = None) -> dict:
+    """Sintesi dell'alpha: quante operazioni hanno davvero battuto il mercato.
+
+    ATTENZIONE a come si somma. La somma grezza degli alpha delle singole
+    operazioni NON e' la sovraperformance del portafoglio, e leggerla come tale
+    gonfia enormemente il quadro: ogni posizione impegna solo il 30-45% del
+    capitale e dura pochi giorni, mentre l'indice compone su tutto il periodo.
+    Su 15 operazioni quella somma dava +33% mentre la sovraperformance reale era
+    prossima allo zero — e il supervisore l'ha effettivamente letta come prova di
+    "un edge reale e persistente".
+
+    Qui la somma grezza non viene piu' pubblicata. Al suo posto c'e' il
+    CONTRIBUTO al portafoglio, che pesa l'alpha di ogni operazione per la quota
+    di capitale che impegnava. E' confrontabile con l'alpha di periodo.
+    """
     con = [t for t in trades if t.get("alpha_pct") is not None]
     if not con:
         return {}
     a = [t["alpha_pct"] for t in con]
     meglio = [x for x in a if x > 0]
-    return {
+    out = {
         "n_confrontabili": len(con),
-        "alpha_medio_pct": round(sum(a) / len(a), 2),
-        "alpha_totale_pct": round(sum(a), 2),
+        "alpha_medio_per_operazione_pct": round(sum(a) / len(a), 2),
         "quota_che_batte_il_mercato_pct": round(len(meglio) / len(con) * 100, 1),
         "migliore_pct": round(max(a), 2),
         "peggiore_pct": round(min(a), 2),
     }
+    # Nessun numero di portafoglio viene pubblicato qui, di proposito.
+    # Pesare gli alpha per la quota di capitale impegnata li avvicina molto al
+    # vero (l'errore scende da 30 punti a 4) ma non li azzera: la somma conta
+    # solo i giorni in cui si e' in posizione, mentre l'indice compone anche
+    # negli altri. Restarebbero due cifre che pretendono di misurare la stessa
+    # cosa senza concordare, ed e' proprio l'ambiguita' che ha portato il
+    # supervisore a scambiare "+33%" per la prova di un vantaggio.
+    # Qui si dichiara solo la QUALITA' delle singole scelte. La sovraperformance
+    # complessiva ha una fonte sola: period_alpha(), calcolata sul rendimento
+    # reale del capitale contro l'indice.
+    out["nota"] = (
+        "Questi campi misurano la QUALITA' delle singole scelte, NON il "
+        "risultato del portafoglio: sommarli o interpretarli come "
+        "sovraperformance e' sbagliato, perche' ogni posizione impegna solo una "
+        "parte del capitale e dura pochi giorni mentre l'indice compone sempre. "
+        "Per giudicare se la strategia sta battendo il mercato esiste UN SOLO "
+        "numero valido: 'alpha_pct' dentro 'confronto_con_indice'. Operazioni "
+        "mediamente buone possono benissimo convivere con un alpha di "
+        "portafoglio nullo o negativo."
+    )
+    return out
 
 
 def period_alpha(client, kind: str, start: str, strategy_pct: float) -> dict:
