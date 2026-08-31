@@ -26,7 +26,13 @@
       "type": "GAP_DETECTED",
       "minutes": 240,
       "last_tick": "2026-08-31T17:20:02+02:00"
+    },
+    {
+      "ts": "2026-08-31T21:45:08+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "WBD"
     }
   ],
-  "last_tick_at": "2026-08-31T21:40:02+02:00"
+  "last_tick_at": "2026-08-31T21:45:02+02:00"
 }
