@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T21:16:21+02:00",
+  "updated_at": "2026-08-31T21:40:09+02:00",
   "entries": [
     {
       "ticker": "PFE",
@@ -10,6 +10,18 @@
         "symbol": "PFE260925C00028500",
         "modo": "swing",
         "premio": 0.77
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "WMT",
+      "date": "2026-08-31",
+      "opened_at": "2026-08-31T21:40:09+02:00",
+      "decision": "Call WMT strike 105.0 scad 2026-09-18, +0.2% dal denaro, premio 205$, spread 3.1%. Modalita' swing, scarto +1.63%.",
+      "meta": {
+        "symbol": "WMT260918C00105000",
+        "modo": "swing",
+        "premio": 2.05
       },
       "status": "in_sospeso"
     }

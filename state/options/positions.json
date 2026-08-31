@@ -12,9 +12,22 @@
       "strike": 28.5,
       "expiration": "2026-09-25",
       "opened_at": "2026-08-31T21:16:21+02:00"
+    },
+    "WMT260918C00105000": {
+      "ticker": "WMT",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 2.05,
+      "underlying_entry": 104.78,
+      "stop_underlying": 101.63,
+      "target_underlying": 113.16,
+      "premium_stop_pct": 0.5,
+      "strike": 105.0,
+      "expiration": "2026-09-18",
+      "opened_at": "2026-08-31T21:40:09+02:00"
     }
   },
-  "peak_equity": 550.0,
+  "peak_equity": 550.97,
   "events": [
     {
       "at": "2026-08-31T21:16:21+02:00",
@@ -42,8 +55,17 @@
       "event": "ingresso_non_eseguito",
       "symbol": "WMT260918C00105000",
       "limite": 2.0
+    },
+    {
+      "at": "2026-08-31T21:40:09+02:00",
+      "event": "ingresso",
+      "symbol": "WMT260918C00105000",
+      "ticker": "WMT",
+      "modo": "swing",
+      "premio": 2.05,
+      "costo_usd": 205.0
     }
   ],
   "closed_trades": [],
-  "updated_at": "2026-08-31T21:25:26+02:00"
+  "updated_at": "2026-08-31T21:40:09+02:00"
 }
