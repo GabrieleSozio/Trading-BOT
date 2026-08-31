@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-31T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-31T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -218,7 +218,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-08-31T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -322,7 +322,7 @@
   }
  },
  "WBD": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-08-31T12:30:06+00:00",
   "data": {
    "ticker": "WBD",
    "available": true,
@@ -378,7 +378,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-08-31T12:30:06+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
