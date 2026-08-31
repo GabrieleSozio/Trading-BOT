@@ -32,5 +32,19 @@ CRON_TZ=Europe/Rome
 # Rendiconto settimanale con analisi AI: domenica 22:00
 0 22 * * 0 /PERCORSO/deploy/crypto_run.sh crypto.routine_c3_report >> /PERCORSO/state/cron.log 2>&1
 
+# ===== DIVISIONE OPZIONI =====
+# Conto separato (PA3YKSS69ZE0). Segue gli orari di borsa americani come le
+# azioni, ma con un ritmo piu' fitto: le opzioni si muovono molto piu' in
+# fretta del sottostante e una posizione puo' cambiare di segno in un'ora.
+# Si usa options_run.sh, NON run.sh: quello esporterebbe le chiavi azionarie.
+
+# Selezione dei contratti: cinque minuti dopo l'apertura di New York
+35 15 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o1_select >> /PERCORSO/state/cron.log 2>&1
+
+# Esecuzione e gestione: ogni 15 minuti durante la sessione.
+# L'ultimo giro delle 21:45 chiude le posizioni intraday (soglia 21:40).
+40,55 15 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o2_trade >> /PERCORSO/state/cron.log 2>&1
+10,25,40,55 16-21 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o2_trade >> /PERCORSO/state/cron.log 2>&1
+
 # Il log di cron cresce senza limite: lunedi' alle 04:20 si tiene solo la coda.
 20 4 * * 1 tail -n 5000 /PERCORSO/state/cron.log > /PERCORSO/state/cron.log.tmp && mv /PERCORSO/state/cron.log.tmp /PERCORSO/state/cron.log

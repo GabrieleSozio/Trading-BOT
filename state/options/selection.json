@@ -1,0 +1,45 @@
+{
+  "generato_il": "2026-08-31T21:15:55+02:00",
+  "session_date": "2026-08-31",
+  "conto": "PA3YKSS69ZE0",
+  "equity_usd": 550.0,
+  "universo": 30,
+  "crediti_intraday_liberi": 2,
+  "selezione": [
+    {
+      "symbol": "PFE260925C00028500",
+      "strike": 28.5,
+      "expiration": "2026-09-25",
+      "otm_pct": -0.37,
+      "ask": 0.74,
+      "premio_usd": 74.0,
+      "spread_pct": 1.36,
+      "ticker": "PFE",
+      "modo": "swing",
+      "gap_pct": 2.31,
+      "spot": 28.61,
+      "rank": 1,
+      "volume": 23316265,
+      "stop_underlying": 27.75,
+      "target_underlying": 30.89
+    },
+    {
+      "symbol": "WMT260918C00105000",
+      "strike": 105.0,
+      "expiration": "2026-09-18",
+      "otm_pct": 0.21,
+      "ask": 1.97,
+      "premio_usd": 197.0,
+      "spread_pct": 3.09,
+      "ticker": "WMT",
+      "modo": "swing",
+      "gap_pct": 1.63,
+      "spot": 104.78,
+      "rank": 2,
+      "volume": 12925944,
+      "stop_underlying": 101.63,
+      "target_underlying": 113.16
+    }
+  ],
+  "scartati": []
+}

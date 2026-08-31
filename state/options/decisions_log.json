@@ -1,0 +1,17 @@
+{
+  "updated_at": "2026-08-31T21:16:21+02:00",
+  "entries": [
+    {
+      "ticker": "PFE",
+      "date": "2026-08-31",
+      "opened_at": "2026-08-31T21:16:21+02:00",
+      "decision": "Call PFE strike 28.5 scad 2026-09-25, -0.4% dal denaro, premio 77$, spread 1.4%. Modalita' swing, scarto +2.31%.",
+      "meta": {
+        "symbol": "PFE260925C00028500",
+        "modo": "swing",
+        "premio": 0.77
+      },
+      "status": "in_sospeso"
+    }
+  ]
+}
