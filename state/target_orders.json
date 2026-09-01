@@ -1,20 +1,36 @@
 {
-  "generated_at": "2026-09-01T14:32:58+02:00",
+  "generated_at": "2026-09-01T15:45:06+02:00",
   "session_date": "2026-09-01",
-  "capital_usd": 569.12,
+  "capital_usd": 563.25,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 310.82,
-  "free_slots": 1,
+  "available_usd": 563.25,
+  "free_slots": 3,
   "orders": [
     {
       "ticker": "PFE",
       "sector": "Health Care",
       "action": "buy",
-      "reference_price": 28.47,
-      "target_entry_price": 28.33,
-      "allocated_capital": 170.74
+      "reference_price": 29.03,
+      "target_entry_price": 28.88,
+      "allocated_capital": 168.97
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "action": "buy",
+      "reference_price": 106.35,
+      "target_entry_price": 105.82,
+      "allocated_capital": 168.97
+    },
+    {
+      "ticker": "KO",
+      "sector": "Consumer Staples",
+      "action": "buy",
+      "reference_price": 89.04,
+      "target_entry_price": 88.59,
+      "allocated_capital": 168.97
     }
   ]
 }
