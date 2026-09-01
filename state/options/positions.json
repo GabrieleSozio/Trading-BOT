@@ -27,7 +27,7 @@
       "opened_at": "2026-08-31T21:40:09+02:00"
     }
   },
-  "peak_equity": 550.97,
+  "peak_equity": 598.9,
   "events": [
     {
       "at": "2026-08-31T21:16:21+02:00",
@@ -64,8 +64,14 @@
       "modo": "swing",
       "premio": 2.05,
       "costo_usd": 205.0
+    },
+    {
+      "at": "2026-09-01T15:40:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE260918C00065000",
+      "limite": 1.24
     }
   ],
   "closed_trades": [],
-  "updated_at": "2026-08-31T21:55:04+02:00"
+  "updated_at": "2026-09-01T15:40:27+02:00"
 }
