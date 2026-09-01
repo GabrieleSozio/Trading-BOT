@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-08-31T12:30:06+00:00",
+  "fetched_at": "2026-09-01T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -204,7 +204,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-09-01T12:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -304,7 +304,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-09-01T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -336,7 +336,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "fetched_at": "2026-09-01T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -437,6 +437,20 @@
   "fetched_at": "2026-08-28T12:30:07+00:00",
   "data": {
    "ticker": "PINS",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "WFC": {
+  "fetched_at": "2026-09-01T12:30:06+00:00",
+  "data": {
+   "ticker": "WFC",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
