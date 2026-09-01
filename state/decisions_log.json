@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T15:47:06+02:00",
+  "updated_at": "2026-09-01T15:47:07+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -156,6 +156,36 @@
         "stop": 5.36,
         "target": 5.86,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PFE",
+      "date": "2026-09-01",
+      "opened_at": "2026-09-01T15:47:06+02:00",
+      "decision": "Volume pre-market piu' alto in assoluto (1.85M) = forte partecipazione reale. Gap modesto (+0.42%) impone cautela per rischio di riempimento (lezione SOFI/NVDA): richiedere conferma di prezzo oltre il livello di gap prima dell'ingresso. Health Care difensivo, tenuta discreta.",
+      "meta": {
+        "entry": 28.88,
+        "stop": 28.01,
+        "target": 30.61,
+        "settore": "Health Care",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "HOOD",
+      "date": "2026-09-01",
+      "opened_at": "2026-09-01T15:47:07+02:00",
+      "decision": "Miglior candidato: gap piu' forte della lista (+1.83%) con volume dominante (~894k), trend Bullish e precedente storico vincente (+5.99%, alpha +5.97%). Momentum autentico con buona probabilita' di prosecuzione multi-day. Settore Financials in forza. Posizione da privilegiare.",
+      "meta": {
+        "entry": 105.06,
+        "stop": 101.91,
+        "target": 111.36,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
