@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T08:05:06+02:00",
+  "updated_at": "2026-09-01T08:05:07+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -139,6 +139,19 @@
         "momentum": 0.31043,
         "stop_distance_pct": 0.23688,
         "usd": 122.47
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "CRV/USD",
+      "date": "2026-09-01",
+      "opened_at": "2026-09-01T08:05:07+02:00",
+      "decision": "Entrata al 1o posto della classifica di momentum (punteggio +47.68%), stop a -26.1% tarato sulla volatilita' giornaliera. Peso assegnato 19.2% del capitale.",
+      "meta": {
+        "rank": 1,
+        "momentum": 0.47677,
+        "stop_distance_pct": 0.26103,
+        "usd": 113.66
       },
       "status": "in_sospeso"
     }

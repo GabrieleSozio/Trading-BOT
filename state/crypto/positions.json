@@ -10,16 +10,6 @@
       "stop_order_id": "6c9e515e-8c86-4a51-9b56-5f34aa424192",
       "stop_price": 1.7957799999999997
     },
-    "SOL/USD": {
-      "entry_price": 107.43,
-      "qty": 1.61958152,
-      "high_water": 107.43,
-      "stop_distance_pct": 0.16928,
-      "opened_at": "2026-08-28T08:05:36+02:00",
-      "entry_rank": 3,
-      "stop_order_id": "bfe22331-774c-4c21-b8bb-7f602529d850",
-      "stop_price": 89.2442496
-    },
     "UNI/USD": {
       "entry_price": 5.1376,
       "qty": 23.386955093,
@@ -29,6 +19,16 @@
       "entry_rank": 1,
       "stop_order_id": "f21a5770-255f-491a-bffc-0ff5dbe03bd2",
       "stop_price": 3.920605312
+    },
+    "CRV/USD": {
+      "entry_price": 0.3459988,
+      "qty": 315.009251283,
+      "high_water": 0.3459988,
+      "stop_distance_pct": 0.26103,
+      "opened_at": "2026-09-01T08:05:07+02:00",
+      "entry_rank": 1,
+      "stop_order_id": "d8eb87fe-7dd8-4d05-8f25-9695da1b1ca9",
+      "stop_price": 0.255682733236
     }
   },
   "peak_equity": 673.8,
@@ -505,6 +505,28 @@
       "at": "2026-08-31T11:35:29+02:00",
       "event": "ingresso_non_eseguito",
       "pair": "HYPE/USD"
+    },
+    {
+      "at": "2026-09-01T08:05:05+02:00",
+      "event": "uscita",
+      "pair": "SOL/USD",
+      "motivo": "scesa al 6o posto (soglia 5)",
+      "pl_usd": -5.01
+    },
+    {
+      "at": "2026-09-01T08:05:07+02:00",
+      "event": "ingresso",
+      "pair": "CRV/USD",
+      "prezzo": 0.3459988,
+      "qty": 315.009251283,
+      "usd": 113.66
+    },
+    {
+      "at": "2026-09-01T08:05:10+02:00",
+      "event": "stop_creato",
+      "pair": "CRV/USD",
+      "stop": 0.25568273,
+      "qty": 314.221728154
     }
   ],
   "fill_failures": {
@@ -524,7 +546,7 @@
       "quarantine_until": "2026-08-26T08:35:28+02:00"
     }
   },
-  "updated_at": "2026-09-01T07:35:03+02:00",
+  "updated_at": "2026-09-01T08:05:10+02:00",
   "closed_trades": [
     {
       "pair": "ETH/USD",
@@ -622,6 +644,20 @@
       "pl_pct": 3.06,
       "risk_usd": 27.73,
       "r_multiple": 0.14,
+      "motivo": "scesa al 6o posto (soglia 5)"
+    },
+    {
+      "pair": "SOL/USD",
+      "opened_at": "2026-08-28T08:05:36+02:00",
+      "closed_at": "2026-09-01T08:05:05+02:00",
+      "entry": 107.43,
+      "exit": 104.327,
+      "qty": 1.61958152,
+      "stop_distance_pct": 0.16928,
+      "pl_usd": -5.01,
+      "pl_pct": -2.89,
+      "risk_usd": 29.45,
+      "r_multiple": -0.17,
       "motivo": "scesa al 6o posto (soglia 5)"
     }
   ]
