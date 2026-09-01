@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T15:47:07+02:00",
+  "updated_at": "2026-09-01T16:53:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -186,6 +186,21 @@
         "stop": 101.91,
         "target": 111.36,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "KO",
+      "date": "2026-09-01",
+      "opened_at": "2026-09-01T16:53:06+02:00",
+      "decision": "Trend Bullish ma segnale poco attraente: gap +0.62% con volume molto basso (33k) e soprattutto vendite insider massicce (~$149M), fattore penalizzante. Consumer Staples poco volatile, scarso potenziale di raggiungere +6% in 5 giorni. Ultima scelta.",
+      "meta": {
+        "entry": 88.58,
+        "stop": 85.92,
+        "target": 93.89,
+        "settore": "Consumer Staples",
         "fascia": "micro",
         "azione": "buy"
       },
