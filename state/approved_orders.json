@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-08-31T15:47:03+02:00",
-  "session_date": "2026-08-31",
-  "source_generated_at": "2026-08-31T15:45:05+02:00",
-  "portfolio_value": 573.87,
+  "generated_at": "2026-09-01T14:33:02+02:00",
+  "session_date": "2026-09-01",
+  "source_generated_at": "2026-09-01T14:32:58+02:00",
+  "portfolio_value": 569.18,
   "capital_simulated": true,
-  "real_equity": 99965.07,
+  "real_equity": 99960.28,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,13 +18,13 @@
   ],
   "orders": [
     {
-      "ticker": "SNAP",
-      "sector": "Communication Services",
+      "ticker": "PFE",
+      "sector": "Health Care",
       "action": "buy",
-      "target_entry_price": 5.54,
-      "allocated_capital": 172.16,
-      "stop_loss_price": 5.37,
-      "take_profit_price": 5.87
+      "target_entry_price": 28.33,
+      "allocated_capital": 170.74,
+      "stop_loss_price": 27.48,
+      "take_profit_price": 30.03
     }
   ]
 }
