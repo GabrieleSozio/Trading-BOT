@@ -1,38 +1,8 @@
 {
-  "session_date": "2026-08-31",
-  "opening_balance": 99966.43,
-  "closing_balance": 99963.99,
+  "session_date": "2026-09-01",
+  "opening_balance": 99956.69,
+  "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [
-    {
-      "ts": "2026-08-31T15:47:06+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "SNAP",
-      "alpaca_order_id": "726eb5f1-8a13-48a6-836d-01aa13aee3a7",
-      "qty": 31,
-      "entry": 5.53,
-      "stop_loss": 5.36,
-      "take_profit": 5.86,
-      "tif": "gtc"
-    },
-    {
-      "ts": "2026-08-31T17:20:04+02:00",
-      "type": "GAP_DETECTED",
-      "minutes": 93,
-      "last_tick": "2026-08-31T15:47:01+02:00"
-    },
-    {
-      "ts": "2026-08-31T21:20:04+02:00",
-      "type": "GAP_DETECTED",
-      "minutes": 240,
-      "last_tick": "2026-08-31T17:20:02+02:00"
-    },
-    {
-      "ts": "2026-08-31T21:45:08+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "max_hold_days 5",
-      "ticker": "WBD"
-    }
-  ],
-  "last_tick_at": "2026-08-31T21:59:01+02:00"
+  "events": [],
+  "last_tick_at": "2026-09-01T15:35:02+02:00"
 }
