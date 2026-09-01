@@ -25,6 +25,19 @@
       "strike": 105.0,
       "expiration": "2026-09-18",
       "opened_at": "2026-08-31T21:40:09+02:00"
+    },
+    "XLE260918C00065000": {
+      "ticker": "XLE",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 1.12,
+      "underlying_entry": 64.94,
+      "stop_underlying": 62.99,
+      "target_underlying": 70.14,
+      "premium_stop_pct": 0.5,
+      "strike": 65.0,
+      "expiration": "2026-09-18",
+      "opened_at": "2026-09-01T16:10:26+02:00"
     }
   },
   "peak_equity": 598.9,
@@ -70,8 +83,17 @@
       "event": "ingresso_non_eseguito",
       "symbol": "XLE260918C00065000",
       "limite": 1.24
+    },
+    {
+      "at": "2026-09-01T16:10:26+02:00",
+      "event": "ingresso",
+      "symbol": "XLE260918C00065000",
+      "ticker": "XLE",
+      "modo": "swing",
+      "premio": 1.12,
+      "costo_usd": 112.0
     }
   ],
   "closed_trades": [],
-  "updated_at": "2026-09-01T15:40:27+02:00"
+  "updated_at": "2026-09-01T16:10:26+02:00"
 }

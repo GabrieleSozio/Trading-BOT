@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-31T21:40:09+02:00",
+  "updated_at": "2026-09-01T16:10:26+02:00",
   "entries": [
     {
       "ticker": "PFE",
@@ -22,6 +22,18 @@
         "symbol": "WMT260918C00105000",
         "modo": "swing",
         "premio": 2.05
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "XLE",
+      "date": "2026-09-01",
+      "opened_at": "2026-09-01T16:10:26+02:00",
+      "decision": "Call XLE strike 65.0 scad 2026-09-18, +0.1% dal denaro, premio 112$, spread 1.6%. Modalita' swing, scarto +1.53%.",
+      "meta": {
+        "symbol": "XLE260918C00065000",
+        "modo": "swing",
+        "premio": 1.12
       },
       "status": "in_sospeso"
     }
