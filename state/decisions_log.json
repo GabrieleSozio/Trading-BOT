@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-01T16:53:06+02:00",
+  "updated_at": "2026-09-02T15:47:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -201,6 +201,21 @@
         "stop": 85.92,
         "target": 93.89,
         "settore": "Consumer Staples",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SMCI",
+      "date": "2026-09-02",
+      "opened_at": "2026-09-02T15:47:06+02:00",
+      "decision": "Secondo gap piu' forte (+1.69%) sostenuto dal volume piu' alto tra i nomi a gap elevato (522k), segno di partecipazione autentica. Tech ad alta volatilita' adatto a un target +6% con follow-through plausibile.",
+      "meta": {
+        "entry": 37.42,
+        "stop": 36.3,
+        "target": 39.67,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
