@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-08-27T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -78,7 +78,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -92,7 +92,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -120,7 +120,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -148,7 +148,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -162,7 +162,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-08-26T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -204,7 +204,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-09-01T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -260,7 +260,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-08-28T12:30:07+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -304,7 +304,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-09-01T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -322,7 +322,7 @@
   }
  },
  "WBD": {
-  "fetched_at": "2026-08-31T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "WBD",
    "available": true,
@@ -336,7 +336,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-09-01T12:30:06+00:00",
+  "fetched_at": "2026-09-02T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -451,6 +451,20 @@
   "fetched_at": "2026-09-01T12:30:06+00:00",
   "data": {
    "ticker": "WFC",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "PYPL": {
+  "fetched_at": "2026-09-02T12:30:06+00:00",
+  "data": {
+   "ticker": "PYPL",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
