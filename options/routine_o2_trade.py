@@ -220,6 +220,18 @@ def _valuta_uscita(cli, cfg: dict, st: dict, sym: str, pos: dict,
             return _chiudi(cli, cfg, st, sym, pos, snap,
                            f"premio a {var*100:+.0f}%", dry)
 
+        # 3-bis. TRAILING sul premio: il massimo raggiunto sale, mai scende.
+        # Protegge i guadagni intermedi, che altrimenti potevano tornare a zero
+        # senza che nulla intervenisse.
+        picco = max(float(rec.get("premium_peak") or 0), corrente, entrata)
+        rec["premium_peak"] = picco
+        guadagno_max = picco / entrata - 1
+        if guadagno_max >= float(e["premium_trail_activate_pct"]):
+            soglia = entrata * (1 + guadagno_max * (1 - float(e["premium_trail_giveback_pct"])))
+            if corrente <= soglia:
+                return _chiudi(cli, cfg, st, sym, pos, snap,
+                               f"trailing: da {guadagno_max*100:+.0f}% a {var*100:+.0f}%", dry)
+
     # 4. tempo massimo
     apertura = (rec.get("opened_at") or "")[:10]
     if apertura and rec.get("modo") == "swing":

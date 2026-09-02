@@ -99,6 +99,18 @@ exits:
   premium_stop_pct: 0.50         # rete di sicurezza: -50% sul premio, si esce
   premium_target_pct: 1.00       # +100% sul premio: si incassa comunque
 
+  # TRAILING SUL PREMIO. Senza, un guadagno inferiore al 100% non era protetto
+  # da nulla: una posizione arrivata a +60% poteva tornare a zero e non si
+  # incassava niente. Con la convessita' e' un caso frequente, non raro — un
+  # guadagno costruito in due giorni puo' svanire in poche ore.
+  #
+  # Si attiva solo oltre la soglia, cosi' le oscillazioni normali dei primi
+  # momenti non chiudono la posizione. Da li' in poi si esce se il premio
+  # restituisce meta' del guadagno massimo raggiunto: i vincitori continuano a
+  # correre senza tetto, ma smettono di poter restituire tutto.
+  premium_trail_activate_pct: 0.40   # protezione attiva oltre il +40%
+  premium_trail_giveback_pct: 0.50   # si esce restituendo meta' del massimo
+
 # --- Guardrail ----------------------------------------------------------
 guardrails:
   max_consecutive_api_errors: 3
