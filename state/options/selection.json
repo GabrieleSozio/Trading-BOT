@@ -1,53 +1,47 @@
 {
-  "generato_il": "2026-09-01T15:35:10+02:00",
-  "session_date": "2026-09-01",
+  "generato_il": "2026-09-02T15:35:10+02:00",
+  "session_date": "2026-09-02",
   "conto": "PA3YKSS69ZE0",
-  "equity_usd": 593.9,
+  "equity_usd": 587.84,
   "universo": 30,
   "crediti_intraday_liberi": 2,
   "selezione": [
     {
-      "symbol": "XLE260918C00065000",
-      "strike": 65.0,
+      "symbol": "SMCI260918C00037500",
+      "strike": 37.5,
       "expiration": "2026-09-18",
-      "otm_pct": 0.09,
-      "ask": 1.24,
-      "premio_usd": 124.0,
-      "spread_pct": 1.63,
-      "ticker": "XLE",
+      "otm_pct": 0.13,
+      "ask": 2.4,
+      "premio_usd": 240.0,
+      "spread_pct": 3.82,
+      "ticker": "SMCI",
       "modo": "swing",
-      "gap_pct": 1.53,
-      "spot": 64.94,
+      "gap_pct": 2.02,
+      "spot": 37.45,
       "rank": 1,
-      "volume": 27185757,
-      "stop_underlying": 62.99,
-      "target_underlying": 70.14
+      "volume": 26852768,
+      "stop_underlying": 36.33,
+      "target_underlying": 40.45
     }
   ],
   "scartati": [
     {
-      "ticker": "KO",
-      "spot": 89.65,
+      "ticker": "DAL",
+      "spot": 77.53,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,965$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~7,753$)"
     },
     {
-      "ticker": "PFE",
-      "spot": 28.76,
+      "ticker": "CCL",
+      "spot": 23.55,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,876$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,354$)"
     },
     {
-      "ticker": "T",
-      "spot": 26.09,
+      "ticker": "UAL",
+      "spot": 105.95,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,609$)"
-    },
-    {
-      "ticker": "VZ",
-      "spot": 50.38,
-      "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~5,038$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,595$)"
     }
   ]
 }
