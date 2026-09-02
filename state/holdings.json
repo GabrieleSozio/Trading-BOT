@@ -1,11 +1,8 @@
 {
-  "KO": {
+  "PFE": {
     "opened_session_date": "2026-09-01"
   },
-  "SMCI": {
-    "opened_session_date": "2026-09-02"
-  },
-  "PFE": {
+  "KO": {
     "opened_session_date": "2026-09-01"
   }
 }
