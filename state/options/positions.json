@@ -14,20 +14,6 @@
       "opened_at": "2026-08-31T21:16:21+02:00",
       "premium_peak": 0.87
     },
-    "WMT260918C00105000": {
-      "ticker": "WMT",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 2.05,
-      "underlying_entry": 104.78,
-      "stop_underlying": 101.63,
-      "target_underlying": 113.16,
-      "premium_stop_pct": 0.5,
-      "strike": 105.0,
-      "expiration": "2026-09-18",
-      "opened_at": "2026-08-31T21:40:09+02:00",
-      "premium_peak": 2.24
-    },
     "XLE260918C00065000": {
       "ticker": "XLE",
       "modo": "swing",
@@ -40,10 +26,10 @@
       "strike": 65.0,
       "expiration": "2026-09-18",
       "opened_at": "2026-09-01T16:10:26+02:00",
-      "premium_peak": 1.37
+      "premium_peak": 1.55
     }
   },
-  "peak_equity": 676.84,
+  "peak_equity": 821.84,
   "events": [
     {
       "at": "2026-08-31T21:16:21+02:00",
@@ -95,8 +81,32 @@
       "modo": "swing",
       "premio": 1.12,
       "costo_usd": 112.0
+    },
+    {
+      "at": "2026-09-03T17:10:04+02:00",
+      "event": "uscita",
+      "symbol": "WMT260918C00105000",
+      "motivo": "premio a +117%",
+      "pl_usd": 240.0
     }
   ],
-  "closed_trades": [],
-  "updated_at": "2026-09-02T21:55:04+02:00"
+  "closed_trades": [
+    {
+      "symbol": "WMT260918C00105000",
+      "ticker": "WMT",
+      "modo": "swing",
+      "opened_at": "2026-08-31T21:40:09+02:00",
+      "closed_at": "2026-09-03T17:10:04+02:00",
+      "entry_premium": 2.05,
+      "exit_premium": 4.42,
+      "qty": 1,
+      "pl_usd": 237.0,
+      "pl_pct": 115.61,
+      "risk_usd": 102.5,
+      "r_multiple": 2.31,
+      "underlying_entry": 104.78,
+      "motivo": "premio a +117%"
+    }
+  ],
+  "updated_at": "2026-09-03T17:10:04+02:00"
 }
