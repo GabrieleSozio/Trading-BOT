@@ -27,9 +27,22 @@
       "expiration": "2026-09-18",
       "opened_at": "2026-09-01T16:10:26+02:00",
       "premium_peak": 1.55
+    },
+    "SLV260918C00060000": {
+      "ticker": "SLV",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 2.62,
+      "underlying_entry": 59.95,
+      "stop_underlying": 58.15,
+      "target_underlying": 64.75,
+      "premium_stop_pct": 0.5,
+      "strike": 60.0,
+      "expiration": "2026-09-18",
+      "opened_at": "2026-09-03T17:25:08+02:00"
     }
   },
-  "peak_equity": 821.84,
+  "peak_equity": 829.82,
   "events": [
     {
       "at": "2026-08-31T21:16:21+02:00",
@@ -88,6 +101,15 @@
       "symbol": "WMT260918C00105000",
       "motivo": "premio a +117%",
       "pl_usd": 240.0
+    },
+    {
+      "at": "2026-09-03T17:25:08+02:00",
+      "event": "ingresso",
+      "symbol": "SLV260918C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "premio": 2.62,
+      "costo_usd": 262.0
     }
   ],
   "closed_trades": [
@@ -108,5 +130,5 @@
       "motivo": "premio a +117%"
     }
   ],
-  "updated_at": "2026-09-03T17:10:04+02:00"
+  "updated_at": "2026-09-03T17:25:09+02:00"
 }
