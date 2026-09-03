@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T08:05:08+02:00",
+  "updated_at": "2026-09-03T08:05:06+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -165,6 +165,19 @@
         "momentum": 0.34038,
         "stop_distance_pct": 0.22315,
         "usd": 137.84
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "ARB/USD",
+      "date": "2026-09-03",
+      "opened_at": "2026-09-03T08:05:06+02:00",
+      "decision": "Entrata al 1o posto della classifica di momentum (punteggio +53.15%), stop a -26.3% tarato sulla volatilita' giornaliera. Peso assegnato 19.0% del capitale.",
+      "meta": {
+        "rank": 1,
+        "momentum": 0.53152,
+        "stop_distance_pct": 0.26267,
+        "usd": 111.64
       },
       "status": "in_sospeso"
     }
