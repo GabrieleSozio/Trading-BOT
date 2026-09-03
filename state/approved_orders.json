@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-02T16:02:03+02:00",
-  "session_date": "2026-09-02",
-  "source_generated_at": "2026-09-02T16:00:05+02:00",
-  "portfolio_value": 555.83,
+  "generated_at": "2026-09-03T14:33:25+02:00",
+  "session_date": "2026-09-03",
+  "source_generated_at": "2026-09-03T14:33:21+02:00",
+  "portfolio_value": 555.86,
   "capital_simulated": true,
-  "real_equity": 99946.94,
+  "real_equity": 99946.96,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,13 +18,13 @@
   ],
   "orders": [
     {
-      "ticker": "UBER",
-      "sector": "Industrials",
+      "ticker": "HOOD",
+      "sector": "Financials",
       "action": "buy",
-      "target_entry_price": 75.42,
-      "allocated_capital": 166.51,
-      "stop_loss_price": 73.16,
-      "take_profit_price": 79.95
+      "target_entry_price": 107.19,
+      "allocated_capital": 166.76,
+      "stop_loss_price": 103.97,
+      "take_profit_price": 113.62
     }
   ]
 }
