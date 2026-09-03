@@ -1,47 +1,64 @@
 {
-  "generato_il": "2026-09-02T15:35:10+02:00",
-  "session_date": "2026-09-02",
+  "generato_il": "2026-09-03T15:35:10+02:00",
+  "session_date": "2026-09-03",
   "conto": "PA3YKSS69ZE0",
-  "equity_usd": 587.84,
+  "equity_usd": 659.84,
   "universo": 30,
   "crediti_intraday_liberi": 2,
   "selezione": [
     {
-      "symbol": "SMCI260918C00037500",
-      "strike": 37.5,
+      "symbol": "SLV260918C00060000",
+      "strike": 60.0,
       "expiration": "2026-09-18",
-      "otm_pct": 0.13,
-      "ask": 2.4,
-      "premio_usd": 240.0,
-      "spread_pct": 3.82,
-      "ticker": "SMCI",
+      "otm_pct": 0.08,
+      "ask": 2.04,
+      "premio_usd": 204.0,
+      "spread_pct": 5.03,
+      "ticker": "SLV",
       "modo": "swing",
-      "gap_pct": 2.02,
-      "spot": 37.45,
+      "gap_pct": 1.53,
+      "spot": 59.95,
       "rank": 1,
-      "volume": 26852768,
-      "stop_underlying": 36.33,
-      "target_underlying": 40.45
+      "volume": 10760277,
+      "stop_underlying": 58.15,
+      "target_underlying": 64.75
+    },
+    {
+      "symbol": "UBER260918C00078000",
+      "strike": 78.0,
+      "expiration": "2026-09-18",
+      "otm_pct": 1.1,
+      "ask": 2.43,
+      "premio_usd": 243.0,
+      "spread_pct": 6.81,
+      "ticker": "UBER",
+      "modo": "swing",
+      "gap_pct": 0.89,
+      "spot": 77.15,
+      "rank": 4,
+      "volume": 13006828,
+      "stop_underlying": 74.84,
+      "target_underlying": 83.32
     }
   ],
   "scartati": [
     {
-      "ticker": "DAL",
-      "spot": 77.53,
+      "ticker": "RIOT",
+      "spot": 18.87,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~7,753$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~1,887$)"
+    },
+    {
+      "ticker": "NKE",
+      "spot": 38.58,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~3,858$)"
     },
     {
       "ticker": "CCL",
-      "spot": 23.55,
+      "spot": 23.92,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,354$)"
-    },
-    {
-      "ticker": "UAL",
-      "spot": 105.95,
-      "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,595$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,392$)"
     }
   ]
 }
