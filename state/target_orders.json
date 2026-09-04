@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-03T14:33:21+02:00",
-  "session_date": "2026-09-03",
-  "capital_usd": 555.86,
+  "generated_at": "2026-09-04T14:32:52+02:00",
+  "session_date": "2026-09-04",
+  "capital_usd": 554.28,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
@@ -9,12 +9,12 @@
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "HOOD",
-      "sector": "Financials",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "buy",
-      "reference_price": 107.73,
-      "target_entry_price": 107.19,
-      "allocated_capital": 166.76
+      "reference_price": 91.66,
+      "target_entry_price": 91.2,
+      "allocated_capital": 166.28
     }
   ]
 }
