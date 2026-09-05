@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-02T15:47:06+02:00",
+  "updated_at": "2026-09-05T10:00:52+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -114,7 +114,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -0.83,
+        "pl_usd": -1.92,
+        "r_multiple": -0.28,
+        "alpha_pct": -1.3,
+        "benchmark_pct": 0.47,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era sbagliata: l'alpha di -1.30% mostra che ho sottoperformato l'indice, non solo perso in assoluto. La tesi sulla partecipazione (volume 880k, gap +1.06%) era plausibile ma il volume elevato in pre-market spesso segnala distribuzione e presa di profitto, non accumulo, e il follow-through atteso non si e' materializzato; la chiusura manuale a -0.28R indica che ho tagliato prima di un vero stop, quindi la gestione ha tenuto anche se l'ingresso no. Lezione: un gap con volume anomalo va confermato dalla tenuta del prezzo nei primi minuti di sessione regolare prima di entrare, invece di assumere che il volume pre-market equivalga a interesse direzionale reale.",
+      "closed_at": "2026-09-05T10:00:18+02:00"
     },
     {
       "ticker": "AAL",
@@ -129,7 +139,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -4.29,
+        "pl_usd": -10.73,
+        "r_multiple": -1.39,
+        "alpha_pct": -4.42,
+        "benchmark_pct": 0.13,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -4.42% contro un indice sostanzialmente piatto, quindi la perdita e' tutta idiosincratica e non attribuibile al mercato. Il ragionamento sulla liquidita' e sul volume pre-market ha tenuto (lo strumento era negoziabile e lo stop e' scattato in modo pulito), ma la tesi centrale - gap rialzista come conferma direzionale - ha ceduto subito, segno che il gap era distribuzione e non accumulazione. La lezione: un gap di +0.71% su volume elevato non e' di per se' conferma, va validato dalla tenuta del prezzo sopra il livello di apertura nei primi minuti prima di impegnare rischio, altrimenti si compra l'esaurimento.",
+      "closed_at": "2026-09-05T10:00:25+02:00"
     },
     {
       "ticker": "INTC",
@@ -144,7 +164,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.03,
+        "pl_usd": -2.71,
+        "r_multiple": -1.0,
+        "alpha_pct": -1.82,
+        "benchmark_pct": -1.21,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -1.82% conferma che non ho battuto l'indice, quindi non ho catturato alcun edge reale dal setup. L'insider buy del CEO ha tenuto come tesi di fondo, ma il ragionamento sul gap +2.33% con volume dominante ha ceduto perche' ho scambiato un movimento gia' esteso per l'inizio di una prosecuzione multi-day, entrando in ipercomprato senza margine. La sfortuna non c'entra: ho pagato l'ingresso troppo tardi nella spinta. Lezione: separare il segnale strutturale lento (insider buy, mesi) dal timing di entrata, e non entrare su un gap gia' consumato senza attendere un ritest o consolidamento che offra uno stop piu' stretto.",
+      "closed_at": "2026-09-05T10:00:32+02:00"
     },
     {
       "ticker": "SNAP",
@@ -159,7 +189,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.59,
+        "pl_usd": -6.17,
+        "r_multiple": -1.11,
+        "alpha_pct": -2.9,
+        "benchmark_pct": -0.69,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.90% contro l'indice, quindi non un semplice caso di mercato debole ma sottoperformance specifica del titolo. Ha tenuto l'osservazione che il gap fosse il piu' forte per ampiezza e volume, ma ha ceduto l'assunzione che gap+volume implichino automaticamente prosecuzione multi-day: HOOD e COIN sono un campione minuscolo e selezionato, non una regola. Lo stop a -1.11R conferma che l'ingresso non aveva una struttura che distinguesse la continuazione dallo sfogo iniziale. Prossima volta: prima di trattare un gap ad alto volume come momentum autentico, verificare la tenuta del prezzo sopra il livello di apertura nelle prime barre invece di affidarsi all'analo",
+      "closed_at": "2026-09-05T10:00:39+02:00"
     },
     {
       "ticker": "PFE",
@@ -189,7 +229,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.05,
+        "pl_usd": -3.21,
+        "r_multiple": -1.0,
+        "alpha_pct": -3.49,
+        "benchmark_pct": 0.44,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.49% contro un indice comunque positivo, quindi non e' stato un problema di mercato ma di selezione. Ha ceduto l'assunzione che gap forte piu' volume dominante implichi prosecuzione multi-day: il momentum si e' rivelato esaurimento, e il precedente storico vincente e' stato sovrappesato come segnale invece che trattato come singolo caso. La forza settoriale Financials non ha protetto il singolo nome, segno che avevo confuso beta di settore con edge idiosincratico. Lezione: un gap intraday sopra +1.5% con volume anomalo va classificato come possibile climax e non come continuazione, richiedendo conferma il giorno successivo prima dell'ingresso invece di ",
+      "closed_at": "2026-09-05T10:00:46+02:00"
     },
     {
       "ticker": "KO",
@@ -219,7 +269,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.04,
+        "pl_usd": -4.56,
+        "r_multiple": -0.97,
+        "alpha_pct": -3.04,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -3.04% contro un indice piatto, quindi la scelta ha distrutto valore in senso relativo, non solo assoluto. L'idea che il volume elevato (522k) confermasse partecipazione autentica ha ceduto: il volume misurava esaurimento del gap piu' che avvio di un trend, e il follow-through atteso non e' mai arrivato, portando allo stop a -0.97R. La lezione: su gap tech ad alta volatilita' non trattare il volume alto come segnale rialzista di per se', ma richiedere una tenuta del prezzo sopra il livello di gap nei primi minuti prima di entrare.",
+      "closed_at": "2026-09-05T10:00:52+02:00"
     }
   ]
 }
