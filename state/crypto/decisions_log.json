@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T08:05:06+02:00",
+  "updated_at": "2026-09-06T22:00:16+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -127,7 +127,17 @@
         "stop_distance_pct": 0.16928,
         "usd": 177.45
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.89,
+        "pl_usd": -5.01,
+        "r_multiple": -0.17,
+        "alpha_pct": -2.33,
+        "benchmark_pct": -0.56,
+        "closed_by": "scesa al 6o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.33% su un titolo che ha sottoperformato l'indice mentre il momentum stesso si sgretolava, portando all'uscita per scivolamento in classifica. Il ragionamento sul ranking di momentum (3o posto, +29.29%) ha ceduto perche' il punteggio era gia' in fase di deterioramento all'ingresso, mentre lo stop tarato sulla volatilita' ha tenuto ed evitato perdite maggiori. Il peso del 29.5% era eccessivo per una posizione con momentum non confermato in accelerazione. Lezione: non pesare oltre il 20% titoli in cui il ranking di momentum e' alto ma non in miglioramento marginale, distinguendo il livello del punteggio dalla sua derivata.",
+      "closed_at": "2026-09-06T22:00:16+02:00"
     },
     {
       "ticker": "UNI/USD",
