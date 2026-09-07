@@ -1,58 +1,53 @@
 {
-  "generato_il": "2026-09-04T15:35:10+02:00",
-  "session_date": "2026-09-04",
+  "generato_il": "2026-09-07T15:35:09+02:00",
+  "session_date": "2026-09-07",
   "conto": "PA3YKSS69ZE0",
-  "equity_usd": 611.72,
+  "equity_usd": 641.72,
   "universo": 30,
   "crediti_intraday_liberi": 2,
   "selezione": [
     {
-      "symbol": "SMCI260918C00038000",
-      "strike": 38.0,
-      "expiration": "2026-09-18",
-      "otm_pct": -0.6,
-      "ask": 2.5,
-      "premio_usd": 250.0,
-      "spread_pct": 6.61,
-      "ticker": "SMCI",
+      "symbol": "INTC260925C00100000",
+      "strike": 100.0,
+      "expiration": "2026-09-25",
+      "otm_pct": 4.29,
+      "ask": 3.92,
+      "premio_usd": 392.0,
+      "spread_pct": 0.77,
+      "ticker": "INTC",
       "modo": "swing",
-      "gap_pct": 0.95,
-      "spot": 38.23,
-      "rank": 1,
-      "volume": 34369761,
-      "stop_underlying": 37.08,
-      "target_underlying": 41.29
-    },
-    {
-      "symbol": "UBER260918C00080000",
-      "strike": 80.0,
-      "expiration": "2026-09-18",
-      "otm_pct": 4.43,
-      "ask": 0.83,
-      "premio_usd": 83.0,
-      "spread_pct": 7.5,
-      "ticker": "UBER",
-      "modo": "swing",
-      "gap_pct": 0.86,
-      "spot": 76.61,
-      "rank": 2,
-      "volume": 14410835,
-      "stop_underlying": 74.31,
-      "target_underlying": 82.74
+      "gap_pct": 0.09,
+      "spot": 95.89,
+      "rank": 5,
+      "volume": 97604243,
+      "stop_underlying": 93.01,
+      "target_underlying": 103.56
     }
   ],
   "scartati": [
     {
-      "ticker": "CSCO",
-      "spot": 109.19,
+      "ticker": "UAL",
+      "spot": 111.67,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,919$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~11,167$)"
     },
     {
       "ticker": "DAL",
-      "spot": 78.95,
+      "spot": 80.28,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~7,895$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,028$)"
+    },
+    {
+      "ticker": "DKNG",
+      "spot": 24.04,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,404$)"
+    },
+    {
+      "ticker": "VZ",
+      "spot": 50.19,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~5,019$)"
     }
   ]
 }
