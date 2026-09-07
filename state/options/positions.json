@@ -1,19 +1,5 @@
 {
   "positions": {
-    "PFE260925C00028500": {
-      "ticker": "PFE",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 0.77,
-      "underlying_entry": 28.61,
-      "stop_underlying": 27.75,
-      "target_underlying": 30.89,
-      "premium_stop_pct": 0.5,
-      "strike": 28.5,
-      "expiration": "2026-09-25",
-      "opened_at": "2026-08-31T21:16:21+02:00",
-      "premium_peak": 0.87
-    },
     "XLE260918C00065000": {
       "ticker": "XLE",
       "modo": "swing",
@@ -111,6 +97,13 @@
       "modo": "swing",
       "premio": 2.62,
       "costo_usd": 262.0
+    },
+    {
+      "at": "2026-09-07T15:40:04+02:00",
+      "event": "uscita",
+      "symbol": "PFE260925C00028500",
+      "motivo": "scadenza tempo (7 giorni)",
+      "pl_usd": -21.0
     }
   ],
   "closed_trades": [
@@ -129,7 +122,23 @@
       "r_multiple": 2.31,
       "underlying_entry": 104.78,
       "motivo": "premio a +117%"
+    },
+    {
+      "symbol": "PFE260925C00028500",
+      "ticker": "PFE",
+      "modo": "swing",
+      "opened_at": "2026-08-31T21:16:21+02:00",
+      "closed_at": "2026-09-07T15:40:04+02:00",
+      "entry_premium": 0.77,
+      "exit_premium": 0.58,
+      "qty": 1,
+      "pl_usd": -19.0,
+      "pl_pct": -24.68,
+      "risk_usd": 38.5,
+      "r_multiple": -0.49,
+      "underlying_entry": 28.61,
+      "motivo": "scadenza tempo (7 giorni)"
     }
   ],
-  "updated_at": "2026-09-04T21:55:04+02:00"
+  "updated_at": "2026-09-07T15:40:05+02:00"
 }
