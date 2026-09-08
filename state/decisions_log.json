@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-05T10:00:52+02:00",
+  "updated_at": "2026-09-08T15:49:07+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -280,6 +280,21 @@
       },
       "lesson": "La direzione era sbagliata: alpha -3.04% contro un indice piatto, quindi la scelta ha distrutto valore in senso relativo, non solo assoluto. L'idea che il volume elevato (522k) confermasse partecipazione autentica ha ceduto: il volume misurava esaurimento del gap piu' che avvio di un trend, e il follow-through atteso non e' mai arrivato, portando allo stop a -0.97R. La lezione: su gap tech ad alta volatilita' non trattare il volume alto come segnale rialzista di per se', ma richiedere una tenuta del prezzo sopra il livello di gap nei primi minuti prima di entrare.",
       "closed_at": "2026-09-05T10:00:52+02:00"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-09-08",
+      "opened_at": "2026-09-08T15:49:07+02:00",
+      "decision": "Gap moderato (+1.02%) non da climax, volume solido (827k), trend rialzista. Movimento contenuto lascia spazio a prosecuzione multi-day con stop stretto, coerente con la lezione di evitare gap gia' estesi.",
+      "meta": {
+        "entry": 38.45,
+        "stop": 37.29,
+        "target": 40.75,
+        "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
     }
   ]
 }
