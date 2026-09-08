@@ -1,19 +1,5 @@
 {
   "positions": {
-    "XLE260918C00065000": {
-      "ticker": "XLE",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 1.12,
-      "underlying_entry": 64.94,
-      "stop_underlying": 62.99,
-      "target_underlying": 70.14,
-      "premium_stop_pct": 0.5,
-      "strike": 65.0,
-      "expiration": "2026-09-18",
-      "opened_at": "2026-09-01T16:10:26+02:00",
-      "premium_peak": 1.55
-    },
     "SLV260918C00060000": {
       "ticker": "SLV",
       "modo": "swing",
@@ -104,6 +90,13 @@
       "symbol": "PFE260925C00028500",
       "motivo": "scadenza tempo (7 giorni)",
       "pl_usd": -21.0
+    },
+    {
+      "at": "2026-09-08T15:40:04+02:00",
+      "event": "uscita",
+      "symbol": "XLE260918C00065000",
+      "motivo": "scadenza tempo (7 giorni)",
+      "pl_usd": -1.0
     }
   ],
   "closed_trades": [
@@ -138,7 +131,23 @@
       "r_multiple": -0.49,
       "underlying_entry": 28.61,
       "motivo": "scadenza tempo (7 giorni)"
+    },
+    {
+      "symbol": "XLE260918C00065000",
+      "ticker": "XLE",
+      "modo": "swing",
+      "opened_at": "2026-09-01T16:10:26+02:00",
+      "closed_at": "2026-09-08T15:40:04+02:00",
+      "entry_premium": 1.12,
+      "exit_premium": 1.09,
+      "qty": 1,
+      "pl_usd": -3.0,
+      "pl_pct": -2.68,
+      "risk_usd": 56.0,
+      "r_multiple": -0.05,
+      "underlying_entry": 64.94,
+      "motivo": "scadenza tempo (7 giorni)"
     }
   ],
-  "updated_at": "2026-09-07T21:55:04+02:00"
+  "updated_at": "2026-09-08T15:40:05+02:00"
 }
