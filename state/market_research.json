@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-09-08T14:32:14+02:00",
+  "session_date": "2026-09-08",
+  "universe_size": 44,
+  "capital_usd": 550.32,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 165.1,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La lista e' interamente rialzista ma i dati storici del sistema mostrano un pattern ricorrente di fallimento: gap forti (>1.5%) con volume elevato scambiati per continuazione si sono rivelati climax di esaurimento (INTC, HOOD 01/09, SMCI, SNAP). La lezione dominante e' non inseguire movimenti gia' estesi in ipercomprato. INTC ha un gap ampio (+4.75%) e insider buy del CEO da 10M$ come tesi strutturale di fondo, ma la storia recente e' due volte negativa proprio su INTC per ingresso su gap gia' consumato: il segnale insider e' lento (mesi) e non giustifica timing swing su un gap del +4.75% gia' esteso. Preferisco gap piu' contenuti con volume decente, che offrono struttura per prosecuzione multi-day e stop piu' stretto, evitando i climax. Devo comunque selezionarne 5. Ordino privilegiando movimenti moderati con volume convincente e settori solidi, declassando i gap estremi a rischio esaurimento.",
+  "candidates": [
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "last_price": 38.79,
+      "prev_close": 38.4,
+      "gap_pct": 1.0156,
+      "premarket_volume": 827252,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 2,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap moderato (+1.02%) non da climax, volume solido (827k), trend rialzista. Movimento contenuto lascia spazio a prosecuzione multi-day con stop stretto, coerente con la lezione di evitare gap gia' estesi."
+    },
+    {
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "last_price": 76.44,
+      "prev_close": 75.76,
+      "gap_pct": 0.8976,
+      "premarket_volume": 218746,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap contenuto (+0.90%) tipico di un avvio piu' che di uno sfogo, trend bullish, settore Industrials in forza. Basso rischio di rientro immediato, favorisce la tenuta overnight."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 100.35,
+      "prev_close": 95.8,
+      "gap_pct": 4.7495,
+      "premarket_volume": 5065230,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 0,
+      "insider_buy_usd": 9999985.0,
+      "ai_rationale": "Gap forte (+4.75%) con volume dominante e insider buy del CEO come tesi strutturale. Attenzione: due esiti storici negativi per ingresso su gap gia' consumato; incluso con cautela, richiede tenuta sopra il livello di gap prima di conferma."
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "last_price": 124.5,
+      "prev_close": 122.11,
+      "gap_pct": 1.9573,
+      "premarket_volume": 675733,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.96% con precedente vincente e settore Financials forte, ma storia mista con un climax recente. Volume moderato: da trattare come possibile continuazione solo con conferma di tenuta, non inseguendo lo sfogo."
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 39.63,
+      "prev_close": 39.59,
+      "gap_pct": 0.101,
+      "premarket_volume": 495753,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap minimo (+0.10%) ma volume elevato (495k) e trend bullish; il gap ridotto abbassa il rischio di esaurimento visto in passato. Da monitorare la tenuta sopra il livello di apertura prima dell'ingresso."
+    }
+  ]
+}

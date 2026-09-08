@@ -1,24 +1,23 @@
 {
  "NKE": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 5,
+   "n_sells": 2,
    "buy_value_usd": 0,
-   "sell_value_usd": 400094.15,
+   "sell_value_usd": 238810.95,
    "buyers": [],
    "sellers": [
-    "Alagirisamy Venkatesh (EVP: CHIEF OPERATING OFFICER)",
-    "Friend Matthew (EVP: CFO)",
-    "Leinwand Robert (EVP: Chief Legal Officer)"
+    "Leinwand Robert (EVP: Chief Legal Officer)",
+    "Montagne Amy (PRESIDENT, NIKE)"
    ]
   }
  },
  "SMCI": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +31,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +45,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -146,7 +145,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -160,7 +159,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -362,7 +361,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-08T12:30:06+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
