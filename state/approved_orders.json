@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-08T14:32:26+02:00",
+  "generated_at": "2026-09-08T15:47:03+02:00",
   "session_date": "2026-09-08",
-  "source_generated_at": "2026-09-08T14:32:21+02:00",
-  "portfolio_value": 550.14,
+  "source_generated_at": "2026-09-08T15:45:05+02:00",
+  "portfolio_value": 549.68,
   "capital_simulated": true,
-  "real_equity": 99941.24,
+  "real_equity": 99940.78,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -21,10 +21,19 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 100.07,
-      "allocated_capital": 165.04,
-      "stop_loss_price": 97.07,
-      "take_profit_price": 106.07
+      "target_entry_price": 100.12,
+      "allocated_capital": 164.9,
+      "stop_loss_price": 97.12,
+      "take_profit_price": 106.13
+    },
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 38.45,
+      "allocated_capital": 164.9,
+      "stop_loss_price": 37.3,
+      "take_profit_price": 40.76
     }
   ]
 }
