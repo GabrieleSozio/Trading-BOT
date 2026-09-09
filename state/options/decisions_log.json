@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-03T17:25:08+02:00",
+  "updated_at": "2026-09-09T19:25:08+02:00",
   "entries": [
     {
       "ticker": "PFE",
@@ -46,6 +46,18 @@
         "symbol": "SLV260918C00060000",
         "modo": "swing",
         "premio": 2.62
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SLV",
+      "date": "2026-09-09",
+      "opened_at": "2026-09-09T19:25:08+02:00",
+      "decision": "Call SLV strike 60.5 scad 2026-09-25, -0.2% dal denaro, premio 283$, spread 6.1%. Modalita' swing, scarto +2.16%.",
+      "meta": {
+        "symbol": "SLV260925C00060500",
+        "modo": "swing",
+        "premio": 2.83
       },
       "status": "in_sospeso"
     }
