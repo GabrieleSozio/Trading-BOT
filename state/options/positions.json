@@ -192,6 +192,18 @@
       "event": "ingresso_non_eseguito",
       "symbol": "XLE261002C00065500",
       "limite": 1.48
+    },
+    {
+      "at": "2026-09-09T18:55:25+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.62
+    },
+    {
+      "at": "2026-09-09T18:55:47+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.45
     }
   ],
   "closed_trades": [
@@ -260,7 +272,7 @@
       "motivo": "blocco del profitto"
     }
   ],
-  "updated_at": "2026-09-09T18:40:50+02:00",
+  "updated_at": "2026-09-09T18:55:49+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
