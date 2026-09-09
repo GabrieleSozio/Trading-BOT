@@ -137,6 +137,45 @@ def _registra_chiusa(st: dict, sym: str, rec: dict, uscita: float,
     st["closed_trades"] = st["closed_trades"][-300:]
 
 
+def _ticker_da_simbolo(sym: str) -> str:
+    """'PFE260925C00028500' -> 'PFE'. Il sottostante e' tutto cio' che precede
+    la data a sei cifre."""
+    for i, ch in enumerate(sym):
+        if ch.isdigit() and sym[i:i + 6].isdigit():
+            return sym[:i]
+    return sym
+
+
+def _adotta_orfane(cfg: dict, st: dict, aperte: dict) -> None:
+    """Posizioni presenti sul BROKER ma assenti dallo stato: vanno riprese in
+    carico, altrimenti restano senza stop, senza trailing e senza limite di
+    tempo — invisibili al bot ma con soldi veri dentro.
+
+    Succedeva quando un ordine di uscita non si eseguiva ma la posizione era
+    gia' stata tolta dallo stato. Il difetto a monte e' corretto, questo e' la
+    rete: se per qualunque motivo lo stato e la realta' divergono, vince la
+    realta'.
+    """
+    for sym, pos in aperte.items():
+        if sym in st.get("positions", {}):
+            continue
+        entrata = float(pos.get("avg_entry_price") or 0)
+        st.setdefault("positions", {})[sym] = {
+            "ticker": _ticker_da_simbolo(sym),
+            "modo": "swing",
+            "qty": abs(int(float(pos.get("qty") or 1))),
+            "entry_premium": entrata,
+            "premium_peak": max(entrata, float(pos.get("current_price") or 0)),
+            "premium_stop_pct": float(cfg["exits"]["premium_stop_pct"]),
+            "opened_at": now_cet().isoformat(timespec="seconds"),
+            "adottata": True,      # livelli sul sottostante non ricostruibili:
+                                   # valgono solo le uscite basate sul premio
+        }
+        log.warning("%s: posizione ORFANA ripresa in carico (carico %.2f). "
+                    "Da ora e' di nuovo gestita.", sym, entrata)
+        _event(st, "orfana_adottata", symbol=sym, entry_premium=entrata)
+
+
 def _riconcilia(cli, st: dict, aperte: dict) -> None:
     """Posizioni sparite dal broker senza che le abbiamo chiuse noi.
 
@@ -173,15 +212,47 @@ def _chiudi(cli, cfg: dict, st: dict, sym: str, pos: dict, snap: dict,
     if dry:
         return 1
     try:
-        cli.sell_to_close(sym, qty, limit_price=lim)
+        o = cli.sell_to_close(sym, qty, limit_price=lim)
     except BrokerError as e:
         log.error("%s: ordine di uscita rifiutato (%s).", sym, str(e)[:160])
         _event(st, "uscita_fallita", symbol=sym, errore=str(e)[:160])
         return 1
+
+    # SI ASPETTA IL RIEMPIMENTO prima di dare la posizione per chiusa.
+    # Registrarla subito era un errore grave: su un limite a fine giornata
+    # l'ordine puo' SCADERE senza eseguirsi (successo davvero su PFE), e la
+    # posizione restava aperta sul broker ma sparita dallo stato — quindi
+    # orfana, senza piu' stop, trailing ne' controllo del tempo. In piu' il
+    # risultato registrato era falso: -19$ contro i -51$ reali.
+    riempito = None
+    for _ in range(FILL_POLL_TRIES):
+        time.sleep(FILL_POLL_SECONDS)
+        try:
+            cur = cli.order(o["id"])
+        except BrokerError:
+            break
+        if cur.get("status") == "filled":
+            riempito = cur
+            break
+        if cur.get("status") in ("canceled", "rejected", "expired"):
+            break
+
+    if not riempito:
+        log.warning("%s: uscita NON eseguita (limite %.2f). La posizione resta "
+                    "aperta e gestita: si riprova al prossimo giro.", sym, lim or 0)
+        try:
+            cli.cancel_order(o["id"])
+        except BrokerError:
+            pass
+        _event(st, "uscita_non_eseguita", symbol=sym, limite=lim, motivo=motivo)
+        return 1
+
+    prezzo = float(riempito.get("filled_avg_price") or lim or 0)
     rec = st["positions"].pop(sym, None)
     if rec:
-        _registra_chiusa(st, sym, rec, lim or 0.0, motivo)
-    _event(st, "uscita", symbol=sym, motivo=motivo, pl_usd=round(pl, 2))
+        _registra_chiusa(st, sym, rec, prezzo, motivo)
+    log.info("%s: uscita eseguita a %.2f.", sym, prezzo)
+    _event(st, "uscita", symbol=sym, motivo=motivo, prezzo=prezzo, pl_usd=round(pl, 2))
     return 1
 
 
@@ -340,7 +411,8 @@ def run(dry_run: bool = False) -> dict:
     aperte = {p["symbol"]: p for p in cli.option_positions()}
     log.info("Posizioni aperte: %d", len(aperte))
     if not dry_run:
-        _riconcilia(cli, st, aperte)
+        _riconcilia(cli, st, aperte)      # sparite dal broker -> registrate come chiuse
+        _adotta_orfane(cfg, st, aperte)   # presenti sul broker ma non nello stato
 
     budget = int(cfg["guardrails"]["max_orders_per_tick"])
     inviati = 0
