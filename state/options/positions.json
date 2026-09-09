@@ -133,6 +133,13 @@
       "symbol": "PFE260925C00028500",
       "limite": 0.28,
       "motivo": "premio a -66%"
+    },
+    {
+      "at": "2026-09-09T17:10:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "PFE260925C00028500",
+      "limite": 0.3,
+      "motivo": "premio a -64%"
     }
   ],
   "closed_trades": [
@@ -169,5 +176,5 @@
       "motivo": "scadenza tempo (7 giorni)"
     }
   ],
-  "updated_at": "2026-09-09T16:55:26+02:00"
+  "updated_at": "2026-09-09T17:10:26+02:00"
 }
