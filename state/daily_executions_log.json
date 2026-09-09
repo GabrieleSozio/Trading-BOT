@@ -31,7 +31,13 @@
       "type": "GAP_DETECTED",
       "minutes": 15,
       "last_tick": "2026-09-09T16:40:02+02:00"
+    },
+    {
+      "ts": "2026-09-09T21:45:07+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "KO"
     }
   ],
-  "last_tick_at": "2026-09-09T20:40:02+02:00"
+  "last_tick_at": "2026-09-09T21:45:01+02:00"
 }
