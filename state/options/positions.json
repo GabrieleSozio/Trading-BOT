@@ -1,20 +1,5 @@
 {
-  "positions": {
-    "SLV260918C00060000": {
-      "ticker": "SLV",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 2.62,
-      "underlying_entry": 59.95,
-      "stop_underlying": 58.15,
-      "target_underlying": 64.75,
-      "premium_stop_pct": 0.5,
-      "strike": 60.0,
-      "expiration": "2026-09-18",
-      "opened_at": "2026-09-03T17:25:08+02:00",
-      "premium_peak": 2.7
-    }
-  },
+  "positions": {},
   "peak_equity": 829.82,
   "events": [
     {
@@ -164,6 +149,25 @@
       "symbol": "SLV260918C00060000",
       "limite": 2.17,
       "motivo": "blocco del profitto"
+    },
+    {
+      "at": "2026-09-09T18:10:02+02:00",
+      "event": "incasso_avviato",
+      "equity": 691.62,
+      "motivo": "incasso in corso: chiudo le posizioni rimaste"
+    },
+    {
+      "at": "2026-09-09T18:10:07+02:00",
+      "event": "uscita",
+      "symbol": "SLV260918C00060000",
+      "motivo": "blocco del profitto",
+      "prezzo": 2.13,
+      "pl_usd": -49.0
+    },
+    {
+      "at": "2026-09-09T18:10:08+02:00",
+      "event": "incassato",
+      "messaggio": "INCASSATO $+141.60: la base passa da $550.00 a $691.60 (totale messo da parte $+141.60)"
     }
   ],
   "closed_trades": [
@@ -214,9 +218,33 @@
       "r_multiple": -1.25,
       "underlying_entry": null,
       "motivo": "premio a -62%"
+    },
+    {
+      "symbol": "SLV260918C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "opened_at": "2026-09-03T17:25:08+02:00",
+      "closed_at": "2026-09-09T18:10:07+02:00",
+      "entry_premium": 2.62,
+      "exit_premium": 2.13,
+      "qty": 1,
+      "pl_usd": -49.0,
+      "pl_pct": -18.7,
+      "risk_usd": 131.0,
+      "r_multiple": -0.37,
+      "underlying_entry": 59.95,
+      "motivo": "blocco del profitto"
     }
   ],
-  "updated_at": "2026-09-09T17:59:25+02:00",
-  "profit_lock_base": 550.0,
-  "incasso_in_corso": true
+  "updated_at": "2026-09-09T18:10:08+02:00",
+  "profit_lock_base": 691.6,
+  "incasso_in_corso": false,
+  "incassato_totale": 141.6,
+  "incassi": [
+    {
+      "da": 550.0,
+      "a": 691.6,
+      "importo": 141.6
+    }
+  ]
 }
