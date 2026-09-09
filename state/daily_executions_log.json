@@ -3,6 +3,18 @@
   "opening_balance": 99937.6,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-09-09T15:46:01+02:00"
+  "events": [
+    {
+      "ts": "2026-09-09T15:50:06+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "HOOD",
+      "alpaca_order_id": "9b5ca42c-f47d-45ab-8912-665ba5c3ad33",
+      "qty": 1,
+      "entry": 118.34,
+      "stop_loss": 114.79,
+      "take_profit": 125.44,
+      "tif": "gtc"
+    }
+  ],
+  "last_tick_at": "2026-09-09T15:50:01+02:00"
 }

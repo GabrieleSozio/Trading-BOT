@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-08T15:49:07+02:00",
+  "updated_at": "2026-09-09T15:50:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -291,6 +291,21 @@
         "stop": 37.29,
         "target": 40.75,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "HOOD",
+      "date": "2026-09-09",
+      "opened_at": "2026-09-09T15:50:06+02:00",
+      "decision": "Gap piu' forte (+1.88%) e volume di gran lunga dominante (~361k). Storicamente ambivalente: una vincita a +6% e uno stop da climax. Lo includo con cautela per la forza del momentum, ma trattando il gap come possibile esaurimento da confermare, non come certezza.",
+      "meta": {
+        "entry": 118.34,
+        "stop": 114.79,
+        "target": 125.44,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
