@@ -1,52 +1,64 @@
 {
-  "generato_il": "2026-09-08T15:35:10+02:00",
-  "session_date": "2026-09-08",
+  "generato_il": "2026-09-09T15:35:11+02:00",
+  "session_date": "2026-09-09",
   "conto": "PA3YKSS69ZE0",
-  "equity_usd": 629.72,
+  "equity_usd": 702.64,
   "universo": 30,
-  "crediti_intraday_liberi": 1,
+  "crediti_intraday_liberi": 2,
   "selezione": [
     {
-      "symbol": "INTC260909C00101000",
-      "strike": 101.0,
-      "expiration": "2026-09-09",
-      "otm_pct": -0.11,
-      "ask": 2.43,
-      "premio_usd": 243.0,
-      "spread_pct": 5.93,
-      "ticker": "INTC",
-      "modo": "intraday",
-      "gap_pct": 5.53,
-      "spot": 101.11,
+      "symbol": "SLV260925C00060500",
+      "strike": 60.5,
+      "expiration": "2026-09-25",
+      "otm_pct": -0.25,
+      "ask": 2.72,
+      "premio_usd": 272.0,
+      "spread_pct": 6.06,
+      "ticker": "SLV",
+      "modo": "swing",
+      "gap_pct": 2.16,
+      "spot": 60.65,
       "rank": 1,
-      "volume": 97604243,
-      "stop_underlying": 98.07,
-      "target_underlying": 109.2
+      "volume": 9747390,
+      "stop_underlying": 58.83,
+      "target_underlying": 65.5
     },
     {
-      "symbol": "NKE261002C00040000",
-      "strike": 40.0,
+      "symbol": "XLE261002C00065500",
+      "strike": 65.5,
       "expiration": "2026-10-02",
-      "otm_pct": 2.62,
-      "ask": 1.43,
-      "premio_usd": 143.0,
-      "spread_pct": 6.5,
-      "ticker": "NKE",
+      "otm_pct": 0.0,
+      "ask": 1.79,
+      "premio_usd": 179.0,
+      "spread_pct": 7.54,
+      "ticker": "XLE",
       "modo": "swing",
-      "gap_pct": 1.51,
-      "spot": 38.98,
-      "rank": 2,
-      "volume": 20621542,
-      "stop_underlying": 37.81,
-      "target_underlying": 42.1
+      "gap_pct": 1.13,
+      "spot": 65.5,
+      "rank": 3,
+      "volume": 28082601,
+      "stop_underlying": 63.53,
+      "target_underlying": 70.74
     }
   ],
   "scartati": [
     {
-      "ticker": "XLE",
-      "spot": 64.71,
+      "ticker": "CVS",
+      "spot": 97.87,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~6,471$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~9,787$)"
+    },
+    {
+      "ticker": "RIOT",
+      "spot": 22.48,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,248$)"
+    },
+    {
+      "ticker": "DKNG",
+      "spot": 24.01,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,401$)"
     }
   ]
 }

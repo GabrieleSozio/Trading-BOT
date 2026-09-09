@@ -1,20 +1,8 @@
 {
-  "session_date": "2026-09-08",
-  "opening_balance": 99941.57,
-  "closing_balance": 99939.32,
+  "session_date": "2026-09-09",
+  "opening_balance": 99937.6,
+  "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [
-    {
-      "ts": "2026-09-08T15:49:07+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "NKE",
-      "alpaca_order_id": "77615274-61fd-4910-ac1e-d23c9c5565ce",
-      "qty": 4,
-      "entry": 38.445,
-      "stop_loss": 37.29,
-      "take_profit": 40.75,
-      "tif": "gtc"
-    }
-  ],
-  "last_tick_at": "2026-09-08T21:59:02+02:00"
+  "events": [],
+  "last_tick_at": "2026-09-09T15:35:02+02:00"
 }
