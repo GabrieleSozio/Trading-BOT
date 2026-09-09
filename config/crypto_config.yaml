@@ -90,6 +90,18 @@ strategy:
 
   min_order_usd: 10              # minimo imposto da Alpaca
 
+# --- Blocco del profitto a livello di CONTO ---------------------------
+# Le protezioni di questa divisione (stop sul broker, trailing) sono tutte per
+# POSIZIONE: nessuna guarda il totale. Quando l'equity supera la base di 95
+# dollari si liquida TUTTO e quel guadagno diventa la nuova base.
+#
+# Obiettivo dichiarato dall'utente: incassi frequenti e certi invece di
+# guadagni grandi e sospesi. Costo altrettanto dichiarato — se una moneta
+# sarebbe andata molto oltre, quel resto non lo prendiamo.
+profit_lock:
+  enabled: true
+  threshold_usd: 95
+
 # --- Guardrail --------------------------------------------------------
 # Sicurezza di base: protezione sempre presente sul broker e un freno di
 # emergenza largo. Non servono a evitare il rischio, servono a evitare la

@@ -35,7 +35,7 @@ import time
 from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
-from lib import pdt
+from lib import pdt, profitlock
 from options.broker import OptionsClient, load_config, MOLTIPLICATORE
 
 logging.basicConfig(level=logging.INFO,
@@ -414,6 +414,13 @@ def run(dry_run: bool = False) -> dict:
         _riconcilia(cli, st, aperte)      # sparite dal broker -> registrate come chiuse
         _adotta_orfane(cfg, st, aperte)   # presenti sul broker ma non nello stato
 
+    # --- blocco del profitto: si guarda il CONTO, non le singole posizioni ---
+    log.info("%s", profitlock.descrivi(cfg, st, equity))
+    incassare, motivo = profitlock.da_incassare(cfg, st, equity)
+    if incassare:
+        log.warning("INCASSO: %s. Chiudo tutte le posizioni.", motivo)
+        _event(st, "incasso_avviato", equity=round(equity, 2), motivo=motivo)
+
     budget = int(cfg["guardrails"]["max_orders_per_tick"])
     inviati = 0
 
@@ -428,13 +435,18 @@ def run(dry_run: bool = False) -> dict:
         for sym, pos in list(aperte.items()):
             if inviati >= budget:
                 break
+            if incassare:
+                # Fase di incasso: si chiude tutto, senza valutare i livelli.
+                inviati += _safe(st, sym, "incasso", _chiudi, cli, cfg, st, sym,
+                                 pos, quot.get(sym), "blocco del profitto", dry_run)
+                continue
             t = (st["positions"].get(sym) or {}).get("ticker")
             s = ((spot.get(t) or {}).get("latestTrade") or {}).get("p") if t else None
             inviati += _safe(st, sym, "gestione", _valuta_uscita,
                              cli, cfg, st, sym, pos, quot.get(sym), s, dry_run)
 
     # --- ingressi ---
-    if not bloccato:
+    if not bloccato and not incassare:
         try:
             sel = read_json(REPO / cfg["state"]["files"]["selection"])
         except Exception:  # noqa: BLE001
@@ -473,7 +485,17 @@ def run(dry_run: bool = False) -> dict:
                 cash = float(acct["cash"])
                 impegnato += costo
 
+    # L'incasso si chiude solo quando il conto e' DAVVERO piatto: un limite puo'
+    # non riempirsi, e spostare la base con posizioni ancora aperte farebbe
+    # ripartire il conteggio da un valore che le comprende.
     if not dry_run:
+        rimaste = len(cli.option_positions())
+        msg = profitlock.completa(cfg, st, float(cli.account()["equity"]), rimaste)
+        if msg:
+            log.warning("%s", msg)
+            _event(st, "incassato", messaggio=msg)
+        elif st.get("incasso_in_corso"):
+            log.info("Incasso non ancora completo: %d posizioni da chiudere.", rimaste)
         _save_state(cfg, st)
     log.info("Giro concluso: %d operazioni%s.", inviati, " (dry-run)" if dry_run else "")
     return {"ok": True, "orders": inviati}

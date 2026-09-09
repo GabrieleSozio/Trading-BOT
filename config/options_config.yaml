@@ -108,8 +108,26 @@ exits:
   # momenti non chiudono la posizione. Da li' in poi si esce se il premio
   # restituisce meta' del guadagno massimo raggiunto: i vincitori continuano a
   # correre senza tetto, ma smettono di poter restituire tutto.
-  premium_trail_activate_pct: 0.40   # protezione attiva oltre il +40%
+  # Abbassata da 0,40 a 0,25 il 2026-09-09: con la soglia al 40% una posizione
+  # arrivata a +38% (XLE) ha restituito tutto senza che nulla intervenisse.
+  premium_trail_activate_pct: 0.25   # protezione attiva oltre il +25%
   premium_trail_giveback_pct: 0.50   # si esce restituendo meta' del massimo
+
+# --- Blocco del profitto a livello di CONTO ------------------------------
+# Le protezioni sopra sono tutte per POSIZIONE. Nessuna guardava il totale, e
+# infatti il conto e' salito a 829$ ed e' tornato a 694$ senza che scattasse
+# nulla: il picco era la somma di tre posizioni, nessuna delle quali aveva
+# toccato la propria soglia.
+#
+# Qui la regola mancante: quando l'equity supera la base di 95 dollari si
+# liquida TUTTO e quel guadagno diventa la nuova base.
+#
+# Obiettivo dichiarato dall'utente: incassi frequenti e certi, non guadagni
+# grandi e sospesi. Il costo e' altrettanto dichiarato — se una posizione
+# sarebbe andata molto oltre, quel resto non lo prendiamo.
+profit_lock:
+  enabled: true
+  threshold_usd: 95
 
 # --- Guardrail ----------------------------------------------------------
 guardrails:

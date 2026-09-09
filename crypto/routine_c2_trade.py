@@ -28,6 +28,7 @@ import time
 from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
+from lib import profitlock
 from crypto.broker import CryptoClient, load_config, to_pair
 
 logging.basicConfig(
@@ -473,9 +474,21 @@ def run(dry_run: bool = False) -> dict:
     budget = int(cfg["guardrails"]["max_orders_per_tick"])
     sent = 0
 
+    # --- 0) blocco del profitto: si guarda il CONTO, non le singole monete ---
+    log.info("%s", profitlock.descrivi(cfg, st, equity))
+    incassare, motivo = profitlock.da_incassare(cfg, st, equity)
+    if incassare:
+        log.warning("INCASSO: %s. Liquido tutte le posizioni.", motivo)
+        _event(st, "incasso_avviato", equity=round(equity, 2), motivo=motivo)
+        for pair, pos in list(positions.items()):
+            if sent >= budget:
+                break
+            sent += _safe(st, pair, "incasso", _exit_position, cli, cfg, st, pair,
+                          pos, open_sells, "blocco del profitto", dry_run)
+
     # --- 1) protezione, prima di tutto ---
     for pair, pos in positions.items():
-        if sent >= budget:
+        if sent >= budget or incassare:
             break
         sent += _safe(st, pair, "protezione", _ensure_protection,
                       cli, cfg, st, pair, pos, open_sells, dry_run)
@@ -497,7 +510,7 @@ def run(dry_run: bool = False) -> dict:
                           f"scesa al {r}o posto (soglia {threshold})", dry_run)
 
     # --- 3) ingressi ---
-    if not entries_blocked:
+    if not entries_blocked and not incassare:
         for pair, sel in selection.items():
             if sent >= budget:
                 log.info("Raggiunto il tetto di ordini per giro.")
@@ -520,7 +533,18 @@ def run(dry_run: bool = False) -> dict:
             if n and not dry_run:
                 cash = float(cli.account()["cash"])
 
+    # L'incasso si chiude solo a conto DAVVERO piatto: sulle cripto una vendita
+    # richiede prima di togliere lo stop depositato, quindi puo' servire piu' di
+    # un giro. Spostare la base con posizioni ancora aperte farebbe ripartire il
+    # conteggio da un valore che le comprende.
     if not dry_run:
+        rimaste = len(cli.crypto_positions())
+        msg = profitlock.completa(cfg, st, float(cli.account()["equity"]), rimaste)
+        if msg:
+            log.warning("%s", msg)
+            _event(st, "incassato", messaggio=msg)
+        elif st.get("incasso_in_corso"):
+            log.info("Incasso non ancora completo: %d posizioni da chiudere.", rimaste)
         _save_state(cfg, st)
     log.info("Giro concluso: %d operazioni%s.", sent, " (dry-run)" if dry_run else "")
     return {"ok": True, "orders": sent, "drawdown_pct": dd}
