@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-09-08T15:45:05+02:00",
-  "session_date": "2026-09-08",
-  "capital_usd": 549.74,
+  "generated_at": "2026-09-09T14:32:37+02:00",
+  "session_date": "2026-09-09",
+  "capital_usd": 547.49,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 461.42,
-  "free_slots": 2,
+  "available_usd": 307.66,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "HOOD",
+      "sector": "Financials",
       "action": "buy",
-      "reference_price": 100.62,
-      "target_entry_price": 100.12,
-      "allocated_capital": 164.92
-    },
-    {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
-      "action": "buy",
-      "reference_price": 38.65,
-      "target_entry_price": 38.45,
-      "allocated_capital": 164.92
+      "reference_price": 117.66,
+      "target_entry_price": 117.07,
+      "allocated_capital": 164.25
     }
   ]
 }
