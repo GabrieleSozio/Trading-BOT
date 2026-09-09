@@ -168,6 +168,18 @@
       "at": "2026-09-09T18:10:08+02:00",
       "event": "incassato",
       "messaggio": "INCASSATO $+141.60: la base passa da $550.00 a $691.60 (totale messo da parte $+141.60)"
+    },
+    {
+      "at": "2026-09-09T18:25:25+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.47
+    },
+    {
+      "at": "2026-09-09T18:25:48+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.51
     }
   ],
   "closed_trades": [
@@ -236,7 +248,7 @@
       "motivo": "blocco del profitto"
     }
   ],
-  "updated_at": "2026-09-09T18:10:08+02:00",
+  "updated_at": "2026-09-09T18:25:49+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
