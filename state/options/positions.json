@@ -12,7 +12,7 @@
       "strike": 60.0,
       "expiration": "2026-09-18",
       "opened_at": "2026-09-03T17:25:08+02:00",
-      "premium_peak": 2.62
+      "premium_peak": 2.7
     }
   },
   "peak_equity": 829.82,
@@ -97,6 +97,12 @@
       "symbol": "XLE260918C00065000",
       "motivo": "scadenza tempo (7 giorni)",
       "pl_usd": -1.0
+    },
+    {
+      "at": "2026-09-09T16:40:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.5
     }
   ],
   "closed_trades": [
@@ -149,5 +155,5 @@
       "motivo": "scadenza tempo (7 giorni)"
     }
   ],
-  "updated_at": "2026-09-09T15:55:05+02:00"
+  "updated_at": "2026-09-09T16:40:27+02:00"
 }
