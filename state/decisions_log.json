@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T15:50:06+02:00",
+  "updated_at": "2026-09-09T16:01:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -306,6 +306,21 @@
         "stop": 114.79,
         "target": 125.44,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "UBER",
+      "date": "2026-09-09",
+      "opened_at": "2026-09-09T16:01:06+02:00",
+      "decision": "Gap contenuto (+0.49%) ma con volume elevato (~205k), settore Industrials solido. Movimento ordinato, non climax: buon profilo per prosecuzione multi-day con stop stretto, coerente con le lezioni sull'evitare gap gia' consumati.",
+      "meta": {
+        "entry": 72.24,
+        "stop": 70.07,
+        "target": 76.57,
+        "settore": "Industrials",
         "fascia": "micro",
         "azione": "buy"
       },
