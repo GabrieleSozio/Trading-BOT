@@ -39,6 +39,16 @@
       "entry_rank": 3,
       "stop_order_id": "bcc6b264-77e7-4521-8865-d7480dcb7fd2",
       "stop_price": 10.949887200000001
+    },
+    "DOT/USD": {
+      "entry_price": 1.18644,
+      "qty": 94.946548119,
+      "high_water": 1.18644,
+      "stop_distance_pct": 0.1973,
+      "opened_at": "2026-09-09T08:05:06+02:00",
+      "entry_rank": 3,
+      "stop_order_id": "28bca6d0-232a-48cb-81d6-97a015379b71",
+      "stop_price": 0.952355388
     }
   },
   "peak_equity": 697.21,
@@ -596,6 +606,21 @@
       "pair": "LINK/USD",
       "stop": 10.9498872,
       "qty": 7.877601988
+    },
+    {
+      "at": "2026-09-09T08:05:06+02:00",
+      "event": "ingresso",
+      "pair": "DOT/USD",
+      "prezzo": 1.18644,
+      "qty": 94.946548119,
+      "usd": 114.82
+    },
+    {
+      "at": "2026-09-09T08:05:09+02:00",
+      "event": "stop_creato",
+      "pair": "DOT/USD",
+      "stop": 0.95235539,
+      "qty": 94.709181748
     }
   ],
   "fill_failures": {
@@ -615,7 +640,7 @@
       "quarantine_until": "2026-08-26T08:35:28+02:00"
     }
   },
-  "updated_at": "2026-09-09T07:35:03+02:00",
+  "updated_at": "2026-09-09T08:05:09+02:00",
   "closed_trades": [
     {
       "pair": "ETH/USD",
