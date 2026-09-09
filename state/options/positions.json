@@ -13,16 +13,6 @@
       "expiration": "2026-09-18",
       "opened_at": "2026-09-03T17:25:08+02:00",
       "premium_peak": 2.7
-    },
-    "PFE260925C00028500": {
-      "ticker": "PFE",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 0.77,
-      "premium_peak": 0.77,
-      "premium_stop_pct": 0.5,
-      "opened_at": "2026-09-09T16:51:36+02:00",
-      "adottata": true
     }
   },
   "peak_equity": 829.82,
@@ -147,6 +137,14 @@
       "symbol": "PFE260925C00028500",
       "limite": 0.3,
       "motivo": "premio a -64%"
+    },
+    {
+      "at": "2026-09-09T17:40:07+02:00",
+      "event": "uscita",
+      "symbol": "PFE260925C00028500",
+      "motivo": "premio a -62%",
+      "prezzo": 0.29,
+      "pl_usd": -48.0
     }
   ],
   "closed_trades": [
@@ -181,7 +179,23 @@
       "r_multiple": -0.05,
       "underlying_entry": 64.94,
       "motivo": "scadenza tempo (7 giorni)"
+    },
+    {
+      "symbol": "PFE260925C00028500",
+      "ticker": "PFE",
+      "modo": "swing",
+      "opened_at": "2026-09-09T16:51:36+02:00",
+      "closed_at": "2026-09-09T17:40:07+02:00",
+      "entry_premium": 0.77,
+      "exit_premium": 0.29,
+      "qty": 1,
+      "pl_usd": -48.0,
+      "pl_pct": -62.34,
+      "risk_usd": 38.5,
+      "r_multiple": -1.25,
+      "underlying_entry": null,
+      "motivo": "premio a -62%"
     }
   ],
-  "updated_at": "2026-09-09T17:25:26+02:00"
+  "updated_at": "2026-09-09T17:40:08+02:00"
 }
