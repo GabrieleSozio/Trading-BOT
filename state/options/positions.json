@@ -145,6 +145,12 @@
       "motivo": "premio a -62%",
       "prezzo": 0.29,
       "pl_usd": -48.0
+    },
+    {
+      "at": "2026-09-09T17:55:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.5
     }
   ],
   "closed_trades": [
@@ -197,5 +203,5 @@
       "motivo": "premio a -62%"
     }
   ],
-  "updated_at": "2026-09-09T17:40:08+02:00"
+  "updated_at": "2026-09-09T17:55:27+02:00"
 }
