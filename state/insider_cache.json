@@ -75,7 +75,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -89,7 +89,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-09-02T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -159,7 +159,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-09-09T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -187,7 +187,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-09-09T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -201,7 +201,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-09-09T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -301,15 +301,15 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-09-02T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 22,
+   "n_sells": 13,
    "buy_value_usd": 0,
-   "sell_value_usd": 149472035.81,
+   "sell_value_usd": 89906387.98,
    "buyers": [],
    "sellers": [
     "MANN JENNIFER K (Executive Vice President)",
@@ -319,7 +319,7 @@
   }
  },
  "WBD": {
-  "fetched_at": "2026-09-02T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "WBD",
    "available": true,
@@ -333,7 +333,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-09-02T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -403,7 +403,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-09-04T12:30:06+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -431,7 +431,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
@@ -445,7 +445,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-10T12:30:06+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,
