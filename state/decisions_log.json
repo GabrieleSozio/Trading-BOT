@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T15:30:06+02:00",
+  "updated_at": "2026-09-10T16:44:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -336,6 +336,21 @@
         "stop": 12.93,
         "target": 14.13,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PFE",
+      "date": "2026-09-10",
+      "opened_at": "2026-09-10T16:44:06+02:00",
+      "decision": "Volume elevato (190k) con gap minimo (+0.11%): movimento lento e sostenuto, l'opposto del climax da evitare. Health Care difensivo, prezzo basso, buona tenuta attesa overnight con basso rischio di sfogo improvviso.",
+      "meta": {
+        "entry": 27.45,
+        "stop": 26.63,
+        "target": 29.1,
+        "settore": "Health Care",
         "fascia": "micro",
         "azione": "buy"
       },
