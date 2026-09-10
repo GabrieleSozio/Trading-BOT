@@ -1,7 +1,7 @@
 {
   "session_date": "2026-09-09",
   "opening_balance": 99937.6,
-  "closing_balance": 99929.66,
+  "closing_balance": 99928.49,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -39,5 +39,5 @@
       "ticker": "KO"
     }
   ],
-  "last_tick_at": "2026-09-09T21:46:02+02:00"
+  "last_tick_at": "2026-09-09T21:59:02+02:00"
 }
