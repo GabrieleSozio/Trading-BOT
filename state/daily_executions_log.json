@@ -1,43 +1,20 @@
 {
-  "session_date": "2026-09-09",
-  "opening_balance": 99937.6,
-  "closing_balance": 99928.49,
+  "session_date": "2026-09-10",
+  "opening_balance": 99924.16,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-09-09T15:50:06+02:00",
+      "ts": "2026-09-10T15:30:06+02:00",
       "type": "ORDER_SUBMITTED",
-      "ticker": "HOOD",
-      "alpaca_order_id": "9b5ca42c-f47d-45ab-8912-665ba5c3ad33",
-      "qty": 1,
-      "entry": 118.34,
-      "stop_loss": 114.79,
-      "take_profit": 125.44,
+      "ticker": "F",
+      "alpaca_order_id": "719e5a85-29da-445a-be3a-c4aceb2e073e",
+      "qty": 12,
+      "entry": 13.33,
+      "stop_loss": 12.93,
+      "take_profit": 14.13,
       "tif": "gtc"
-    },
-    {
-      "ts": "2026-09-09T16:01:06+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "UBER",
-      "alpaca_order_id": "182fae81-8b6d-432b-bdfd-4a9ab29a3e87",
-      "qty": 2,
-      "entry": 72.24,
-      "stop_loss": 70.07,
-      "take_profit": 76.57,
-      "tif": "gtc"
-    },
-    {
-      "ts": "2026-09-09T16:55:05+02:00",
-      "type": "GAP_DETECTED",
-      "minutes": 15,
-      "last_tick": "2026-09-09T16:40:02+02:00"
-    },
-    {
-      "ts": "2026-09-09T21:45:07+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "max_hold_days 5",
-      "ticker": "KO"
     }
   ],
-  "last_tick_at": "2026-09-09T21:59:02+02:00"
+  "last_tick_at": "2026-09-10T15:30:01+02:00"
 }

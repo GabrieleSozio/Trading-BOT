@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T16:01:06+02:00",
+  "updated_at": "2026-09-10T15:30:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -321,6 +321,21 @@
         "stop": 70.07,
         "target": 76.57,
         "settore": "Industrials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "F",
+      "date": "2026-09-10",
+      "opened_at": "2026-09-10T15:30:06+02:00",
+      "decision": "Volume pre-market di gran lunga il piu' alto (287k) tra i titoli con gap moderato, segnale di partecipazione autentica e non picco isolato. Gap +0.38% contenuto, prezzo basso e liquido, Consumer Discretionary rialzista: setup con buona probabilita' di prosecuzione ordinata e stop gestibile.",
+      "meta": {
+        "entry": 13.33,
+        "stop": 12.93,
+        "target": 14.13,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
