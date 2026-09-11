@@ -399,6 +399,11 @@
       "at": "2026-09-11T21:40:02+02:00",
       "event": "freno_emergenza",
       "drawdown_pct": 0.45
+    },
+    {
+      "at": "2026-09-11T21:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4802
     }
   ],
   "closed_trades": [
@@ -483,7 +488,7 @@
       "motivo": "stop sul titolo (58.17)"
     }
   ],
-  "updated_at": "2026-09-11T21:40:04+02:00",
+  "updated_at": "2026-09-11T21:55:05+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
