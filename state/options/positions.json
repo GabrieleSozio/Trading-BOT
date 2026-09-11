@@ -269,6 +269,12 @@
       "motivo": "stop sul titolo (58.17)",
       "prezzo": 1.33,
       "pl_usd": -152.0
+    },
+    {
+      "at": "2026-09-11T15:40:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "INTC260925C00106000",
+      "limite": 3.96
     }
   ],
   "closed_trades": [
@@ -353,7 +359,7 @@
       "motivo": "stop sul titolo (58.17)"
     }
   ],
-  "updated_at": "2026-09-10T21:55:04+02:00",
+  "updated_at": "2026-09-11T15:40:27+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
