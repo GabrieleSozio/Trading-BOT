@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-09-10T15:45:05+02:00",
-  "session_date": "2026-09-10",
-  "capital_usd": 534.44,
+  "generated_at": "2026-09-11T14:33:21+02:00",
+  "session_date": "2026-09-11",
+  "capital_usd": 539.39,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 370.55,
-  "free_slots": 2,
+  "available_usd": 233.25,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "PFE",
-      "sector": "Health Care",
+      "ticker": "SOFI",
+      "sector": "Financials",
       "action": "buy",
-      "reference_price": 27.59,
-      "target_entry_price": 27.45,
-      "allocated_capital": 160.33
-    },
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "action": "buy",
-      "reference_price": 75.08,
-      "target_entry_price": 74.7,
-      "allocated_capital": 160.33
+      "reference_price": 17.2,
+      "target_entry_price": 17.11,
+      "allocated_capital": 161.82
     }
   ]
 }
