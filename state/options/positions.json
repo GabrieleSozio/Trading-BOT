@@ -11,7 +11,8 @@
       "premium_stop_pct": 0.5,
       "strike": 106.0,
       "expiration": "2026-09-25",
-      "opened_at": "2026-09-11T15:55:25+02:00"
+      "opened_at": "2026-09-11T15:55:25+02:00",
+      "premium_peak": 4.3
     }
   },
   "peak_equity": 829.82,
@@ -298,6 +299,51 @@
       "modo": "swing",
       "premio": 4.3,
       "costo_usd": 430.0
+    },
+    {
+      "at": "2026-09-11T16:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.432
+    },
+    {
+      "at": "2026-09-11T16:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4018
+    },
+    {
+      "at": "2026-09-11T16:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4139
+    },
+    {
+      "at": "2026-09-11T16:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.45
+    },
+    {
+      "at": "2026-09-11T17:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.432
+    },
+    {
+      "at": "2026-09-11T17:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4079
+    },
+    {
+      "at": "2026-09-11T17:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4079
+    },
+    {
+      "at": "2026-09-11T17:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4139
+    },
+    {
+      "at": "2026-09-11T18:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
     }
   ],
   "closed_trades": [
@@ -382,7 +428,7 @@
       "motivo": "stop sul titolo (58.17)"
     }
   ],
-  "updated_at": "2026-09-11T15:55:26+02:00",
+  "updated_at": "2026-09-11T18:10:05+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
