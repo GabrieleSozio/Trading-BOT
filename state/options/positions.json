@@ -344,6 +344,61 @@
       "at": "2026-09-11T18:10:03+02:00",
       "event": "freno_emergenza",
       "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T19:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4681
+    },
+    {
+      "at": "2026-09-11T19:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4561
+    },
+    {
+      "at": "2026-09-11T19:40:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T19:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T20:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T21:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4561
+    },
+    {
+      "at": "2026-09-11T21:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.444
+    },
+    {
+      "at": "2026-09-11T21:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.45
     }
   ],
   "closed_trades": [
@@ -428,7 +483,7 @@
       "motivo": "stop sul titolo (58.17)"
     }
   ],
-  "updated_at": "2026-09-11T18:10:05+02:00",
+  "updated_at": "2026-09-11T21:40:04+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
