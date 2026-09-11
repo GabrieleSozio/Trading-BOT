@@ -1,5 +1,19 @@
 {
-  "positions": {},
+  "positions": {
+    "INTC260925C00106000": {
+      "ticker": "INTC",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 4.3,
+      "underlying_entry": 102.8,
+      "stop_underlying": 99.72,
+      "target_underlying": 111.02,
+      "premium_stop_pct": 0.5,
+      "strike": 106.0,
+      "expiration": "2026-09-25",
+      "opened_at": "2026-09-11T15:55:25+02:00"
+    }
+  },
   "peak_equity": 829.82,
   "events": [
     {
@@ -275,6 +289,15 @@
       "event": "ingresso_non_eseguito",
       "symbol": "INTC260925C00106000",
       "limite": 3.96
+    },
+    {
+      "at": "2026-09-11T15:55:25+02:00",
+      "event": "ingresso",
+      "symbol": "INTC260925C00106000",
+      "ticker": "INTC",
+      "modo": "swing",
+      "premio": 4.3,
+      "costo_usd": 430.0
     }
   ],
   "closed_trades": [
@@ -359,7 +382,7 @@
       "motivo": "stop sul titolo (58.17)"
     }
   ],
-  "updated_at": "2026-09-11T15:40:27+02:00",
+  "updated_at": "2026-09-11T15:55:26+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,

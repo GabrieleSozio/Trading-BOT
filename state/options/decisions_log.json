@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T19:25:08+02:00",
+  "updated_at": "2026-09-11T15:55:25+02:00",
   "entries": [
     {
       "ticker": "PFE",
@@ -58,6 +58,18 @@
         "symbol": "SLV260925C00060500",
         "modo": "swing",
         "premio": 2.83
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-09-11",
+      "opened_at": "2026-09-11T15:55:25+02:00",
+      "decision": "Call INTC strike 106.0 scad 2026-09-25, +3.1% dal denaro, premio 430$, spread 2.2%. Modalita' swing, scarto +2.47%.",
+      "meta": {
+        "symbol": "INTC260925C00106000",
+        "modo": "swing",
+        "premio": 4.3
       },
       "status": "in_sospeso"
     }
