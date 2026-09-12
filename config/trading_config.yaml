@@ -52,7 +52,7 @@ tiers:
     # quindi i titoli comprabili passano da 34 a 28 su 44. Capitale investito
     # invariato al 90%. NON e' una messa a punto sui numeri del backtest: e' una
     # riduzione di concentrazione, che vale a prescindere dal risultato storico.
-    positions_to_open: 3
+    positions_to_open: 2
     max_position_size_pct: 0.30
     stop_loss_pct: 0.03          # stop piu' largo: di notte i prezzi saltano
     take_profit_pct: 0.06
@@ -141,7 +141,7 @@ universe:
     - F
     - AAL
     - SNAP
-  top_candidates: 5              # quanti titoli passa l'Analista al Portfolio Manager
+  top_candidates: 4              # quanti titoli passa l'Analista al Portfolio Manager
 
 # --- Allocazione (02 Portfolio Manager) -------------------------------
 # NB: il NUMERO di posizioni e la DIMENSIONE arrivano dalla fascia di capitale

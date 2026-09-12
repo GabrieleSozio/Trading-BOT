@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T16:44:06+02:00",
+  "updated_at": "2026-09-12T10:00:43+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -214,7 +214,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.76,
+        "pl_usd": -5.43,
+        "r_multiple": -1.25,
+        "alpha_pct": -4.31,
+        "benchmark_pct": 0.55,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -4.31% con uscita a stop conferma che la tesi rialzista non ha retto affatto. Il ragionamento sul volume pre-market elevato come proxy di partecipazione reale ha ceduto: alto volume su gap modesto (+0.42%) indicava distribuzione, non accumulo, e la conferma oltre il livello di gap che avevo preteso o non e' arrivata o e' stata una falsa rottura seguita dal riempimento che temevo. La tenuta \"difensiva\" dell'Health Care si e' rivelata narrativa a posteriori, non un edge misurabile. Lezione: volume record senza espansione di range e con gap sottile va letto come segnale di rischio di reversione, non di forza; da ora richiedere sia conferma di prezzo sia chiu",
+      "closed_at": "2026-09-12T10:00:18+02:00"
     },
     {
       "ticker": "HOOD",
@@ -254,7 +264,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -1.12,
+        "pl_usd": -0.99,
+        "r_multiple": -0.37,
+        "alpha_pct": -1.2,
+        "benchmark_pct": 0.08,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era sbagliata: alpha -1.20% conferma che il long non aveva edge, e il -0.37R mostra comunque una perdita contenuta rispetto al rischio. Ha tenuto la lettura scettica sul segnale (volume basso, insider selling, bassa volatilità del settore rendevano improbabile il +6%), ma ha ceduto la decisione di entrare comunque nonostante l'avessi classificato come 'ultima scelta': se il setup e' il peggiore del paniere, non va tradato. Lezione: quando un'idea e' esplicitamente etichettata come marginale e priva di catalizzatori, il default e' passare, non partecipare con size ridotta.",
+      "closed_at": "2026-09-12T10:00:24+02:00"
     },
     {
       "ticker": "SMCI",
@@ -294,7 +314,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.89,
+        "pl_usd": -5.98,
+        "r_multiple": -1.3,
+        "alpha_pct": -3.43,
+        "benchmark_pct": -0.46,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.43% conferma che non e' stato un problema di mercato ma della singola scelta, dato che l'indice e' rimasto quasi piatto. L'idea che un gap moderato lasciasse spazio a prosecuzione multi-day ha ceduto subito, mentre la lettura di trend e volume solido non ha retto perche' non escludeva un rientro completo del gap; lo stop stretto ha limitato la perdita a -1.30R ma il timing d'ingresso subito dopo il gap era prematuro. Prossima volta, su gap moderato in trend, attendere una conferma intraday (tenuta del minimo del gap o consolidamento) prima di entrare, invece di comprare la sola apertura.",
+      "closed_at": "2026-09-12T10:00:30+02:00"
     },
     {
       "ticker": "HOOD",
@@ -309,7 +339,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -5.12,
+        "pl_usd": -6.08,
+        "r_multiple": -1.58,
+        "alpha_pct": -4.52,
+        "benchmark_pct": -0.6,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -4.52% con uscita in stop a -1.58R conferma che il gap forte non ha retto come segnale di continuazione. Ha tenuto la cautela dichiarata a monte (dimensione ridotta, gap trattato come possibile esaurimento), ma ha ceduto la lettura del volume dominante come prova di momentum: i ~361k erano piu' coerenti con un climax di distribuzione, esattamente lo scenario ambivalente gia' visto nello storico. La lezione: quando lo storico su un pattern e' 1-1 con uno stop da climax, non basta dimensionare al ribasso, serve una conferma esplicita di follow-through nel primo intervallo prima di entrare, altrimenti si sta scommettendo sul lato piu' debole di un campione ambi",
+      "closed_at": "2026-09-12T10:00:37+02:00"
     },
     {
       "ticker": "UBER",
@@ -324,7 +364,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.83,
+        "pl_usd": -5.53,
+        "r_multiple": -1.28,
+        "alpha_pct": -3.23,
+        "benchmark_pct": -0.6,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.23% con uscita per stop a -1.28R, quindi non un caso di semplice sfortuna ma di tesi che non ha retto. Ha ceduto l'assunzione centrale che un gap contenuto con volume elevato implichi prosecuzione ordinata multi-day; il volume alto senza continuazione era piu' probabilmente distribuzione che accumulo, e la solidita' del settore Industrials non ha fornito il sostegno atteso. La lezione: un gap piccolo con volume sproporzionato va trattato come segnale ambiguo, non bullish, e richiede conferma intraday della tenuta prima dell'ingresso invece di entrare sulla sola premessa di prosecuzione.",
+      "closed_at": "2026-09-12T10:00:43+02:00"
     },
     {
       "ticker": "F",
