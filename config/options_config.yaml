@@ -125,9 +125,19 @@ exits:
 # Obiettivo dichiarato dall'utente: incassi frequenti e certi, non guadagni
 # grandi e sospesi. Il costo e' altrettanto dichiarato — se una posizione
 # sarebbe andata molto oltre, quel resto non lo prendiamo.
+#
+# CORREZIONE del 2026-09-12. La prima versione spostava la base ma lasciava il
+# denaro nel giro: il dimensionamento si calcolava sull'equity totale. Il 9
+# settembre il conto ha "messo al sicuro" 141,60$ e li ha rimessi a rischio 75
+# minuti dopo, perdendo tutto entro il giorno seguente. Realizzare un guadagno e
+# reinvestirlo subito non lo protegge: cambia solo la contabilita'.
+#
+# Con reinvest_pct a 0 il guadagno incassato resta liquido e NON rientra nel
+# capitale impegnabile: il conto sale a gradini e i gradini non si ripercorrono.
 profit_lock:
   enabled: true
   threshold_usd: 95
+  reinvest_pct: 0.0              # 0 = niente reinvestito; 1 = comportamento vecchio
 
 # --- Guardrail ----------------------------------------------------------
 guardrails:

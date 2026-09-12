@@ -430,13 +430,19 @@ def run(dry_run: bool = False) -> dict:
     st = _load_state(cfg)
 
     equity = float(acct["equity"])
-    cash = float(acct["cash"])
-    peak = max(float(st.get("peak_equity") or 0), equity)
+    # Capitale OPERATIVO: l'equity meno il guadagno gia' incassato, che resta
+    # fuori dal giro. Il freno e il dimensionamento si misurano su questo, non
+    # sull'equity totale.
+    operativo = profitlock.capitale_operativo(cfg, st, equity)
+    da_parte = profitlock.messo_da_parte(cfg, st)
+    cash = max(0.0, float(acct["cash"]) - da_parte)
+    peak = max(float(st.get("peak_equity") or 0), operativo)
     st["peak_equity"] = peak
-    dd = (peak - equity) / peak if peak > 0 else 0.0
+    dd = (peak - operativo) / peak if peak > 0 else 0.0
 
-    log.info("Conto %s | equity $%.2f | cash $%.2f | massimo $%.2f | drawdown %.1f%%",
-             acct["account_number"], equity, cash, peak, dd * 100)
+    log.info("Conto %s | equity $%.2f | operativo $%.2f | cash spendibile $%.2f | "
+             "massimo $%.2f | drawdown %.1f%%",
+             acct["account_number"], equity, operativo, cash, peak, dd * 100)
 
     max_dd = float(cfg["guardrails"]["max_drawdown_from_peak_pct"])
     entries_blocked = dd >= max_dd
@@ -531,7 +537,7 @@ def run(dry_run: bool = False) -> dict:
             n = _safe(st, pair, "ingresso", _enter, cli, cfg, st, sel, usd, dry_run)
             sent += n
             if n and not dry_run:
-                cash = float(cli.account()["cash"])
+                cash = max(0.0, float(cli.account()["cash"]) - da_parte)
 
     # L'incasso si chiude solo a conto DAVVERO piatto: sulle cripto una vendita
     # richiede prima di togliere lo stop depositato, quindi puo' servire piu' di

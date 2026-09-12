@@ -16,6 +16,8 @@ state/*.err
 # --- Python ---
 __pycache__/
 *.pyc
+.venv/
+venv/
 
 # --- Sistema / editor ---
 .DS_Store

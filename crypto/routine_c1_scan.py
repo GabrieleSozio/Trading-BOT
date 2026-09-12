@@ -15,7 +15,8 @@ import datetime as dt
 import logging
 import sys
 
-from lib.alpaca_rest import atomic_write_json, now_cet
+from lib.alpaca_rest import atomic_write_json, now_cet, read_json
+from lib import profitlock
 from crypto import signals
 from crypto.broker import CryptoClient, load_config
 
@@ -30,12 +31,19 @@ def run(dry_run: bool = False) -> dict:
     cli = CryptoClient(cfg)
     acct = cli.assert_right_account()
 
-    equity = float(acct["equity"])
-    log.info("Conto cripto %s | equity $%.2f | cash $%.2f",
-             acct["account_number"], equity, float(acct["cash"]))
+    # I pesi si applicano al capitale OPERATIVO: il guadagno gia' incassato dal
+    # blocco del profitto resta fuori dal giro e non va riallocato.
+    try:
+        stato = read_json(cfg["state"]["files"]["positions"])
+    except Exception:  # noqa: BLE001 — primo avvio
+        stato = {}
+    equity = profitlock.capitale_operativo(cfg, stato, float(acct["equity"]))
+    log.info("Conto cripto %s | equity $%.2f | operativo $%.2f (da parte $%.2f) | "
+             "cash $%.2f", acct["account_number"], float(acct["equity"]), equity,
+             profitlock.messo_da_parte(cfg, stato), float(acct["cash"]))
 
     if equity < float(cfg["capital"]["min_usd"]):
-        log.warning("Capitale eroso sotto la soglia minima ($%.2f).", equity)
+        log.warning("Capitale operativo eroso sotto la soglia minima ($%.2f).", equity)
 
     # 1. universo misurato
     pairs, diag = signals.discover_universe(cli, cfg)
@@ -76,7 +84,8 @@ def run(dry_run: bool = False) -> dict:
         "generated_at": now_cet().isoformat(timespec="seconds"),
         "session_date": dt.date.today().isoformat(),
         "account": acct["account_number"],
-        "equity_usd": round(equity, 2),
+        "equity_usd": round(float(acct["equity"]), 2),
+        "capitale_operativo_usd": round(equity, 2),
         "universe_size": len(pairs),
         "universe_diagnostics": diag,
         "ranking": ranked,

@@ -98,9 +98,15 @@ strategy:
 # Obiettivo dichiarato dall'utente: incassi frequenti e certi invece di
 # guadagni grandi e sospesi. Costo altrettanto dichiarato — se una moneta
 # sarebbe andata molto oltre, quel resto non lo prendiamo.
+#
+# CORREZIONE del 2026-09-12: l'incasso ora METTE DA PARTE davvero. Prima
+# spostava solo la base e il giro successivo dimensionava sull'equity totale,
+# quindi il guadagno tornava subito a rischio. Qui non era ancora scattato —
+# sul conto opzioni si', ed e' costato 141,60$ in un giorno.
 profit_lock:
   enabled: true
   threshold_usd: 95
+  reinvest_pct: 0.0              # 0 = niente reinvestito; 1 = comportamento vecchio
 
 # --- Guardrail --------------------------------------------------------
 # Sicurezza di base: protezione sempre presente sul broker e un freno di

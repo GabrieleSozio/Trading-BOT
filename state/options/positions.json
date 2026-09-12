@@ -15,7 +15,7 @@
       "premium_peak": 4.3
     }
   },
-  "peak_equity": 829.82,
+  "peak_equity": 550.0,
   "events": [
     {
       "at": "2026-08-31T21:16:21+02:00",
@@ -404,6 +404,13 @@
       "at": "2026-09-11T21:55:02+02:00",
       "event": "freno_emergenza",
       "drawdown_pct": 0.4802
+    },
+    {
+      "at": "2026-09-12T00:00:00+02:00",
+      "event": "picco_riallineato",
+      "da": 829.82,
+      "a": 550.0,
+      "motivo": "il freno ora misura il capitale operativo, non l'equity"
     }
   ],
   "closed_trades": [

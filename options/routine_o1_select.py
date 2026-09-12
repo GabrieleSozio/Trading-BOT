@@ -32,7 +32,7 @@ import sys
 from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet
-from lib import pdt
+from lib import pdt, profitlock
 from options.broker import OptionsClient, load_config, MOLTIPLICATORE
 
 logging.basicConfig(level=logging.INFO,
@@ -131,10 +131,20 @@ def run(dry_run: bool = False) -> dict:
     cli = OptionsClient(cfg)
     acct = cli.assert_right_account()
     equity = float(acct["equity"])
-    log.info("Conto %s | equity $%.2f", acct["account_number"], equity)
+    # Si dimensiona sul capitale OPERATIVO: il guadagno gia' incassato resta
+    # fuori dal giro, altrimenti l'incasso e' solo un'annotazione contabile.
+    try:
+        stato = read_json(REPO / cfg["state"]["files"]["positions"])
+    except Exception:  # noqa: BLE001 — primo avvio
+        stato = {}
+    equity = profitlock.capitale_operativo(cfg, stato, equity)
+    log.info("Conto %s | equity $%.2f | operativo $%.2f (da parte $%.2f)",
+             acct["account_number"], float(acct["equity"]), equity,
+             profitlock.messo_da_parte(cfg, stato))
 
     if equity < float(cfg["capital"]["min_usd"]):
-        log.error("Capitale sotto la soglia minima: nessun contratto acquistabile.")
+        log.error("Capitale operativo sotto la soglia minima: nessun contratto "
+                  "acquistabile.")
         return {"ok": False, "reason": "capitale insufficiente"}
 
     cand = _segnale(cli, cfg)
@@ -216,7 +226,8 @@ def run(dry_run: bool = False) -> dict:
         "generato_il": now_cet().isoformat(timespec="seconds"),
         "session_date": dt.date.today().isoformat(),
         "conto": acct["account_number"],
-        "equity_usd": round(equity, 2),
+        "equity_usd": round(float(acct["equity"]), 2),
+        "capitale_operativo_usd": round(equity, 2),
         "universo": len(cfg["universe"]["tickers"]),
         "crediti_intraday_liberi": liberi,
         "selezione": scelti,

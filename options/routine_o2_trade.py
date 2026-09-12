@@ -395,11 +395,17 @@ def run(dry_run: bool = False) -> dict:
     st = _load_state(cfg)
 
     equity = float(acct["equity"])
-    picco = max(float(st.get("peak_equity") or 0), equity)
+    # Il freno si misura sul capitale OPERATIVO, non sull'equity: sotto l'equity
+    # c'e' anche il guadagno gia' incassato, che non e' piu' in gioco e non deve
+    # nascondere un drawdown della parte che invece lo e'.
+    operativo = profitlock.capitale_operativo(cfg, st, equity)
+    picco = max(float(st.get("peak_equity") or 0), operativo)
     st["peak_equity"] = picco
-    dd = (picco - equity) / picco if picco > 0 else 0.0
-    log.info("Conto %s | equity $%.2f | liquidita' $%.2f | massimo $%.2f | drawdown %.1f%%",
-             acct["account_number"], equity, float(acct["cash"]), picco, dd * 100)
+    dd = (picco - operativo) / picco if picco > 0 else 0.0
+    log.info("Conto %s | equity $%.2f | operativo $%.2f | liquidita' $%.2f | "
+             "massimo $%.2f | drawdown %.1f%%",
+             acct["account_number"], equity, operativo, float(acct["cash"]),
+             picco, dd * 100)
 
     maxdd = float(cfg["guardrails"]["max_drawdown_from_peak_pct"])
     bloccato = dd >= maxdd
@@ -456,9 +462,12 @@ def run(dry_run: bool = False) -> dict:
             log.info("Selezione di un altro giorno (%s): ignorata.", sel["session_date"])
             sel = {"selezione": []}
 
-        tetto = equity * float(cfg["modes"]["swing"]["max_total_premium_pct"])
+        # Il tetto si calcola sul capitale operativo: dimensionare sull'equity
+        # rimetterebbe in gioco il guadagno gia' incassato.
+        tetto = operativo * float(cfg["modes"]["swing"]["max_total_premium_pct"])
         impegnato = sum(abs(float(p.get("cost_basis") or 0)) for p in aperte.values())
-        cash = float(acct["cash"])
+        # La liquidita' spendibile e' quella del broker meno l'accantonato.
+        cash = max(0.0, float(acct["cash"]) - profitlock.messo_da_parte(cfg, st))
         usati, _ = pdt.count_recent_day_trades(cli)
 
         for x in sel.get("selezione", []):
@@ -482,7 +491,7 @@ def run(dry_run: bool = False) -> dict:
             inviati += n
             if n and not dry_run:
                 acct = cli.account()
-                cash = float(acct["cash"])
+                cash = max(0.0, float(acct["cash"]) - profitlock.messo_da_parte(cfg, st))
                 impegnato += costo
 
     # L'incasso si chiude solo quando il conto e' DAVVERO piatto: un limite puo'
