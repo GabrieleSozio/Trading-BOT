@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-09T08:05:06+02:00",
+  "updated_at": "2026-09-13T22:00:27+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -163,7 +163,17 @@
         "stop_distance_pct": 0.26103,
         "usd": 113.66
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 4.74,
+        "pl_usd": 5.15,
+        "r_multiple": 0.18,
+        "alpha_pct": 3.39,
+        "benchmark_pct": 1.35,
+        "closed_by": "scesa al 8o posto (soglia 5)"
+      },
+      "lesson": "La direzione era corretta: l'alpha di +3.39% conferma che il segnale di momentum al primo posto batteva l'indice, non solo il rendimento nominale. Ha tenuto la tesi di ingresso sul leader di classifica, mentre ha ceduto la gestione dell'uscita, arrivata solo all'ottavo posto ben oltre la soglia dichiarata di 5, lasciando erodere parte del vantaggio prima di chiudere. La lezione: applicare la soglia di rango come stop meccanico e uscire alla rottura del quinto posto, senza tolleranza discrezionale, per cristallizzare l'alpha quando il momentum comincia a decadere.",
+      "closed_at": "2026-09-13T22:00:14+02:00"
     },
     {
       "ticker": "AAVE/USD",
@@ -202,7 +212,17 @@
         "stop_distance_pct": 0.13508,
         "usd": 101.98
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -6.32,
+        "pl_usd": -6.3,
+        "r_multiple": -0.47,
+        "alpha_pct": -3.88,
+        "benchmark_pct": -2.44,
+        "closed_by": "scesa al 7o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sbagliata: l'alpha di -3.88% conferma che non ho battuto l'indice ma l'ho seguito in peggio, quindi il segnale di momentum non ha aggiunto valore. La classifica di momentum a +37.62% ha retto come criterio di ingresso, ma il peso del 37% su un singolo nome ha amplificato un movimento avverso che uno stop a -13.5% troppo largo non ha contenuto in tempo, lasciando lavorare la sola soglia di ranking. La lezione: tagliare il peso massimo per singola posizione quando lo stop tarato sulla volatilita' supera il 10%, perche' concentrazione e stop ampio insieme costano troppo quando il momentum si esaurisce.",
+      "closed_at": "2026-09-13T22:00:21+02:00"
     },
     {
       "ticker": "DOT/USD",
@@ -215,7 +235,17 @@
         "stop_distance_pct": 0.1973,
         "usd": 114.82
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -14.37,
+        "pl_usd": -16.14,
+        "r_multiple": -0.73,
+        "alpha_pct": -13.06,
+        "benchmark_pct": -1.31,
+        "closed_by": "scesa al 9o posto (soglia 5)"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -13.06% contro un indice quasi piatto, quindi non e' stato il mercato a penalizzarci ma la scelta specifica del titolo. Il ranking di momentum al 3o posto (+39.62%) ha retto come segnale di ingresso, ma il ragionamento ha ceduto sul dimensionamento: 25.3% del capitale su un singolo nome con stop a -19.7% concentrava troppo rischio su un momentum gia' maturo e prossimo all'esaurimento. La lezione concreta: quando il punteggio di momentum e' cosi' elevato, ridurre il peso e stringere la soglia di uscita, perche' punteggi estremi segnalano tanto forza quanto vulnerabilita' al reversal.",
+      "closed_at": "2026-09-13T22:00:27+02:00"
     }
   ]
 }
