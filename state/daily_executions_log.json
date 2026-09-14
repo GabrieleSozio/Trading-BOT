@@ -1,7 +1,7 @@
 {
   "session_date": "2026-09-14",
   "opening_balance": 99930.85,
-  "closing_balance": null,
+  "closing_balance": 99929.67,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -15,7 +15,13 @@
       "type": "GAP_DETECTED",
       "minutes": 5,
       "last_tick": "2026-09-14T21:39:02+02:00"
+    },
+    {
+      "ts": "2026-09-14T21:50:13+02:00",
+      "type": "GAP_DETECTED",
+      "minutes": 6,
+      "last_tick": "2026-09-14T21:44:02+02:00"
     }
   ],
-  "last_tick_at": "2026-09-14T21:44:02+02:00"
+  "last_tick_at": "2026-09-14T21:50:01+02:00"
 }
