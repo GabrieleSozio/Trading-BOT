@@ -1,0 +1,66 @@
+{
+  "generated_at": "2026-09-14T14:32:19+02:00",
+  "session_date": "2026-09-14",
+  "universe_size": 44,
+  "capital_usd": 539.84,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 161.95,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Le lezioni storiche convergono su un tema: gap piccoli con volume sproporzionato tendono a essere distribuzione, non accumulo (UBER, HOOD, SMCI, NKE tutti falliti). Privilegio quindi titoli con gap piu' consistente E volume convincente che supporti una vera continuazione, evitando KO (insider selling massiccio + storico negativo) e PFE (storico negativo, gap sottile). AFRM guida per gap (+2.42%) con volume dignitoso e settore Financials in trend. NFLX combina gap solido (+1.27%) con volume di gran lunga il piu' alto del paniere (~502k), segnale di reale partecipazione. Evito UBER nonostante il volume alto per gap troppo sottile (+0.25%) e storico recente negativo. Come terza e quarta scelta prendo T e PINS/SHOP: preferisco T per gap decente (+0.96%) su settore difensivo stabile, e come quarta SHOP che unisce trend tech e gap modesto ma pulito. Complessivamente cerco il miglior rapporto forza-del-gap/volume evitando i pattern gia' rivelatisi trappole.",
+  "candidates": [
+    {
+      "ticker": "AFRM",
+      "sector": "Financials",
+      "last_price": 73.17,
+      "prev_close": 71.44,
+      "gap_pct": 2.4216,
+      "premarket_volume": 102603,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap piu' ampio del paniere (+2.42%) con volume adeguato (~103k) e trend rialzista in Financials. Il movimento e' abbastanza sostanziale da giustificare una continuazione multi-day, non un picco isolato. Nessuna vendita insider."
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 78.3794,
+      "prev_close": 77.4,
+      "gap_pct": 1.2654,
+      "premarket_volume": 502376,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap solido (+1.27%) accompagnato dal volume di gran lunga piu' alto del paniere (~502k): qui l'alto volume abbina un gap non sottile, riducendo il rischio di distribuzione visto altrove. Communication Services in trend, buona probabilita' di tenuta overnight."
+    },
+    {
+      "ticker": "T",
+      "sector": "Communication Services",
+      "last_price": 26.31,
+      "prev_close": 26.06,
+      "gap_pct": 0.9593,
+      "premarket_volume": 68768,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap discreto (+0.96%) su titolo difensivo e a bassa volatilita' che tende a movimenti ordinati e persistenti. Meno soggetto a reversioni violente overnight; buon profilo rischio per lo stop stretto -3%."
+    },
+    {
+      "ticker": "SHOP",
+      "sector": "Technology",
+      "last_price": 129.55,
+      "prev_close": 128.79,
+      "gap_pct": 0.5901,
+      "premarket_volume": 49515,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Trend tech rialzista con gap modesto ma pulito (+0.59%) e nessun insider selling. Preferito a UBER/DKNG per assenza del pattern gap-sottile/volume-sproporzionato che ha generato le perdite recenti; scelta di completamento con potenziale di estensione."
+    }
+  ]
+}
