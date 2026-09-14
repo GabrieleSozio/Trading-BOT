@@ -421,6 +421,116 @@
       "motivo": "stop sul titolo (95.47)",
       "prezzo": 1.38,
       "pl_usd": -292.0
+    },
+    {
+      "at": "2026-09-14T16:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
     }
   ],
   "closed_trades": [
@@ -521,7 +631,7 @@
       "motivo": "stop sul titolo (95.47)"
     }
   ],
-  "updated_at": "2026-09-14T15:55:09+02:00",
+  "updated_at": "2026-09-14T21:25:03+02:00",
   "profit_lock_base": 691.6,
   "incasso_in_corso": false,
   "incassato_totale": 141.6,
