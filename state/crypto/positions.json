@@ -29,6 +29,16 @@
       "entry_rank": 1,
       "stop_order_id": "acfcef5a-cab9-4e89-bbe6-0fb3538f87f3",
       "stop_price": 0.0967671892
+    },
+    "XTZ/USD": {
+      "entry_price": 0.2825,
+      "qty": 505.137698643,
+      "high_water": 0.2825,
+      "stop_distance_pct": 0.1997,
+      "opened_at": "2026-09-14T08:05:06+02:00",
+      "entry_rank": 3,
+      "stop_order_id": "85761356-4646-4575-b98f-8f0c04324220",
+      "stop_price": 0.22608474999999997
     }
   },
   "peak_equity": 697.21,
@@ -615,6 +625,21 @@
       "pair": "DOT/USD",
       "motivo": "scesa al 9o posto (soglia 5)",
       "pl_usd": -16.14
+    },
+    {
+      "at": "2026-09-14T08:05:06+02:00",
+      "event": "ingresso",
+      "pair": "XTZ/USD",
+      "prezzo": 0.2825,
+      "qty": 505.137698643,
+      "usd": 145.71
+    },
+    {
+      "at": "2026-09-14T08:05:08+02:00",
+      "event": "stop_creato",
+      "pair": "XTZ/USD",
+      "stop": 0.22608475,
+      "qty": 503.874854396
     }
   ],
   "fill_failures": {
@@ -634,7 +659,7 @@
       "quarantine_until": "2026-08-26T08:35:28+02:00"
     }
   },
-  "updated_at": "2026-09-14T07:35:04+02:00",
+  "updated_at": "2026-09-14T08:05:10+02:00",
   "closed_trades": [
     {
       "pair": "ETH/USD",

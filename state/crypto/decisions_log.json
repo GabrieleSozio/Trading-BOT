@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T22:00:27+02:00",
+  "updated_at": "2026-09-14T08:05:06+02:00",
   "entries": [
     {
       "ticker": "CRV/USD",
@@ -246,6 +246,19 @@
       },
       "lesson": "La direzione era sbagliata: alpha di -13.06% contro un indice quasi piatto, quindi non e' stato il mercato a penalizzarci ma la scelta specifica del titolo. Il ranking di momentum al 3o posto (+39.62%) ha retto come segnale di ingresso, ma il ragionamento ha ceduto sul dimensionamento: 25.3% del capitale su un singolo nome con stop a -19.7% concentrava troppo rischio su un momentum gia' maturo e prossimo all'esaurimento. La lezione concreta: quando il punteggio di momentum e' cosi' elevato, ridurre il peso e stringere la soglia di uscita, perche' punteggi estremi segnalano tanto forza quanto vulnerabilita' al reversal.",
       "closed_at": "2026-09-13T22:00:27+02:00"
+    },
+    {
+      "ticker": "XTZ/USD",
+      "date": "2026-09-14",
+      "opened_at": "2026-09-14T08:05:06+02:00",
+      "decision": "Entrata al 3o posto della classifica di momentum (punteggio +27.63%), stop a -20.0% tarato sulla volatilita' giornaliera. Peso assegnato 25.0% del capitale.",
+      "meta": {
+        "rank": 3,
+        "momentum": 0.27626,
+        "stop_distance_pct": 0.1997,
+        "usd": 145.71
+      },
+      "status": "in_sospeso"
     }
   ]
 }
