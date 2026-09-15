@@ -33,7 +33,7 @@ CRON_TZ=Europe/Rome
 0 22 * * 0 /PERCORSO/deploy/crypto_run.sh crypto.routine_c3_report >> /PERCORSO/state/cron.log 2>&1
 
 # ===== DIVISIONE OPZIONI =====
-# Conto separato (PA3YKSS69ZE0). Segue gli orari di borsa americani come le
+# Conto separato (PA3NW0SCZK7E dal 2026-09-15; il primo era PA3YKSS69ZE0). Segue gli orari di borsa americani come le
 # azioni, ma con un ritmo piu' fitto: le opzioni si muovono molto piu' in
 # fretta del sottostante e una posizione puo' cambiare di segno in un'ora.
 # Si usa options_run.sh, NON run.sh: quello esporterebbe le chiavi azionarie.
