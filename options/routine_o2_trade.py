@@ -35,7 +35,8 @@ import time
 from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
-from lib import pdt, profitlock
+from lib import freno, pdt, profitlock
+from options import regole
 from options.broker import OptionsClient, load_config, MOLTIPLICATORE
 
 logging.basicConfig(level=logging.INFO,
@@ -204,11 +205,15 @@ def _riconcilia(cli, st: dict, aperte: dict) -> None:
 
 
 def _chiudi(cli, cfg: dict, st: dict, sym: str, pos: dict, snap: dict,
-            motivo: str, dry: bool) -> int:
+            motivo: str, dry: bool, a_mercato: bool = False) -> int:
     qty = abs(int(float(pos["qty"])))
-    lim = _limite_vendita(cli, snap)
+    # A pochi minuti dalla campana un limite al denaro puo' non eseguirsi, e la
+    # posizione resterebbe aperta proprio a mercato chiuso: e' il rischio che
+    # la chiusura serve a evitare. Li' si paga lo spread e si esce a mercato.
+    lim = None if a_mercato else _limite_vendita(cli, snap)
     pl = float(pos.get("unrealized_pl") or 0)
-    log.info("%s: USCITA (%s) — %d contratti, P&L $%+.2f", sym, motivo, qty, pl)
+    log.info("%s: USCITA (%s) — %d contratti, P&L $%+.2f%s", sym, motivo, qty, pl,
+             " [a mercato]" if lim is None else "")
     if dry:
         return 1
     try:
@@ -257,17 +262,24 @@ def _chiudi(cli, cfg: dict, st: dict, sym: str, pos: dict, snap: dict,
 
 
 def _valuta_uscita(cli, cfg: dict, st: dict, sym: str, pos: dict,
-                   snap: dict, spot: float | None, dry: bool) -> int:
+                   snap: dict, spot: float | None, dry: bool, sessione: dict) -> int:
     """Decide se questa posizione va chiusa, e per quale motivo."""
     rec = st["positions"].get(sym) or {}
     e = cfg["exits"]
     ora = now_cet()
 
-    # 1. fine giornata per le posizioni intraday
-    if rec.get("modo") == "intraday":
-        h, m = (cfg["modes"]["intraday"]["close_by"]).split(":")
-        if ora.hour > int(h) or (ora.hour == int(h) and ora.minute >= int(m)):
-            return _chiudi(cli, cfg, st, sym, pos, snap, "fine giornata (intraday)", dry)
+    # 1. finestra finale della sessione, misurata sul calendario della borsa.
+    #    Chiudono le intraday sempre, e tutte le altre se dopo oggi la borsa
+    #    resta chiusa piu' di una notte: nel weekend lo stop non puo' agire.
+    if regole.in_chiusura(cfg, sessione):
+        mercato = regole.uscita_a_mercato(cfg, sessione)
+        if rec.get("modo") == "intraday":
+            return _chiudi(cli, cfg, st, sym, pos, snap, "fine giornata (intraday)",
+                           dry, a_mercato=mercato)
+        if sessione.get("chiusura_lunga") and cfg["session"].get("flat_before_long_closure"):
+            return _chiudi(cli, cfg, st, sym, pos, snap,
+                           "chiusura prima del weekend o di una festivita'",
+                           dry, a_mercato=mercato)
 
     # 2. livelli sul SOTTOSTANTE — e' l'evento che decide, come sulle azioni
     if spot:
@@ -399,23 +411,34 @@ def run(dry_run: bool = False) -> dict:
     # c'e' anche il guadagno gia' incassato, che non e' piu' in gioco e non deve
     # nascondere un drawdown della parte che invece lo e'.
     operativo = profitlock.capitale_operativo(cfg, st, equity)
-    picco = max(float(st.get("peak_equity") or 0), operativo)
-    st["peak_equity"] = picco
-    dd = (picco - operativo) / picco if picco > 0 else 0.0
+    aperte = {p["symbol"]: p for p in cli.option_positions()}
+
+    # Il freno ha bisogno di sapere se il conto e' piatto: la pausa prima della
+    # ripartenza conta solo quando non c'e' piu' rischio in corso.
+    fr = freno.valuta(cfg["guardrails"], st, operativo, len(aperte), now_cet())
+    bloccato = fr["bloccato"]
     log.info("Conto %s | equity $%.2f | operativo $%.2f | liquidita' $%.2f | "
              "massimo $%.2f | drawdown %.1f%%",
              acct["account_number"], equity, operativo, float(acct["cash"]),
-             picco, dd * 100)
-
-    maxdd = float(cfg["guardrails"]["max_drawdown_from_peak_pct"])
-    bloccato = dd >= maxdd
+             fr["picco"], fr["drawdown"] * 100)
     if bloccato:
-        log.error("FRENO DI EMERGENZA: drawdown %.1f%% >= %.1f%%. Nessun ingresso nuovo.",
-                  dd * 100, maxdd * 100)
-        _event(st, "freno_emergenza", drawdown_pct=round(dd, 4))
+        log.error("FRENO DI EMERGENZA: drawdown %.1f%% >= %.1f%%. Nessun ingresso nuovo. %s",
+                  fr["drawdown"] * 100,
+                  float(cfg["guardrails"]["max_drawdown_from_peak_pct"]) * 100,
+                  fr["dettaglio"])
+    if fr["transizione"]:
+        if fr["transizione"] == "riarmato":
+            log.warning("FRENO RIARMATO: %s", fr["dettaglio"])
+        _event(st, "freno_" + fr["transizione"],
+               drawdown_pct=round(fr["drawdown"], 4), dettaglio=fr["dettaglio"])
 
-    aperte = {p["symbol"]: p for p in cli.option_positions()}
-    log.info("Posizioni aperte: %d", len(aperte))
+    sessione = regole.stato_sessione(cli)
+    log.info("Posizioni aperte: %d | borsa %s%s", len(aperte),
+             "aperta" if sessione["aperta"] else "chiusa",
+             (" | chiusura tra %.0f minuti (%s New York)%s"
+              % (sessione["minuti_alla_chiusura"], sessione["chiude_alle"],
+                 ", poi chiusa piu' di una notte" if sessione["chiusura_lunga"] else ""))
+             if sessione["aperta"] else "")
     if not dry_run:
         _riconcilia(cli, st, aperte)      # sparite dal broker -> registrate come chiuse
         _adotta_orfane(cfg, st, aperte)   # presenti sul broker ma non nello stato
@@ -444,15 +467,21 @@ def run(dry_run: bool = False) -> dict:
             if incassare:
                 # Fase di incasso: si chiude tutto, senza valutare i livelli.
                 inviati += _safe(st, sym, "incasso", _chiudi, cli, cfg, st, sym,
-                                 pos, quot.get(sym), "blocco del profitto", dry_run)
+                                 pos, quot.get(sym), "blocco del profitto", dry_run,
+                                 regole.uscita_a_mercato(cfg, sessione))
                 continue
             t = (st["positions"].get(sym) or {}).get("ticker")
             s = ((spot.get(t) or {}).get("latestTrade") or {}).get("p") if t else None
             inviati += _safe(st, sym, "gestione", _valuta_uscita,
-                             cli, cfg, st, sym, pos, quot.get(sym), s, dry_run)
+                             cli, cfg, st, sym, pos, quot.get(sym), s, dry_run, sessione)
 
     # --- ingressi ---
-    if not bloccato and not incassare:
+    if not sessione["aperta"]:
+        log.info("Borsa chiusa: nessun ingresso.")
+    elif regole.in_chiusura(cfg, sessione):
+        log.info("Ultimi %.0f minuti di sessione: nessun ingresso.",
+                 sessione["minuti_alla_chiusura"])
+    elif not bloccato and not incassare:
         try:
             sel = read_json(REPO / cfg["state"]["files"]["selection"])
         except Exception:  # noqa: BLE001
@@ -479,7 +508,25 @@ def run(dry_run: bool = False) -> dict:
             if x["modo"] == "intraday" and usati >= int(cfg["guardrails"]["day_trades_usable"]):
                 log.info("%s: crediti intraday esauriti (%d), salto.", x["symbol"], usati)
                 continue
+            if x["modo"] == "swing" and sessione["chiusura_lunga"] \
+                    and cfg["session"].get("flat_before_long_closure"):
+                # Andrebbe chiusa stasera: sarebbe un day trade non voluto.
+                log.info("%s: niente swing prima di un weekend o una festivita', salto.",
+                         x["symbol"])
+                continue
+            raff, perche = regole.in_raffreddamento(cfg, st, x.get("ticker"))
+            if raff:
+                log.info("%s: %s %s, salto.", x["symbol"], x.get("ticker"), perche)
+                continue
             costo = float(x["premio_usd"])
+            # Controllo ripetuto qui oltre che nella selezione: una selezione
+            # scritta con regole vecchie non deve poter comprare un contratto
+            # piu' grande del tetto per singola posizione.
+            tetto_singolo = operativo * float(cfg["modes"][x["modo"]]["max_premium_pct"])
+            if costo > tetto_singolo:
+                log.info("%s: %.0f$ supera il tetto per contratto (%.0f$), salto.",
+                         x["symbol"], costo, tetto_singolo)
+                continue
             if impegnato + costo > tetto:
                 log.info("%s: %.0f$ sforerebbe il tetto (%.0f$ su %.0f$), salto.",
                          x["symbol"], costo, impegnato, tetto)

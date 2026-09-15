@@ -28,7 +28,7 @@ import time
 from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
-from lib import profitlock
+from lib import freno, profitlock
 from crypto.broker import CryptoClient, load_config, to_pair
 
 logging.basicConfig(
@@ -436,23 +436,27 @@ def run(dry_run: bool = False) -> dict:
     operativo = profitlock.capitale_operativo(cfg, st, equity)
     da_parte = profitlock.messo_da_parte(cfg, st)
     cash = max(0.0, float(acct["cash"]) - da_parte)
-    peak = max(float(st.get("peak_equity") or 0), operativo)
-    st["peak_equity"] = peak
-    dd = (peak - operativo) / peak if peak > 0 else 0.0
+    positions = {to_pair(p["symbol"]): p for p in cli.crypto_positions()}
+
+    # Freno con ripartenza dopo una pausa a conto piatto (lib/freno.py): senza,
+    # una volta scattato non si sarebbe piu' sbloccato.
+    fr = freno.valuta(cfg["guardrails"], st, operativo, len(positions), now_cet())
+    entries_blocked = fr["bloccato"]
+    max_dd = float(cfg["guardrails"]["max_drawdown_from_peak_pct"])
 
     log.info("Conto %s | equity $%.2f | operativo $%.2f | cash spendibile $%.2f | "
              "massimo $%.2f | drawdown %.1f%%",
-             acct["account_number"], equity, operativo, cash, peak, dd * 100)
-
-    max_dd = float(cfg["guardrails"]["max_drawdown_from_peak_pct"])
-    entries_blocked = dd >= max_dd
+             acct["account_number"], equity, operativo, cash, fr["picco"],
+             fr["drawdown"] * 100)
     if entries_blocked:
         log.error("FRENO DI EMERGENZA: drawdown %.1f%% >= %.1f%%. "
-                  "Nessun nuovo ingresso; le posizioni restano protette.",
-                  dd * 100, max_dd * 100)
-        _event(st, "freno_emergenza", drawdown_pct=round(dd, 4))
-
-    positions = {to_pair(p["symbol"]): p for p in cli.crypto_positions()}
+                  "Nessun nuovo ingresso; le posizioni restano protette. %s",
+                  fr["drawdown"] * 100, max_dd * 100, fr["dettaglio"])
+    if fr["transizione"]:
+        if fr["transizione"] == "riarmato":
+            log.warning("FRENO RIARMATO: %s", fr["dettaglio"])
+        _event(st, "freno_" + fr["transizione"],
+               drawdown_pct=round(fr["drawdown"], 4), dettaglio=fr["dettaglio"])
     all_open = cli.list_orders(status="open")
     open_sells = {to_pair(o["symbol"]): o for o in all_open if o.get("side") == "sell"}
     # Un acquisto gia' in coda significa che l'ingresso e' in corso: senza questo
@@ -553,7 +557,7 @@ def run(dry_run: bool = False) -> dict:
             log.info("Incasso non ancora completo: %d posizioni da chiudere.", rimaste)
         _save_state(cfg, st)
     log.info("Giro concluso: %d operazioni%s.", sent, " (dry-run)" if dry_run else "")
-    return {"ok": True, "orders": sent, "drawdown_pct": dd}
+    return {"ok": True, "orders": sent, "drawdown_pct": fr["drawdown"]}
 
 
 def main() -> int:

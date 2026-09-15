@@ -115,6 +115,9 @@ profit_lock:
 guardrails:
   max_consecutive_api_errors: 3
   max_drawdown_from_peak_pct: 0.25   # -25% dal massimo: stop ai NUOVI ingressi
+  # Ripartenza dopo questi giorni a conto piatto, dal capitale rimasto (lib/freno.py).
+  # Prima il freno, scattato una volta, non si sbloccava piu'. 0 = mai.
+  rearm_after_days: 3
   require_protective_stop: true      # una posizione senza stop viene protetta subito
   max_orders_per_tick: 6             # freno anti-loop
 

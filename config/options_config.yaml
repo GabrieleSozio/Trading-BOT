@@ -53,8 +53,8 @@ modes:
     only_top_rank: 1             # solo il candidato numero uno
     expiry_min_days: 0           # scadenza ravvicinata: massima reattivita'
     expiry_max_days: 7
-    close_by: "21:40"            # CET — si chiude prima della campana
-    max_premium_pct: 0.70        # quota massima del capitale in un contratto
+    # La chiusura NON e' piu' un orario italiano fisso: vedi il blocco session.
+    max_premium_pct: 0.25        # quota massima del capitale in un contratto
 
   # SWING: tenute piu' giorni. NON consumano crediti PDT (il conteggio
   # scatta solo su apri-e-chiudi nella stessa giornata). E' il grosso
@@ -64,13 +64,18 @@ modes:
     expiry_min_days: 14          # lontano dalla scadenza: il decadimento
     expiry_max_days: 35          # temporale su 5 giorni resta sopportabile
     max_hold_days: 7             # due giorni piu' delle azioni: serve spazio
-    max_premium_pct: 0.70        # tetto per SINGOLO contratto
+    # TETTO PER SINGOLO CONTRATTO: dal 70% al 25% il 2026-09-15.
+    # Col 70% una perdita normale per un'opzione (50-70% del premio) diventava
+    # la perdita di mezzo conto: INTC valeva il 62% del capitale e ha perso il
+    # 68%, cioe' $292 in un colpo. Al 25% la stessa perdita costa circa un sesto
+    # del conto. Si possono avere piu' posizioni insieme, ma nessuna da sola puo'
+    # piu' dimezzare il capitale.
+    max_premium_pct: 0.25
     # Il vincolo vero e' sull'IMPORTO complessivo, non sul numero: se i contratti
     # sono economici se ne tengono piu' d'uno, purche' la somma dei premi resti
-    # entro il tetto. Limitare il conteggio lasciava fermo l'86% del capitale
-    # quando il contratto scelto costava 79 dollari.
-    max_total_premium_pct: 0.70
-    max_positions: 4             # solo un freno anti-frammentazione
+    # entro il tetto.
+    max_total_premium_pct: 0.75
+    max_positions: 3             # tre contratti al 25% riempiono il tetto
 
 # --- Scelta del contratto ----------------------------------------------
 contract:
@@ -149,13 +154,35 @@ guardrails:
   day_trades_usable: 2
   day_trades_total: 3
   max_drawdown_from_peak_pct: 0.35   # le opzioni oscillano: freno largo
+  # RIPARTENZA DEL FRENO (2026-09-15). Prima, scattato il freno, il conto non
+  # poteva piu' risalire: servono operazioni, e il freno le vieta. Ora, dopo
+  # questi giorni a conto piatto, si riparte dal capitale rimasto. 0 = mai.
+  rearm_after_days: 3
+  # PAUSA SULLO STESSO TITOLO dopo una chiusura in perdita. SLV venduto in
+  # perdita e ricomprato 75 minuti dopo ha perso altri $150.
+  reentry_cooldown_days: 3
   max_orders_per_tick: 4
+
+# --- Sessione (2026-09-15) -----------------------------------------------
+# Gli orari si leggono dal CALENDARIO DELLA BORSA, non dall'orologio italiano:
+# quando Europa e Stati Uniti cambiano ora in date diverse New York chiude alle
+# 21:00 italiane, e nelle mezze giornate alle 19:00. Un orario fisso alle 21:40
+# avrebbe lasciato aperte di notte proprio le posizioni intraday.
+session:
+  close_minutes_before_close: 35         # finestra finale: si chiude, non si apre
+  market_order_minutes_before_close: 10  # ultimo tentativo: a mercato, non a limite
+  # NIENTE OPZIONI A MERCATO CHIUSO PIU' DI UNA NOTTE. Lo stop e' un controllo
+  # del programma e nel weekend non agisce: INTC ha aperto il lunedi' gia'
+  # sotto lo stop ed e' uscita a -68% invece di -50%. Prima di un weekend o di
+  # una festivita' si chiude tutto, e in quella sessione non si apre swing.
+  # Le notti infrasettimanali restano scoperte: li' protegge il tetto al 25%.
+  flat_before_long_closure: true
 
 # --- Orari (CET) --------------------------------------------------------
 schedule_cet:
   select: "15:35"                # dopo l'apertura di New York
   trade_every_minutes: 15
-  close_intraday: "21:40"
+  # la chiusura intraday segue il calendario della borsa (blocco session)
   weekly_report: "Sat 11:00"
 
 state:

@@ -33,6 +33,7 @@ from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet
 from lib import pdt, profitlock
+from options import regole
 from options.broker import OptionsClient, load_config, MOLTIPLICATORE
 
 logging.basicConfig(level=logging.INFO,
@@ -170,6 +171,13 @@ def run(dry_run: bool = False) -> dict:
     spot = cli.snapshots([c["ticker"] for c in cand], feed="delayed_sip")
     scelti, scartati = [], []
 
+    sessione = regole.stato_sessione(cli)
+    no_swing = bool(sessione["chiusura_lunga"]
+                    and cfg["session"].get("flat_before_long_closure"))
+    if no_swing:
+        log.info("Dopo oggi la borsa resta chiusa piu' di una notte: niente swing, "
+                 "solo eventuali intraday.")
+
     for i, c in enumerate(cand):
         t = c["ticker"]
         s = (spot.get(t) or {}).get("latestTrade", {}).get("p")
@@ -178,11 +186,21 @@ def run(dry_run: bool = False) -> dict:
             continue
         gap = float(c.get("gap_pct") or 0)
 
+        raff, perche = regole.in_raffreddamento(cfg, stato, t)
+        if raff:
+            scartati.append({"ticker": t, "motivo": perche})
+            log.info("  %-5s scartato: %s", t, perche)
+            continue
+
         mi = cfg["modes"]["intraday"]
         intraday = (mi.get("enabled") and i < int(mi["only_top_rank"])
                     and gap >= float(mi["min_gap_pct"]) and liberi > 0)
         modo = "intraday" if intraday else "swing"
         if modo == "swing" and not cfg["modes"]["swing"].get("enabled"):
+            continue
+        if modo == "swing" and no_swing:
+            scartati.append({"ticker": t, "modo": modo,
+                             "motivo": "niente swing prima di un weekend o una festivita'"})
             continue
 
         budget = equity * float(cfg["modes"][modo]["max_premium_pct"])

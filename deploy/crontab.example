@@ -42,7 +42,11 @@ CRON_TZ=Europe/Rome
 35 15 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o1_select >> /PERCORSO/state/cron.log 2>&1
 
 # Esecuzione e gestione: ogni 15 minuti durante la sessione.
-# L'ultimo giro delle 21:45 chiude le posizioni intraday (soglia 21:40).
+# Le chiusure di fine sessione NON dipendono da questi orari: il codice legge
+# l'ora di chiusura dal calendario della borsa e agisce negli ultimi 35 minuti.
+# La griglia ogni 15 minuti garantisce almeno due tentativi in quella finestra
+# sia con chiusura alle 22:00, sia alle 21:00 (settimane di ora legale
+# sfasata), sia alle 19:00 (mezze giornate).
 40,55 15 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o2_trade >> /PERCORSO/state/cron.log 2>&1
 10,25,40,55 16-21 * * 1-5 /PERCORSO/deploy/options_run.sh options.routine_o2_trade >> /PERCORSO/state/cron.log 2>&1
 
