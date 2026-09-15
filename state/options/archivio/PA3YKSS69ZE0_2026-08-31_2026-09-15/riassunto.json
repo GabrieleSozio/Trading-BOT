@@ -1,0 +1,11 @@
+{
+  "conto": "PA3YKSS69ZE0",
+  "periodo": "2026-08-31 / 2026-09-15",
+  "capitale_iniziale_usd": 550.0,
+  "equity_finale_usd": 249.26,
+  "operazioni_chiuse": 6,
+  "pl_totale_usd": -305.0,
+  "r_medio": -0.3,
+  "regole": "contratto fino al 70% del capitale, opzioni tenute nel weekend, freno senza ripartenza, chiusura intraday a orario fisso 21:40 CET",
+  "motivo_chiusura": "capitale operativo 107.66$: nessun contratto acquistabile con le regole nuove (tetto 25%)"
+}

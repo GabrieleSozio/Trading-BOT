@@ -1,0 +1,785 @@
+{
+  "positions": {},
+  "peak_equity": 550.0,
+  "events": [
+    {
+      "at": "2026-08-31T21:16:21+02:00",
+      "event": "ingresso",
+      "symbol": "PFE260925C00028500",
+      "ticker": "PFE",
+      "modo": "swing",
+      "premio": 0.77,
+      "costo_usd": 77.0
+    },
+    {
+      "at": "2026-08-31T21:16:47+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "WMT260918C00105000",
+      "limite": 1.92
+    },
+    {
+      "at": "2026-08-31T21:20:49+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "WMT260918C00105000",
+      "limite": 2.0
+    },
+    {
+      "at": "2026-08-31T21:25:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "WMT260918C00105000",
+      "limite": 2.0
+    },
+    {
+      "at": "2026-08-31T21:40:09+02:00",
+      "event": "ingresso",
+      "symbol": "WMT260918C00105000",
+      "ticker": "WMT",
+      "modo": "swing",
+      "premio": 2.05,
+      "costo_usd": 205.0
+    },
+    {
+      "at": "2026-09-01T15:40:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE260918C00065000",
+      "limite": 1.24
+    },
+    {
+      "at": "2026-09-01T16:10:26+02:00",
+      "event": "ingresso",
+      "symbol": "XLE260918C00065000",
+      "ticker": "XLE",
+      "modo": "swing",
+      "premio": 1.12,
+      "costo_usd": 112.0
+    },
+    {
+      "at": "2026-09-03T17:10:04+02:00",
+      "event": "uscita",
+      "symbol": "WMT260918C00105000",
+      "motivo": "premio a +117%",
+      "pl_usd": 240.0
+    },
+    {
+      "at": "2026-09-03T17:25:08+02:00",
+      "event": "ingresso",
+      "symbol": "SLV260918C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "premio": 2.62,
+      "costo_usd": 262.0
+    },
+    {
+      "at": "2026-09-07T15:40:04+02:00",
+      "event": "uscita",
+      "symbol": "PFE260925C00028500",
+      "motivo": "scadenza tempo (7 giorni)",
+      "pl_usd": -21.0
+    },
+    {
+      "at": "2026-09-08T15:40:04+02:00",
+      "event": "uscita",
+      "symbol": "XLE260918C00065000",
+      "motivo": "scadenza tempo (7 giorni)",
+      "pl_usd": -1.0
+    },
+    {
+      "at": "2026-09-09T16:40:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.5
+    },
+    {
+      "at": "2026-09-09T16:51:36+02:00",
+      "event": "orfana_adottata",
+      "symbol": "PFE260925C00028500",
+      "entry_premium": 0.77
+    },
+    {
+      "at": "2026-09-09T16:52:01+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "PFE260925C00028500",
+      "limite": 0.28,
+      "motivo": "premio a -66%"
+    },
+    {
+      "at": "2026-09-09T16:55:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "PFE260925C00028500",
+      "limite": 0.28,
+      "motivo": "premio a -66%"
+    },
+    {
+      "at": "2026-09-09T17:10:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "PFE260925C00028500",
+      "limite": 0.3,
+      "motivo": "premio a -64%"
+    },
+    {
+      "at": "2026-09-09T17:25:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "PFE260925C00028500",
+      "limite": 0.3,
+      "motivo": "premio a -64%"
+    },
+    {
+      "at": "2026-09-09T17:40:07+02:00",
+      "event": "uscita",
+      "symbol": "PFE260925C00028500",
+      "motivo": "premio a -62%",
+      "prezzo": 0.29,
+      "pl_usd": -48.0
+    },
+    {
+      "at": "2026-09-09T17:55:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.5
+    },
+    {
+      "at": "2026-09-09T17:59:01+02:00",
+      "event": "incasso_avviato",
+      "equity": 693.62,
+      "motivo": "soglia raggiunta: equity $693.62 contro base $550.00 + $95"
+    },
+    {
+      "at": "2026-09-09T17:59:24+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "SLV260918C00060000",
+      "limite": 2.17,
+      "motivo": "blocco del profitto"
+    },
+    {
+      "at": "2026-09-09T18:10:02+02:00",
+      "event": "incasso_avviato",
+      "equity": 691.62,
+      "motivo": "incasso in corso: chiudo le posizioni rimaste"
+    },
+    {
+      "at": "2026-09-09T18:10:07+02:00",
+      "event": "uscita",
+      "symbol": "SLV260918C00060000",
+      "motivo": "blocco del profitto",
+      "prezzo": 2.13,
+      "pl_usd": -49.0
+    },
+    {
+      "at": "2026-09-09T18:10:08+02:00",
+      "event": "incassato",
+      "messaggio": "INCASSATO $+141.60: la base passa da $550.00 a $691.60 (totale messo da parte $+141.60)"
+    },
+    {
+      "at": "2026-09-09T18:25:25+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.47
+    },
+    {
+      "at": "2026-09-09T18:25:48+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.51
+    },
+    {
+      "at": "2026-09-09T18:40:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.57
+    },
+    {
+      "at": "2026-09-09T18:40:48+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.48
+    },
+    {
+      "at": "2026-09-09T18:55:25+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.62
+    },
+    {
+      "at": "2026-09-09T18:55:47+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.45
+    },
+    {
+      "at": "2026-09-09T19:10:25+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260925C00060500",
+      "limite": 2.96
+    },
+    {
+      "at": "2026-09-09T19:10:48+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.49
+    },
+    {
+      "at": "2026-09-09T19:25:08+02:00",
+      "event": "ingresso",
+      "symbol": "SLV260925C00060500",
+      "ticker": "SLV",
+      "modo": "swing",
+      "premio": 2.83,
+      "costo_usd": 283.0
+    },
+    {
+      "at": "2026-09-09T19:25:30+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.55
+    },
+    {
+      "at": "2026-09-09T19:40:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.59
+    },
+    {
+      "at": "2026-09-09T19:55:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.58
+    },
+    {
+      "at": "2026-09-09T20:10:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.56
+    },
+    {
+      "at": "2026-09-09T20:25:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.58
+    },
+    {
+      "at": "2026-09-09T20:40:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "XLE261002C00065500",
+      "limite": 1.59
+    },
+    {
+      "at": "2026-09-10T15:40:08+02:00",
+      "event": "uscita",
+      "symbol": "SLV260925C00060500",
+      "motivo": "stop sul titolo (58.17)",
+      "prezzo": 1.33,
+      "pl_usd": -152.0
+    },
+    {
+      "at": "2026-09-11T15:40:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "INTC260925C00106000",
+      "limite": 3.96
+    },
+    {
+      "at": "2026-09-11T15:55:25+02:00",
+      "event": "ingresso",
+      "symbol": "INTC260925C00106000",
+      "ticker": "INTC",
+      "modo": "swing",
+      "premio": 4.3,
+      "costo_usd": 430.0
+    },
+    {
+      "at": "2026-09-11T16:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.432
+    },
+    {
+      "at": "2026-09-11T16:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4018
+    },
+    {
+      "at": "2026-09-11T16:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4139
+    },
+    {
+      "at": "2026-09-11T16:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.45
+    },
+    {
+      "at": "2026-09-11T17:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.432
+    },
+    {
+      "at": "2026-09-11T17:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4079
+    },
+    {
+      "at": "2026-09-11T17:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4079
+    },
+    {
+      "at": "2026-09-11T17:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4139
+    },
+    {
+      "at": "2026-09-11T18:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T19:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4681
+    },
+    {
+      "at": "2026-09-11T19:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4561
+    },
+    {
+      "at": "2026-09-11T19:40:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T19:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T20:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4259
+    },
+    {
+      "at": "2026-09-11T20:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.438
+    },
+    {
+      "at": "2026-09-11T21:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4561
+    },
+    {
+      "at": "2026-09-11T21:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.444
+    },
+    {
+      "at": "2026-09-11T21:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.45
+    },
+    {
+      "at": "2026-09-11T21:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.4802
+    },
+    {
+      "at": "2026-09-12T00:00:00+02:00",
+      "event": "picco_riallineato",
+      "da": 829.82,
+      "a": 550.0,
+      "motivo": "il freno ora misura il capitale operativo, non l'equity"
+    },
+    {
+      "at": "2026-09-14T15:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8259
+    },
+    {
+      "at": "2026-09-14T15:40:25+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "INTC260925C00106000",
+      "limite": 1.28,
+      "motivo": "stop sul titolo (95.98)"
+    },
+    {
+      "at": "2026-09-14T15:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8041
+    },
+    {
+      "at": "2026-09-14T15:55:08+02:00",
+      "event": "uscita",
+      "symbol": "INTC260925C00106000",
+      "motivo": "stop sul titolo (95.47)",
+      "prezzo": 1.38,
+      "pl_usd": -292.0
+    },
+    {
+      "at": "2026-09-14T16:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T16:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T17:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T18:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T19:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T20:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:40:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-14T21:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8042
+    },
+    {
+      "at": "2026-09-15T15:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T15:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T16:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T16:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T16:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T16:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T17:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T17:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T17:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T17:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T18:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T18:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T18:40:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T18:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T19:10:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T19:25:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T19:40:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T19:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T20:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T20:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T20:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T20:55:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T21:10:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T21:25:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T21:40:02+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    },
+    {
+      "at": "2026-09-15T21:55:03+02:00",
+      "event": "freno_emergenza",
+      "drawdown_pct": 0.8043
+    }
+  ],
+  "closed_trades": [
+    {
+      "symbol": "WMT260918C00105000",
+      "ticker": "WMT",
+      "modo": "swing",
+      "opened_at": "2026-08-31T21:40:09+02:00",
+      "closed_at": "2026-09-03T17:10:04+02:00",
+      "entry_premium": 2.05,
+      "exit_premium": 4.42,
+      "qty": 1,
+      "pl_usd": 237.0,
+      "pl_pct": 115.61,
+      "risk_usd": 102.5,
+      "r_multiple": 2.31,
+      "underlying_entry": 104.78,
+      "motivo": "premio a +117%"
+    },
+    {
+      "symbol": "XLE260918C00065000",
+      "ticker": "XLE",
+      "modo": "swing",
+      "opened_at": "2026-09-01T16:10:26+02:00",
+      "closed_at": "2026-09-08T15:40:04+02:00",
+      "entry_premium": 1.12,
+      "exit_premium": 1.09,
+      "qty": 1,
+      "pl_usd": -3.0,
+      "pl_pct": -2.68,
+      "risk_usd": 56.0,
+      "r_multiple": -0.05,
+      "underlying_entry": 64.94,
+      "motivo": "scadenza tempo (7 giorni)"
+    },
+    {
+      "symbol": "PFE260925C00028500",
+      "ticker": "PFE",
+      "modo": "swing",
+      "opened_at": "2026-09-09T16:51:36+02:00",
+      "closed_at": "2026-09-09T17:40:07+02:00",
+      "entry_premium": 0.77,
+      "exit_premium": 0.29,
+      "qty": 1,
+      "pl_usd": -48.0,
+      "pl_pct": -62.34,
+      "risk_usd": 38.5,
+      "r_multiple": -1.25,
+      "underlying_entry": null,
+      "motivo": "premio a -62%"
+    },
+    {
+      "symbol": "SLV260918C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "opened_at": "2026-09-03T17:25:08+02:00",
+      "closed_at": "2026-09-09T18:10:07+02:00",
+      "entry_premium": 2.62,
+      "exit_premium": 2.13,
+      "qty": 1,
+      "pl_usd": -49.0,
+      "pl_pct": -18.7,
+      "risk_usd": 131.0,
+      "r_multiple": -0.37,
+      "underlying_entry": 59.95,
+      "motivo": "blocco del profitto"
+    },
+    {
+      "symbol": "SLV260925C00060500",
+      "ticker": "SLV",
+      "modo": "swing",
+      "opened_at": "2026-09-09T19:25:08+02:00",
+      "closed_at": "2026-09-10T15:40:08+02:00",
+      "entry_premium": 2.83,
+      "exit_premium": 1.33,
+      "qty": 1,
+      "pl_usd": -150.0,
+      "pl_pct": -53.0,
+      "risk_usd": 141.5,
+      "r_multiple": -1.06,
+      "underlying_entry": 60.65,
+      "motivo": "stop sul titolo (58.17)"
+    },
+    {
+      "symbol": "INTC260925C00106000",
+      "ticker": "INTC",
+      "modo": "swing",
+      "opened_at": "2026-09-11T15:55:25+02:00",
+      "closed_at": "2026-09-14T15:55:08+02:00",
+      "entry_premium": 4.3,
+      "exit_premium": 1.38,
+      "qty": 1,
+      "pl_usd": -292.0,
+      "pl_pct": -67.91,
+      "risk_usd": 215.0,
+      "r_multiple": -1.36,
+      "underlying_entry": 102.8,
+      "motivo": "stop sul titolo (95.47)"
+    }
+  ],
+  "updated_at": "2026-09-15T21:55:04+02:00",
+  "profit_lock_base": 691.6,
+  "incasso_in_corso": false,
+  "incassato_totale": 141.6,
+  "incassi": [
+    {
+      "da": 550.0,
+      "a": 691.6,
+      "importo": 141.6
+    }
+  ]
+}
