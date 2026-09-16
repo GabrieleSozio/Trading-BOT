@@ -1,5 +1,32 @@
 {
-  "positions": {},
+  "positions": {
+    "INTC260916C00103000": {
+      "ticker": "INTC",
+      "modo": "intraday",
+      "qty": 1,
+      "entry_premium": 1.27,
+      "underlying_entry": 100.69,
+      "stop_underlying": 97.67,
+      "target_underlying": 108.74,
+      "premium_stop_pct": 0.5,
+      "strike": 103.0,
+      "expiration": "2026-09-16",
+      "opened_at": "2026-09-16T15:40:08+02:00"
+    },
+    "SLV260930C00060000": {
+      "ticker": "SLV",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 1.26,
+      "underlying_entry": 58.28,
+      "stop_underlying": 56.53,
+      "target_underlying": 62.94,
+      "premium_stop_pct": 0.5,
+      "strike": 60.0,
+      "expiration": "2026-09-30",
+      "opened_at": "2026-09-16T15:40:13+02:00"
+    }
+  },
   "closed_trades": [],
   "peak_equity": 550.0,
   "profit_lock_base": 550.0,
@@ -16,7 +43,25 @@
       "conto": "PA3NW0SCZK7E",
       "equity": 550.0,
       "archivio_precedente": "state/options/archivio/PA3YKSS69ZE0_2026-08-31_2026-09-15"
+    },
+    {
+      "at": "2026-09-16T15:40:08+02:00",
+      "event": "ingresso",
+      "symbol": "INTC260916C00103000",
+      "ticker": "INTC",
+      "modo": "intraday",
+      "premio": 1.27,
+      "costo_usd": 127.0
+    },
+    {
+      "at": "2026-09-16T15:40:13+02:00",
+      "event": "ingresso",
+      "symbol": "SLV260930C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "premio": 1.26,
+      "costo_usd": 126.0
     }
   ],
-  "updated_at": "2026-09-15T23:06:47+02:00"
+  "updated_at": "2026-09-16T15:40:15+02:00"
 }
