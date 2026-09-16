@@ -656,7 +656,7 @@
       "quarantine_until": "2026-08-26T08:35:28+02:00"
     }
   },
-  "updated_at": "2026-09-15T21:35:04+02:00",
+  "updated_at": "2026-09-16T07:35:04+02:00",
   "closed_trades": [
     {
       "pair": "ETH/USD",
@@ -841,5 +841,7 @@
       "motivo": "scesa al 8o posto (soglia 5)"
     }
   ],
-  "profit_lock_base": 550.0
+  "profit_lock_base": 550.0,
+  "freno_attivo": false,
+  "freno_piatto_dal": null
 }
