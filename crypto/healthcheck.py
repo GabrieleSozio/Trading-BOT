@@ -29,7 +29,7 @@ def check(label: str, fn) -> None:
 
 
 def main() -> int:
-    from crypto.broker import CryptoClient, load_config
+    from crypto.broker import CryptoClient, load_config, in_pausa
     from crypto import signals
 
     print("=" * 62)
@@ -37,6 +37,14 @@ def main() -> int:
     print("=" * 62)
 
     cfg = load_config()
+    motivo = in_pausa(cfg)
+    if motivo:
+        # Senza questo, la verifica fallirebbe su ogni controllo che tocca il
+        # broker e sembrerebbe un guasto invece di una scelta.
+        print(f"  DIVISIONE IN PAUSA — {motivo}")
+        print("  Nessun controllo eseguito: il conto non esiste piu'.")
+        print("=" * 62)
+        return 0
     state = {}
 
     def c_config():

@@ -13,6 +13,14 @@
 
 meta:
   division: crypto
+  # IN PAUSA dal 2026-09-16. L'utente ha eliminato il conto paper per liberare
+  # uno slot: da quel momento ogni giro rispondeva 401 e lasciava una traccia di
+  # errore nel log ogni 30 minuti. Le routine si fermano prima di toccare il
+  # broker; lo storico resta in state/crypto/archivio/.
+  # Per riattivarla: nuovo conto paper, chiavi in secrets/alpaca_crypto_keys.env,
+  # account_hint aggiornato, paused rimesso a false, righe cron riabilitate.
+  paused: true
+  paused_reason: "conto PA3KDARZ86JB eliminato dall'utente il 2026-09-16"
   paper_trading: true            # NON mettere false senza revisione
   account_hint: PA3KDARZ86JB     # solo per verifica: se il conto non e' questo, ferma
   base_currency: USD

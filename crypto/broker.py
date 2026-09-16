@@ -34,6 +34,20 @@ def load_config() -> dict:
         return yaml.safe_load(fh)
 
 
+def in_pausa(cfg: dict) -> str | None:
+    """Se la divisione e' in pausa ritorna il motivo, altrimenti None.
+
+    Serve a fermare le routine PRIMA che tocchino il broker. Il 2026-09-16
+    l'utente ha eliminato il conto cripto per liberare uno slot: da quel momento
+    ogni giro finiva con un 401 e una traccia di errore nel log ogni 30 minuti.
+    La pausa e' una scelta esplicita scritta in configurazione, non un guasto.
+    """
+    meta = cfg.get("meta") or {}
+    if meta.get("paused"):
+        return str(meta.get("paused_reason") or "divisione in pausa")
+    return None
+
+
 def to_pair(symbol: str) -> str:
     """'BTCUSD' -> 'BTC/USD'. Le posizioni tornano senza barra, gli ordini la vogliono."""
     if "/" in symbol:

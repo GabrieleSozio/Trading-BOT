@@ -18,7 +18,7 @@ import sys
 from lib.alpaca_rest import atomic_write_json, now_cet, read_json
 from lib import profitlock
 from crypto import signals
-from crypto.broker import CryptoClient, load_config
+from crypto.broker import CryptoClient, load_config, in_pausa
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)-7s %(name)s | %(message)s"
@@ -28,6 +28,10 @@ log = logging.getLogger("crypto.c1")
 
 def run(dry_run: bool = False) -> dict:
     cfg = load_config()
+    motivo = in_pausa(cfg)
+    if motivo:
+        log.warning("Divisione cripto in PAUSA: %s. Nessuna scansione.", motivo)
+        return {"ok": True, "paused": True, "reason": motivo}
     cli = CryptoClient(cfg)
     acct = cli.assert_right_account()
 

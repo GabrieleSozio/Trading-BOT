@@ -16,21 +16,25 @@ CRON_TZ=Europe/Rome
 # Supervisore AI: sabato 10:00
 0 10 * * 6 /PERCORSO/deploy/run.sh lib.routine_06_supervisor >> /PERCORSO/state/cron.log 2>&1
 
-# ===== DIVISIONE CRIPTO =====
+# ===== DIVISIONE CRIPTO — IN PAUSA dal 2026-09-16 =====
+# L'utente ha eliminato il conto paper cripto per liberare uno slot. Le righe
+# restano qui, disattivate, per poterle riattivare senza riscriverle. Anche il
+# codice si ferma da solo: meta.paused in config/crypto_config.yaml.
+# Per riattivare: nuovo conto paper, chiavi in secrets/alpaca_crypto_keys.env,
+# account_hint aggiornato, paused a false, e togliere il # dalle tre righe.
+#
 # Conto separato, mercato aperto 24 ore su 24, 7 giorni su 7: niente vincoli di
 # giorni feriali o orari di borsa. Si usa crypto_run.sh, NON run.sh: quello
 # esporterebbe le chiavi del conto azionario nell'ambiente.
-# Gli orari sono sfalsati di 5 minuti per non accavallarsi con le routine
-# azionarie sulle operazioni git.
 
 # Classifica di momentum: una volta al giorno, tutti i giorni
-0 8 * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c1_scan >> /PERCORSO/state/cron.log 2>&1
+#0 8 * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c1_scan >> /PERCORSO/state/cron.log 2>&1
 
 # Gestione posizioni, trailing stop e ingressi: ogni 30 minuti, sempre
-5,35 * * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c2_trade >> /PERCORSO/state/cron.log 2>&1
+#5,35 * * * * /PERCORSO/deploy/crypto_run.sh crypto.routine_c2_trade >> /PERCORSO/state/cron.log 2>&1
 
 # Rendiconto settimanale con analisi AI: domenica 22:00
-0 22 * * 0 /PERCORSO/deploy/crypto_run.sh crypto.routine_c3_report >> /PERCORSO/state/cron.log 2>&1
+#0 22 * * 0 /PERCORSO/deploy/crypto_run.sh crypto.routine_c3_report >> /PERCORSO/state/cron.log 2>&1
 
 # ===== DIVISIONE OPZIONI =====
 # Conto separato (PA3NW0SCZK7E dal 2026-09-15; il primo era PA3YKSS69ZE0). Segue gli orari di borsa americani come le

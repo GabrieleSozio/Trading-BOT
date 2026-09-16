@@ -29,7 +29,7 @@ from pathlib import Path
 
 from lib.alpaca_rest import atomic_write_json, read_json, now_cet, BrokerError
 from lib import freno, profitlock
-from crypto.broker import CryptoClient, load_config, to_pair
+from crypto.broker import CryptoClient, load_config, to_pair, in_pausa
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s %(levelname)-7s %(name)s | %(message)s"
@@ -425,6 +425,10 @@ def _enter(cli, cfg: dict, st: dict, sel: dict, usd: float, dry: bool) -> int:
 # =====================================================================
 def run(dry_run: bool = False) -> dict:
     cfg = load_config()
+    motivo = in_pausa(cfg)
+    if motivo:
+        log.warning("Divisione cripto in PAUSA: %s. Nessuna operazione.", motivo)
+        return {"ok": True, "paused": True, "reason": motivo}
     cli = CryptoClient(cfg)
     acct = cli.assert_right_account()
     st = _load_state(cfg)
