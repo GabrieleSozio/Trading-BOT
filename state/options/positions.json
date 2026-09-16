@@ -12,7 +12,7 @@
       "strike": 60.0,
       "expiration": "2026-09-30",
       "opened_at": "2026-09-16T15:40:13+02:00",
-      "premium_peak": 1.26
+      "premium_peak": 1.3
     }
   },
   "closed_trades": [
@@ -76,5 +76,5 @@
       "pl_usd": -82.0
     }
   ],
-  "updated_at": "2026-09-16T15:55:16+02:00"
+  "updated_at": "2026-09-16T21:40:05+02:00"
 }
