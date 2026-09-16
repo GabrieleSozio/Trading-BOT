@@ -58,8 +58,19 @@ modes:
     enabled: true
     min_gap_pct: 3.0             # sotto questo scarto non vale la pena
     only_top_rank: 1             # solo il candidato numero uno
-    expiry_min_days: 0           # scadenza ravvicinata: massima reattivita'
-    expiry_max_days: 7
+    # MAI una scadenza nel giorno stesso (era 0 fino al 2026-09-16).
+    # Il 16 settembre l'intraday ha comprato una call INTC in scadenza quel
+    # giorno, strike 103 con il titolo a 100,69. Un contratto che scade fra
+    # poche ore non ha piu' valore di tempo: INTC e' sceso a 99,29 subito dopo
+    # l'acquisto, il premio ha perso il 65% e la protezione e' scattata. Poi il
+    # titolo e' salito fino a 104,42 — la direzione era giusta — ma eravamo gia'
+    # usciti a -80$, e quel contratto a fine giornata valeva 1 centesimo.
+    # Con la scadenza a 2 giorni lo stesso contratto costava 133$ invece di 127$
+    # e un calo dell'1,4% non lo avrebbe fatto scendere del 65%.
+    # Misurato: la finestra 2-9 giorni lascia 16 titoli acquistabili su 30,
+    # contro i 13 della finestra 0-7. Non costa opportunita'.
+    expiry_min_days: 2
+    expiry_max_days: 9
     # La chiusura NON e' piu' un orario italiano fisso: vedi il blocco session.
     max_premium_pct: 0.25        # quota massima del capitale in un contratto
 
