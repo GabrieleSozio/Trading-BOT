@@ -1,18 +1,5 @@
 {
   "positions": {
-    "INTC260916C00103000": {
-      "ticker": "INTC",
-      "modo": "intraday",
-      "qty": 1,
-      "entry_premium": 1.27,
-      "underlying_entry": 100.69,
-      "stop_underlying": 97.67,
-      "target_underlying": 108.74,
-      "premium_stop_pct": 0.5,
-      "strike": 103.0,
-      "expiration": "2026-09-16",
-      "opened_at": "2026-09-16T15:40:08+02:00"
-    },
     "SLV260930C00060000": {
       "ticker": "SLV",
       "modo": "swing",
@@ -24,10 +11,28 @@
       "premium_stop_pct": 0.5,
       "strike": 60.0,
       "expiration": "2026-09-30",
-      "opened_at": "2026-09-16T15:40:13+02:00"
+      "opened_at": "2026-09-16T15:40:13+02:00",
+      "premium_peak": 1.26
     }
   },
-  "closed_trades": [],
+  "closed_trades": [
+    {
+      "symbol": "INTC260916C00103000",
+      "ticker": "INTC",
+      "modo": "intraday",
+      "opened_at": "2026-09-16T15:40:08+02:00",
+      "closed_at": "2026-09-16T15:55:15+02:00",
+      "entry_premium": 1.27,
+      "exit_premium": 0.47,
+      "qty": 1,
+      "pl_usd": -80.0,
+      "pl_pct": -62.99,
+      "risk_usd": 63.5,
+      "r_multiple": -1.26,
+      "underlying_entry": 100.69,
+      "motivo": "premio a -65%"
+    }
+  ],
   "peak_equity": 550.0,
   "profit_lock_base": 550.0,
   "incasso_in_corso": false,
@@ -61,7 +66,15 @@
       "modo": "swing",
       "premio": 1.26,
       "costo_usd": 126.0
+    },
+    {
+      "at": "2026-09-16T15:55:15+02:00",
+      "event": "uscita",
+      "symbol": "INTC260916C00103000",
+      "motivo": "premio a -65%",
+      "prezzo": 0.47,
+      "pl_usd": -82.0
     }
   ],
-  "updated_at": "2026-09-16T15:40:15+02:00"
+  "updated_at": "2026-09-16T15:55:16+02:00"
 }
