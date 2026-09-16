@@ -65,15 +65,27 @@ def main() -> int:
     def c_separazione():
         """Il controllo piu' importante: conto diverso da azioni E da cripto."""
         from lib.alpaca_rest import AlpacaClient
+        from crypto.broker import in_pausa, load_config as load_crypto
+
+        divisioni = [("azioni", "secrets/alpaca_keys.env")]
+        # La cripto si confronta solo se e' attiva: dal 2026-09-16 il suo conto
+        # e' stato eliminato, e interrogarlo faceva fallire questo controllo
+        # facendo sembrare guasta la divisione opzioni.
+        saltata = ""
+        if in_pausa(load_crypto()):
+            saltata = ", cripto in pausa (conto eliminato)"
+        else:
+            divisioni.append(("cripto", "secrets/alpaca_crypto_keys.env"))
+
         mio = S["acct"]["account_number"]
         altri = {}
-        for nome, f in (("azioni", "secrets/alpaca_keys.env"),
-                        ("cripto", "secrets/alpaca_crypto_keys.env")):
+        for nome, f in divisioni:
             n = AlpacaClient(max_consecutive_errors=3,
                              secrets_file=REPO_ROOT / f).account()["account_number"]
             assert n != mio, f"STESSO CONTO DI {nome.upper()}!"
             altri[nome] = n
-        return "distinto da " + ", ".join(f"{k} {v}" for k, v in altri.items())
+        return ("distinto da " + ", ".join(f"{k} {v}" for k, v in altri.items())
+                + saltata)
 
     def c_catena():
         cli, cand = S["cli"], cfg["universe"]["tickers"][:3]
