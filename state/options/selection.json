@@ -1,65 +1,52 @@
 {
-  "generato_il": "2026-09-16T15:35:11+02:00",
-  "session_date": "2026-09-16",
+  "generato_il": "2026-09-17T15:35:09+02:00",
+  "session_date": "2026-09-17",
   "conto": "PA3NW0SCZK7E",
-  "equity_usd": 550.0,
-  "capitale_operativo_usd": 550.0,
+  "equity_usd": 481.84,
+  "capitale_operativo_usd": 481.84,
   "universo": 30,
-  "crediti_intraday_liberi": 1,
+  "crediti_intraday_liberi": 0,
   "selezione": [
     {
-      "symbol": "INTC260916C00103000",
-      "strike": 103.0,
-      "expiration": "2026-09-16",
-      "otm_pct": 2.3,
-      "ask": 1.13,
-      "premio_usd": 113.0,
-      "spread_pct": 5.45,
-      "ticker": "INTC",
-      "modo": "intraday",
-      "gap_pct": 3.65,
-      "spot": 100.69,
-      "rank": 1,
-      "volume": 85002785,
-      "stop_underlying": 97.67,
-      "target_underlying": 108.74
-    },
-    {
-      "symbol": "SLV260930C00060000",
-      "strike": 60.0,
-      "expiration": "2026-09-30",
-      "otm_pct": 2.95,
-      "ask": 1.24,
-      "premio_usd": 124.0,
-      "spread_pct": 2.45,
+      "symbol": "SLV260921C00059000",
+      "strike": 59.0,
+      "expiration": "2026-09-21",
+      "otm_pct": -0.42,
+      "ask": 1.03,
+      "premio_usd": 103.0,
+      "spread_pct": 3.96,
       "ticker": "SLV",
-      "modo": "swing",
-      "gap_pct": 1.3,
-      "spot": 58.28,
-      "rank": 3,
-      "volume": 11797825,
-      "stop_underlying": 56.53,
-      "target_underlying": 62.94
+      "modo": "intraday",
+      "gap_pct": 3.86,
+      "spot": 59.25,
+      "rank": 1,
+      "volume": 20857033,
+      "stop_underlying": 57.47,
+      "target_underlying": 63.99
     }
   ],
   "scartati": [
     {
-      "ticker": "DAL",
-      "spot": 80.02,
+      "ticker": "RIOT",
+      "spot": 21.11,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,002$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,111$)"
     },
     {
-      "ticker": "CCL",
-      "spot": 22.39,
-      "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,239$)"
+      "ticker": "INTC",
+      "motivo": "chiuso in perdita 1.0 giorni fa ($-80), pausa di 3 giorni"
     },
     {
       "ticker": "UAL",
-      "spot": 108.2,
+      "spot": 109.5,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,820$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,950$)"
+    },
+    {
+      "ticker": "DAL",
+      "spot": 80.04,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,004$)"
     }
   ]
 }
