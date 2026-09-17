@@ -126,7 +126,13 @@
       "event": "ingresso_non_eseguito",
       "symbol": "SLV260921C00059000",
       "limite": 0.93
+    },
+    {
+      "at": "2026-09-17T17:10:26+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260921C00059000",
+      "limite": 0.96
     }
   ],
-  "updated_at": "2026-09-17T16:55:32+02:00"
+  "updated_at": "2026-09-17T17:10:27+02:00"
 }
