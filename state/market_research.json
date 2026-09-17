@@ -1,63 +1,60 @@
 {
-  "generated_at": "2026-09-16T14:32:36+02:00",
-  "session_date": "2026-09-16",
+  "generated_at": "2026-09-17T14:31:23+02:00",
+  "session_date": "2026-09-17",
   "universe_size": 44,
-  "capital_usd": 533.73,
+  "capital_usd": 533.46,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 160.12,
+  "max_price_per_share": 160.04,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Lo storico recente e' un monito ricorrente: i gap ad alto volume su questa lista tendono a essere esaurimento/distribuzione, non avvio di trend multi-day (INTC, SMCI, AAL, SNAP, UBER, HOOD, NKE tutti falliti con alpha negativo). La lezione trasversale e' chiara: evitare il gap gia' esteso su volume dominante e privilegiare movimenti piu' contenuti ma con supporto strutturale (insider, settore, catalizzatore). Per lo swing multi-day preferisco combinare un segnale strutturale lento (insider buy) con titoli liquidi che non mostrano segni di climax immediato. Evito INTC nonostante l'insider CEO buy perche' il gap +3.35% e' proprio il pattern gia' fallito due volte (ingresso in ipercomprato). Preferisco candidati con gap moderato, buon volume e trend di fondo credibile.",
+  "ai_analysis": "Lo storico di questo sistema e' molto istruttivo: i gap forti con volume elevato (HOOD, SNAP, INTC, SMCI, UBER, NKE, AAL) hanno ripetutamente prodotto stop perche' scambiati per continuazione mentre erano climax/distribuzione. La lezione ricorrente e' evitare i gap gia' estesi in ipercomprato e privilegiare invece movimenti moderati ma sostenuti da liquidita' reale e da un catalizzatore strutturale credibile. Preferisco quindi titoli con gap contenuto/medio ma volume genuino e supporto fondamentale, evitando i nomi gia' 'bruciati'. INTC ha l'insider buy del CEO (segnale strutturale lento) ma lo storico recente e' negativo su ingressi tardivi; lo scarto. Seleziono nomi liquidi con trend ordinato e minor rischio di esaurimento immediato.",
   "candidates": [
-    {
-      "ticker": "SOFI",
-      "sector": "Financials",
-      "last_price": 17.2073,
-      "prev_close": 17.07,
-      "gap_pct": 0.8043,
-      "premarket_volume": 257716,
-      "trend": "Bullish",
-      "insider_buys": 0,
-      "insider_sells": 0,
-      "insider_buy_usd": 0,
-      "ai_rationale": "Gap moderato +0.80% con volume elevato (257k), non un picco estremo da esaurimento. Settore Financials in trend positivo, titolo liquido con momentum strutturale. Il gap contenuto lascia spazio a prosecuzione senza entrare in ipercomprato, coerente con la lezione di evitare gap gia' consumati."
-    },
     {
       "ticker": "ORCL",
       "sector": "Technology",
-      "last_price": 141.45,
-      "prev_close": 140.35,
-      "gap_pct": 0.7838,
-      "premarket_volume": 464806,
+      "last_price": 146.95,
+      "prev_close": 143.16,
+      "gap_pct": 2.6474,
+      "premarket_volume": 677056,
       "trend": "Bullish",
       "insider_buys": 0,
       "insider_sells": 11,
       "insider_buy_usd": 0,
-      "ai_rationale": "Trend rialzista solido su titolo large-cap tech liquido, gap +0.78% con volume convincente (464k). Nonostante le vendite insider (ambigue e spesso pianificate), la struttura di trend e la liquidita' offrono tenuta multi-day migliore rispetto ai piccoli gap ad alto volume tipici del pattern fallito."
+      "ai_rationale": "Gap +2.65% con volume robusto (677k) in un mega-cap tech liquido e trend solido. Il movimento e' significativo ma non estremo, coerente con prosecuzione multi-day ordinata; le vendite insider sono ambigue e spesso pianificate, non un veto. Struttura piu' istituzionale e meno soggetta a climax speculativo rispetto ai nomi retail."
     },
     {
-      "ticker": "RIVN",
-      "sector": "Consumer Discretionary",
-      "last_price": 15.65,
-      "prev_close": 15.54,
-      "gap_pct": 0.7079,
-      "premarket_volume": 123010,
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "last_price": 17.2299,
+      "prev_close": 16.84,
+      "gap_pct": 2.3153,
+      "premarket_volume": 760129,
       "trend": "Bullish",
       "insider_buys": 0,
       "insider_sells": 0,
       "insider_buy_usd": 0,
-      "ai_rationale": "Gap +0.71% con volume solido (123k) in Consumer Discretionary; movimento contenuto ma sostenuto da trend rialzista. Il gap non estremo riduce il rischio di rientro immediato tipico degli esaurimenti, offrendo margine per prosecuzione con stop gestibile."
+      "ai_rationale": "Gap +2.32% con il volume piu' alto della lista (760k), settore Financials in forza. Movimento moderato-forte sostenuto da partecipazione ampia e genuina, con spazio verso il target senza essere gia' in ipercomprato estremo come HOOD/AFRM. Buon profilo di tenuta attesa."
     },
     {
-      "ticker": "F",
-      "sector": "Consumer Discretionary",
-      "last_price": 13.555,
-      "prev_close": 13.5,
-      "gap_pct": 0.4074,
-      "premarket_volume": 142105,
+      "ticker": "BAC",
+      "sector": "Financials",
+      "last_price": 58.34,
+      "prev_close": 57.9,
+      "gap_pct": 0.7599,
+      "premarket_volume": 119549,
       "trend": "Bullish",
-      "ai_rationale": "Gap +0.41% moderato con volume alto (142k), titolo molto liquido a basso prezzo. Movimento ordinato non da climax, settore Consumer Discretionary in trend; profilo piu' coerente con una prosecuzione lenta e meno soggetto al pattern di esaurimento visto sui gap forti."
+      "ai_rationale": "Gap +0.76% contenuto ma con volume elevato (119k) e settore Financials solido; profilo a bassa volatilita' che riduce il rischio di rientro violento del gap. Titolo mega-cap con trend ordinato, adatto a una prosecuzione lenta e a uno stop gestibile overnight, coerente con la lezione di evitare i climax."
+    },
+    {
+      "ticker": "SHOP",
+      "sector": "Technology",
+      "last_price": 130.25,
+      "prev_close": 129.96,
+      "gap_pct": 0.2231,
+      "premarket_volume": 22313,
+      "trend": "Bullish",
+      "ai_rationale": "Gap +0.22% modesto ma su titolo tech liquido in trend rialzista; nessun segnale di esaurimento dato il gap piccolo, che lascia margine di continuazione senza l'ipercomprato tipico dei nomi con gap +3/5%. Diversifica il rischio rispetto ai Financials selezionati."
     }
   ]
 }

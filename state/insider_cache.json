@@ -1,23 +1,24 @@
 {
  "NKE": {
-  "fetched_at": "2026-09-08T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 2,
+   "n_sells": 3,
    "buy_value_usd": 0,
-   "sell_value_usd": 238810.95,
+   "sell_value_usd": 371238.84,
    "buyers": [],
    "sellers": [
+    "Alagirisamy Venkatesh (EVP: CHIEF OPERATING OFFICER)",
     "Leinwand Robert (EVP: Chief Legal Officer)",
-    "Montagne Amy (PRESIDENT, NIKE)"
+    "McCartney Philip (EVP: CHIEF INN,PROD&DSG OFCR)"
    ]
   }
  },
  "SMCI": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -31,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -45,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -61,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -75,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-09-11T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -117,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -173,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -215,7 +216,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -257,7 +258,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -285,7 +286,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -361,7 +362,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-17T12:30:07+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
