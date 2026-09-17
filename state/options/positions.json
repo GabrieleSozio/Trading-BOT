@@ -98,7 +98,20 @@
       "event": "ingresso_non_eseguito",
       "symbol": "SLV260921C00059000",
       "limite": 1.25
+    },
+    {
+      "at": "2026-09-17T16:40:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "SLV260930C00060000",
+      "limite": 1.46,
+      "motivo": "trailing: da +30% a +14%"
+    },
+    {
+      "at": "2026-09-17T16:40:49+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260921C00059000",
+      "limite": 1.08
     }
   ],
-  "updated_at": "2026-09-17T16:25:28+02:00"
+  "updated_at": "2026-09-17T16:40:50+02:00"
 }
