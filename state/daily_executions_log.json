@@ -1,7 +1,7 @@
 {
   "session_date": "2026-09-17",
   "opening_balance": 99925.76,
-  "closing_balance": null,
+  "closing_balance": 99926.54,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -17,5 +17,5 @@
       "ticker": "PFE"
     }
   ],
-  "last_tick_at": "2026-09-17T21:45:02+02:00"
+  "last_tick_at": "2026-09-17T21:46:01+02:00"
 }
