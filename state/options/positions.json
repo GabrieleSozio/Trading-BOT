@@ -11,7 +11,8 @@
       "premium_stop_pct": 0.5,
       "strike": 59.0,
       "expiration": "2026-09-21",
-      "opened_at": "2026-09-17T17:25:08+02:00"
+      "opened_at": "2026-09-17T17:25:08+02:00",
+      "premium_peak": 1.07
     }
   },
   "closed_trades": [
@@ -155,7 +156,14 @@
       "modo": "intraday",
       "premio": 1.07,
       "costo_usd": 107.0
+    },
+    {
+      "at": "2026-09-17T21:25:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "SLV260921C00059000",
+      "limite": 0.74,
+      "motivo": "fine giornata (intraday)"
     }
   ],
-  "updated_at": "2026-09-17T17:25:10+02:00"
+  "updated_at": "2026-09-17T21:25:27+02:00"
 }
