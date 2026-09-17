@@ -3,6 +3,19 @@
   "opening_balance": 99925.76,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-09-17T21:40:03+02:00"
+  "events": [
+    {
+      "ts": "2026-09-17T21:45:11+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "F"
+    },
+    {
+      "ts": "2026-09-17T21:45:16+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "PFE"
+    }
+  ],
+  "last_tick_at": "2026-09-17T21:45:02+02:00"
 }
