@@ -1,5 +1,19 @@
 {
-  "positions": {},
+  "positions": {
+    "SLV260921C00059000": {
+      "ticker": "SLV",
+      "modo": "intraday",
+      "qty": 1,
+      "entry_premium": 1.07,
+      "underlying_entry": 59.25,
+      "stop_underlying": 57.47,
+      "target_underlying": 63.99,
+      "premium_stop_pct": 0.5,
+      "strike": 59.0,
+      "expiration": "2026-09-21",
+      "opened_at": "2026-09-17T17:25:08+02:00"
+    }
+  },
   "closed_trades": [
     {
       "symbol": "INTC260916C00103000",
@@ -132,7 +146,16 @@
       "event": "ingresso_non_eseguito",
       "symbol": "SLV260921C00059000",
       "limite": 0.96
+    },
+    {
+      "at": "2026-09-17T17:25:08+02:00",
+      "event": "ingresso",
+      "symbol": "SLV260921C00059000",
+      "ticker": "SLV",
+      "modo": "intraday",
+      "premio": 1.07,
+      "costo_usd": 107.0
     }
   ],
-  "updated_at": "2026-09-17T17:10:27+02:00"
+  "updated_at": "2026-09-17T17:25:10+02:00"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-16T15:40:13+02:00",
+  "updated_at": "2026-09-17T17:25:08+02:00",
   "entries": [
     {
       "ticker": "INTC",
@@ -22,6 +22,18 @@
         "symbol": "SLV260930C00060000",
         "modo": "swing",
         "premio": 1.26
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SLV",
+      "date": "2026-09-17",
+      "opened_at": "2026-09-17T17:25:08+02:00",
+      "decision": "Call SLV strike 59.0 scad 2026-09-21, -0.4% dal denaro, premio 107$, spread 4.0%. Modalita' intraday, scarto +3.86%.",
+      "meta": {
+        "symbol": "SLV260921C00059000",
+        "modo": "intraday",
+        "premio": 1.07
       },
       "status": "in_sospeso"
     }
