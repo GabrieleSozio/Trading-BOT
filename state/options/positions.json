@@ -12,7 +12,7 @@
       "strike": 60.0,
       "expiration": "2026-09-30",
       "opened_at": "2026-09-16T15:40:13+02:00",
-      "premium_peak": 1.31
+      "premium_peak": 1.46
     }
   },
   "closed_trades": [
@@ -80,7 +80,13 @@
       "event": "ingresso_non_eseguito",
       "symbol": "SLV260921C00059000",
       "limite": 0.9
+    },
+    {
+      "at": "2026-09-17T15:55:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260921C00059000",
+      "limite": 1.1
     }
   ],
-  "updated_at": "2026-09-17T15:40:28+02:00"
+  "updated_at": "2026-09-17T15:55:29+02:00"
 }
