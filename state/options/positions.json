@@ -1,20 +1,5 @@
 {
-  "positions": {
-    "SLV260921C00059000": {
-      "ticker": "SLV",
-      "modo": "intraday",
-      "qty": 1,
-      "entry_premium": 1.07,
-      "underlying_entry": 59.25,
-      "stop_underlying": 57.47,
-      "target_underlying": 63.99,
-      "premium_stop_pct": 0.5,
-      "strike": 59.0,
-      "expiration": "2026-09-21",
-      "opened_at": "2026-09-17T17:25:08+02:00",
-      "premium_peak": 1.07
-    }
-  },
+  "positions": {},
   "closed_trades": [
     {
       "symbol": "INTC260916C00103000",
@@ -47,6 +32,22 @@
       "r_multiple": 0.11,
       "underlying_entry": 58.28,
       "motivo": "trailing: da +30% a +6%"
+    },
+    {
+      "symbol": "SLV260921C00059000",
+      "ticker": "SLV",
+      "modo": "intraday",
+      "opened_at": "2026-09-17T17:25:08+02:00",
+      "closed_at": "2026-09-17T21:40:09+02:00",
+      "entry_premium": 1.07,
+      "exit_premium": 0.72,
+      "qty": 1,
+      "pl_usd": -35.0,
+      "pl_pct": -32.71,
+      "risk_usd": 53.5,
+      "r_multiple": -0.65,
+      "underlying_entry": 59.25,
+      "motivo": "fine giornata (intraday)"
     }
   ],
   "peak_equity": 550.0,
@@ -163,7 +164,15 @@
       "symbol": "SLV260921C00059000",
       "limite": 0.74,
       "motivo": "fine giornata (intraday)"
+    },
+    {
+      "at": "2026-09-17T21:40:09+02:00",
+      "event": "uscita",
+      "symbol": "SLV260921C00059000",
+      "motivo": "fine giornata (intraday)",
+      "prezzo": 0.72,
+      "pl_usd": -35.0
     }
   ],
-  "updated_at": "2026-09-17T21:25:27+02:00"
+  "updated_at": "2026-09-17T21:40:10+02:00"
 }
