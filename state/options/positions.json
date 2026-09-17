@@ -1,20 +1,5 @@
 {
-  "positions": {
-    "SLV260930C00060000": {
-      "ticker": "SLV",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 1.26,
-      "underlying_entry": 58.28,
-      "stop_underlying": 56.53,
-      "target_underlying": 62.94,
-      "premium_stop_pct": 0.5,
-      "strike": 60.0,
-      "expiration": "2026-09-30",
-      "opened_at": "2026-09-16T15:40:13+02:00",
-      "premium_peak": 1.64
-    }
-  },
+  "positions": {},
   "closed_trades": [
     {
       "symbol": "INTC260916C00103000",
@@ -31,6 +16,22 @@
       "r_multiple": -1.26,
       "underlying_entry": 100.69,
       "motivo": "premio a -65%"
+    },
+    {
+      "symbol": "SLV260930C00060000",
+      "ticker": "SLV",
+      "modo": "swing",
+      "opened_at": "2026-09-16T15:40:13+02:00",
+      "closed_at": "2026-09-17T16:55:08+02:00",
+      "entry_premium": 1.26,
+      "exit_premium": 1.33,
+      "qty": 1,
+      "pl_usd": 7.0,
+      "pl_pct": 5.56,
+      "risk_usd": 63.0,
+      "r_multiple": 0.11,
+      "underlying_entry": 58.28,
+      "motivo": "trailing: da +30% a +6%"
     }
   ],
   "peak_equity": 550.0,
@@ -111,7 +112,21 @@
       "event": "ingresso_non_eseguito",
       "symbol": "SLV260921C00059000",
       "limite": 1.08
+    },
+    {
+      "at": "2026-09-17T16:55:08+02:00",
+      "event": "uscita",
+      "symbol": "SLV260930C00060000",
+      "motivo": "trailing: da +30% a +6%",
+      "prezzo": 1.33,
+      "pl_usd": 7.0
+    },
+    {
+      "at": "2026-09-17T16:55:31+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "SLV260921C00059000",
+      "limite": 0.93
     }
   ],
-  "updated_at": "2026-09-17T16:40:50+02:00"
+  "updated_at": "2026-09-17T16:55:32+02:00"
 }
