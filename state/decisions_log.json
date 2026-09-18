@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-12T10:00:43+02:00",
+  "updated_at": "2026-09-18T15:33:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -401,6 +401,21 @@
         "stop": 26.63,
         "target": 29.1,
         "settore": "Health Care",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-09-18",
+      "opened_at": "2026-09-18T15:33:06+02:00",
+      "decision": "Volume di gran lunga dominante (4.3M) con gap contenuto (+0.76%): configurazione di accumulo piu' che di climax. Insider buy del CEO da ~$10M come tesi strutturale di fondo. Gap moderato lascia margine per prosecuzione senza ingresso in ipercomprato, correggendo l'errore passato di entrare su spinta gia' consumata.",
+      "meta": {
+        "entry": 108.84,
+        "stop": 105.57,
+        "target": 115.37,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
