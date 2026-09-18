@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -174,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -202,7 +202,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -216,7 +216,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -230,7 +230,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -258,7 +258,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -432,7 +432,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-18T12:30:06+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
