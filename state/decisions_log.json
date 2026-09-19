@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-18T15:33:06+02:00",
+  "updated_at": "2026-09-19T10:00:23+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -389,7 +389,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 2.09,
+        "pl_usd": 3.36,
+        "r_multiple": 0.58,
+        "alpha_pct": 1.46,
+        "benchmark_pct": 0.63,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era corretta: +1.46% di alpha conferma che il setup ha battuto l'indice, non solo cavalcato un mercato in salita. Ha tenuto la tesi centrale sul volume pre-market come segnale di partecipazione autentica, che si e' tradotto in una prosecuzione ordinata come previsto; l'elemento piu' debole resta l'uscita manuale, che a +0.58R non permette di sapere se un target o trailing definito avrebbe catturato piu' movimento o protetto meglio il guadagno. Per la prossima analisi simile: fissare a priori una regola di uscita quantificata invece di chiudere a mano, cosi' l'alpha diventa attribuibile al metodo e non alla discrezione del momento.",
+      "closed_at": "2026-09-19T10:00:16+02:00"
     },
     {
       "ticker": "PFE",
@@ -404,7 +414,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 0.51,
+        "pl_usd": 0.7,
+        "r_multiple": 0.17,
+        "alpha_pct": -0.12,
+        "benchmark_pct": 0.63,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era sostanzialmente corretta ma l'alpha e' leggermente negativo (-0.12%): ho catturato il movimento del settore senza aggiungere valore rispetto all'indice. La lettura del volume elevato con gap minimo ha tenuto, il posizionamento e' rimasto ordinato senza sfoghi improvvisi, ma la tesi difensiva su Health Care non ha generato alcun sovrarendimento perche' il titolo si e' limitato a seguire il mercato. La chiusura manuale con +0.17R suggerisce un'uscita prudente ma priva di edge. Lezione: un setup a basso rischio e movimento lento va bene per la conservazione, ma se manca un catalizzatore idiosincratico rispetto al settore l'alpha atteso e' vicino a zero e conviene pretendere una",
+      "closed_at": "2026-09-19T10:00:23+02:00"
     },
     {
       "ticker": "INTC",
