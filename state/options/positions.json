@@ -1,5 +1,19 @@
 {
-  "positions": {},
+  "positions": {
+    "SOFI261009C00017500": {
+      "ticker": "SOFI",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 0.59,
+      "underlying_entry": 17.39,
+      "stop_underlying": 16.87,
+      "target_underlying": 18.78,
+      "premium_stop_pct": 0.5,
+      "strike": 17.5,
+      "expiration": "2026-10-09",
+      "opened_at": "2026-09-21T15:40:08+02:00"
+    }
+  },
   "closed_trades": [
     {
       "symbol": "INTC260916C00103000",
@@ -172,7 +186,16 @@
       "motivo": "fine giornata (intraday)",
       "prezzo": 0.72,
       "pl_usd": -35.0
+    },
+    {
+      "at": "2026-09-21T15:40:08+02:00",
+      "event": "ingresso",
+      "symbol": "SOFI261009C00017500",
+      "ticker": "SOFI",
+      "modo": "swing",
+      "premio": 0.59,
+      "costo_usd": 59.0
     }
   ],
-  "updated_at": "2026-09-18T21:55:04+02:00"
+  "updated_at": "2026-09-21T15:40:10+02:00"
 }

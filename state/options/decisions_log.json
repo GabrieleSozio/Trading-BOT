@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-17T17:25:08+02:00",
+  "updated_at": "2026-09-21T15:40:08+02:00",
   "entries": [
     {
       "ticker": "INTC",
@@ -34,6 +34,18 @@
         "symbol": "SLV260921C00059000",
         "modo": "intraday",
         "premio": 1.07
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOFI",
+      "date": "2026-09-21",
+      "opened_at": "2026-09-21T15:40:08+02:00",
+      "decision": "Call SOFI strike 17.5 scad 2026-10-09, +0.6% dal denaro, premio 59$, spread 7.9%. Modalita' swing, scarto +2.54%.",
+      "meta": {
+        "symbol": "SOFI261009C00017500",
+        "modo": "swing",
+        "premio": 0.59
       },
       "status": "in_sospeso"
     }
