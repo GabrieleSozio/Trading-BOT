@@ -1,35 +1,54 @@
 {
-  "generato_il": "2026-09-18T15:35:05+02:00",
-  "session_date": "2026-09-18",
+  "generato_il": "2026-09-21T15:35:10+02:00",
+  "session_date": "2026-09-21",
   "conto": "PA3NW0SCZK7E",
   "equity_usd": 441.68,
   "capitale_operativo_usd": 441.68,
   "universo": 30,
   "crediti_intraday_liberi": 0,
-  "selezione": [],
+  "selezione": [
+    {
+      "symbol": "SOFI261009C00017500",
+      "strike": 17.5,
+      "expiration": "2026-10-09",
+      "otm_pct": 0.63,
+      "ask": 0.66,
+      "premio_usd": 66.0,
+      "spread_pct": 7.87,
+      "ticker": "SOFI",
+      "modo": "swing",
+      "gap_pct": 2.54,
+      "spot": 17.39,
+      "rank": 5,
+      "volume": 44213844,
+      "stop_underlying": 16.87,
+      "target_underlying": 18.78
+    }
+  ],
   "scartati": [
     {
-      "ticker": "RIOT",
-      "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
-    },
-    {
-      "ticker": "BABA",
-      "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
-    },
-    {
-      "ticker": "SLV",
-      "motivo": "chiuso in perdita 0.7 giorni fa ($-35), pausa di 3 giorni"
-    },
-    {
       "ticker": "INTC",
-      "motivo": "chiuso in perdita 2.0 giorni fa ($-80), pausa di 3 giorni"
+      "spot": 114.88,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~11,488$)"
     },
     {
-      "ticker": "RIVN",
+      "ticker": "RIOT",
+      "spot": 24.9,
       "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,490$)"
+    },
+    {
+      "ticker": "SMCI",
+      "spot": 40.43,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,043$)"
+    },
+    {
+      "ticker": "CCL",
+      "spot": 22.47,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,247$)"
     }
   ]
 }
