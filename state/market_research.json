@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-09-21T14:31:37+02:00",
+  "session_date": "2026-09-21",
+  "universe_size": 44,
+  "capital_usd": 541.33,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 162.4,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Lo storico del sistema e' brutalmente chiaro: i gap forti tech/financial ad alto volume in pre-market (INTC, HOOD, SMCI, SOFI, WBD) sono stati ripetutamente climax di distribuzione, non prosecuzioni multi-day, generando stop e alpha negativi. La lezione chiave e' evitare gap gia' consumati con volume anomalo e privilegiare movimenti piu' ordinati con catalizzatore/tenuta. F e' l'unico caso recente vincente (+1.46% alpha) con lettura volume-partecipazione corretta. Per questo swing multi-day preferisco gap moderati/contenuti con volume convincente ma non da climax, e nomi con struttura solida. Evito INTC (gia' esteso nonostante insider buy), HOOD e SMCI e SOFI (pattern climax ripetuti perdenti). Seleziono candidati con miglior rapporto rischio/prosecuzione.",
+  "candidates": [
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 13.3199,
+      "prev_close": 13.21,
+      "gap_pct": 0.8319,
+      "premarket_volume": 794787,
+      "trend": "Bullish",
+      "ai_rationale": "Precedente vincente del sistema (+2.09%, alpha +1.46%): gap contenuto +0.83% con volume alto (795k) letto correttamente come partecipazione autentica e prosecuzione ordinata. Consumer Discretionary, movimento sostenibile multi-day. Miglior candidato per tenuta notturna."
+    },
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "last_price": 13.1992,
+      "prev_close": 12.96,
+      "gap_pct": 1.8457,
+      "premarket_volume": 616450,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.85% con volume solido (616k), Industrials. Movimento moderato non da climax, ampio spazio di prosecuzione su titolo a basso prezzo (13.2). Nessuno storico negativo, catalizzatore settoriale plausibile."
+    },
+    {
+      "ticker": "WBD",
+      "sector": "Communication Services",
+      "last_price": 29.8,
+      "prev_close": 27.8,
+      "gap_pct": 7.1942,
+      "premarket_volume": 3120159,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap piu' forte della lista (+7.19%) con volume alto (3.1M) e trend bullish. Storico ambivalente impone cautela, ma la magnitudine del movimento su Communication Services suggerisce catalizzatore reale; ingresso solo su tenuta del livello di gap in apertura."
+    },
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "last_price": 35.57,
+      "prev_close": 35.51,
+      "gap_pct": 0.169,
+      "premarket_volume": 558917,
+      "trend": "Bullish",
+      "ai_rationale": "Gap minimo +0.17% ma volume elevato (559k), Consumer Discretionary. Movimento ordinato senza segni di esaurimento, meno rischio di climax rispetto ai gap tech; buona base per prosecuzione lenta e stop stretto."
+    },
+    {
+      "ticker": "SNAP",
+      "sector": "Communication Services",
+      "last_price": 5.5585,
+      "prev_close": 5.53,
+      "gap_pct": 0.5154,
+      "premarket_volume": 935595,
+      "trend": "Bullish",
+      "ai_rationale": "Volume molto alto (936k) su gap contenuto +0.52%, Communication Services. Prezzo basso (5.56) con partecipazione ampia; movimento non esteso lascia margine di prosecuzione multi-day evitando lo scenario ipercomprato."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 114.93,
+      "prev_close": 108.6,
+      "gap_pct": 5.8287,
+      "premarket_volume": 4894187,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 0,
+      "insider_buy_usd": 9999985.0,
+      "ai_rationale": "Insider buy del CEO da ~10M$ e' segnale strutturale forte di fiducia. Gap +5.83% gia' esteso richiede prudenza (storico perdente per ingresso tardivo), ma con ingresso su ritest/consolidamento la tesi di fondo resta valida su Technology."
+    }
+  ]
+}

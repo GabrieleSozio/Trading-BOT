@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -174,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -258,7 +258,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -286,18 +286,19 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 11,
+   "n_sells": 12,
    "buy_value_usd": 0,
-   "sell_value_usd": 63664039.59,
+   "sell_value_usd": 65186866.67,
    "buyers": [],
    "sellers": [
-    "HENLEY JEFFREY (Vice Chairman)"
+    "HENLEY JEFFREY (Vice Chairman)",
+    "Sicilia Michael D. (Chief Executive Officer)"
    ]
   }
  },
@@ -320,7 +321,7 @@
   }
  },
  "WBD": {
-  "fetched_at": "2026-09-10T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "WBD",
    "available": true,
@@ -334,7 +335,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -362,7 +363,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -432,7 +433,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-09-18T12:30:06+00:00",
+  "fetched_at": "2026-09-21T12:30:06+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
