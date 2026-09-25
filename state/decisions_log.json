@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-19T10:00:23+02:00",
+  "updated_at": "2026-09-25T15:30:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -435,6 +435,21 @@
         "entry": 108.84,
         "stop": 105.57,
         "target": 115.37,
+        "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-09-25",
+      "opened_at": "2026-09-25T15:30:06+02:00",
+      "decision": "Insider buy del CEO da ~$10M e' un segnale strutturale di fiducia forte e volume enorme (2.8M). Gap odierno contenuto (+0.73%), meno esteso del precedente che porto' allo stop: timing meno rischioso. Tenuta attesa supportata dal supporto insider.",
+      "meta": {
+        "entry": 126.39,
+        "stop": 122.59,
+        "target": 133.97,
         "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
