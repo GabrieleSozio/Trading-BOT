@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-25T15:30:06+02:00",
+  "updated_at": "2026-09-26T10:00:17+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -439,7 +439,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 8.61,
+        "pl_usd": 9.36,
+        "r_multiple": 2.94,
+        "alpha_pct": 7.06,
+        "benchmark_pct": 1.55,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta e ben remunerata: +7.06% di alpha con uscita a target e un rischio/rendimento di +2.94R confermano la validita' della tesi. Ha tenuto l'intuizione centrale, ovvero distinguere un volume dominante con gap contenuto come accumulo piuttosto che climax, e ha tenuto anche la disciplina di non inseguire una spinta gia' consumata; l'insider buy ha fornito un supporto strutturale piu' che un innesco tattico, quindi meno determinante nel timing. La lezione da riportare: la combinazione volume elevato + gap moderato e' un segnale replicabile di prosecuzione, e vale la pena codificarne le soglie (gap sotto ~1%, volume multiplo della media) per riconoscerla in modo sistematico ",
+      "closed_at": "2026-09-26T10:00:17+02:00"
     },
     {
       "ticker": "INTC",
