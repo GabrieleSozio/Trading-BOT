@@ -11,7 +11,8 @@
       "premium_stop_pct": 0.5,
       "strike": 64.0,
       "expiration": "2026-10-16",
-      "opened_at": "2026-09-28T15:55:08+02:00"
+      "opened_at": "2026-09-28T15:55:08+02:00",
+      "premium_peak": 0.87
     },
     "NFLX261016C00074000": {
       "ticker": "NFLX",
@@ -24,7 +25,8 @@
       "premium_stop_pct": 0.5,
       "strike": 74.0,
       "expiration": "2026-10-16",
-      "opened_at": "2026-09-28T15:55:13+02:00"
+      "opened_at": "2026-09-28T15:55:13+02:00",
+      "premium_peak": 0.71
     }
   },
   "closed_trades": [
@@ -264,5 +266,5 @@
       "costo_usd": 69.0
     }
   ],
-  "updated_at": "2026-09-28T15:55:14+02:00"
+  "updated_at": "2026-09-28T16:10:06+02:00"
 }
