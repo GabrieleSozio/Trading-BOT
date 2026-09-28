@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-09-28T16:30:05+02:00",
+  "generated_at": "2026-09-28T16:45:04+02:00",
   "session_date": "2026-09-28",
-  "capital_usd": 631.18,
+  "capital_usd": 630.26,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 340.55,
+  "available_usd": 340.54,
   "free_slots": 1,
   "orders": []
 }
