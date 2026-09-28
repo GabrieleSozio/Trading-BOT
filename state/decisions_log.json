@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T15:31:06+02:00",
+  "updated_at": "2026-09-28T15:32:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -475,6 +475,21 @@
         "entry": 25.2,
         "stop": 24.44,
         "target": 26.71,
+        "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NFLX",
+      "date": "2026-09-28",
+      "opened_at": "2026-09-28T15:32:06+02:00",
+      "decision": "Miglior setup del paniere: volume elevato (421k) con gap moderato (+1.27%), pattern coerente con accumulo/prosecuzione che ha funzionato su INTC e F. Trend Bullish, settore Communication Services attivo. Buona tenuta attesa overnight con target +6% raggiungibile.",
+      "meta": {
+        "entry": 70.67,
+        "stop": 68.55,
+        "target": 74.9,
         "settore": "Communication Services",
         "fascia": "micro",
         "azione": "buy"
