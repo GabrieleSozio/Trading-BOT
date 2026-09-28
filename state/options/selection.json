@@ -1,37 +1,65 @@
 {
-  "generato_il": "2026-09-25T15:35:06+02:00",
-  "session_date": "2026-09-25",
+  "generato_il": "2026-09-28T15:35:10+02:00",
+  "session_date": "2026-09-28",
   "conto": "PA3NW0SCZK7E",
   "equity_usd": 426.57,
   "capitale_operativo_usd": 426.57,
   "universo": 30,
   "crediti_intraday_liberi": 1,
-  "selezione": [],
+  "selezione": [
+    {
+      "symbol": "XLE261016C00064000",
+      "strike": 64.0,
+      "expiration": "2026-10-16",
+      "otm_pct": 1.81,
+      "ask": 0.92,
+      "premio_usd": 92.0,
+      "spread_pct": 4.44,
+      "ticker": "XLE",
+      "modo": "swing",
+      "gap_pct": 1.32,
+      "spot": 62.86,
+      "rank": 1,
+      "volume": 37514116,
+      "stop_underlying": 60.97,
+      "target_underlying": 67.89
+    },
+    {
+      "symbol": "NFLX261016C00074000",
+      "strike": 74.0,
+      "expiration": "2026-10-16",
+      "otm_pct": 3.38,
+      "ask": 0.83,
+      "premio_usd": 83.0,
+      "spread_pct": 3.68,
+      "ticker": "NFLX",
+      "modo": "swing",
+      "gap_pct": 0.61,
+      "spot": 71.58,
+      "rank": 2,
+      "volume": 23207943,
+      "stop_underlying": 69.43,
+      "target_underlying": 77.31
+    }
+  ],
   "scartati": [
     {
-      "ticker": "UAL",
+      "ticker": "CVS",
+      "spot": 89.52,
       "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,952$)"
     },
     {
-      "ticker": "RIOT",
+      "ticker": "VZ",
+      "spot": 47.28,
       "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,728$)"
     },
     {
-      "ticker": "DAL",
+      "ticker": "T",
+      "spot": 25.46,
       "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
-    },
-    {
-      "ticker": "CCL",
-      "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
-    },
-    {
-      "ticker": "SMCI",
-      "modo": "swing",
-      "motivo": "niente swing prima di un weekend o una festivita'"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,546$)"
     }
   ]
 }
