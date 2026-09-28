@@ -1,5 +1,32 @@
 {
-  "positions": {},
+  "positions": {
+    "XLE261016C00064000": {
+      "ticker": "XLE",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 0.87,
+      "underlying_entry": 62.86,
+      "stop_underlying": 60.97,
+      "target_underlying": 67.89,
+      "premium_stop_pct": 0.5,
+      "strike": 64.0,
+      "expiration": "2026-10-16",
+      "opened_at": "2026-09-28T15:55:08+02:00"
+    },
+    "NFLX261016C00074000": {
+      "ticker": "NFLX",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 0.69,
+      "underlying_entry": 71.58,
+      "stop_underlying": 69.43,
+      "target_underlying": 77.31,
+      "premium_stop_pct": 0.5,
+      "strike": 74.0,
+      "expiration": "2026-10-16",
+      "opened_at": "2026-09-28T15:55:13+02:00"
+    }
+  },
   "closed_trades": [
     {
       "symbol": "INTC260916C00103000",
@@ -217,7 +244,25 @@
       "event": "ingresso_non_eseguito",
       "symbol": "NFLX261016C00074000",
       "limite": 0.77
+    },
+    {
+      "at": "2026-09-28T15:55:08+02:00",
+      "event": "ingresso",
+      "symbol": "XLE261016C00064000",
+      "ticker": "XLE",
+      "modo": "swing",
+      "premio": 0.87,
+      "costo_usd": 87.0
+    },
+    {
+      "at": "2026-09-28T15:55:13+02:00",
+      "event": "ingresso",
+      "symbol": "NFLX261016C00074000",
+      "ticker": "NFLX",
+      "modo": "swing",
+      "premio": 0.69,
+      "costo_usd": 69.0
     }
   ],
-  "updated_at": "2026-09-28T15:40:49+02:00"
+  "updated_at": "2026-09-28T15:55:14+02:00"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-21T15:40:08+02:00",
+  "updated_at": "2026-09-28T15:55:13+02:00",
   "entries": [
     {
       "ticker": "INTC",
@@ -46,6 +46,30 @@
         "symbol": "SOFI261009C00017500",
         "modo": "swing",
         "premio": 0.59
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "XLE",
+      "date": "2026-09-28",
+      "opened_at": "2026-09-28T15:55:08+02:00",
+      "decision": "Call XLE strike 64.0 scad 2026-10-16, +1.8% dal denaro, premio 87$, spread 4.4%. Modalita' swing, scarto +1.32%.",
+      "meta": {
+        "symbol": "XLE261016C00064000",
+        "modo": "swing",
+        "premio": 0.87
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NFLX",
+      "date": "2026-09-28",
+      "opened_at": "2026-09-28T15:55:13+02:00",
+      "decision": "Call NFLX strike 74.0 scad 2026-10-16, +3.4% dal denaro, premio 69$, spread 3.7%. Modalita' swing, scarto +0.61%.",
+      "meta": {
+        "symbol": "NFLX261016C00074000",
+        "modo": "swing",
+        "premio": 0.69
       },
       "status": "in_sospeso"
     }
