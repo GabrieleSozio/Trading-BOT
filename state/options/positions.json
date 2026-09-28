@@ -13,20 +13,6 @@
       "expiration": "2026-10-16",
       "opened_at": "2026-09-28T15:55:08+02:00",
       "premium_peak": 0.87
-    },
-    "NFLX261016C00074000": {
-      "ticker": "NFLX",
-      "modo": "swing",
-      "qty": 1,
-      "entry_premium": 0.69,
-      "underlying_entry": 71.58,
-      "stop_underlying": 69.43,
-      "target_underlying": 77.31,
-      "premium_stop_pct": 0.5,
-      "strike": 74.0,
-      "expiration": "2026-10-16",
-      "opened_at": "2026-09-28T15:55:13+02:00",
-      "premium_peak": 0.71
     }
   },
   "closed_trades": [
@@ -93,6 +79,22 @@
       "r_multiple": -0.51,
       "underlying_entry": 17.39,
       "motivo": "stop sul titolo (16.87)"
+    },
+    {
+      "symbol": "NFLX261016C00074000",
+      "ticker": "NFLX",
+      "modo": "swing",
+      "opened_at": "2026-09-28T15:55:13+02:00",
+      "closed_at": "2026-09-28T18:10:08+02:00",
+      "entry_premium": 0.69,
+      "exit_premium": 0.56,
+      "qty": 1,
+      "pl_usd": -13.0,
+      "pl_pct": -18.84,
+      "risk_usd": 34.5,
+      "r_multiple": -0.38,
+      "underlying_entry": 71.58,
+      "motivo": "stop sul titolo (69.17)"
     }
   ],
   "peak_equity": 550.0,
@@ -264,7 +266,15 @@
       "modo": "swing",
       "premio": 0.69,
       "costo_usd": 69.0
+    },
+    {
+      "at": "2026-09-28T18:10:08+02:00",
+      "event": "uscita",
+      "symbol": "NFLX261016C00074000",
+      "motivo": "stop sul titolo (69.17)",
+      "prezzo": 0.56,
+      "pl_usd": -13.0
     }
   ],
-  "updated_at": "2026-09-28T17:55:05+02:00"
+  "updated_at": "2026-09-28T18:10:09+02:00"
 }
