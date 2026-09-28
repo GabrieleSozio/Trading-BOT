@@ -188,7 +188,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-28T12:30:06+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -303,7 +303,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-28T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -335,7 +335,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-09-21T12:30:06+00:00",
+  "fetched_at": "2026-09-28T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,

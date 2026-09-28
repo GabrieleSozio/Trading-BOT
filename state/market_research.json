@@ -1,0 +1,40 @@
+{
+  "generated_at": "2026-09-28T14:30:40+02:00",
+  "session_date": "2026-09-28",
+  "universe_size": 44,
+  "capital_usd": 538.74,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 161.62,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Il paniere e' molto ristretto: solo 3 titoli disponibili, quindi non e' possibile selezionare 6 candidati. Seleziono i migliori sulla base della coerenza con il pattern vincente del sistema (gap moderato + volume convincente = accumulo/prosecuzione, vedi INTC e F). NFLX e' l'unico con volume realmente significativo (421k) e un gap moderato di +1.27%, coerente con un setup di prosecuzione multi-day in un settore attivo. T mostra trend rialzista ma volume irrisorio (22k), segnale debole con scarsa partecipazione. KO va esplicitamente scartato: precedente perdente (-1.12%, alpha -1.20%), insider selling massiccio ($87M), gap minimo (+0.16%) e settore difensivo a bassa volatilita' che rende improbabile il +6% target. La lezione appresa impone di NON tradare il setup marginale. Data la carenza di candidati validi, indico solo quelli che offrono un edge plausibile.",
+  "candidates": [
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "last_price": 72.05,
+      "prev_close": 71.145,
+      "gap_pct": 1.2721,
+      "premarket_volume": 421898,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Miglior setup del paniere: volume elevato (421k) con gap moderato (+1.27%), pattern coerente con accumulo/prosecuzione che ha funzionato su INTC e F. Trend Bullish, settore Communication Services attivo. Buona tenuta attesa overnight con target +6% raggiungibile."
+    },
+    {
+      "ticker": "T",
+      "sector": "Communication Services",
+      "last_price": 25.51,
+      "prev_close": 25.38,
+      "gap_pct": 0.5122,
+      "premarket_volume": 22010,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Trend Bullish e gap positivo contenuto (+0.51%), ma volume molto basso (22k) indica scarsa partecipazione: segnale piu' debole. Ammesso solo come seconda scelta per diversificazione, con size prudente vista la minore convinzione sul movimento."
+    }
+  ]
+}
