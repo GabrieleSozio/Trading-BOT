@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-09-28T14:30:49+02:00",
+  "session_date": "2026-09-28",
+  "capital_usd": 538.76,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "available_usd": 418.7,
+  "free_slots": 2,
+  "orders": [
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 71.14,
+      "target_entry_price": 70.78,
+      "allocated_capital": 161.63
+    },
+    {
+      "ticker": "T",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 25.39,
+      "target_entry_price": 25.26,
+      "allocated_capital": 161.63
+    }
+  ]
+}
