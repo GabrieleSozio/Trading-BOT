@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-28T14:30:54+02:00",
+  "generated_at": "2026-09-28T15:47:03+02:00",
   "session_date": "2026-09-28",
-  "source_generated_at": "2026-09-28T14:30:49+02:00",
-  "portfolio_value": 538.77,
+  "source_generated_at": "2026-09-28T15:45:04+02:00",
+  "portfolio_value": 631.84,
   "capital_simulated": true,
-  "real_equity": 99929.78,
+  "real_equity": 99930.33,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,24 +16,5 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": [
-    {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
-      "action": "buy",
-      "target_entry_price": 70.78,
-      "allocated_capital": 161.63,
-      "stop_loss_price": 68.66,
-      "take_profit_price": 75.03
-    },
-    {
-      "ticker": "T",
-      "sector": "Communication Services",
-      "action": "buy",
-      "target_entry_price": 25.26,
-      "allocated_capital": 161.63,
-      "stop_loss_price": 24.5,
-      "take_profit_price": 26.78
-    }
-  ]
+  "orders": []
 }
