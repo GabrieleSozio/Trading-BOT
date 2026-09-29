@@ -25,7 +25,8 @@
       "premium_stop_pct": 0.5,
       "strike": 24.5,
       "expiration": "2026-10-02",
-      "opened_at": "2026-09-29T16:25:09+02:00"
+      "opened_at": "2026-09-29T16:25:09+02:00",
+      "premium_peak": 0.9
     }
   },
   "closed_trades": [
@@ -314,7 +315,26 @@
       "modo": "intraday",
       "premio": 0.85,
       "costo_usd": 85.0
+    },
+    {
+      "at": "2026-09-29T18:10:02+02:00",
+      "event": "freno_scattato",
+      "drawdown_pct": 0.3557,
+      "dettaglio": "posizioni ancora aperte: la pausa parte a conto piatto"
+    },
+    {
+      "at": "2026-09-29T18:25:03+02:00",
+      "event": "freno_rientrato",
+      "drawdown_pct": 0.3211,
+      "dettaglio": ""
+    },
+    {
+      "at": "2026-09-29T21:25:26+02:00",
+      "event": "uscita_non_eseguita",
+      "symbol": "CCL261002C00024500",
+      "limite": 0.93,
+      "motivo": "fine giornata (intraday)"
     }
   ],
-  "updated_at": "2026-09-29T16:25:10+02:00"
+  "updated_at": "2026-09-29T21:25:27+02:00"
 }
