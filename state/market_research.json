@@ -1,40 +1,83 @@
 {
-  "generated_at": "2026-09-28T14:30:40+02:00",
-  "session_date": "2026-09-28",
+  "generated_at": "2026-09-29T14:31:17+02:00",
+  "session_date": "2026-09-29",
   "universe_size": 44,
-  "capital_usd": 538.74,
+  "capital_usd": 629.79,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "max_price_per_share": 161.62,
+  "max_price_per_share": 188.94,
   "selected_by": "AI (Claude)",
-  "ai_analysis": "Il paniere e' molto ristretto: solo 3 titoli disponibili, quindi non e' possibile selezionare 6 candidati. Seleziono i migliori sulla base della coerenza con il pattern vincente del sistema (gap moderato + volume convincente = accumulo/prosecuzione, vedi INTC e F). NFLX e' l'unico con volume realmente significativo (421k) e un gap moderato di +1.27%, coerente con un setup di prosecuzione multi-day in un settore attivo. T mostra trend rialzista ma volume irrisorio (22k), segnale debole con scarsa partecipazione. KO va esplicitamente scartato: precedente perdente (-1.12%, alpha -1.20%), insider selling massiccio ($87M), gap minimo (+0.16%) e settore difensivo a bassa volatilita' che rende improbabile il +6% target. La lezione appresa impone di NON tradare il setup marginale. Data la carenza di candidati validi, indico solo quelli che offrono un edge plausibile.",
+  "ai_analysis": "La lezione piu' forte e ripetibile del sistema (INTC +7.06% alpha) e' che la combinazione gap MODERATO (<~1%) + volume ELEVATO segnala accumulo con prosecuzione multi-day, mentre i gap forti >1.5% con volume anomalo (SNAP, HOOD, AAL, UBER) si sono ripetutamente rivelati climax/distribuzione e hanno colpito gli stop. Privilegio quindi titoli liquidi con gap contenuto e volume convincente, ed evito i nomi con storico negativo su questo stesso pattern. INTC unisce il pattern vincente all'insider buy del CEO da ~$10M (supporto strutturale). Escludo volumi ridicoli (WFC 525, HPQ 1417, PINS 6828, DKNG 13133, AFRM 14722) che non danno tenuta affidabile overnight.",
   "candidates": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 116.93,
+      "prev_close": 116.03,
+      "gap_pct": 0.7757,
+      "premarket_volume": 2566778,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 0,
+      "insider_buy_usd": 9999985.0,
+      "ai_rationale": "Setup ideale gia' premiato dal sistema: gap moderato +0.78% con volume dominante (2.56M, di gran lunga il piu' alto tra i tech) = accumulo non climax. Insider buy del CEO per ~$10M come supporto strutturale. Massima convinzione."
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 12.3915,
+      "prev_close": 12.38,
+      "gap_pct": 0.0929,
+      "premarket_volume": 3178596,
+      "trend": "Bullish",
+      "ai_rationale": "Volume enorme (3.17M, il maggiore della lista) con gap minimo +0.09%: partecipazione autentica gia' vista funzionare (+1.46% alpha in passato). Titolo liquido, movimento ordinato, buona tenuta overnight."
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "last_price": 132.9,
+      "prev_close": 132.6,
+      "gap_pct": 0.2262,
+      "premarket_volume": 314771,
+      "trend": "Bullish",
+      "ai_rationale": "Gap contenuto +0.23% con volume solido (314k) su titolo molto liquido: pattern accumulo tech coerente con la lezione INTC, senza segnali di esaurimento."
+    },
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "last_price": 16.0497,
+      "prev_close": 15.93,
+      "gap_pct": 0.7514,
+      "premarket_volume": 681231,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap moderato +0.75% con volume elevato (681k) nel settore Financials in forza: rientra nella fascia gap<1%+volume alto favorita dal sistema, evitando l'eccesso di HOOD."
+    },
     {
       "ticker": "NFLX",
       "sector": "Communication Services",
-      "last_price": 72.05,
-      "prev_close": 71.145,
-      "gap_pct": 1.2721,
-      "premarket_volume": 421898,
+      "last_price": 70.196,
+      "prev_close": 69.23,
+      "gap_pct": 1.3953,
+      "premarket_volume": 795665,
       "trend": "Bullish",
       "insider_buys": 0,
       "insider_sells": 0,
       "insider_buy_usd": 0,
-      "ai_rationale": "Miglior setup del paniere: volume elevato (421k) con gap moderato (+1.27%), pattern coerente con accumulo/prosecuzione che ha funzionato su INTC e F. Trend Bullish, settore Communication Services attivo. Buona tenuta attesa overnight con target +6% raggiungibile."
+      "ai_rationale": "Volume alto (795k) con gap contenuto +1.40%: momentum di qualita' in Communication Services, titolo liquido con buona probabilita' di prosecuzione ordinata."
     },
     {
-      "ticker": "T",
-      "sector": "Communication Services",
-      "last_price": 25.51,
-      "prev_close": 25.38,
-      "gap_pct": 0.5122,
-      "premarket_volume": 22010,
+      "ticker": "BAC",
+      "sector": "Financials",
+      "last_price": 55.72,
+      "prev_close": 55.47,
+      "gap_pct": 0.4507,
+      "premarket_volume": 100645,
       "trend": "Bullish",
-      "insider_buys": 0,
-      "insider_sells": 0,
-      "insider_buy_usd": 0,
-      "ai_rationale": "Trend Bullish e gap positivo contenuto (+0.51%), ma volume molto basso (22k) indica scarsa partecipazione: segnale piu' debole. Ammesso solo come seconda scelta per diversificazione, con size prudente vista la minore convinzione sul movimento."
+      "ai_rationale": "Gap piccolo +0.45% con volume adeguato (100k) su large cap Financials: setup a basso rischio con tenuta attesa, coerente con il pattern di accumulo preferito."
     }
   ]
 }

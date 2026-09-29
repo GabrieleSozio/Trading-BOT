@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-09-17T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-09-21T12:30:06+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -160,7 +160,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-09-16T12:30:06+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -174,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -188,7 +188,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-09-28T12:30:06+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -216,7 +216,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -258,7 +258,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -447,7 +447,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-09-14T12:30:06+00:00",
+  "fetched_at": "2026-09-29T12:30:06+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,
