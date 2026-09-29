@@ -280,7 +280,13 @@
       "event": "ingresso_non_eseguito",
       "symbol": "CCL261002C00024500",
       "limite": 0.74
+    },
+    {
+      "at": "2026-09-29T15:55:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "CCL261002C00024500",
+      "limite": 0.78
     }
   ],
-  "updated_at": "2026-09-29T15:40:28+02:00"
+  "updated_at": "2026-09-29T15:55:28+02:00"
 }
