@@ -13,20 +13,6 @@
       "expiration": "2026-10-16",
       "opened_at": "2026-09-28T15:55:08+02:00",
       "premium_peak": 0.87
-    },
-    "CCL261002C00024500": {
-      "ticker": "CCL",
-      "modo": "intraday",
-      "qty": 1,
-      "entry_premium": 0.85,
-      "underlying_entry": 24.04,
-      "stop_underlying": 23.32,
-      "target_underlying": 25.96,
-      "premium_stop_pct": 0.5,
-      "strike": 24.5,
-      "expiration": "2026-10-02",
-      "opened_at": "2026-09-29T16:25:09+02:00",
-      "premium_peak": 0.9
     }
   },
   "closed_trades": [
@@ -109,6 +95,22 @@
       "r_multiple": -0.38,
       "underlying_entry": 71.58,
       "motivo": "stop sul titolo (69.17)"
+    },
+    {
+      "symbol": "CCL261002C00024500",
+      "ticker": "CCL",
+      "modo": "intraday",
+      "opened_at": "2026-09-29T16:25:09+02:00",
+      "closed_at": "2026-09-29T21:40:08+02:00",
+      "entry_premium": 0.85,
+      "exit_premium": 0.93,
+      "qty": 1,
+      "pl_usd": 8.0,
+      "pl_pct": 9.41,
+      "risk_usd": 42.5,
+      "r_multiple": 0.19,
+      "underlying_entry": 24.04,
+      "motivo": "fine giornata (intraday)"
     }
   ],
   "peak_equity": 550.0,
@@ -334,7 +336,15 @@
       "symbol": "CCL261002C00024500",
       "limite": 0.93,
       "motivo": "fine giornata (intraday)"
+    },
+    {
+      "at": "2026-09-29T21:40:08+02:00",
+      "event": "uscita",
+      "symbol": "CCL261002C00024500",
+      "motivo": "fine giornata (intraday)",
+      "prezzo": 0.93,
+      "pl_usd": 8.0
     }
   ],
-  "updated_at": "2026-09-29T21:25:27+02:00"
+  "updated_at": "2026-09-29T21:40:09+02:00"
 }
