@@ -1,65 +1,54 @@
 {
-  "generato_il": "2026-09-28T15:35:10+02:00",
-  "session_date": "2026-09-28",
+  "generato_il": "2026-09-29T15:35:10+02:00",
+  "session_date": "2026-09-29",
   "conto": "PA3NW0SCZK7E",
-  "equity_usd": 426.57,
-  "capitale_operativo_usd": 426.57,
+  "equity_usd": 369.41,
+  "capitale_operativo_usd": 369.41,
   "universo": 30,
-  "crediti_intraday_liberi": 1,
+  "crediti_intraday_liberi": 0,
   "selezione": [
     {
-      "symbol": "XLE261016C00064000",
-      "strike": 64.0,
-      "expiration": "2026-10-16",
-      "otm_pct": 1.81,
-      "ask": 0.92,
-      "premio_usd": 92.0,
-      "spread_pct": 4.44,
-      "ticker": "XLE",
-      "modo": "swing",
-      "gap_pct": 1.32,
-      "spot": 62.86,
+      "symbol": "CCL261002C00024500",
+      "strike": 24.5,
+      "expiration": "2026-10-02",
+      "otm_pct": 1.92,
+      "ask": 0.88,
+      "premio_usd": 88.0,
+      "spread_pct": 1.14,
+      "ticker": "CCL",
+      "modo": "intraday",
+      "gap_pct": 8.57,
+      "spot": 24.04,
       "rank": 1,
-      "volume": 37514116,
-      "stop_underlying": 60.97,
-      "target_underlying": 67.89
-    },
-    {
-      "symbol": "NFLX261016C00074000",
-      "strike": 74.0,
-      "expiration": "2026-10-16",
-      "otm_pct": 3.38,
-      "ask": 0.83,
-      "premio_usd": 83.0,
-      "spread_pct": 3.68,
-      "ticker": "NFLX",
-      "modo": "swing",
-      "gap_pct": 0.61,
-      "spot": 71.58,
-      "rank": 2,
-      "volume": 23207943,
-      "stop_underlying": 69.43,
-      "target_underlying": 77.31
+      "volume": 31340381,
+      "stop_underlying": 23.32,
+      "target_underlying": 25.96
     }
   ],
   "scartati": [
     {
-      "ticker": "CVS",
-      "spot": 89.52,
+      "ticker": "UAL",
+      "spot": 114.18,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,952$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~11,418$)"
     },
     {
-      "ticker": "VZ",
-      "spot": 47.28,
+      "ticker": "RIOT",
+      "spot": 22.11,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,728$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,211$)"
     },
     {
-      "ticker": "T",
-      "spot": 25.46,
+      "ticker": "DAL",
+      "spot": 85.51,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,546$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,551$)"
+    },
+    {
+      "ticker": "SMCI",
+      "spot": 42.25,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,225$)"
     }
   ]
 }
