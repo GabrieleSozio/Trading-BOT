@@ -1,8 +1,11 @@
 {
+  "NFLX": {
+    "opened_session_date": "2026-09-28"
+  },
   "T": {
     "opened_session_date": "2026-09-28"
   },
-  "NFLX": {
-    "opened_session_date": "2026-09-28"
+  "F": {
+    "opened_session_date": "2026-09-29"
   }
 }

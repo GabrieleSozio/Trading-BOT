@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T15:32:06+02:00",
+  "updated_at": "2026-09-29T15:35:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -491,6 +491,21 @@
         "stop": 68.55,
         "target": 74.9,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "F",
+      "date": "2026-09-29",
+      "opened_at": "2026-09-29T15:35:06+02:00",
+      "decision": "Volume enorme (3.17M, il maggiore della lista) con gap minimo +0.09%: partecipazione autentica gia' vista funzionare (+1.46% alpha in passato). Titolo liquido, movimento ordinato, buona tenuta overnight.",
+      "meta": {
+        "entry": 12.31,
+        "stop": 11.94,
+        "target": 13.05,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
