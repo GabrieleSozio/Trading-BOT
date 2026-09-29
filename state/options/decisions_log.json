@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-28T15:55:13+02:00",
+  "updated_at": "2026-09-29T16:25:09+02:00",
   "entries": [
     {
       "ticker": "INTC",
@@ -70,6 +70,18 @@
         "symbol": "NFLX261016C00074000",
         "modo": "swing",
         "premio": 0.69
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "CCL",
+      "date": "2026-09-29",
+      "opened_at": "2026-09-29T16:25:09+02:00",
+      "decision": "Call CCL strike 24.5 scad 2026-10-02, +1.9% dal denaro, premio 85$, spread 1.1%. Modalita' intraday, scarto +8.57%.",
+      "meta": {
+        "symbol": "CCL261002C00024500",
+        "modo": "intraday",
+        "premio": 0.85
       },
       "status": "in_sospeso"
     }

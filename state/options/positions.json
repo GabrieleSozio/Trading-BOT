@@ -13,6 +13,19 @@
       "expiration": "2026-10-16",
       "opened_at": "2026-09-28T15:55:08+02:00",
       "premium_peak": 0.87
+    },
+    "CCL261002C00024500": {
+      "ticker": "CCL",
+      "modo": "intraday",
+      "qty": 1,
+      "entry_premium": 0.85,
+      "underlying_entry": 24.04,
+      "stop_underlying": 23.32,
+      "target_underlying": 25.96,
+      "premium_stop_pct": 0.5,
+      "strike": 24.5,
+      "expiration": "2026-10-02",
+      "opened_at": "2026-09-29T16:25:09+02:00"
     }
   },
   "closed_trades": [
@@ -292,7 +305,16 @@
       "event": "ingresso_non_eseguito",
       "symbol": "CCL261002C00024500",
       "limite": 0.89
+    },
+    {
+      "at": "2026-09-29T16:25:09+02:00",
+      "event": "ingresso",
+      "symbol": "CCL261002C00024500",
+      "ticker": "CCL",
+      "modo": "intraday",
+      "premio": 0.85,
+      "costo_usd": 85.0
     }
   ],
-  "updated_at": "2026-09-29T16:10:28+02:00"
+  "updated_at": "2026-09-29T16:25:10+02:00"
 }
