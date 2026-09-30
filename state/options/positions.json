@@ -344,7 +344,13 @@
       "motivo": "fine giornata (intraday)",
       "prezzo": 0.93,
       "pl_usd": 8.0
+    },
+    {
+      "at": "2026-09-30T15:40:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "RIVN261016C00015500",
+      "limite": 0.52
     }
   ],
-  "updated_at": "2026-09-29T21:55:05+02:00"
+  "updated_at": "2026-09-30T15:40:29+02:00"
 }
