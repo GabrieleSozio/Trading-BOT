@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -104,7 +104,7 @@
   }
  },
  "COIN": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "COIN",
    "available": true,
@@ -160,7 +160,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -174,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -216,7 +216,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -230,7 +230,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-09-25T12:30:07+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -244,7 +244,7 @@
   }
  },
  "CSX": {
-  "fetched_at": "2026-09-03T12:30:07+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "CSX",
    "available": true,
@@ -303,7 +303,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-09-28T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -335,7 +335,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-09-28T12:30:06+00:00",
+  "fetched_at": "2026-09-30T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
