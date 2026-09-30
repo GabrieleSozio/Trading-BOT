@@ -350,7 +350,13 @@
       "event": "ingresso_non_eseguito",
       "symbol": "RIVN261016C00015500",
       "limite": 0.52
+    },
+    {
+      "at": "2026-09-30T15:55:27+02:00",
+      "event": "ingresso_non_eseguito",
+      "symbol": "RIVN261016C00015500",
+      "limite": 0.51
     }
   ],
-  "updated_at": "2026-09-30T15:40:29+02:00"
+  "updated_at": "2026-09-30T15:55:28+02:00"
 }
