@@ -2,10 +2,10 @@
   "SMCI": {
     "opened_session_date": "2026-09-30"
   },
-  "F": {
-    "opened_session_date": "2026-09-29"
-  },
   "NFLX": {
     "opened_session_date": "2026-09-28"
+  },
+  "F": {
+    "opened_session_date": "2026-09-29"
   }
 }
