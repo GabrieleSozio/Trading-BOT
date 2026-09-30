@@ -1,54 +1,54 @@
 {
-  "generato_il": "2026-09-29T15:35:10+02:00",
-  "session_date": "2026-09-29",
+  "generato_il": "2026-09-30T15:35:10+02:00",
+  "session_date": "2026-09-30",
   "conto": "PA3NW0SCZK7E",
-  "equity_usd": 369.41,
-  "capitale_operativo_usd": 369.41,
+  "equity_usd": 392.29,
+  "capitale_operativo_usd": 392.29,
   "universo": 30,
   "crediti_intraday_liberi": 0,
   "selezione": [
     {
-      "symbol": "CCL261002C00024500",
-      "strike": 24.5,
-      "expiration": "2026-10-02",
-      "otm_pct": 1.92,
-      "ask": 0.88,
-      "premio_usd": 88.0,
-      "spread_pct": 1.14,
-      "ticker": "CCL",
-      "modo": "intraday",
-      "gap_pct": 8.57,
-      "spot": 24.04,
-      "rank": 1,
-      "volume": 31340381,
-      "stop_underlying": 23.32,
-      "target_underlying": 25.96
+      "symbol": "RIVN261016C00015500",
+      "strike": 15.5,
+      "expiration": "2026-10-16",
+      "otm_pct": 2.19,
+      "ask": 0.55,
+      "premio_usd": 55.0,
+      "spread_pct": 3.7,
+      "ticker": "RIVN",
+      "modo": "swing",
+      "gap_pct": 1.32,
+      "spot": 15.17,
+      "rank": 3,
+      "volume": 28890317,
+      "stop_underlying": 14.71,
+      "target_underlying": 16.38
     }
   ],
   "scartati": [
     {
-      "ticker": "UAL",
-      "spot": 114.18,
-      "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~11,418$)"
-    },
-    {
       "ticker": "RIOT",
-      "spot": 22.11,
+      "spot": 21.91,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,211$)"
-    },
-    {
-      "ticker": "DAL",
-      "spot": 85.51,
-      "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~8,551$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,191$)"
     },
     {
       "ticker": "SMCI",
-      "spot": 42.25,
+      "spot": 42.03,
       "modo": "swing",
-      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,225$)"
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~4,203$)"
+    },
+    {
+      "ticker": "CCL",
+      "spot": 25.44,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~2,544$)"
+    },
+    {
+      "ticker": "BABA",
+      "spot": 108.7,
+      "modo": "swing",
+      "motivo": "nessun contratto entro budget/spread (un contratto muove ~10,870$)"
     }
   ]
 }
