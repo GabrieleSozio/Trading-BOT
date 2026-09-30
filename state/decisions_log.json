@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T15:35:06+02:00",
+  "updated_at": "2026-09-30T15:47:05+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -506,6 +506,21 @@
         "stop": 11.94,
         "target": 13.05,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SMCI",
+      "date": "2026-09-30",
+      "opened_at": "2026-09-30T15:47:05+02:00",
+      "decision": "Gap contenuto (+1.88%) con volume molto alto (784k), il piu' elevato tra i tech. Momentum tech forte; da monitorare la tenuta sopra il livello di gap per confermare accumulo e non esaurimento.",
+      "meta": {
+        "entry": 41,
+        "stop": 39.77,
+        "target": 43.46,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
