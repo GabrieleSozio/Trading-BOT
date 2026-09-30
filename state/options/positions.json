@@ -13,6 +13,19 @@
       "expiration": "2026-10-16",
       "opened_at": "2026-09-28T15:55:08+02:00",
       "premium_peak": 0.87
+    },
+    "RIVN261016C00015500": {
+      "ticker": "RIVN",
+      "modo": "swing",
+      "qty": 1,
+      "entry_premium": 0.65,
+      "underlying_entry": 15.17,
+      "stop_underlying": 14.71,
+      "target_underlying": 16.38,
+      "premium_stop_pct": 0.5,
+      "strike": 15.5,
+      "expiration": "2026-10-16",
+      "opened_at": "2026-09-30T16:10:10+02:00"
     }
   },
   "closed_trades": [
@@ -356,7 +369,16 @@
       "event": "ingresso_non_eseguito",
       "symbol": "RIVN261016C00015500",
       "limite": 0.51
+    },
+    {
+      "at": "2026-09-30T16:10:10+02:00",
+      "event": "ingresso",
+      "symbol": "RIVN261016C00015500",
+      "ticker": "RIVN",
+      "modo": "swing",
+      "premio": 0.65,
+      "costo_usd": 65.0
     }
   ],
-  "updated_at": "2026-09-30T15:55:28+02:00"
+  "updated_at": "2026-09-30T16:10:11+02:00"
 }

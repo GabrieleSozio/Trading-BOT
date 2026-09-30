@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-29T16:25:09+02:00",
+  "updated_at": "2026-09-30T16:10:10+02:00",
   "entries": [
     {
       "ticker": "INTC",
@@ -82,6 +82,18 @@
         "symbol": "CCL261002C00024500",
         "modo": "intraday",
         "premio": 0.85
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "RIVN",
+      "date": "2026-09-30",
+      "opened_at": "2026-09-30T16:10:10+02:00",
+      "decision": "Call RIVN strike 15.5 scad 2026-10-16, +2.2% dal denaro, premio 65$, spread 3.7%. Modalita' swing, scarto +1.32%.",
+      "meta": {
+        "symbol": "RIVN261016C00015500",
+        "modo": "swing",
+        "premio": 0.65
       },
       "status": "in_sospeso"
     }
