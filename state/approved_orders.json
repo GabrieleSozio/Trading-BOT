@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-01T16:02:03+02:00",
+  "generated_at": "2026-10-01T16:17:03+02:00",
   "session_date": "2026-10-01",
-  "source_generated_at": "2026-10-01T16:00:05+02:00",
-  "portfolio_value": 597.72,
+  "source_generated_at": "2026-10-01T16:15:06+02:00",
+  "portfolio_value": 597.39,
   "capital_simulated": true,
-  "real_equity": 99915.7,
+  "real_equity": 99915.37,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -21,10 +21,19 @@
       "ticker": "SOFI",
       "sector": "Financials",
       "action": "buy",
-      "target_entry_price": 15.71,
-      "allocated_capital": 174.79,
-      "stop_loss_price": 15.24,
-      "take_profit_price": 16.65
+      "target_entry_price": 15.65,
+      "allocated_capital": 179.18,
+      "stop_loss_price": 15.18,
+      "take_profit_price": 16.59
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "action": "buy",
+      "target_entry_price": 111.12,
+      "allocated_capital": 179.18,
+      "stop_loss_price": 107.79,
+      "take_profit_price": 117.79
     }
   ]
 }
