@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-09-30T15:45:05+02:00",
-  "session_date": "2026-09-30",
-  "capital_usd": 531.29,
+  "generated_at": "2026-10-01T14:31:25+02:00",
+  "session_date": "2026-10-01",
+  "capital_usd": 685.26,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 207.33,
-  "free_slots": 1,
-  "orders": [
-    {
-      "ticker": "SMCI",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 41.56,
-      "target_entry_price": 41.35,
-      "allocated_capital": 159.39
-    }
-  ]
+  "available_usd": 241.03,
+  "free_slots": 0,
+  "orders": []
 }
