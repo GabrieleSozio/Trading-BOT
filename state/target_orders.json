@@ -1,11 +1,20 @@
 {
-  "generated_at": "2026-10-01T14:31:25+02:00",
+  "generated_at": "2026-10-01T16:00:05+02:00",
   "session_date": "2026-10-01",
-  "capital_usd": 685.26,
+  "capital_usd": 582.63,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 241.03,
-  "free_slots": 0,
-  "orders": []
+  "available_usd": 280.57,
+  "free_slots": 1,
+  "orders": [
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "action": "buy",
+      "reference_price": 15.79,
+      "target_entry_price": 15.71,
+      "allocated_capital": 174.79
+    }
+  ]
 }
