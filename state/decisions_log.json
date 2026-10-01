@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T16:34:06+02:00",
+  "updated_at": "2026-10-01T18:54:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -535,6 +535,21 @@
         "entry": 15.64,
         "stop": 15.18,
         "target": 16.58,
+        "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "HOOD",
+      "date": "2026-10-01",
+      "opened_at": "2026-10-01T18:54:06+02:00",
+      "decision": "Gap moderato +0.73% con volume pre-market molto elevato (630k): tipico profilo accumulo/partecipazione autentica piuttosto che climax. Financials in forza, titolo liquido, buona tenuta attesa overnight con target +6% raggiungibile.",
+      "meta": {
+        "entry": 110.75,
+        "stop": 107.43,
+        "target": 117.4,
         "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
