@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-01T14:31:29+02:00",
+  "generated_at": "2026-10-01T16:02:03+02:00",
   "session_date": "2026-10-01",
-  "source_generated_at": "2026-10-01T14:31:25+02:00",
-  "portfolio_value": 685.26,
+  "source_generated_at": "2026-10-01T16:00:05+02:00",
+  "portfolio_value": 597.72,
   "capital_simulated": true,
-  "real_equity": 99922.44,
+  "real_equity": 99915.7,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "action": "buy",
+      "target_entry_price": 15.71,
+      "allocated_capital": 174.79,
+      "stop_loss_price": 15.24,
+      "take_profit_price": 16.65
+    }
+  ]
 }
