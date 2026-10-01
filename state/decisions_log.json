@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30T15:47:05+02:00",
+  "updated_at": "2026-10-01T16:34:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -521,6 +521,21 @@
         "stop": 39.77,
         "target": 43.46,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOFI",
+      "date": "2026-10-01",
+      "opened_at": "2026-10-01T16:34:06+02:00",
+      "decision": "Volume pre-market enorme (1.14M, il piu' alto della lista) con gap minimo +0.32%: massima partecipazione con gap non esaurito, profilo ideale di continuazione. Financials in trend rialzista, titolo molto liquido.",
+      "meta": {
+        "entry": 15.64,
+        "stop": 15.18,
+        "target": 16.58,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
