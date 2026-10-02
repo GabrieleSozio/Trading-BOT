@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T16:51:06+02:00",
+  "updated_at": "2026-10-02T17:10:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -565,6 +565,21 @@
         "entry": 123.79,
         "stop": 120.08,
         "target": 131.22,
+        "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "ORCL",
+      "date": "2026-10-02",
+      "opened_at": "2026-10-02T17:10:06+02:00",
+      "decision": "Gap +1.52% con volume decente (~588k) e insider buy di un Director per ~$3.5M che offre supporto strutturale. Tech in trend; le vendite insider sono piu' ambigue ma l'acquisto netto conferma fiducia. Gap ancora nella fascia di prosecuzione.",
+      "meta": {
+        "entry": 141.38,
+        "stop": 137.14,
+        "target": 149.87,
         "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
