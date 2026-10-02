@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-01T18:54:06+02:00",
+  "updated_at": "2026-10-02T16:51:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -551,6 +551,21 @@
         "stop": 107.43,
         "target": 117.4,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-10-02",
+      "opened_at": "2026-10-02T16:51:06+02:00",
+      "decision": "Volume dominante (1.85M, di gran lunga il piu' alto) con gap +1.94%: esattamente il pattern accumulo che ha gia' reso +8.61%. Supportato dall'insider buy del CEO per ~$10M come tesi strutturale. Tenuta attesa alta, ma ingresso su conferma per evitare l'errore del 27/08 (gap gia' consumato).",
+      "meta": {
+        "entry": 123.79,
+        "stop": 120.08,
+        "target": 131.22,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
