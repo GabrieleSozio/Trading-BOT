@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-10-02T16:00:06+02:00",
+  "generated_at": "2026-10-02T19:30:05+02:00",
   "session_date": "2026-10-02",
-  "capital_usd": 633.01,
+  "capital_usd": 700.47,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 458.94,
-  "free_slots": 2,
+  "available_usd": 386.32,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "NFLX",
+      "sector": "Communication Services",
       "action": "buy",
-      "reference_price": 124.74,
-      "target_entry_price": 124.12,
-      "allocated_capital": 189.9
-    },
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 142.4,
-      "target_entry_price": 141.68,
-      "allocated_capital": 189.9
+      "reference_price": 66.83,
+      "target_entry_price": 66.5,
+      "allocated_capital": 210.14
     }
   ]
 }
