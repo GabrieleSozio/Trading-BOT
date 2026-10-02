@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-02T15:47:03+02:00",
+  "generated_at": "2026-10-02T16:02:03+02:00",
   "session_date": "2026-10-02",
-  "source_generated_at": "2026-10-02T15:45:05+02:00",
-  "portfolio_value": 619.46,
+  "source_generated_at": "2026-10-02T16:00:06+02:00",
+  "portfolio_value": 633.29,
   "capital_simulated": true,
-  "real_equity": 99934.75,
+  "real_equity": 99933.73,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -21,10 +21,19 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 123.48,
-      "allocated_capital": 185.55,
-      "stop_loss_price": 119.78,
-      "take_profit_price": 130.89
+      "target_entry_price": 124.12,
+      "allocated_capital": 189.9,
+      "stop_loss_price": 120.4,
+      "take_profit_price": 131.57
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 141.68,
+      "allocated_capital": 189.9,
+      "stop_loss_price": 137.43,
+      "take_profit_price": 150.18
     }
   ]
 }
