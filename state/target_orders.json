@@ -1,28 +1,11 @@
 {
-  "generated_at": "2026-10-01T16:15:06+02:00",
-  "session_date": "2026-10-01",
-  "capital_usd": 597.27,
+  "generated_at": "2026-10-02T14:31:23+02:00",
+  "session_date": "2026-10-02",
+  "capital_usd": 565.11,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 476.13,
-  "free_slots": 2,
-  "orders": [
-    {
-      "ticker": "SOFI",
-      "sector": "Financials",
-      "action": "buy",
-      "reference_price": 15.72,
-      "target_entry_price": 15.65,
-      "allocated_capital": 179.18
-    },
-    {
-      "ticker": "HOOD",
-      "sector": "Financials",
-      "action": "buy",
-      "reference_price": 111.67,
-      "target_entry_price": 111.12,
-      "allocated_capital": 179.18
-    }
-  ]
+  "available_usd": 146.26,
+  "free_slots": 0,
+  "orders": []
 }
