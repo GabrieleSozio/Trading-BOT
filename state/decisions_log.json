@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-02T17:10:06+02:00",
+  "updated_at": "2026-10-03T10:00:56+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -464,7 +464,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.94,
+        "pl_usd": -4.97,
+        "r_multiple": -1.38,
+        "alpha_pct": -3.2,
+        "benchmark_pct": -0.74,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -3,20% contro l'indice, quindi non e' stato un calo di mercato ma sottoperformance specifica. L'insider buy del CEO ha tenuto come tesi di fondo ma era un segnale lento, inadatto a giustificare un ingresso a brevissimo termine; la parte che ha ceduto e' il presunto 'timing meno rischioso' basato solo su un gap piu' contenuto, lettura troppo debole per reggere lo stop a -1,38R. Lezione: un insider buy e' una tesi strutturale, non un trigger di entry, e va accoppiato a un livello tecnico oggettivo di supporto prima di impegnare rischio, altrimenti si paga la volatilita' senza che la tesi abbia tempo di maturare.",
+      "closed_at": "2026-10-03T10:00:19+02:00"
     },
     {
       "ticker": "T",
@@ -479,7 +489,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.43,
+        "pl_usd": -3.67,
+        "r_multiple": -0.86,
+        "alpha_pct": -2.04,
+        "benchmark_pct": -0.39,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.04% con uscita per stop, quindi il titolo ha fatto peggio dell'indice in un contesto comunque debole. Ha ceduto proprio la parte su cui avevo gia' espresso dubbi: il volume basso (22k) segnalava scarsa partecipazione e il gap bullish non aveva benzina per reggere, mentre la scelta di ridurre la size ha limitato il danno a -0.86R. Il ragionamento era internamente coerente nel dubitare del segnale, ma l'errore e' stato comprare comunque: la prossima volta, con volume cosi' sotto soglia a conferma di un gap, scarto l'ingresso invece di ammetterlo come seconda scelta diversificante.",
+      "closed_at": "2026-10-03T10:00:26+02:00"
     },
     {
       "ticker": "NFLX",
@@ -494,7 +514,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.77,
+        "pl_usd": -3.9,
+        "r_multiple": -1.0,
+        "alpha_pct": -2.56,
+        "benchmark_pct": -0.21,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.56% contro un indice sostanzialmente piatto, quindi la perdita e' idiosincratica e non imputabile al mercato. Ha tenuto la lettura del volume elevato come segnale di interesse, ma ha ceduto l'inferenza che gap moderato piu' trend bullish implichino tenuta overnight: il parallelo con INTC e F era una generalizzazione da pochi casi, non un edge statistico. La prossima volta richiedo conferma intraday della prosecuzione prima di tenere overnight, invece di proiettare un target +6% su un pattern validato solo da due precedenti.",
+      "closed_at": "2026-10-03T10:00:31+02:00"
     },
     {
       "ticker": "F",
@@ -509,7 +539,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.25,
+        "pl_usd": -6.0,
+        "r_multiple": -1.05,
+        "alpha_pct": -3.22,
+        "benchmark_pct": -0.03,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.22% contro un indice piatto, con uscita in stop a -1.05R, quindi il segnale ha prodotto il risultato opposto a quello atteso. L'idea della partecipazione autentica via volume elevato ha retto come lettura di liquidita', ma ha ceduto come segnale direzionale: il volume alto con gap minimo misura interesse, non orientamento, e qui ha accompagnato distribuzione invece che accumulo. La volta scorsa lo stesso setup aveva dato +1.46%, quindi il pattern non e' affidabile da solo. Lezione concreta: il volume record senza conferma della direzione del flusso (chiusura relativa al range, prezzo sopra VWAP) non basta a entrare; serve un secondo filtro direzionale ",
+      "closed_at": "2026-10-03T10:00:39+02:00"
     },
     {
       "ticker": "SMCI",
@@ -524,7 +564,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 5.94,
+        "pl_usd": 7.32,
+        "r_multiple": 1.87,
+        "alpha_pct": 5.02,
+        "benchmark_pct": 0.92,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta: +5.02% di alpha con uscita al target a +1.87R conferma che il gap su volume anomalo segnalava accumulo e non esaurimento. Ha tenuto la lettura del volume come conferma del momentum tech, mentre la cautela sulla 'tenuta sopra il livello di gap' si e' rivelata ridondante dato che il gap non e' stato riempito. Prossima volta: quando il volume e' il piu' alto del comparto e il gap resta contenuto, dare piu' peso all'ingresso immediato invece di subordinarlo a una conferma che il setup gia' implica.",
+      "closed_at": "2026-10-03T10:00:44+02:00"
     },
     {
       "ticker": "SOFI",
@@ -554,7 +604,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.18,
+        "pl_usd": 6.84,
+        "r_multiple": 2.07,
+        "alpha_pct": 5.44,
+        "benchmark_pct": 0.74,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta: +5.44% di alpha con uscita pulita sul target e 2.07R confermano che la lettura del gap moderato con volume pre-market elevato come accumulo autentico, non climax, ha tenuto. Il ragionamento solido e' stato distinguere partecipazione genuina da esaurimento usando il rapporto gap/volume, mentre la tesi settoriale sui financials in forza era accessoria e non verificabile come driver effettivo. Per la prossima analisi simile: mantenere la soglia gap <1% con volume pre-market sopra la norma come segnale di continuazione, ma smettere di attaccare narrazioni settoriali che non aggiungono edge misurabile.",
+      "closed_at": "2026-10-03T10:00:50+02:00"
     },
     {
       "ticker": "INTC",
@@ -569,7 +629,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.97,
+        "pl_usd": -3.68,
+        "r_multiple": -1.01,
+        "alpha_pct": -2.97,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -2.97% contro un indice piatto, quindi la perdita e' interamente idiosincratica, non colpa del mercato. Ha ceduto l'assunto che volume dominante piu' gap replicasse il pattern accumulo da +8.61%: il volume senza follow-through dopo l'ingresso su conferma era distribuzione mascherata, non assorbimento. L'insider buy del CEO ha retto come tesi strutturale di lungo periodo ma era irrilevante sull'orizzonte dello stop, e averlo citato ha gonfiato la fiducia in un setup tattico. Lezione: separare la tesi strutturale (insider) dal trigger tattico (volume/gap) e dimensionare solo sul secondo, pretendendo conferma di follow-through nelle prime barre prima di accetta",
+      "closed_at": "2026-10-03T10:00:56+02:00"
     },
     {
       "ticker": "ORCL",
