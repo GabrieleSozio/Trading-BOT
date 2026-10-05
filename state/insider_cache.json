@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-09-30T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -104,7 +104,7 @@
   }
  },
  "COIN": {
-  "fetched_at": "2026-09-30T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "COIN",
    "available": true,
@@ -146,7 +146,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -188,7 +188,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -230,7 +230,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-10-01T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -305,7 +305,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-09-30T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -379,7 +379,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-10-01T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
@@ -421,7 +421,7 @@
   }
  },
  "SHOP": {
-  "fetched_at": "2026-10-01T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "SHOP",
    "available": true,
@@ -435,7 +435,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-09-21T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
@@ -449,7 +449,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-09-29T12:30:06+00:00",
+  "fetched_at": "2026-10-05T12:30:08+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,

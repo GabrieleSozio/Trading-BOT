@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-10-05T14:31:06+02:00",
+  "session_date": "2026-10-05",
+  "universe_size": 44,
+  "capital_usd": 701.88,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 210.56,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La lista e' tutta rialzista; cerco combinazioni di gap significativo + volume convincente, evitando picchi isolati. DKNG ha il gap piu' forte (+4.84%) con volume solido: candidato di continuazione. COIN e HOOD hanno storico positivo del sistema con gap/volume allineati (COIN +6.88%, HOOD +6.18%), anche se HOOD e' 1-1 e richiede conferma di follow-through. QCOM mostra gap moderato con il volume piu' alto tra i tech (536k), coerente con accumulo genuino alla SMCI/HOOD winner. BAC ha volume dominante (671k) ma gap minimo: lezione F/INTC insegna che volume alto con gap piatto misura interesse non direzione, quindi lo tratto con cautela ma lo includo per liquidita' e settore financials in forza. NKE ha volume enorme (1.55M) ma gap quasi nullo e vendite insider: lo includo con riserva. Escludo KO (vendite insider massicce $88M, gap debole) e titoli con volume pre-market irrisorio (PINS, HPQ, SHOP) che non danno conferma di partecipazione.",
+  "candidates": [
+    {
+      "ticker": "DKNG",
+      "sector": "Consumer Discretionary",
+      "last_price": 19.49,
+      "prev_close": 18.59,
+      "gap_pct": 4.8413,
+      "premarket_volume": 491163,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap piu' forte della lista (+4.84%) con volume solido (~491k) e trend bullish: setup di continuazione multi-day forte, simile ai pattern gap+volume gia' premiati. Dimensionare per catturare la prosecuzione."
+    },
+    {
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 188.5,
+      "prev_close": 183,
+      "gap_pct": 3.0055,
+      "premarket_volume": 338151,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap robusto (+3.01%) con volume adeguato (338k); storico del sistema molto positivo (+6.88%, +2.27R). Catalizzatore crypto plausibile ma da trattare come ipotesi; allineamento gap/volume/trend giustifica l'ingresso."
+    },
+    {
+      "ticker": "QCOM",
+      "sector": "Technology",
+      "last_price": 187.4418,
+      "prev_close": 184.87,
+      "gap_pct": 1.3911,
+      "premarket_volume": 536334,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap moderato (+1.39%) con il volume piu' alto tra i tech (536k): rapporto gap/volume coerente con accumulo autentico (pattern SMCI/HOOD winner), non climax. Buona tenuta attesa overnight."
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "last_price": 114,
+      "prev_close": 112.74,
+      "gap_pct": 1.1176,
+      "premarket_volume": 298549,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap contenuto (+1.12%) con volume pre-market elevato (298k), pattern di accumulo gia' premiato (+6.18%). Storico 1-1 impone conferma di follow-through nelle prime barre prima di piena esposizione."
+    },
+    {
+      "ticker": "BAC",
+      "sector": "Financials",
+      "last_price": 53.95,
+      "prev_close": 53.75,
+      "gap_pct": 0.3721,
+      "premarket_volume": 670959,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Volume dominante (671k) e settore financials in forza, ma gap minimo (+0.37%): interesse alto senza direzione netta. Incluso con cautela, richiede conferma direzionale (prezzo sopra VWAP) per evitare l'errore tipo F/INTC."
+    },
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "last_price": 33.96,
+      "prev_close": 33.87,
+      "gap_pct": 0.2657,
+      "premarket_volume": 1550073,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 3,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Volume massiccio (1.55M) segnala forte partecipazione, trend bullish; gap minimo e piccole vendite insider ($371k, poco rilevanti) ne riducono la convinzione. Incluso solo se conferma follow-through direzionale all'apertura."
+    }
+  ]
+}
