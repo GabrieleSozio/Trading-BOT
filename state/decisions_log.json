@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-03T10:00:56+02:00",
+  "updated_at": "2026-10-05T15:31:07+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -651,6 +651,21 @@
         "stop": 137.14,
         "target": 149.87,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-10-05",
+      "opened_at": "2026-10-05T15:31:07+02:00",
+      "decision": "Volume massiccio (1.55M) segnala forte partecipazione, trend bullish; gap minimo e piccole vendite insider ($371k, poco rilevanti) ne riducono la convinzione. Incluso solo se conferma follow-through direzionale all'apertura.",
+      "meta": {
+        "entry": 33.32,
+        "stop": 32.32,
+        "target": 35.32,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
