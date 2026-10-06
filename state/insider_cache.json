@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-10-05T12:30:08+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-05T12:30:08+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -216,7 +216,7 @@
   }
  },
  "SNAP": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "SNAP",
    "available": true,
@@ -258,7 +258,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -286,7 +286,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-10-02T12:30:06+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -379,7 +379,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-10-05T12:30:08+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
@@ -421,7 +421,7 @@
   }
  },
  "SHOP": {
-  "fetched_at": "2026-10-05T12:30:08+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "SHOP",
    "available": true,
@@ -435,7 +435,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-10-05T12:30:08+00:00",
+  "fetched_at": "2026-10-06T12:30:06+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
