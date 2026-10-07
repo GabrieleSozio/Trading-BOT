@@ -1,8 +1,8 @@
 {
-  "session_date": "2026-10-06",
-  "opening_balance": 99937.9,
-  "closing_balance": 99940.61,
+  "session_date": "2026-10-07",
+  "opening_balance": 99935.81,
+  "closing_balance": 99936.39,
   "kill_switch_triggered": false,
   "events": [],
-  "last_tick_at": "2026-10-06T21:59:01+02:00"
+  "last_tick_at": "2026-10-07T21:46:02+02:00"
 }
