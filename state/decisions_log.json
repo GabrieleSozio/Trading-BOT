@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T15:31:07+02:00",
+  "updated_at": "2026-10-08T19:12:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -666,6 +666,21 @@
         "stop": 32.32,
         "target": 35.32,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NFLX",
+      "date": "2026-10-08",
+      "opened_at": "2026-10-08T19:12:06+02:00",
+      "decision": "Unico titolo con volume pre-market realmente rilevante (278k) e gap contenuto (+0.65%), profilo analogo ai setup vincenti HOOD/SMCI (gap<1% + volume elevato = possibile accumulo). Trend bullish. Il precedente negativo impone conferma intraday di follow-through prima di tenere overnight e target +6% realistico su un nome liquido e volatile.",
+      "meta": {
+        "entry": 70.94,
+        "stop": 68.81,
+        "target": 75.2,
+        "settore": "Communication Services",
         "fascia": "micro",
         "azione": "buy"
       },
