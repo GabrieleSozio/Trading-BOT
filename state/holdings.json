@@ -1,11 +1,8 @@
 {
-  "SOFI": {
-    "opened_session_date": "2026-10-01"
-  },
-  "ORCL": {
-    "opened_session_date": "2026-10-02"
-  },
   "NKE": {
     "opened_session_date": "2026-10-05"
+  },
+  "SOFI": {
+    "opened_session_date": "2026-10-01"
   }
 }
