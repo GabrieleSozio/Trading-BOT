@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-08T19:00:05+02:00",
-  "session_date": "2026-10-08",
-  "capital_usd": 588.15,
+  "generated_at": "2026-10-09T14:37:12+02:00",
+  "session_date": "2026-10-09",
+  "capital_usd": 676.12,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 212.84,
+  "available_usd": 326.4,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
+      "ticker": "SOFI",
+      "sector": "Financials",
       "action": "buy",
-      "reference_price": 71.32,
-      "target_entry_price": 70.96,
-      "allocated_capital": 176.44
+      "reference_price": 15.74,
+      "target_entry_price": 15.66,
+      "allocated_capital": 202.84
     }
   ]
 }
