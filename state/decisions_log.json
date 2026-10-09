@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-08T19:12:06+02:00",
+  "updated_at": "2026-10-09T15:31:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -681,6 +681,21 @@
         "stop": 68.81,
         "target": 75.2,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOFI",
+      "date": "2026-10-09",
+      "opened_at": "2026-10-09T15:31:06+02:00",
+      "decision": "Volume pre-market il piu' alto dei financials (~504k) con gap contenuto +0.83%: segnale di partecipazione autentica nel pattern gap<1%+volume elevato. Titolo liquido in trend, buona tenuta attesa overnight con conferma direzionale.",
+      "meta": {
+        "entry": 15.59,
+        "stop": 15.12,
+        "target": 16.52,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
