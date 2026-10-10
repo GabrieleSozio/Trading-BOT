@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-09T15:31:06+02:00",
+  "updated_at": "2026-10-10T10:00:22+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -589,7 +589,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -0.7,
+        "pl_usd": -1.21,
+        "r_multiple": -0.24,
+        "alpha_pct": -2.0,
+        "benchmark_pct": 1.3,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era sbagliata: alpha -2.00% contro un indice in rialzo conferma che il titolo ha sottoperformato, non solo chiuso in lieve perdita. La tesi della partecipazione elevata ha tenuto sul piano della liquidita', ma l'inferenza chiave ha ceduto: volume pre-market enorme con gap minimo non segnala continuazione: puo' indicare distribuzione o assorbimento della domanda prima dell'apertura. La prossima volta tratto il volume alto con gap compresso come segnale ambiguo e richiedo conferma intraday (break del massimo pre-market) prima di entrare, invece di presumere il profilo di continuazione.",
+      "closed_at": "2026-10-10T10:00:16+02:00"
     },
     {
       "ticker": "HOOD",
@@ -654,7 +664,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.97,
+        "pl_usd": -4.2,
+        "r_multiple": -1.0,
+        "alpha_pct": -3.53,
+        "benchmark_pct": 0.56,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.53% contro un indice in leggero rialzo, quindi non e' stata sfortuna ma una lettura errata del setup. L'insider buy del Director ha tenuto come segnale di fiducia di medio termine ma non offriva alcun supporto intraday al prezzo, mentre la tesi del gap in fascia di prosecuzione ha ceduto subito: volume ~588k era solo 'decente', non confermava convinzione reale dietro il gap. La prossima volta separo i segnali per orizzonte temporale: un insider buy non giustifica un trade a stop stretto su gap, e un gap senza volume nettamente superiore alla media va trattato come continuazione non confermata.",
+      "closed_at": "2026-10-10T10:00:22+02:00"
     },
     {
       "ticker": "NKE",
