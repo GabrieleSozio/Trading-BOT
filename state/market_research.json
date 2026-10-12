@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-10-12T14:31:21+02:00",
+  "session_date": "2026-10-12",
+  "universe_size": 44,
+  "capital_usd": 664.6,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 199.38,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La lezione ricorrente del sistema e' chiara: il miglior setup di continuazione multi-day e' un gap moderato (sotto ~1.5%) accompagnato da volume pre-market elevato rispetto alla media, che indica accumulo autentico e non climax (HOOD +5.44%, COIN +6.47% confermano). Al contrario gap forti con volume senza struttura (SNAP) o gap compressi con volume enorme (SOFI) hanno fallito. SNAP e NFLX hanno precedenti negativi diretti su questo sistema e vanno evitati o ridotti. Privilegio quindi titoli con volume pre-market convincente e gap ragionevole. KO ha vendite insider massicce ($88M) che riducono l'appeal. Seleziono i 6 con il miglior rapporto gap/volume e liquidita' reale.",
+  "candidates": [
+    {
+      "ticker": "COIN",
+      "sector": "Financials",
+      "last_price": 181.47,
+      "prev_close": 179.39,
+      "gap_pct": 1.1595,
+      "premarket_volume": 121287,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.16% moderato con volume solido (121k) e trend deciso. Precedente positivo diretto su questo sistema (+6.47% alpha). Il profilo gap+volume+trend allineato e' proprio il filtro di qualita' che ha funzionato. Catalizzatore crypto plausibile ma trattato come ipotesi."
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "last_price": 109.58,
+      "prev_close": 109.02,
+      "gap_pct": 0.5137,
+      "premarket_volume": 300362,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.51% compresso ma volume pre-market elevato (300k), esattamente il pattern di accumulo autentico che ha prodotto +5.44% alpha l'ultima volta. Financials in forza. Setup di continuazione preferito dal sistema."
+    },
+    {
+      "ticker": "SHOP",
+      "sector": "Technology",
+      "last_price": 172.6,
+      "prev_close": 170.85,
+      "gap_pct": 1.0243,
+      "premarket_volume": 112627,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.02% nella fascia ideale di continuazione, volume decente (112k), tech in trend. Gap moderato senza segni di esaurimento, buona probabilita' di tenuta overnight."
+    },
+    {
+      "ticker": "T",
+      "sector": "Communication Services",
+      "last_price": 22.2938,
+      "prev_close": 22.18,
+      "gap_pct": 0.5131,
+      "premarket_volume": 317609,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.51% contenuto con volume pre-market robusto (317k), tipico profilo di partecipazione genuina. Titolo liquido e difensivo, minore rischio di sfogo isolato, tenuta overnight ragionevole."
+    },
+    {
+      "ticker": "PFE",
+      "sector": "Health Care",
+      "last_price": 28.34,
+      "prev_close": 28.28,
+      "gap_pct": 0.2122,
+      "premarket_volume": 96009,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.21% modesto ma volume pre-market consistente (96k) su titolo liquido health care. Movimento non esteso lascia spazio al target senza rischio climax; profilo a rischio controllato."
+    },
+    {
+      "ticker": "BAC",
+      "sector": "Financials",
+      "last_price": 54.55,
+      "prev_close": 54.32,
+      "gap_pct": 0.4234,
+      "premarket_volume": 47099,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.42% moderato con volume accettabile (47k), financials in forza come settore che ha mostrato continuazione. Movimento ordinato e liquidita' elevata favoriscono la tenuta multi-day."
+    }
+  ]
+}
