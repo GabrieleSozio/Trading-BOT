@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T15:43:06+02:00",
+  "updated_at": "2026-10-13T15:49:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -731,6 +731,21 @@
         "stop": 12.19,
         "target": 13.32,
         "settore": "Industrials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "F",
+      "date": "2026-10-13",
+      "opened_at": "2026-10-13T15:49:06+02:00",
+      "decision": "Volume elevato (~211k) con gap contenuto +0.25%, Consumer Discretionary. Prezzo basso e liquido, profilo gap/volume coerente con accumulo genuino alla HOOD. Buona tenuta attesa se conferma il massimo pre-market.",
+      "meta": {
+        "entry": 12.06,
+        "stop": 11.7,
+        "target": 12.78,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
