@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10T10:00:22+02:00",
+  "updated_at": "2026-10-13T15:43:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -716,6 +716,21 @@
         "stop": 15.12,
         "target": 16.52,
         "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "AAL",
+      "date": "2026-10-13",
+      "opened_at": "2026-10-13T15:43:06+02:00",
+      "decision": "Volume pre-market piu' alto del paniere (~306k), gap +0.50% moderato in settore Industrials. Massima partecipazione = maggiore probabilita' di prosecuzione. Lo storico negativo impone conferma della tenuta sopra apertura prima dell'ingresso, ma la liquidita' e il trend bullish lo rendono il candidato con piu' convinzione reale.",
+      "meta": {
+        "entry": 12.57,
+        "stop": 12.19,
+        "target": 13.32,
+        "settore": "Industrials",
         "fascia": "micro",
         "azione": "buy"
       },
