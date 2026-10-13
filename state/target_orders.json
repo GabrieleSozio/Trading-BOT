@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-12T21:45:05+02:00",
-  "session_date": "2026-10-12",
-  "capital_usd": 545.21,
+  "generated_at": "2026-10-13T14:31:35+02:00",
+  "session_date": "2026-10-13",
+  "capital_usd": 545.3,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 205.81,
+  "available_usd": 205.79,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "T",
-      "sector": "Communication Services",
+      "ticker": "AAL",
+      "sector": "Industrials",
       "action": "buy",
-      "reference_price": 22.41,
-      "target_entry_price": 22.3,
-      "allocated_capital": 163.56
+      "reference_price": 12.63,
+      "target_entry_price": 12.57,
+      "allocated_capital": 163.59
     }
   ]
 }
