@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-10-13T14:31:35+02:00",
+  "generated_at": "2026-10-13T15:45:06+02:00",
   "session_date": "2026-10-13",
-  "capital_usd": 545.3,
+  "capital_usd": 523.84,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 205.79,
+  "available_usd": 218.3,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "AAL",
-      "sector": "Industrials",
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 12.63,
-      "target_entry_price": 12.57,
-      "allocated_capital": 163.59
+      "reference_price": 12.12,
+      "target_entry_price": 12.06,
+      "allocated_capital": 157.15
     }
   ]
 }
