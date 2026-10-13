@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-13T14:31:39+02:00",
+  "generated_at": "2026-10-13T15:47:03+02:00",
   "session_date": "2026-10-13",
-  "source_generated_at": "2026-10-13T14:31:35+02:00",
-  "portfolio_value": 545.3,
+  "source_generated_at": "2026-10-13T15:45:06+02:00",
+  "portfolio_value": 523.59,
   "capital_simulated": true,
-  "real_equity": 99930.5,
+  "real_equity": 99931.22,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,13 +18,13 @@
   ],
   "orders": [
     {
-      "ticker": "AAL",
-      "sector": "Industrials",
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "target_entry_price": 12.57,
-      "allocated_capital": 163.59,
-      "stop_loss_price": 12.19,
-      "take_profit_price": 13.32
+      "target_entry_price": 12.06,
+      "allocated_capital": 157.08,
+      "stop_loss_price": 11.7,
+      "take_profit_price": 12.78
     }
   ]
 }
