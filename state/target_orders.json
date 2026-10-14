@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-10-13T15:45:06+02:00",
-  "session_date": "2026-10-13",
-  "capital_usd": 523.84,
+  "generated_at": "2026-10-14T14:31:32+02:00",
+  "session_date": "2026-10-14",
+  "capital_usd": 690.02,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 218.3,
-  "free_slots": 1,
-  "orders": [
-    {
-      "ticker": "F",
-      "sector": "Consumer Discretionary",
-      "action": "buy",
-      "reference_price": 12.12,
-      "target_entry_price": 12.06,
-      "allocated_capital": 157.15
-    }
-  ]
+  "available_usd": 231.74,
+  "free_slots": 0,
+  "orders": []
 }
