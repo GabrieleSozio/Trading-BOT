@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -146,7 +146,7 @@
   }
  },
  "DKNG": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "DKNG",
    "available": true,
@@ -174,7 +174,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-10-01T12:30:06+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -188,7 +188,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -202,7 +202,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -230,7 +230,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-10-12T12:30:10+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -305,7 +305,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -337,7 +337,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-10-12T12:30:10+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -407,7 +407,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -421,7 +421,7 @@
   }
  },
  "SHOP": {
-  "fetched_at": "2026-10-12T12:30:10+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "SHOP",
    "available": true,
@@ -463,7 +463,7 @@
   }
  },
  "PYPL": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-14T12:30:06+00:00",
   "data": {
    "ticker": "PYPL",
    "available": true,

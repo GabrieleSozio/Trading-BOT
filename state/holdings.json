@@ -1,11 +1,11 @@
 {
-  "AAL": {
-    "opened_session_date": "2026-10-13"
-  },
   "F": {
     "opened_session_date": "2026-10-13"
   },
   "NFLX": {
     "opened_session_date": "2026-10-08"
+  },
+  "AAL": {
+    "opened_session_date": "2026-10-13"
   }
 }
