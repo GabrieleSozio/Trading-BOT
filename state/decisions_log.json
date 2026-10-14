@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-13T15:49:06+02:00",
+  "updated_at": "2026-10-14T16:15:07+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -745,6 +745,21 @@
         "entry": 12.06,
         "stop": 11.7,
         "target": 12.78,
+        "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-10-14",
+      "opened_at": "2026-10-14T16:15:07+02:00",
+      "decision": "Gap piu' forte del paniere (+1.22%) con volume di gran lunga il piu' alto (372k), segnale di partecipazione reale. Storico negativo ma quella volta il volume non era confermante come oggi; resta il miglior rapporto forza/liquidita'. Entrare solo su tenuta del minimo del gap.",
+      "meta": {
+        "entry": 34.85,
+        "stop": 33.81,
+        "target": 36.95,
         "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
