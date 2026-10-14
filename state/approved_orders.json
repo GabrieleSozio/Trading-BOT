@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T14:31:37+02:00",
+  "generated_at": "2026-10-14T16:02:03+02:00",
   "session_date": "2026-10-14",
-  "source_generated_at": "2026-10-14T14:31:32+02:00",
-  "portfolio_value": 690.02,
+  "source_generated_at": "2026-10-14T16:00:06+02:00",
+  "portfolio_value": 930.96,
   "capital_simulated": true,
-  "real_equity": 99927.39,
+  "real_equity": 99923.84,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "target_entry_price": 34.87,
+      "allocated_capital": 279.29,
+      "stop_loss_price": 33.82,
+      "take_profit_price": 36.96
+    }
+  ]
 }
