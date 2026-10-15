@@ -1,7 +1,7 @@
 {
   "session_date": "2026-10-15",
   "opening_balance": 99938.27,
-  "closing_balance": null,
+  "closing_balance": 99950.59,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -11,5 +11,5 @@
       "ticker": "NFLX"
     }
   ],
-  "last_tick_at": "2026-10-15T21:45:02+02:00"
+  "last_tick_at": "2026-10-15T21:46:01+02:00"
 }
