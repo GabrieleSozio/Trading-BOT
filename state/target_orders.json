@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-10-16T17:15:06+02:00",
+  "generated_at": "2026-10-16T21:45:05+02:00",
   "session_date": "2026-10-16",
-  "capital_usd": 1004.89,
+  "capital_usd": 889.13,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 839.12,
-  "free_slots": 2,
+  "available_usd": 431.05,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
+      "ticker": "CRM",
+      "sector": "Technology",
       "action": "buy",
-      "reference_price": 37.58,
-      "target_entry_price": 37.39,
-      "allocated_capital": 301.47
-    },
-    {
-      "ticker": "RIVN",
-      "sector": "Consumer Discretionary",
-      "action": "buy",
-      "reference_price": 12.83,
-      "target_entry_price": 12.77,
-      "allocated_capital": 301.47
+      "reference_price": 241.56,
+      "target_entry_price": 240.36,
+      "allocated_capital": 266.74
     }
   ]
 }
