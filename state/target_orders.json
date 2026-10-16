@@ -1,20 +1,28 @@
 {
-  "generated_at": "2026-10-15T15:45:05+02:00",
-  "session_date": "2026-10-15",
-  "capital_usd": 749.38,
+  "generated_at": "2026-10-16T14:31:30+02:00",
+  "session_date": "2026-10-16",
+  "capital_usd": 938.02,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 449.38,
-  "free_slots": 1,
+  "available_usd": 775.65,
+  "free_slots": 2,
   "orders": [
     {
       "ticker": "NKE",
       "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 36.83,
-      "target_entry_price": 36.64,
-      "allocated_capital": 224.81
+      "reference_price": 37.16,
+      "target_entry_price": 36.97,
+      "allocated_capital": 281.41
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 200.49,
+      "target_entry_price": 199.49,
+      "allocated_capital": 281.41
     }
   ]
 }
