@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-14T16:15:07+02:00",
+  "updated_at": "2026-10-16T15:38:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -761,6 +761,21 @@
         "stop": 33.81,
         "target": 36.95,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PLTR",
+      "date": "2026-10-16",
+      "opened_at": "2026-10-16T15:38:06+02:00",
+      "decision": "Gap +0.65% moderato con volume solido (~169k) su un leader tech ad alto beta. Momentum strutturale forte, buona probabilita' di follow-through multi-day verso target.",
+      "meta": {
+        "entry": 198.76,
+        "stop": 192.8,
+        "target": 210.69,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },

@@ -1,15 +1,20 @@
 {
-  "session_date": "2026-10-15",
-  "opening_balance": 99938.27,
-  "closing_balance": 99950.53,
+  "session_date": "2026-10-16",
+  "opening_balance": 99953.11,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-10-15T21:45:10+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "max_hold_days 5",
-      "ticker": "NFLX"
+      "ts": "2026-10-16T15:38:06+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "PLTR",
+      "alpaca_order_id": "42d982ac-15ae-4f08-8222-4321a64ba5fa",
+      "qty": 1,
+      "entry": 198.765,
+      "stop_loss": 192.8,
+      "take_profit": 210.69,
+      "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-10-15T21:59:02+02:00"
+  "last_tick_at": "2026-10-16T15:38:02+02:00"
 }
