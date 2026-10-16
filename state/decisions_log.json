@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T17:41:06+02:00",
+  "updated_at": "2026-10-16T18:25:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -790,6 +790,21 @@
         "entry": 12.77,
         "stop": 12.39,
         "target": 13.54,
+        "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-10-16",
+      "opened_at": "2026-10-16T18:25:06+02:00",
+      "decision": "Gap +0.70% in fascia prosecuzione con volume pre-market elevato (~357k, tra i piu' alti). Consumer discretionary in forza, partecipazione autentica che supporta continuazione ordinata.",
+      "meta": {
+        "entry": 37.39,
+        "stop": 36.27,
+        "target": 39.63,
         "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"

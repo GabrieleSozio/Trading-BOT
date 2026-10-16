@@ -1,8 +1,11 @@
 {
-  "F": {
-    "opened_session_date": "2026-10-13"
-  },
   "RIVN": {
     "opened_session_date": "2026-10-16"
+  },
+  "NKE": {
+    "opened_session_date": "2026-10-16"
+  },
+  "F": {
+    "opened_session_date": "2026-10-13"
   }
 }
