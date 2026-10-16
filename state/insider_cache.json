@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -132,17 +132,21 @@
   }
  },
  "CRM": {
-  "fetched_at": "2026-08-24T12:30:07+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "CRM",
    "available": true,
    "window_days": 90,
-   "n_buys": 0,
-   "n_sells": 0,
-   "buy_value_usd": 0,
-   "sell_value_usd": 0,
-   "buyers": [],
-   "sellers": []
+   "n_buys": 1,
+   "n_sells": 2,
+   "buy_value_usd": 999450.85,
+   "sell_value_usd": 1172746.1,
+   "buyers": [
+    "Kirk David Blair (Director)"
+   ],
+   "sellers": [
+    "Conway Craig (Director)"
+   ]
   }
  },
  "DKNG": {
@@ -174,7 +178,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-10-14T12:30:06+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -305,7 +309,7 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
@@ -337,7 +341,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -407,7 +411,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -435,7 +439,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
@@ -449,7 +453,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,
@@ -477,7 +481,7 @@
   }
  },
  "PLTR": {
-  "fetched_at": "2026-10-09T12:30:07+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "PLTR",
    "available": true,
@@ -491,7 +495,7 @@
   }
  },
  "ADBE": {
-  "fetched_at": "2026-10-15T12:30:09+00:00",
+  "fetched_at": "2026-10-16T12:30:07+00:00",
   "data": {
    "ticker": "ADBE",
    "available": true,
