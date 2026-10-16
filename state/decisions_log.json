@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T15:38:06+02:00",
+  "updated_at": "2026-10-16T17:41:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -776,6 +776,21 @@
         "stop": 192.8,
         "target": 210.69,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "RIVN",
+      "date": "2026-10-16",
+      "opened_at": "2026-10-16T17:41:06+02:00",
+      "decision": "Gap +0.92% in fascia di prosecuzione ideale (<1%) con volume consistente (~124k), trend Bullish. Profilo simile ai setup vincenti (gap moderato + partecipazione autentica). Titolo volatile adatto a target +6%.",
+      "meta": {
+        "entry": 12.77,
+        "stop": 12.39,
+        "target": 13.54,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
