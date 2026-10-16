@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-10-16T14:31:30+02:00",
+  "generated_at": "2026-10-16T17:15:06+02:00",
   "session_date": "2026-10-16",
-  "capital_usd": 938.02,
+  "capital_usd": 1004.89,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 775.65,
+  "available_usd": 839.12,
   "free_slots": 2,
   "orders": [
     {
       "ticker": "NKE",
       "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 37.16,
-      "target_entry_price": 36.97,
-      "allocated_capital": 281.41
+      "reference_price": 37.58,
+      "target_entry_price": 37.39,
+      "allocated_capital": 301.47
     },
     {
-      "ticker": "PLTR",
-      "sector": "Technology",
+      "ticker": "RIVN",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 200.49,
-      "target_entry_price": 199.49,
-      "allocated_capital": 281.41
+      "reference_price": 12.83,
+      "target_entry_price": 12.77,
+      "allocated_capital": 301.47
     }
   ]
 }
