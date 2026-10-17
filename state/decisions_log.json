@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-16T18:25:06+02:00",
+  "updated_at": "2026-10-17T10:00:54+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -689,7 +689,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.19,
+        "pl_usd": 12.35,
+        "r_multiple": 2.19,
+        "alpha_pct": 5.77,
+        "benchmark_pct": 0.42,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta: +5.77% di alpha con uscita a target e 2.19R confermano che la lettura rialzista era solida. Ha tenuto l'intuizione sul volume massiccio come segnale di partecipazione reale, e la scelta di condizionare l'ingresso al follow-through all'apertura ha filtrato il rischio di falsa partenza; il peso dato alle vendite insider era giustamente marginale e non ha inquinato la tesi. La lezione: la disciplina di richiedere conferma direzionale prima di entrare, invece di anticipare sul solo volume, va replicata perche' qui ha trasformato un segnale promettente in un trade pulito.",
+      "closed_at": "2026-10-17T10:00:18+02:00"
     },
     {
       "ticker": "NFLX",
@@ -704,7 +714,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 2.68,
+        "pl_usd": 3.8,
+        "r_multiple": 0.89,
+        "alpha_pct": 2.96,
+        "benchmark_pct": -0.28,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era corretta: +2.96% di alpha contro un indice piatto-negativo conferma che la selezione del titolo ha aggiunto valore reale, non solo beta di mercato. Ha tenuto la tesi centrale (gap<1% + volume pre-market elevato come segnale di accumulo su nome liquido), mentre ha ceduto l'aspettativa di target +6%: la chiusura manuale a +0.89R indica che il follow-through intraday non ha retto fino all'obiettivo, giustamente monetizzato invece di insistere. Lezione per setup analoghi: definire in anticipo un livello di parziale intorno a +2/3% quando il follow-through rallenta, invece di legare l'intera posizione a un target ottimistico calibrato su HOOD/SMCI che erano casi piu esplosivi di ",
+      "closed_at": "2026-10-17T10:00:24+02:00"
     },
     {
       "ticker": "SOFI",
@@ -719,7 +739,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -1.7,
+        "pl_usd": -3.43,
+        "r_multiple": -0.66,
+        "alpha_pct": -1.63,
+        "benchmark_pct": -0.07,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -1.63% contro un indice piatto, quindi il segnale non ha prodotto sovraperformance, anzi il contrario. La tesi del volume pre-market come proxy di partecipazione autentica ha ceduto: volume elevato e gap contenuto non hanno garantito tenuta direzionale, e lo stop e' scattato a -0.66R senza che il trend confermasse. La lezione: il volume pre-market da solo non e' una tesi direzionale, serve una conferma intraday sul range o sulla struttura prima di considerare valido il pattern gap<1%+volume.",
+      "closed_at": "2026-10-17T10:00:29+02:00"
     },
     {
       "ticker": "AAL",
@@ -734,7 +764,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.02,
+        "pl_usd": -4.94,
+        "r_multiple": -1.0,
+        "alpha_pct": -1.94,
+        "benchmark_pct": -1.08,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -1.94% conferma che non si e' trattato solo di beta di mercato ma di una sottoperformance attiva rispetto all'indice. Ha ceduto l'equazione \"massimo volume = massima probabilita' di prosecuzione\", perche' il volume elevato ha accompagnato distribuzione piu' che accumulo; ha tenuto invece l'intuizione di pretendere conferma sopra apertura, condizione che a quanto pare non si e' mai consolidata e che avrei dovuto far rispettare con piu' disciplina prima di entrare. La lezione: il volume pre-market da solo non segnala direzione, va sempre letto insieme alla tenuta effettiva del prezzo sopra l'apertura, e in presenza di storico negativo l'ingresso va rinviato",
+      "closed_at": "2026-10-17T10:00:36+02:00"
     },
     {
       "ticker": "F",
@@ -764,7 +804,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.11,
+        "pl_usd": 17.04,
+        "r_multiple": 2.03,
+        "alpha_pct": 5.83,
+        "benchmark_pct": 0.28,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta: +5.83% di alpha con uscita a target e 2.03R confermano che la lettura del setup ha pagato. Ha tenuto la tesi centrale, cioe' usare il volume confermante (372k) come discriminante rispetto allo storico negativo del titolo, e ha tenuto la disciplina d'ingresso condizionata alla tenuta del minimo del gap, che ha evitato un'entrata prematura. Ha retto anche la scelta di privilegiare il miglior rapporto forza/liquidita' nel paniere invece del solo gap piu' ampio. Lezione: continuare a trattare il volume confermante come il veto che sospende un giudizio negativo sullo storico, ma codificare una soglia volumetrica esplicita invece di affidarsi al confronto qualitativo \"mo",
+      "closed_at": "2026-10-17T10:00:43+02:00"
     },
     {
       "ticker": "PLTR",
@@ -779,7 +829,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.03,
+        "pl_usd": -6.02,
+        "r_multiple": -1.01,
+        "alpha_pct": -3.03,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -3.03% contro un indice piatto, quindi l'intera perdita e' imputabile alla scelta e non al mercato. Il ragionamento sul momentum strutturale ha ceduto perche' un gap +0.65% con volume solo ~169k non e' una conferma sufficiente di follow-through; l'ipotesi di continuazione multi-day si e' rivelata fragile e lo stop ha chiuso a -1.01R. La lezione: per entrare su un gap su titolo ad alto beta pretendere un volume relativo nettamente sopra media e una tenuta del prezzo sopra l'apertura nelle prime barre, altrimenti il gap moderato va trattato come rumore e non come segnale.",
+      "closed_at": "2026-10-17T10:00:49+02:00"
     },
     {
       "ticker": "RIVN",
@@ -794,7 +854,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.05,
+        "pl_usd": -8.97,
+        "r_multiple": -1.03,
+        "alpha_pct": -3.05,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha -3.05% contro un indice piatto, quindi la perdita e' interamente idiosincratica e non imputabile al mercato. Ha tenuto la lettura del gap moderato (<1%) in zona di prosecuzione, ma ha ceduto l'inferenza dal volume: ~124k 'consistente' non ha confermato una partecipazione autentica, e la volatilita' che giustificava il target +6% ha lavorato contro di me colpendo lo stop a -1.03R. La scelta era plausibile ma l'esecuzione del rischio era asimmetrica: con target +6% e stop a 1R serviva un filtro di conferma intraday (tenuta sopra il gap nei primi minuti) prima di accettare la posizione piena.",
+      "closed_at": "2026-10-17T10:00:54+02:00"
     },
     {
       "ticker": "NKE",
