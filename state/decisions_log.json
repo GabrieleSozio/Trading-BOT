@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-17T10:00:54+02:00",
+  "updated_at": "2026-10-19T15:32:06+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -876,6 +876,21 @@
         "stop": 36.27,
         "target": 39.63,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-10-19",
+      "opened_at": "2026-10-19T15:32:06+02:00",
+      "decision": "Gap +1.91% su volume altissimo (1.84M), leader tech a forte beta e liquidita' eccellente. Momentum strutturale solido, follow-through multi-day plausibile con partecipazione reale alle spalle.",
+      "meta": {
+        "entry": 216.34,
+        "stop": 209.85,
+        "target": 229.32,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
