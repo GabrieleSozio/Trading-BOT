@@ -1,20 +1,15 @@
 {
-  "session_date": "2026-10-19",
-  "opening_balance": 99934.25,
-  "closing_balance": 99933.43,
+  "session_date": "2026-10-20",
+  "opening_balance": 99933.03,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-10-19T15:32:06+02:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "NVDA",
-      "alpaca_order_id": "666f06d7-3d1b-46e6-b690-2b8dbd93af7e",
-      "qty": 1,
-      "entry": 216.34,
-      "stop_loss": 209.85,
-      "take_profit": 229.32,
-      "tif": "gtc"
+      "ts": "2026-10-20T21:45:11+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "F"
     }
   ],
-  "last_tick_at": "2026-10-19T21:59:02+02:00"
+  "last_tick_at": "2026-10-20T21:45:02+02:00"
 }
