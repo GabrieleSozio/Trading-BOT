@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-10-19T14:31:26+02:00",
-  "session_date": "2026-10-19",
-  "capital_usd": 891.32,
+  "generated_at": "2026-10-20T14:31:18+02:00",
+  "session_date": "2026-10-20",
+  "capital_usd": 974.89,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 430.97,
-  "free_slots": 1,
-  "orders": [
-    {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 218.18,
-      "target_entry_price": 217.09,
-      "allocated_capital": 267.4
-    }
-  ]
+  "available_usd": 303.82,
+  "free_slots": 0,
+  "orders": []
 }
