@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-16T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -104,7 +104,7 @@
   }
  },
  "COIN": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "COIN",
    "available": true,
@@ -178,7 +178,7 @@
   }
  },
  "RIVN": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "RIVN",
    "available": true,
@@ -276,7 +276,7 @@
   }
  },
  "ARM": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "ARM",
    "available": true,
@@ -290,15 +290,15 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
    "window_days": 90,
    "n_buys": 1,
-   "n_sells": 3,
+   "n_sells": 2,
    "buy_value_usd": 3483800.0,
-   "sell_value_usd": 5342123.36,
+   "sell_value_usd": 3819296.28,
    "buyers": [
     "RUSCKOWSKI STEPHEN H (Director)"
    ],
@@ -369,7 +369,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-10-09T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -383,7 +383,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
@@ -397,7 +397,7 @@
   }
  },
  "NVDA": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-21T12:30:07+00:00",
   "data": {
    "ticker": "NVDA",
    "available": true,
