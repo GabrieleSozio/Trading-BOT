@@ -1,7 +1,7 @@
 {
   "session_date": "2026-10-21",
   "opening_balance": 99939.84,
-  "closing_balance": null,
+  "closing_balance": 99924.81,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -286,5 +286,5 @@
       "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
     }
   ],
-  "last_tick_at": "2026-10-21T21:44:02+02:00"
+  "last_tick_at": "2026-10-21T21:46:02+02:00"
 }
