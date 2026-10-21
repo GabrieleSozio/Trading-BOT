@@ -1,15 +1,20 @@
 {
-  "session_date": "2026-10-20",
-  "opening_balance": 99933.03,
-  "closing_balance": 99936.61,
+  "session_date": "2026-10-21",
+  "opening_balance": 99939.84,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-10-20T21:45:11+02:00",
-      "type": "LIQUIDATE_ALL",
-      "reason": "max_hold_days 5",
-      "ticker": "F"
+      "ts": "2026-10-21T15:30:09+02:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "SMCI",
+      "alpaca_order_id": "e1acce68-3052-46bb-81f3-0ed9cd0f2b8f",
+      "qty": 8,
+      "entry": 36.26,
+      "stop_loss": 35.17,
+      "take_profit": 38.44,
+      "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-10-20T21:59:01+02:00"
+  "last_tick_at": "2026-10-21T15:30:02+02:00"
 }

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-19T15:32:06+02:00",
+  "updated_at": "2026-10-21T15:30:09+02:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -890,6 +890,21 @@
         "entry": 216.34,
         "stop": 209.85,
         "target": 229.32,
+        "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SMCI",
+      "date": "2026-10-21",
+      "opened_at": "2026-10-21T15:30:09+02:00",
+      "decision": "Gap piu' ampio del paniere (+12.29%) con volume largamente dominante del comparto (~3.7M). Storico positivo quando il volume e' il piu' alto e segnala accumulo. Momentum tech solido con buona probabilita' di follow-through multi-day; ingresso su tenuta sopra apertura.",
+      "meta": {
+        "entry": 36.26,
+        "stop": 35.17,
+        "target": 38.44,
         "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
