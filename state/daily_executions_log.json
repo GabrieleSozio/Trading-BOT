@@ -825,7 +825,85 @@
       "type": "SUSPENDED",
       "reason": "PDT_limit",
       "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:47:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:48:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:49:06+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:50:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:51:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:52:06+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:53:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:54:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:55:06+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:56:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:57:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:58:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-22T17:59:05+02:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
     }
   ],
-  "last_tick_at": "2026-10-22T17:46:02+02:00"
+  "last_tick_at": "2026-10-22T17:59:02+02:00"
 }
