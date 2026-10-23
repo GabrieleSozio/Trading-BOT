@@ -1,7 +1,7 @@
 {
   "session_date": "2026-10-23",
   "opening_balance": 99916.88,
-  "closing_balance": 99913.63,
+  "closing_balance": 99913.41,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -65,5 +65,5 @@
       "ticker": "NKE"
     }
   ],
-  "last_tick_at": "2026-10-23T21:46:02+02:00"
+  "last_tick_at": "2026-10-23T21:59:02+02:00"
 }
