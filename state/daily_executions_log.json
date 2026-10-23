@@ -57,7 +57,13 @@
       "type": "SUSPENDED",
       "reason": "PDT_limit",
       "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (PLTR@2026-10-16, RIVN@2026-10-16, SMCI@2026-10-21): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-10-23T21:45:12+02:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "NKE"
     }
   ],
-  "last_tick_at": "2026-10-23T21:44:02+02:00"
+  "last_tick_at": "2026-10-23T21:45:02+02:00"
 }
