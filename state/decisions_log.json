@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24T10:00:27+02:00",
+  "updated_at": "2026-10-26T15:30:09+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -940,6 +940,21 @@
       },
       "lesson": "La direzione era sbagliata: alpha -4.85% con stop a -1R, nessuna copertura dall'indice piatto. Ha ceduto la tesi del follow-through multi-day: il gap del +12.29% con volume dominante segnalava esaurimento piu' che accumulo, e l'ingresso su tenuta sopra apertura non ha retto. La prossima volta, su gap estesi oltre il 10% con volume di picco, trattare lo scenario come potenziale blow-off e pretendere conferma di consolidamento prima dell'ingresso invece della semplice tenuta sopra apertura.",
       "closed_at": "2026-10-24T10:00:27+02:00"
+    },
+    {
+      "ticker": "SMCI",
+      "date": "2026-10-26",
+      "opened_at": "2026-10-26T15:30:09+01:00",
+      "decision": "Gap contenuto (+0.61%) su volume elevato (663k): configurazione piu' vicina al caso vincente passato (+5.94%) che al blow-off da gap esteso. Settore tech ad alto beta con buona proseguibilita' se il prezzo tiene sopra apertura.",
+      "meta": {
+        "entry": 32.83,
+        "stop": 31.85,
+        "target": 34.8,
+        "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
     }
   ]
 }
