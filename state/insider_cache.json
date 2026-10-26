@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-10-20T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-10-23T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-10-23T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-10-16T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-21T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-10-13T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -248,7 +248,7 @@
   }
  },
  "CSX": {
-  "fetched_at": "2026-10-22T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "CSX",
    "available": true,
@@ -262,7 +262,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -290,7 +290,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-10-21T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -369,7 +369,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-10-21T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -411,7 +411,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-10-16T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -453,7 +453,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-10-20T12:30:07+00:00",
+  "fetched_at": "2026-10-26T13:30:09+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,

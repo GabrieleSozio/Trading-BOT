@@ -1,0 +1,92 @@
+{
+  "generated_at": "2026-10-26T14:31:19+01:00",
+  "session_date": "2026-10-26",
+  "universe_size": 44,
+  "capital_usd": 539.7,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 161.91,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "La lista e' interamente rialzista ma con gap complessivamente modesti e volumi pre-market molto eterogenei. Le lezioni storiche sono chiare: INTC e ORCL hanno ripetutamente fallito nonostante insider buy (segnale strutturale, non trigger tattico), AAL ha dato distribuzione mascherata su volume alto, SMCI su gap estesi va in blow-off. Qui pero' SMCI mostra gap contenuto (+0.61%) con volume solido, scenario piu' vicino al caso vincente del 2026-09-30 che a quello perdente. Privilegio titoli con volume pre-market convincente che confermi partecipazione autentica, scartando quelli a volume irrisorio (CSCO 57k, GM 24k, CSX 1k, WFC 1.4k) che non danno tenuta affidabile overnight. INTC lo includo con cautela per volume dominante ma consapevole dello storico negativo; separo la tesi insider dal trigger tattico. Punto su settori tech/industrial con liquidita' reale e movimento proseguibile.",
+  "candidates": [
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 88.48,
+      "prev_close": 86.96,
+      "gap_pct": 1.7479,
+      "premarket_volume": 2764485,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 0,
+      "insider_buy_usd": 9999985.0,
+      "ai_rationale": "Volume pre-market dominante (2.76M) e gap piu' ampio della lista (+1.75%), trend bullish. Storico negativo impone cautela ma il volume e' nettamente superiore agli altri candidati e supporta tenuta overnight; ingresso solo su conferma di follow-through sopra apertura, senza sovrappesare l'insider buy del CEO."
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 33.1413,
+      "prev_close": 32.94,
+      "gap_pct": 0.6111,
+      "premarket_volume": 663358,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap contenuto (+0.61%) su volume elevato (663k): configurazione piu' vicina al caso vincente passato (+5.94%) che al blow-off da gap esteso. Settore tech ad alto beta con buona proseguibilita' se il prezzo tiene sopra apertura."
+    },
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "last_price": 127.28,
+      "prev_close": 126.16,
+      "gap_pct": 0.8878,
+      "premarket_volume": 457036,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 2,
+      "insider_buy_usd": 3483800.0,
+      "ai_rationale": "Gap +0.89% con volume decente (457k) e trend bullish nel tech. Storico misto, ma volume sufficiente per partecipazione; entrata subordinata a tenuta sopra apertura e separando l'insider buy dalla tesi tattica."
+    },
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "last_price": 37.464,
+      "prev_close": 37.3,
+      "gap_pct": 0.4397,
+      "premarket_volume": 339669,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 3,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.44% con volume solido (339k), forza settoriale consumer discretionary gia' validata in passato con alpha positivo. Movimento ordinato con partecipazione autentica; richiede trigger di invalidazione temporale nei primi minuti."
+    },
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "last_price": 12.19,
+      "prev_close": 12.11,
+      "gap_pct": 0.6606,
+      "premarket_volume": 328907,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.66% su volume elevato (328k) nel settore industrials. Storico negativo pesante, quindi ingresso rigorosamente condizionato a tenuta confermata sopra apertura per evitare la distribuzione mascherata vista in passato."
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 11.64,
+      "prev_close": 11.6,
+      "gap_pct": 0.3448,
+      "premarket_volume": 224231,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +0.34% con volume pre-market consistente (224k) e prezzo basso che consente dimensionamento preciso. Trend bullish nel consumer discretionary; movimento modesto ma con partecipazione reale, adatto a continuazione graduale multi-day."
+    }
+  ]
+}
