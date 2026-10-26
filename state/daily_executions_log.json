@@ -14,7 +14,13 @@
       "stop_loss": 31.85,
       "take_profit": 34.8,
       "tif": "gtc"
+    },
+    {
+      "ts": "2026-10-26T21:45:08+01:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "NVDA"
     }
   ],
-  "last_tick_at": "2026-10-26T15:30:02+01:00"
+  "last_tick_at": "2026-10-26T21:45:02+01:00"
 }
