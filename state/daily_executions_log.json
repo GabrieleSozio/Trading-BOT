@@ -86,7 +86,13 @@
       "type": "LIQUIDATE_ALL",
       "reason": "max_hold_days 5",
       "ticker": "NVDA"
+    },
+    {
+      "ts": "2026-10-26T21:57:07+01:00",
+      "type": "LIQUIDATE_ALL",
+      "reason": "max_hold_days 5",
+      "ticker": "NVDA"
     }
   ],
-  "last_tick_at": "2026-10-26T21:56:02+01:00"
+  "last_tick_at": "2026-10-26T21:57:02+01:00"
 }
