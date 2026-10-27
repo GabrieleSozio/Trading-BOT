@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-27T16:09:07+01:00",
+  "updated_at": "2026-10-27T16:11:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -965,6 +965,21 @@
         "entry": 95.8,
         "stop": 92.92,
         "target": 101.54,
+        "settore": "Financials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOFI",
+      "date": "2026-10-27",
+      "opened_at": "2026-10-27T16:11:06+01:00",
+      "decision": "Gap piu' ampio della lista (+10.33%) su volume dominante (19M): c'e' un catalizzatore evidente. Lo storico negativo invita cautela e rischio blow-off oltre il 10%, ma la magnitudine e il volume giustificano l'inclusione con stop stretto -3%.",
+      "meta": {
+        "entry": 16.37,
+        "stop": 15.88,
+        "target": 17.35,
         "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
