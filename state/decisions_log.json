@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-26T15:30:09+01:00",
+  "updated_at": "2026-10-27T16:09:07+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -951,6 +951,21 @@
         "stop": 31.85,
         "target": 34.8,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "HOOD",
+      "date": "2026-10-27",
+      "opened_at": "2026-10-27T16:09:07+01:00",
+      "decision": "Gap +1.92% con volume solido (691k) e trend bullish nel settore Financials in forza. Momentum consolidato su titolo ad alta volatilita' adatto al target +6%, con tenuta attesa ragionevole.",
+      "meta": {
+        "entry": 95.8,
+        "stop": 92.92,
+        "target": 101.54,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
