@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-26T14:31:31+01:00",
-  "session_date": "2026-10-26",
-  "source_generated_at": "2026-10-26T14:31:27+01:00",
-  "portfolio_value": 540.28,
+  "generated_at": "2026-10-27T14:31:40+01:00",
+  "session_date": "2026-10-27",
+  "source_generated_at": "2026-10-27T14:31:35+01:00",
+  "portfolio_value": 605.37,
   "capital_simulated": true,
-  "real_equity": 99915.32,
+  "real_equity": 99922.74,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,22 +18,22 @@
   ],
   "orders": [
     {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "action": "buy",
+      "target_entry_price": 15.82,
+      "allocated_capital": 181.61,
+      "stop_loss_price": 15.35,
+      "take_profit_price": 16.77
+    },
+    {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 86.99,
-      "allocated_capital": 162.08,
-      "stop_loss_price": 84.38,
-      "take_profit_price": 92.21
-    },
-    {
-      "ticker": "SMCI",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 33.12,
-      "allocated_capital": 162.08,
-      "stop_loss_price": 32.13,
-      "take_profit_price": 35.11
+      "target_entry_price": 92.28,
+      "allocated_capital": 181.61,
+      "stop_loss_price": 89.51,
+      "take_profit_price": 97.82
     }
   ]
 }
