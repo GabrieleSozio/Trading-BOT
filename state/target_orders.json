@@ -1,28 +1,36 @@
 {
-  "generated_at": "2026-10-27T14:31:35+01:00",
+  "generated_at": "2026-10-27T16:00:07+01:00",
   "session_date": "2026-10-27",
-  "capital_usd": 605.45,
+  "capital_usd": 773.63,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 471.47,
-  "free_slots": 2,
+  "available_usd": 773.63,
+  "free_slots": 3,
   "orders": [
     {
       "ticker": "SOFI",
       "sector": "Financials",
       "action": "buy",
-      "reference_price": 15.89,
-      "target_entry_price": 15.82,
-      "allocated_capital": 181.64
+      "reference_price": 16.45,
+      "target_entry_price": 16.37,
+      "allocated_capital": 232.09
     },
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 92.74,
-      "target_entry_price": 92.28,
-      "allocated_capital": 181.64
+      "reference_price": 92.98,
+      "target_entry_price": 92.52,
+      "allocated_capital": 232.09
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "action": "buy",
+      "reference_price": 96.29,
+      "target_entry_price": 95.81,
+      "allocated_capital": 232.09
     }
   ]
 }
