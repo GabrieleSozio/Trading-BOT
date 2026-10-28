@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T15:50:07+01:00",
+  "updated_at": "2026-10-28T19:56:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -995,6 +995,21 @@
         "entry": 130.21,
         "stop": 126.3,
         "target": 138.02,
+        "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-10-28",
+      "opened_at": "2026-10-28T19:56:06+01:00",
+      "decision": "Leadership settoriale tech, gap +0.95% contenuto quindi basso rischio blow-off, volume pre-market elevato (~1.9M) che conferma partecipazione autentica. Storico misto ma il gap moderato su nome liquido offre buon rapporto rischio/rendimento con tenuta attesa multi-day.",
+      "meta": {
+        "entry": 215.72,
+        "stop": 209.25,
+        "target": 228.66,
         "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
