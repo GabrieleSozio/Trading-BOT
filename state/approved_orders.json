@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T14:31:45+01:00",
+  "generated_at": "2026-10-28T15:02:03+01:00",
   "session_date": "2026-10-28",
-  "source_generated_at": "2026-10-28T14:31:41+01:00",
-  "portfolio_value": 703.84,
+  "source_generated_at": "2026-10-28T15:00:07+01:00",
+  "portfolio_value": 650.11,
   "capital_simulated": true,
-  "real_equity": 99922.52,
+  "real_equity": 99924.42,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,15 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "ORCL",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 129.81,
+      "allocated_capital": 195.03,
+      "stop_loss_price": 125.92,
+      "take_profit_price": 137.6
+    }
+  ]
 }
