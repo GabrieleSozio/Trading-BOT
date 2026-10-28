@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -46,7 +46,7 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
@@ -62,7 +62,7 @@
   }
  },
  "SOFI": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "SOFI",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-26T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -290,22 +290,17 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
    "window_days": 90,
-   "n_buys": 1,
-   "n_sells": 2,
-   "buy_value_usd": 3483800.0,
-   "sell_value_usd": 3819296.28,
-   "buyers": [
-    "RUSCKOWSKI STEPHEN H (Director)"
-   ],
-   "sellers": [
-    "Sicilia Michael D. (Chief Executive Officer)",
-    "Smith Maria (EVP, Chief  Accounting Officer)"
-   ]
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
   }
  },
  "KO": {
@@ -369,7 +364,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -383,7 +378,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-10-21T12:30:07+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
@@ -397,7 +392,7 @@
   }
  },
  "NVDA": {
-  "fetched_at": "2026-10-21T12:30:07+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "NVDA",
    "available": true,
@@ -411,7 +406,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-10-27T13:30:09+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -439,7 +434,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-10-23T12:30:07+00:00",
+  "fetched_at": "2026-10-28T13:30:13+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
