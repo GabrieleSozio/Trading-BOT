@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T19:17:03+01:00",
+  "generated_at": "2026-10-28T19:32:03+01:00",
   "session_date": "2026-10-28",
-  "source_generated_at": "2026-10-28T19:15:05+01:00",
-  "portfolio_value": 619.32,
+  "source_generated_at": "2026-10-28T19:30:07+01:00",
+  "portfolio_value": 743.44,
   "capital_simulated": true,
-  "real_equity": 99921.3,
+  "real_equity": 99930.24,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,24 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 215.96,
+      "allocated_capital": 223.03,
+      "stop_loss_price": 209.48,
+      "take_profit_price": 228.92
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "action": "buy",
+      "target_entry_price": 34.84,
+      "allocated_capital": 223.03,
+      "stop_loss_price": 33.79,
+      "take_profit_price": 36.93
+    }
+  ]
 }
