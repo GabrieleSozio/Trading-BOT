@@ -1,11 +1,28 @@
 {
-  "generated_at": "2026-10-28T19:15:05+01:00",
+  "generated_at": "2026-10-28T19:30:07+01:00",
   "session_date": "2026-10-28",
-  "capital_usd": 619.5,
+  "capital_usd": 743.72,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 254.2,
-  "free_slots": 1,
-  "orders": []
+  "available_usd": 507.68,
+  "free_slots": 2,
+  "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 217.04,
+      "target_entry_price": 215.96,
+      "allocated_capital": 223.12
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 35.02,
+      "target_entry_price": 34.84,
+      "allocated_capital": 223.12
+    }
+  ]
 }
