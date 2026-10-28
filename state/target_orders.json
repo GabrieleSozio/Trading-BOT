@@ -1,20 +1,11 @@
 {
-  "generated_at": "2026-10-28T15:45:06+01:00",
+  "generated_at": "2026-10-28T16:00:07+01:00",
   "session_date": "2026-10-28",
-  "capital_usd": 649.34,
+  "capital_usd": 618.59,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 412.2,
-  "free_slots": 2,
-  "orders": [
-    {
-      "ticker": "ORCL",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 130.88,
-      "target_entry_price": 130.23,
-      "allocated_capital": 194.8
-    }
-  ]
+  "available_usd": 254.3,
+  "free_slots": 1,
+  "orders": []
 }
