@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-28T19:56:06+01:00",
+  "updated_at": "2026-10-29T15:30:08+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1011,6 +1011,21 @@
         "stop": 209.25,
         "target": 228.66,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-10-29",
+      "opened_at": "2026-10-29T15:30:08+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 38.02,
+        "stop": 36.88,
+        "target": 40.3,
+        "settore": "Consumer Discretionary",
         "fascia": "micro",
         "azione": "buy"
       },
