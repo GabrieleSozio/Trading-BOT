@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T15:30:08+01:00",
+  "updated_at": "2026-10-29T19:16:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1026,6 +1026,21 @@
         "stop": 36.88,
         "target": 40.3,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PFE",
+      "date": "2026-10-29",
+      "opened_at": "2026-10-29T19:16:06+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 29.62,
+        "stop": 28.73,
+        "target": 31.4,
+        "settore": "Health Care",
         "fascia": "micro",
         "azione": "buy"
       },
