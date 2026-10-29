@@ -1,20 +1,28 @@
 {
-  "generated_at": "2026-10-29T14:31:30+01:00",
+  "generated_at": "2026-10-29T15:00:07+01:00",
   "session_date": "2026-10-29",
-  "capital_usd": 783.06,
+  "capital_usd": 757.15,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 330.14,
-  "free_slots": 1,
+  "available_usd": 544.08,
+  "free_slots": 2,
   "orders": [
     {
       "ticker": "NKE",
       "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 37.88,
-      "target_entry_price": 37.69,
-      "allocated_capital": 234.92
+      "reference_price": 38.62,
+      "target_entry_price": 38.43,
+      "allocated_capital": 227.14
+    },
+    {
+      "ticker": "PFE",
+      "sector": "Health Care",
+      "action": "buy",
+      "reference_price": 29.77,
+      "target_entry_price": 29.62,
+      "allocated_capital": 227.14
     }
   ]
 }
