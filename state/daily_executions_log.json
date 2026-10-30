@@ -1,31 +1,20 @@
 {
-  "session_date": "2026-10-29",
-  "opening_balance": 99935.28,
-  "closing_balance": 99937.72,
+  "session_date": "2026-10-30",
+  "opening_balance": 99936.67,
+  "closing_balance": null,
   "kill_switch_triggered": false,
   "events": [
     {
-      "ts": "2026-10-29T15:30:08+01:00",
+      "ts": "2026-10-30T18:20:06+01:00",
       "type": "ORDER_SUBMITTED",
-      "ticker": "NKE",
-      "alpaca_order_id": "ffc447ec-4d8e-41dc-a374-d35f787e4cbe",
-      "qty": 5,
-      "entry": 38.02,
-      "stop_loss": 36.88,
-      "take_profit": 40.3,
-      "tif": "gtc"
-    },
-    {
-      "ts": "2026-10-29T19:16:06+01:00",
-      "type": "ORDER_SUBMITTED",
-      "ticker": "PFE",
-      "alpaca_order_id": "e9a53d72-fe54-48a6-8bef-4ee9a63ff939",
-      "qty": 7,
-      "entry": 29.62,
-      "stop_loss": 28.73,
-      "take_profit": 31.4,
+      "ticker": "NFLX",
+      "alpaca_order_id": "e3c3d7c3-6e7a-4270-bbd8-fba49d2c908e",
+      "qty": 4,
+      "entry": 62.12,
+      "stop_loss": 60.26,
+      "take_profit": 65.85,
       "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-10-29T21:59:01+01:00"
+  "last_tick_at": "2026-10-30T18:20:01+01:00"
 }

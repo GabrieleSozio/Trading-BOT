@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-29T19:16:06+01:00",
+  "updated_at": "2026-10-30T18:20:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1041,6 +1041,21 @@
         "stop": 28.73,
         "target": 31.4,
         "settore": "Health Care",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NFLX",
+      "date": "2026-10-30",
+      "opened_at": "2026-10-30T18:20:06+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 62.12,
+        "stop": 60.26,
+        "target": 65.85,
+        "settore": "Communication Services",
         "fascia": "micro",
         "azione": "buy"
       },
