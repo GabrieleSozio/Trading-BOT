@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-30T18:20:06+01:00",
+  "updated_at": "2026-10-31T10:00:13+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -914,7 +914,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 1.03,
+        "pl_usd": 2.22,
+        "r_multiple": 0.37,
+        "alpha_pct": 0.62,
+        "benchmark_pct": 0.41,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:12+01:00"
     },
     {
       "ticker": "SMCI",
@@ -954,7 +964,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.04,
+        "pl_usd": 7.93,
+        "r_multiple": 2.04,
+        "alpha_pct": 5.48,
+        "benchmark_pct": 0.56,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:12+01:00"
     },
     {
       "ticker": "HOOD",
@@ -969,7 +989,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -6.41,
+        "pl_usd": -12.28,
+        "r_multiple": -2.12,
+        "alpha_pct": -6.75,
+        "benchmark_pct": 0.34,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:12+01:00"
     },
     {
       "ticker": "SOFI",
@@ -984,7 +1014,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 5.96,
+        "pl_usd": 13.67,
+        "r_multiple": 1.98,
+        "alpha_pct": 6.0,
+        "benchmark_pct": -0.04,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:13+01:00"
     },
     {
       "ticker": "ORCL",
@@ -999,7 +1039,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.08,
+        "pl_usd": 7.92,
+        "r_multiple": 2.03,
+        "alpha_pct": 6.08,
+        "benchmark_pct": 0.0,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:13+01:00"
     },
     {
       "ticker": "NVDA",
@@ -1014,7 +1064,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -4.09,
+        "pl_usd": -8.82,
+        "r_multiple": -1.35,
+        "alpha_pct": -1.94,
+        "benchmark_pct": -2.15,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-10-31T10:00:13+01:00"
     },
     {
       "ticker": "NKE",

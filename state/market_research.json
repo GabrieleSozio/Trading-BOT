@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-11-02T14:31:10+01:00",
+  "session_date": "2026-11-02",
+  "universe_size": 44,
+  "capital_usd": 797.18,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 239.15,
+  "selected_by": "deterministico",
+  "ai_analysis": null,
+  "candidates": [
+    {
+      "ticker": "RIVN",
+      "sector": "Consumer Discretionary",
+      "last_price": 12.5732,
+      "prev_close": 12.16,
+      "gap_pct": 3.398,
+      "premarket_volume": 1287155,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "last_price": 12.8607,
+      "prev_close": 12.6,
+      "gap_pct": 2.069,
+      "premarket_volume": 326685,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "ARM",
+      "sector": "Technology",
+      "last_price": 209.4323,
+      "prev_close": 205.97,
+      "gap_pct": 1.681,
+      "premarket_volume": 74902,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "PLTR",
+      "sector": "Technology",
+      "last_price": 187.09,
+      "prev_close": 184.11,
+      "gap_pct": 1.6186,
+      "premarket_volume": 365473,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 33.298,
+      "prev_close": 32.95,
+      "gap_pct": 1.0561,
+      "premarket_volume": 443252,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "last_price": 65.93,
+      "prev_close": 65.25,
+      "gap_pct": 1.0421,
+      "premarket_volume": 81155,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    }
+  ]
+}
