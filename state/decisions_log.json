@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-31T10:00:13+01:00",
+  "updated_at": "2026-11-04T16:23:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1116,6 +1116,21 @@
         "stop": 60.26,
         "target": 65.85,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "AAL",
+      "date": "2026-11-04",
+      "opened_at": "2026-11-04T16:23:06+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 13.22,
+        "stop": 12.82,
+        "target": 14.01,
+        "settore": "Industrials",
         "fascia": "micro",
         "azione": "buy"
       },
