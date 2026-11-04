@@ -1,11 +1,28 @@
 {
-  "generated_at": "2026-11-04T14:31:36+01:00",
+  "generated_at": "2026-11-04T16:15:06+01:00",
   "session_date": "2026-11-04",
-  "capital_usd": 809.94,
+  "capital_usd": 581.98,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 140.32,
-  "free_slots": 0,
-  "orders": []
+  "available_usd": 371.6,
+  "free_slots": 2,
+  "orders": [
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "action": "buy",
+      "reference_price": 13.29,
+      "target_entry_price": 13.23,
+      "allocated_capital": 174.59
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 65.95,
+      "target_entry_price": 65.62,
+      "allocated_capital": 174.59
+    }
+  ]
 }
