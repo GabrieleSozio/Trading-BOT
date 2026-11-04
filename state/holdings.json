@@ -1,8 +1,8 @@
 {
-  "PFE": {
-    "opened_session_date": "2026-10-29"
-  },
   "AAL": {
     "opened_session_date": "2026-11-04"
+  },
+  "PFE": {
+    "opened_session_date": "2026-10-29"
   }
 }
