@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-10-28T13:30:13+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -132,7 +132,7 @@
   }
  },
  "CRM": {
-  "fetched_at": "2026-10-16T12:30:07+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "CRM",
    "available": true,
@@ -192,7 +192,7 @@
   }
  },
  "NFLX": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "NFLX",
    "available": true,
@@ -206,7 +206,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -262,7 +262,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-11-02T13:30:08+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -304,20 +304,20 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 8,
+   "n_sells": 7,
    "buy_value_usd": 0,
-   "sell_value_usd": 33648554.57,
+   "sell_value_usd": 20334974.12,
    "buyers": [],
    "sellers": [
-    "MURPHY JOHN (President and CFO)",
     "Ortega Luisa (Insider)",
-    "Pietracci Bruno (Insider)"
+    "Pietracci Bruno (Insider)",
+    "QUAN NANCY (Executive Vice President)"
    ]
   }
  },
@@ -336,7 +336,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -406,7 +406,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-11-02T13:30:08+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -448,7 +448,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,
@@ -462,7 +462,7 @@
   }
  },
  "PYPL": {
-  "fetched_at": "2026-10-30T13:30:16+00:00",
+  "fetched_at": "2026-11-04T13:30:11+00:00",
   "data": {
    "ticker": "PYPL",
    "available": true,
