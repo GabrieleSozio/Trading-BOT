@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T15:31:06+01:00",
+  "updated_at": "2026-11-05T16:36:07+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1146,6 +1146,21 @@
         "stop": 64.74,
         "target": 70.74,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "BAC",
+      "date": "2026-11-05",
+      "opened_at": "2026-11-05T16:36:07+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 51.02,
+        "stop": 49.49,
+        "target": 54.09,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
