@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-05T14:32:01+01:00",
+  "generated_at": "2026-11-05T16:00:08+01:00",
   "session_date": "2026-11-05",
-  "capital_usd": 583.91,
+  "capital_usd": 776.07,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 190.34,
+  "available_usd": 473.25,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "NFLX",
-      "sector": "Communication Services",
+      "ticker": "UBER",
+      "sector": "Industrials",
       "action": "buy",
-      "reference_price": 67.17,
-      "target_entry_price": 66.83,
-      "allocated_capital": 175.17
+      "reference_price": 68.28,
+      "target_entry_price": 67.94,
+      "allocated_capital": 232.82
     }
   ]
 }
