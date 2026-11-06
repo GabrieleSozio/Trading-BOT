@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-05T16:42:06+01:00",
+  "updated_at": "2026-11-06T15:30:08+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1176,6 +1176,21 @@
         "stop": 66.45,
         "target": 72.62,
         "settore": "Industrials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "INTC",
+      "date": "2026-11-06",
+      "opened_at": "2026-11-06T15:30:08+01:00",
+      "decision": "Selezione deterministica: scarto ?%, ingresso su ritracciamento.",
+      "meta": {
+        "entry": 54.72,
+        "stop": 53.07,
+        "target": 58.0,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
