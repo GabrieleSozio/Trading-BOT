@@ -18,7 +18,7 @@
   }
  },
  "SMCI": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "SMCI",
    "available": true,
@@ -32,7 +32,7 @@
   }
  },
  "HOOD": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "HOOD",
    "available": true,
@@ -46,14 +46,14 @@
   }
  },
  "INTC": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "INTC",
    "available": true,
    "window_days": 90,
-   "n_buys": 1,
+   "n_buys": 2,
    "n_sells": 0,
-   "buy_value_usd": 9999985.0,
+   "buy_value_usd": 19709665.0,
    "sell_value_usd": 0,
    "buyers": [
     "TAN LIP BU (CEO)"
@@ -104,7 +104,7 @@
   }
  },
  "COIN": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "COIN",
    "available": true,
@@ -276,7 +276,7 @@
   }
  },
  "ARM": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "ARM",
    "available": true,
@@ -290,7 +290,7 @@
   }
  },
  "ORCL": {
-  "fetched_at": "2026-10-28T13:30:13+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "ORCL",
    "available": true,
@@ -364,7 +364,7 @@
   }
  },
  "CSCO": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "CSCO",
    "available": true,
@@ -378,7 +378,7 @@
   }
  },
  "QCOM": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "QCOM",
    "available": true,
@@ -392,7 +392,7 @@
   }
  },
  "NVDA": {
-  "fetched_at": "2026-11-03T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "NVDA",
    "available": true,
@@ -476,7 +476,7 @@
   }
  },
  "PLTR": {
-  "fetched_at": "2026-11-02T13:30:08+00:00",
+  "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "PLTR",
    "available": true,
@@ -493,6 +493,34 @@
   "fetched_at": "2026-10-20T12:30:07+00:00",
   "data": {
    "ticker": "ADBE",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "AVGO": {
+  "fetched_at": "2026-11-06T13:30:09+00:00",
+  "data": {
+   "ticker": "AVGO",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "SNOW": {
+  "fetched_at": "2026-11-06T13:30:09+00:00",
+  "data": {
+   "ticker": "SNOW",
    "available": true,
    "window_days": 90,
    "n_buys": 0,

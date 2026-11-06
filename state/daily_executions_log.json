@@ -1,7 +1,7 @@
 {
   "session_date": "2026-11-05",
   "opening_balance": 99970.63,
-  "closing_balance": 99954.68,
+  "closing_balance": 99954.8,
   "kill_switch_triggered": false,
   "events": [
     {
@@ -38,5 +38,5 @@
       "tif": "gtc"
     }
   ],
-  "last_tick_at": "2026-11-05T21:46:02+01:00"
+  "last_tick_at": "2026-11-05T21:59:01+01:00"
 }
