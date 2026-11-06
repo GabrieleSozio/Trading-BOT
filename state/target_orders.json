@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-05T21:15:05+01:00",
-  "session_date": "2026-11-05",
-  "capital_usd": 1026.83,
+  "generated_at": "2026-11-06T14:31:37+01:00",
+  "session_date": "2026-11-06",
+  "capital_usd": 1025.25,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 621.01,
+  "available_usd": 620.99,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "T",
-      "sector": "Communication Services",
+      "ticker": "INTC",
+      "sector": "Technology",
       "action": "buy",
-      "reference_price": 21.73,
-      "target_entry_price": 21.62,
-      "allocated_capital": 308.05
+      "reference_price": 55.05,
+      "target_entry_price": 54.77,
+      "allocated_capital": 307.57
     }
   ]
 }
