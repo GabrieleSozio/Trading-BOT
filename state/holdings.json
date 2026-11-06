@@ -1,11 +1,11 @@
 {
-  "UBER": {
-    "opened_session_date": "2026-11-05"
-  },
   "INTC": {
     "opened_session_date": "2026-11-06"
   },
   "NVDA": {
     "opened_session_date": "2026-11-06"
+  },
+  "UBER": {
+    "opened_session_date": "2026-11-05"
   }
 }
