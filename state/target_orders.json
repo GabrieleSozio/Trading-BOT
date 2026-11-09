@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-11-09T14:32:21+01:00",
+  "session_date": "2026-11-09",
+  "capital_usd": 994.31,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "available_usd": 503.28,
+  "free_slots": 1,
+  "orders": [
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 292.42,
+      "target_entry_price": 290.96,
+      "allocated_capital": 298.29
+    }
+  ]
+}
