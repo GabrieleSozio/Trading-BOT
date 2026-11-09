@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-06T15:56:06+01:00",
+  "updated_at": "2026-11-07T10:00:13+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1089,7 +1089,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.05,
+        "pl_usd": 11.5,
+        "r_multiple": 2.04,
+        "alpha_pct": 6.38,
+        "benchmark_pct": -0.33,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:12+01:00"
     },
     {
       "ticker": "PFE",
@@ -1104,7 +1114,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.04,
+        "pl_usd": 12.53,
+        "r_multiple": 2.01,
+        "alpha_pct": 10.77,
+        "benchmark_pct": -4.73,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:12+01:00"
     },
     {
       "ticker": "NFLX",
@@ -1119,7 +1139,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 6.07,
+        "pl_usd": 15.07,
+        "r_multiple": 2.03,
+        "alpha_pct": 4.6,
+        "benchmark_pct": 1.47,
+        "closed_by": "target"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:12+01:00"
     },
     {
       "ticker": "AAL",
@@ -1134,7 +1164,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.03,
+        "pl_usd": -5.2,
+        "r_multiple": -1.0,
+        "alpha_pct": 1.38,
+        "benchmark_pct": -4.41,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:12+01:00"
     },
     {
       "ticker": "NFLX",
@@ -1149,7 +1189,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.95,
+        "pl_usd": -3.93,
+        "r_multiple": -1.01,
+        "alpha_pct": -2.95,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:13+01:00"
     },
     {
       "ticker": "BAC",
@@ -1164,7 +1214,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.79,
+        "pl_usd": -5.69,
+        "r_multiple": -0.93,
+        "alpha_pct": -3.1,
+        "benchmark_pct": 0.31,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:13+01:00"
     },
     {
       "ticker": "UBER",
@@ -1209,7 +1269,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.15,
+        "pl_usd": -6.05,
+        "r_multiple": -1.04,
+        "alpha_pct": -3.15,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "",
+      "closed_at": "2026-11-07T10:00:13+01:00"
     }
   ]
 }

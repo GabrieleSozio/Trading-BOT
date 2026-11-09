@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-11-09T14:32:14+01:00",
+  "session_date": "2026-11-09",
+  "universe_size": 44,
+  "capital_usd": 993.72,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 298.12,
+  "selected_by": "AI (Claude)",
+  "ai_analysis": "Privilegio titoli con gap significativo MA sostenuto da volume elevato e autentico, poiche' le lezioni passate mostrano che gap moderati con volume debole sono rumore, mentre gap estremi su volume di picco rischiano il blow-off. AAL viene escluso nonostante il gap maggiore: storico ripetutamente negativo (-3.02% e -4.29%) con distribuzione mascherata da volume alto. Preferisco i big-cap liquidi (AMZN, GOOGL) che combinano gap solido ~3% e volume convincente, piu' nomi con partecipazione reale (UBER, SOFI, BAC, F). Evito titoli con volume pre-market risibile (GM, HPQ, SHOP, AFRM, WFC, PINS, CSX) perche' il movimento non e' confermato. In esecuzione, pretendere tenuta sopra apertura nelle prime barre prima dell'ingresso pieno.",
+  "candidates": [
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "last_price": 293.14,
+      "prev_close": 284.78,
+      "gap_pct": 2.9356,
+      "premarket_volume": 1154263,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +2.94% con il volume pre-market piu' alto della lista (~1.15M): partecipazione autentica, non rumore. Mega-cap liquido in Communication Services con trend solido; tenuta overnight ragionevole e follow-through multi-day plausibile su flusso istituzionale."
+    },
+    {
+      "ticker": "AMZN",
+      "sector": "Consumer Discretionary",
+      "last_price": 267.05,
+      "prev_close": 259.3,
+      "gap_pct": 2.9888,
+      "premarket_volume": 875225,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap robusto +2.99% su volume elevato (~875k). Consumer Discretionary forte, titolo altamente liquido che riduce il rischio di picco isolato. Movimento ampio con probabilita' di prosecuzione se tiene sopra apertura."
+    },
+    {
+      "ticker": "UBER",
+      "sector": "Industrials",
+      "last_price": 69.6211,
+      "prev_close": 68.59,
+      "gap_pct": 1.5033,
+      "premarket_volume": 140502,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.50% con volume consistente (~140k) e trend bullish. Titolo liquido con momentum strutturale; combinazione gap moderato-ma-reale e volume sufficiente per attendersi continuazione ordinata."
+    },
+    {
+      "ticker": "SOFI",
+      "sector": "Financials",
+      "last_price": 16.33,
+      "prev_close": 16.21,
+      "gap_pct": 0.7403,
+      "premarket_volume": 541883,
+      "trend": "Bullish",
+      "ai_rationale": "Volume pre-market elevato (~542k), tra i piu' alti, a conferma di partecipazione reale nonostante gap contenuto +0.74%. Financials in forza, alto beta con potenziale di estensione se regge sopra apertura."
+    },
+    {
+      "ticker": "BAC",
+      "sector": "Financials",
+      "last_price": 50.1437,
+      "prev_close": 49.42,
+      "gap_pct": 1.4644,
+      "premarket_volume": 129099,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.46% su buon volume (~129k) in Financials, settore in salute. Titolo liquido e meno volatile, offre tenuta overnight piu' affidabile e minor rischio di reversal rispetto ai nomi speculativi."
+    },
+    {
+      "ticker": "F",
+      "sector": "Consumer Discretionary",
+      "last_price": 12.58,
+      "prev_close": 12.44,
+      "gap_pct": 1.1254,
+      "premarket_volume": 335997,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0,
+      "ai_rationale": "Gap +1.13% con volume solido (~336k), tra i piu' scambiati. Prezzo basso e liquidita' elevata, movimento supportato da ampia partecipazione; follow-through credibile se mantiene il livello di apertura."
+    }
+  ]
+}

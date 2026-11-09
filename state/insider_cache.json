@@ -76,7 +76,7 @@
   }
  },
  "F": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "F",
    "available": true,
@@ -90,7 +90,7 @@
   }
  },
  "BAC": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "BAC",
    "available": true,
@@ -118,7 +118,7 @@
   }
  },
  "AFRM": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "AFRM",
    "available": true,
@@ -164,7 +164,7 @@
   }
  },
  "UBER": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "UBER",
    "available": true,
@@ -234,7 +234,7 @@
   }
  },
  "HPQ": {
-  "fetched_at": "2026-10-14T12:30:06+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "HPQ",
    "available": true,
@@ -262,7 +262,7 @@
   }
  },
  "AAL": {
-  "fetched_at": "2026-11-04T13:30:11+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "AAL",
    "available": true,
@@ -350,7 +350,7 @@
   }
  },
  "AMZN": {
-  "fetched_at": "2026-10-19T12:30:07+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "AMZN",
    "available": true,
@@ -406,7 +406,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
@@ -420,7 +420,7 @@
   }
  },
  "SHOP": {
-  "fetched_at": "2026-10-14T12:30:06+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "SHOP",
    "available": true,
@@ -434,7 +434,7 @@
   }
  },
  "PINS": {
-  "fetched_at": "2026-10-28T13:30:13+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "PINS",
    "available": true,
@@ -448,7 +448,7 @@
   }
  },
  "WFC": {
-  "fetched_at": "2026-11-05T13:30:09+00:00",
+  "fetched_at": "2026-11-09T13:30:12+00:00",
   "data": {
    "ticker": "WFC",
    "available": true,
@@ -521,6 +521,20 @@
   "fetched_at": "2026-11-06T13:30:09+00:00",
   "data": {
    "ticker": "SNOW",
+   "available": true,
+   "window_days": 90,
+   "n_buys": 0,
+   "n_sells": 0,
+   "buy_value_usd": 0,
+   "sell_value_usd": 0,
+   "buyers": [],
+   "sellers": []
+  }
+ },
+ "GOOGL": {
+  "fetched_at": "2026-11-09T13:30:12+00:00",
+  "data": {
+   "ticker": "GOOGL",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
