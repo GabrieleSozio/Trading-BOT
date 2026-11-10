@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T15:30:10+01:00",
+  "updated_at": "2026-11-10T15:54:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1291,6 +1291,21 @@
         "stop": 61.56,
         "target": 67.27,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "AAL",
+      "date": "2026-11-10",
+      "opened_at": "2026-11-10T15:54:06+01:00",
+      "decision": "Gap maggiore del paniere (+0.92%) e volume elevato (~867k), ma storico negativo doppio su questo sistema: inserito solo con size prudente e vincolo tassativo di conferma di tenuta sopra apertura, altrimenti saltare.",
+      "meta": {
+        "entry": 14.06,
+        "stop": 13.64,
+        "target": 14.9,
+        "settore": "Industrials",
         "fascia": "micro",
         "azione": "buy"
       },
