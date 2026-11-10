@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-07T10:00:13+01:00",
+  "updated_at": "2026-11-10T15:30:10+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1280,6 +1280,21 @@
       },
       "lesson": "",
       "closed_at": "2026-11-07T10:00:13+01:00"
+    },
+    {
+      "ticker": "NFLX",
+      "date": "2026-11-10",
+      "opened_at": "2026-11-10T15:30:10+01:00",
+      "decision": "Volume pre-market tra i piu' alti del paniere (~320k), gap +0.23% modesto ma con partecipazione autentica; Communication Services in trend. Volume reale sostiene follow-through multi-day piu' di gap gonfiati su scambi sottili.",
+      "meta": {
+        "entry": 63.46,
+        "stop": 61.56,
+        "target": 67.27,
+        "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
     }
   ]
 }
