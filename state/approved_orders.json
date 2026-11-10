@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-09T21:47:04+01:00",
-  "session_date": "2026-11-09",
-  "source_generated_at": "2026-11-09T21:45:05+01:00",
-  "portfolio_value": 802.71,
+  "generated_at": "2026-11-10T14:32:36+01:00",
+  "session_date": "2026-11-10",
+  "source_generated_at": "2026-11-10T14:32:32+01:00",
+  "portfolio_value": 800.58,
   "capital_simulated": true,
-  "real_equity": 99968.25,
+  "real_equity": 99966.1,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -16,5 +16,24 @@
     "take_profit",
     "R4_sector_cap"
   ],
-  "orders": []
+  "orders": [
+    {
+      "ticker": "AAL",
+      "sector": "Industrials",
+      "action": "buy",
+      "target_entry_price": 14.08,
+      "allocated_capital": 240.17,
+      "stop_loss_price": 13.66,
+      "take_profit_price": 14.92
+    },
+    {
+      "ticker": "NFLX",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 63.59,
+      "allocated_capital": 240.17,
+      "stop_loss_price": 61.68,
+      "take_profit_price": 67.41
+    }
+  ]
 }
