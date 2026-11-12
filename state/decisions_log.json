@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-10T15:54:06+01:00",
+  "updated_at": "2026-11-12T20:00:07+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1306,6 +1306,21 @@
         "stop": 13.64,
         "target": 14.9,
         "settore": "Industrials",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "PFE",
+      "date": "2026-11-12",
+      "opened_at": "2026-11-12T20:00:07+01:00",
+      "decision": "Volume pre-market piu' alto del paniere (109k) con gap +0.61% e trend bullish in Health Care. Lezione passata impone conferma di prezzo sopra il gap: da monitorare, ma la partecipazione e' la migliore disponibile per un follow-through multi-day.",
+      "meta": {
+        "entry": 29.02,
+        "stop": 28.15,
+        "target": 30.76,
+        "settore": "Health Care",
         "fascia": "micro",
         "azione": "buy"
       },

@@ -3,6 +3,18 @@
   "opening_balance": 99965.65,
   "closing_balance": null,
   "kill_switch_triggered": false,
-  "events": [],
-  "last_tick_at": "2026-11-12T19:16:02+01:00"
+  "events": [
+    {
+      "ts": "2026-11-12T20:00:07+01:00",
+      "type": "ORDER_SUBMITTED",
+      "ticker": "PFE",
+      "alpaca_order_id": "cc46bbbf-db49-41e3-abc2-f9d837f02ef9",
+      "qty": 10,
+      "entry": 29.02,
+      "stop_loss": 28.15,
+      "take_profit": 30.76,
+      "tif": "gtc"
+    }
+  ],
+  "last_tick_at": "2026-11-12T20:00:02+01:00"
 }
