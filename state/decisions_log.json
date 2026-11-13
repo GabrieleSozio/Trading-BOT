@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-12T20:00:07+01:00",
+  "updated_at": "2026-11-13T15:31:07+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1321,6 +1321,21 @@
         "stop": 28.15,
         "target": 30.76,
         "settore": "Health Care",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-11-13",
+      "opened_at": "2026-11-13T15:31:07+01:00",
+      "decision": "Gap piu' ampio della lista (+1.67%) con volume pre-market di gran lunga il piu' alto (~20M), leadership tecnologica e trend bullish solido. Volume genuino riduce il rischio di gap fill; include controllo esplicito sulla tenuta sopra apertura data la lezione passata.",
+      "meta": {
+        "entry": 167.64,
+        "stop": 162.61,
+        "target": 177.7,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
