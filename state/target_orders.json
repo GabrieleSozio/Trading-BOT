@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-13T14:35:58+01:00",
+  "generated_at": "2026-11-13T15:45:06+01:00",
   "session_date": "2026-11-13",
-  "capital_usd": 951.41,
+  "capital_usd": 1089.65,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 472.68,
+  "available_usd": 610.24,
   "free_slots": 1,
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
+      "ticker": "SOFI",
+      "sector": "Financials",
       "action": "buy",
-      "reference_price": 170.01,
-      "target_entry_price": 169.16,
-      "allocated_capital": 285.42
+      "reference_price": 15.67,
+      "target_entry_price": 15.59,
+      "allocated_capital": 326.9
     }
   ]
 }
