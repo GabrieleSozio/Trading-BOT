@@ -1,11 +1,11 @@
 {
-  "PFE": {
-    "opened_session_date": "2026-11-12"
-  },
   "SOFI": {
     "opened_session_date": "2026-11-13"
   },
   "NFLX": {
     "opened_session_date": "2026-11-10"
+  },
+  "PFE": {
+    "opened_session_date": "2026-11-12"
   }
 }
