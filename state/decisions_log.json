@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T15:31:07+01:00",
+  "updated_at": "2026-11-13T15:50:07+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1336,6 +1336,21 @@
         "stop": 162.61,
         "target": 177.7,
         "settore": "Technology",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "SOFI",
+      "date": "2026-11-13",
+      "opened_at": "2026-11-13T15:50:07+01:00",
+      "decision": "Gap +0.55% con volume elevato (~876k), tra i piu' alti della lista, su financial ad alto momentum. Volume relativo forte conferma partecipazione reale, criterio mancato nei casi PLTR/RIVN.",
+      "meta": {
+        "entry": 15.59,
+        "stop": 15.12,
+        "target": 16.53,
+        "settore": "Financials",
         "fascia": "micro",
         "azione": "buy"
       },
