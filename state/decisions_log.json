@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-13T15:50:07+01:00",
+  "updated_at": "2026-11-14T10:00:42+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1239,7 +1239,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 0.84,
+        "pl_usd": 1.73,
+        "r_multiple": 0.28,
+        "alpha_pct": -2.45,
+        "benchmark_pct": 3.29,
+        "closed_by": "chiusura manuale"
+      },
+      "lesson": "La direzione era corretta nel segno ma debole in sostanza: il trade ha prodotto un alpha di -2.45%, quindi pur chiudendo in positivo ho sottoperformato nettamente l'indice e il guadagno grezzo e' solo beta di mercato. Ha tenuto l'impostazione dell'ingresso sul ritracciamento, che ha limitato il rischio a +0.28R, ma ha ceduto la premessa di sovraperformance: in un mercato in forte salita un ingresso ritardato su pullback mi ha fatto perdere l'impulso principale. La lezione: in regime direzionale forte dell'indice, valutare l'alpha atteso prima di entrare e scartare i setup che richiedono un ritracciamento quando il trend lascia poco spazio al rientro.",
+      "closed_at": "2026-11-14T10:00:19+01:00"
     },
     {
       "ticker": "INTC",
@@ -1254,7 +1264,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": 4.86,
+        "pl_usd": 13.47,
+        "r_multiple": 1.16,
+        "alpha_pct": 2.49,
+        "benchmark_pct": 2.37,
+        "closed_by": "target"
+      },
+      "lesson": "La direzione era corretta: l'alpha di +2.49% conferma che la selezione ha battuto l'indice, non solo cavalcato un mercato in salita. Ha tenuto la logica dell'ingresso su ritracciamento, che ha migliorato il rapporto rischio/rendimento portando l'uscita a target con +1.16R; la parte piu' debole resta lo scarto non quantificato, che rende il processo poco replicabile. Lezione: fissare e registrare la soglia di scarto in modo esplicito prima dell'ingresso, cosi' la prossima selezione deterministica sara' verificabile e non dipendente dal giudizio a posteriori.",
+      "closed_at": "2026-11-14T10:00:25+01:00"
     },
     {
       "ticker": "NVDA",
@@ -1309,7 +1329,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -3.12,
+        "pl_usd": -7.48,
+        "r_multiple": -1.0,
+        "alpha_pct": -4.08,
+        "benchmark_pct": 0.96,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha a -4.08% con uscita a -1R, quindi il segnale di gap+volume non ha prodotto il premio atteso rispetto all'indice che saliva. Ha tenuto la gestione del rischio, size prudente e stop rispettato hanno contenuto la perdita a 1R, ma ha ceduto la tesi d'ingresso: lo storico negativo doppio era gia' un veto esplicito e il gap non e' bastato a ribaltarlo. La lezione: quando un sistema ha storico negativo ripetuto, trattarlo come esclusione e non come trade a size ridotta con condizioni, perche' il filtro 'conferma di tenuta sopra apertura' si e' rivelato insufficiente a salvare un setup gia' svantaggiato.",
+      "closed_at": "2026-11-14T10:00:31+01:00"
     },
     {
       "ticker": "PFE",
@@ -1339,7 +1369,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.59,
+        "pl_usd": -4.32,
+        "r_multiple": -1.02,
+        "alpha_pct": -2.59,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.59% contro un indice piatto, quindi la perdita e' tutta nostra e non attribuibile al contesto. Ha tenuto la lettura del gap ampio con volume pre-market dominante come segnale di interesse genuino, ma ha ceduto l'assunzione che quel volume riducesse il rischio di gap fill: il titolo non ha retto sopra l'apertura nonostante il controllo esplicito che avevo inserito proprio su quella lezione passata. La prossima volta il volume alto va trattato come conferma solo DOPO che il prezzo consolida sopra l'apertura per diversi minuti, non come giustificazione per anticipare l'ingresso sul gap.",
+      "closed_at": "2026-11-14T10:00:36+01:00"
     },
     {
       "ticker": "SOFI",
@@ -1354,7 +1394,17 @@
         "fascia": "micro",
         "azione": "buy"
       },
-      "status": "in_sospeso"
+      "status": "chiusa",
+      "outcome": {
+        "pl_pct": -2.71,
+        "pl_usd": -8.41,
+        "r_multiple": -1.0,
+        "alpha_pct": -2.71,
+        "benchmark_pct": 0.0,
+        "closed_by": "stop"
+      },
+      "lesson": "La direzione era sbagliata: alpha di -2.71% contro un indice piatto, quindi la perdita e' interamente idiosincratica e non imputabile al mercato. L'ipotesi sul volume relativo elevato come conferma di partecipazione reale ha ceduto: il volume alto accompagnava un gap in esaurimento, non l'inizio di un movimento sostenuto, e lo stop a -1.00R dimostra che il momentum presunto non si e' materializzato. La prossima volta distinguere tra volume che conferma continuazione e volume da gap climax, verificando la tenuta del prezzo sopra l'apertura nelle prime barre prima di entrare, invece di trattare il volume relativo come segnale sufficiente di per se'.",
+      "closed_at": "2026-11-14T10:00:42+01:00"
     }
   ]
 }
