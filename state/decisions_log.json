@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T16:24:06+01:00",
+  "updated_at": "2026-11-16T18:25:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1416,6 +1416,21 @@
         "stop": 37.17,
         "target": 40.61,
         "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "T",
+      "date": "2026-11-16",
+      "opened_at": "2026-11-16T18:25:06+01:00",
+      "decision": "Gap piu' ampio del paniere (+1.08%) e trend bullish, ma volume storicamente scarso e precedente negativo con lezione di scarto. Incluso solo con size minima e conferma intraday obbligatoria di tenuta sopra apertura; candidato debole.",
+      "meta": {
+        "entry": 22.39,
+        "stop": 21.71,
+        "target": 23.73,
+        "settore": "Communication Services",
         "fascia": "micro",
         "azione": "buy"
       },
