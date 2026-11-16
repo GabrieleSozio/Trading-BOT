@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T10:00:42+01:00",
+  "updated_at": "2026-11-16T16:24:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1405,6 +1405,21 @@
       },
       "lesson": "La direzione era sbagliata: alpha di -2.71% contro un indice piatto, quindi la perdita e' interamente idiosincratica e non imputabile al mercato. L'ipotesi sul volume relativo elevato come conferma di partecipazione reale ha ceduto: il volume alto accompagnava un gap in esaurimento, non l'inizio di un movimento sostenuto, e lo stop a -1.00R dimostra che il momentum presunto non si e' materializzato. La prossima volta distinguere tra volume che conferma continuazione e volume da gap climax, verificando la tenuta del prezzo sopra l'apertura nelle prime barre prima di entrare, invece di trattare il volume relativo come segnale sufficiente di per se'.",
       "closed_at": "2026-11-14T10:00:42+01:00"
+    },
+    {
+      "ticker": "NKE",
+      "date": "2026-11-16",
+      "opened_at": "2026-11-16T16:24:06+01:00",
+      "decision": "Volume solido (230k) e forza settoriale Consumer Discretionary. Storico recente molto buono (+2.03R con volume confermante). Gap +0.90% in prosecuzione ordinata. Vendite insider modeste e ambigue, non invalidanti. Ingresso condizionato alla tenuta sopra il minimo del gap.",
+      "meta": {
+        "entry": 38.31,
+        "stop": 37.17,
+        "target": 40.61,
+        "settore": "Consumer Discretionary",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
     }
   ]
 }
