@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-11-16T14:31:29+01:00",
+  "session_date": "2026-11-16",
+  "capital_usd": 701.9,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "available_usd": 222.53,
+  "free_slots": 1,
+  "orders": [
+    {
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
+      "action": "buy",
+      "reference_price": 37.99,
+      "target_entry_price": 37.8,
+      "allocated_capital": 210.57
+    }
+  ]
+}
