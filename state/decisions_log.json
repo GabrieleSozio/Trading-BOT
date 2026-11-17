@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-16T18:25:06+01:00",
+  "updated_at": "2026-11-17T15:52:06+01:00",
   "entries": [
     {
       "ticker": "SOFI",
@@ -1431,6 +1431,21 @@
         "stop": 21.71,
         "target": 23.73,
         "settore": "Communication Services",
+        "fascia": "micro",
+        "azione": "buy"
+      },
+      "status": "in_sospeso"
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-11-17",
+      "opened_at": "2026-11-17T15:52:06+01:00",
+      "decision": "Leader settoriale con liquidita' enorme (volume pre-market dominante) e gap +1.35% sostenibile. Nonostante storico recente misto, la qualita' e profondita' consentono ingresso solo dopo conferma di tenuta sopra apertura; trend strutturale intatto.",
+      "meta": {
+        "entry": 155,
+        "stop": 150.35,
+        "target": 164.3,
+        "settore": "Technology",
         "fascia": "micro",
         "azione": "buy"
       },
