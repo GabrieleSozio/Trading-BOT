@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-11-18T15:45:06+01:00",
-  "session_date": "2026-11-18",
-  "capital_usd": 1137.86,
+  "generated_at": "2026-11-19T14:31:57+01:00",
+  "session_date": "2026-11-19",
+  "capital_usd": 1133.57,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 894.1,
+  "available_usd": 894.21,
   "free_slots": 2,
   "orders": [
-    {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "buy",
-      "reference_price": 154.29,
-      "target_entry_price": 153.52,
-      "allocated_capital": 341.36
-    },
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 53.61,
-      "target_entry_price": 53.34,
-      "allocated_capital": 341.36
+      "reference_price": 54.19,
+      "target_entry_price": 53.92,
+      "allocated_capital": 340.07
+    },
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "action": "buy",
+      "reference_price": 293.69,
+      "target_entry_price": 292.22,
+      "allocated_capital": 340.07
     }
   ]
 }
