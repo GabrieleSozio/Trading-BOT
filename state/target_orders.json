@@ -1,28 +1,28 @@
 {
-  "generated_at": "2026-11-19T14:31:57+01:00",
+  "generated_at": "2026-11-19T16:00:07+01:00",
   "session_date": "2026-11-19",
-  "capital_usd": 1133.57,
+  "capital_usd": 764.25,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 894.21,
-  "free_slots": 2,
+  "available_usd": 764.25,
+  "free_slots": 3,
   "orders": [
     {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 54.19,
-      "target_entry_price": 53.92,
-      "allocated_capital": 340.07
+      "reference_price": 58.68,
+      "target_entry_price": 58.39,
+      "allocated_capital": 229.28
     },
     {
-      "ticker": "GOOGL",
-      "sector": "Communication Services",
+      "ticker": "SMCI",
+      "sector": "Technology",
       "action": "buy",
-      "reference_price": 293.69,
-      "target_entry_price": 292.22,
-      "allocated_capital": 340.07
+      "reference_price": 25.36,
+      "target_entry_price": 25.23,
+      "allocated_capital": 229.28
     }
   ]
 }
