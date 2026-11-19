@@ -1095,7 +1095,97 @@
       "type": "SUSPENDED",
       "reason": "PDT_limit",
       "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:32:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:33:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:34:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:35:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:36:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:37:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:38:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:39:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:40:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:41:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:42:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:43:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:44:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:45:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
+    },
+    {
+      "ts": "2026-11-19T18:46:05+01:00",
+      "type": "SUSPENDED",
+      "reason": "PDT_limit",
+      "detail": "PDT: 3/3 day trade negli ultimi 5 giorni (NVDA@2026-11-13, NVDA@2026-11-17, SOFI@2026-11-13): un altro sarebbe il 4o e farebbe scattare la marcatura. Non apro."
     }
   ],
-  "last_tick_at": "2026-11-19T18:31:01+01:00"
+  "last_tick_at": "2026-11-19T18:46:01+01:00"
 }
