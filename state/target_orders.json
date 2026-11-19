@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T17:00:07+01:00",
+  "generated_at": "2026-11-19T17:15:06+01:00",
   "session_date": "2026-11-19",
   "capital_usd": 764.25,
   "capital_simulated": true,
@@ -12,16 +12,16 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 57.35,
-      "target_entry_price": 57.06,
+      "reference_price": 57.34,
+      "target_entry_price": 57.05,
       "allocated_capital": 229.28
     },
     {
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 24.85,
-      "target_entry_price": 24.73,
+      "reference_price": 24.77,
+      "target_entry_price": 24.65,
       "allocated_capital": 229.28
     }
   ]
