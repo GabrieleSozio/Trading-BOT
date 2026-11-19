@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-19T16:47:03+01:00",
+  "generated_at": "2026-11-19T17:02:03+01:00",
   "session_date": "2026-11-19",
-  "source_generated_at": "2026-11-19T16:45:05+01:00",
+  "source_generated_at": "2026-11-19T17:00:07+01:00",
   "portfolio_value": 764.25,
   "capital_simulated": true,
   "real_equity": 99931.3,
@@ -21,19 +21,19 @@
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 56.31,
+      "target_entry_price": 57.06,
       "allocated_capital": 229.28,
-      "stop_loss_price": 54.62,
-      "take_profit_price": 59.69
+      "stop_loss_price": 55.35,
+      "take_profit_price": 60.48
     },
     {
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 24.66,
+      "target_entry_price": 24.73,
       "allocated_capital": 229.28,
-      "stop_loss_price": 23.92,
-      "take_profit_price": 26.14
+      "stop_loss_price": 23.99,
+      "take_profit_price": 26.21
     }
   ]
 }
