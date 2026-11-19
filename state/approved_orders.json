@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-18T15:47:03+01:00",
-  "session_date": "2026-11-18",
-  "source_generated_at": "2026-11-18T15:45:06+01:00",
-  "portfolio_value": 1137.81,
+  "generated_at": "2026-11-19T14:32:02+01:00",
+  "session_date": "2026-11-19",
+  "source_generated_at": "2026-11-19T14:31:57+01:00",
+  "portfolio_value": 1133.57,
   "capital_simulated": true,
-  "real_equity": 99936.11,
+  "real_equity": 99931.85,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,22 +18,22 @@
   ],
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
-      "action": "buy",
-      "target_entry_price": 153.52,
-      "allocated_capital": 341.34,
-      "stop_loss_price": 148.91,
-      "take_profit_price": 162.73
-    },
-    {
       "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 53.34,
-      "allocated_capital": 341.34,
-      "stop_loss_price": 51.74,
-      "take_profit_price": 56.54
+      "target_entry_price": 53.92,
+      "allocated_capital": 340.07,
+      "stop_loss_price": 52.3,
+      "take_profit_price": 57.16
+    },
+    {
+      "ticker": "GOOGL",
+      "sector": "Communication Services",
+      "action": "buy",
+      "target_entry_price": 292.22,
+      "allocated_capital": 340.07,
+      "stop_loss_price": 283.45,
+      "take_profit_price": 309.75
     }
   ]
 }
