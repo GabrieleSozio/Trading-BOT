@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T21:00:06+01:00",
+  "generated_at": "2026-11-19T21:15:06+01:00",
   "session_date": "2026-11-19",
   "capital_usd": 764.25,
   "capital_simulated": true,
@@ -20,8 +20,8 @@
       "ticker": "SMCI",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 24.09,
-      "target_entry_price": 23.96,
+      "reference_price": 24.07,
+      "target_entry_price": 23.94,
       "allocated_capital": 229.28
     }
   ]
