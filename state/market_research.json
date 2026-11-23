@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-11-23T14:33:02+01:00",
+  "session_date": "2026-11-23",
+  "universe_size": 44,
+  "capital_usd": 690.59,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "max_price_per_share": 207.18,
+  "selected_by": "deterministico",
+  "ai_analysis": null,
+  "candidates": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "last_price": 136.4538,
+      "prev_close": 125.53,
+      "gap_pct": 8.7021,
+      "premarket_volume": 17763644,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "ARM",
+      "sector": "Technology",
+      "last_price": 165.33,
+      "prev_close": 152.2,
+      "gap_pct": 8.6268,
+      "premarket_volume": 284992,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "SMCI",
+      "sector": "Technology",
+      "last_price": 23.05,
+      "prev_close": 21.65,
+      "gap_pct": 6.4665,
+      "premarket_volume": 1513030,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "last_price": 54.38,
+      "prev_close": 51.28,
+      "gap_pct": 6.0452,
+      "premarket_volume": 2857580,
+      "trend": "Bullish",
+      "insider_buys": 1,
+      "insider_sells": 0,
+      "insider_buy_usd": 9709680.0
+    },
+    {
+      "ticker": "HOOD",
+      "sector": "Financials",
+      "last_price": 65.87,
+      "prev_close": 62.17,
+      "gap_pct": 5.9514,
+      "premarket_volume": 532631,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    },
+    {
+      "ticker": "SHOP",
+      "sector": "Technology",
+      "last_price": 130.45,
+      "prev_close": 123.72,
+      "gap_pct": 5.4397,
+      "premarket_volume": 40495,
+      "trend": "Bullish",
+      "insider_buys": 0,
+      "insider_sells": 0,
+      "insider_buy_usd": 0
+    }
+  ]
+}
