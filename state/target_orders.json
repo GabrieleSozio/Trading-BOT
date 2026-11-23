@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-23T14:33:10+01:00",
+  "session_date": "2026-11-23",
+  "capital_usd": 690.62,
+  "capital_simulated": true,
+  "tier": "micro",
+  "mode": "swing",
+  "available_usd": 516.98,
+  "free_slots": 2,
+  "orders": [
+    {
+      "ticker": "NVDA",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 136.14,
+      "target_entry_price": 135.46,
+      "allocated_capital": 207.19
+    },
+    {
+      "ticker": "INTC",
+      "sector": "Technology",
+      "action": "buy",
+      "reference_price": 52.89,
+      "target_entry_price": 52.63,
+      "allocated_capital": 207.19
+    }
+  ]
+}
