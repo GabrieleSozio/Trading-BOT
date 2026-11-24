@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-23T14:33:10+01:00",
-  "session_date": "2026-11-23",
-  "capital_usd": 690.62,
+  "generated_at": "2026-11-24T14:31:10+01:00",
+  "session_date": "2026-11-24",
+  "capital_usd": 690.67,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
@@ -9,20 +9,20 @@
   "free_slots": 2,
   "orders": [
     {
-      "ticker": "NVDA",
-      "sector": "Technology",
+      "ticker": "NKE",
+      "sector": "Consumer Discretionary",
       "action": "buy",
-      "reference_price": 136.14,
-      "target_entry_price": 135.46,
-      "allocated_capital": 207.19
+      "reference_price": 33.94,
+      "target_entry_price": 33.77,
+      "allocated_capital": 207.2
     },
     {
-      "ticker": "INTC",
-      "sector": "Technology",
+      "ticker": "KO",
+      "sector": "Consumer Staples",
       "action": "buy",
-      "reference_price": 52.89,
-      "target_entry_price": 52.63,
-      "allocated_capital": 207.19
+      "reference_price": 95.99,
+      "target_entry_price": 95.51,
+      "allocated_capital": 207.2
     }
   ]
 }
