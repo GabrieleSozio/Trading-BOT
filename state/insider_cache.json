@@ -1,6 +1,6 @@
 {
  "NKE": {
-  "fetched_at": "2026-11-16T13:30:06+00:00",
+  "fetched_at": "2026-11-24T13:30:06+00:00",
   "data": {
    "ticker": "NKE",
    "available": true,
@@ -206,7 +206,7 @@
   }
  },
  "PFE": {
-  "fetched_at": "2026-11-20T13:30:06+00:00",
+  "fetched_at": "2026-11-24T13:30:06+00:00",
   "data": {
    "ticker": "PFE",
    "available": true,
@@ -304,15 +304,15 @@
   }
  },
  "KO": {
-  "fetched_at": "2026-11-20T13:30:06+00:00",
+  "fetched_at": "2026-11-24T13:30:06+00:00",
   "data": {
    "ticker": "KO",
    "available": true,
    "window_days": 90,
    "n_buys": 0,
-   "n_sells": 11,
+   "n_sells": 8,
    "buy_value_usd": 0,
-   "sell_value_usd": 26607412.3,
+   "sell_value_usd": 16480959.44,
    "buyers": [],
    "sellers": [
     "ARROYO MANUEL (Executive Vice President)",
@@ -336,7 +336,7 @@
   }
  },
  "T": {
-  "fetched_at": "2026-11-20T13:30:06+00:00",
+  "fetched_at": "2026-11-24T13:30:06+00:00",
   "data": {
    "ticker": "T",
    "available": true,
@@ -406,7 +406,7 @@
   }
  },
  "GM": {
-  "fetched_at": "2026-11-17T13:30:06+00:00",
+  "fetched_at": "2026-11-24T13:30:06+00:00",
   "data": {
    "ticker": "GM",
    "available": true,
