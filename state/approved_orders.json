@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-24T14:31:15+01:00",
-  "session_date": "2026-11-24",
-  "source_generated_at": "2026-11-24T14:31:10+01:00",
-  "portfolio_value": 690.67,
+  "generated_at": "2026-11-25T14:31:20+01:00",
+  "session_date": "2026-11-25",
+  "source_generated_at": "2026-11-25T14:31:16+01:00",
+  "portfolio_value": 691.19,
   "capital_simulated": true,
-  "real_equity": 99930.54,
+  "real_equity": 99931.06,
   "tier": "micro",
   "mode": "swing",
   "stop_loss_pct": 0.03,
@@ -18,22 +18,22 @@
   ],
   "orders": [
     {
-      "ticker": "NKE",
-      "sector": "Consumer Discretionary",
+      "ticker": "HPQ",
+      "sector": "Technology",
       "action": "buy",
-      "target_entry_price": 33.77,
-      "allocated_capital": 207.2,
-      "stop_loss_price": 32.76,
-      "take_profit_price": 35.8
+      "target_entry_price": 26.87,
+      "allocated_capital": 207.36,
+      "stop_loss_price": 26.06,
+      "take_profit_price": 28.48
     },
     {
-      "ticker": "KO",
-      "sector": "Consumer Staples",
+      "ticker": "PFE",
+      "sector": "Health Care",
       "action": "buy",
-      "target_entry_price": 95.51,
-      "allocated_capital": 207.2,
-      "stop_loss_price": 92.64,
-      "take_profit_price": 101.24
+      "target_entry_price": 28.34,
+      "allocated_capital": 207.36,
+      "stop_loss_price": 27.49,
+      "take_profit_price": 30.04
     }
   ]
 }
