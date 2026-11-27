@@ -1,28 +1,20 @@
 {
-  "generated_at": "2026-11-25T14:31:16+01:00",
-  "session_date": "2026-11-25",
-  "capital_usd": 691.19,
+  "generated_at": "2026-11-27T14:32:50+01:00",
+  "session_date": "2026-11-27",
+  "capital_usd": 908.33,
   "capital_simulated": true,
   "tier": "micro",
   "mode": "swing",
-  "available_usd": 516.98,
-  "free_slots": 2,
+  "available_usd": 529.14,
+  "free_slots": 1,
   "orders": [
     {
-      "ticker": "HPQ",
+      "ticker": "INTC",
       "sector": "Technology",
       "action": "buy",
-      "reference_price": 27.01,
-      "target_entry_price": 26.87,
-      "allocated_capital": 207.36
-    },
-    {
-      "ticker": "PFE",
-      "sector": "Health Care",
-      "action": "buy",
-      "reference_price": 28.48,
-      "target_entry_price": 28.34,
-      "allocated_capital": 207.36
+      "reference_price": 54.21,
+      "target_entry_price": 53.94,
+      "allocated_capital": 272.5
     }
   ]
 }
